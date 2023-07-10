@@ -1,0 +1,72 @@
+html {
+  font-size: 100%;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+body {
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  margin: 0;
+}
+body .side {
+  width: 100%;
+  min-height: 21rem;
+  text-align: center;
+  display: inline-grid;
+}
+body .side__left {
+  background-color: hsl(241, 81%, 54%);
+  text-align: center;
+  border-radius: 0 0 1.875rem 1.875rem;
+  padding-top: 1rem;
+}
+body .side__left .part_1 {
+  font-size: 1rem;
+  color: hsl(241, 100%, 89%);
+}
+body .side__left .result {
+  background-color: hsl(256, 72%, 46%);
+  margin: 1.6875rem auto;
+  width: 50%;
+  border-radius: 88px;
+  min-height: 11rem;
+  text-align: center;
+}
+body .side__left h1 {
+  color: hsl(0, 0%, 100%);
+  padding-top: 2.5rem;
+  font-size: 4rem;
+  margin: 0;
+}
+body .side__left p {
+  margin: 0 auto;
+  color: hsl(241, 100%, 89%);
+  font-size: 0.8125rem;
+}
+body .side__left .info h1 {
+  padding: 0;
+  margin: 0;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+}
+body .side__left .info h2 {
+  font-size: 1rem;
+  padding-bottom: 2.8125rem;
+  margin: 1rem 2.5rem;
+  color: hsl(241, 100%, 89%);
+}
+body .side__right {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  border-radius: 0px 0px 0px 0px;
+}
+body .side__right h1 {
+  color: black;
+  font-size: 1.2rem;
+  position: absolute;
+  margin-left: 2rem;
+}
+body .side__right .scores {
+  font-size: 1rem;
+}/*# sourceMappingURL=styles.css.map */

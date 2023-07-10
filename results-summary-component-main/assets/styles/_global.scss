@@ -1,0 +1,98 @@
+@import "variable.scss";
+
+html {
+    font-size: 100%;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+
+body {
+    color: $white;
+    font-size: 1rem;
+    margin: 0;
+
+
+    .side {
+        width: 100%;
+        min-height: 21rem;
+        text-align: center;
+        display: inline-grid;
+        
+        &__left{
+            background-color: $lightRoyalBlue;
+            text-align: center;
+            border-radius: 0 0 1.875rem 1.875rem;
+            padding-top: 1rem;
+        
+            .part_1{
+                font-size: 1rem;
+                color: $lightLavender
+                
+            }
+            .result {
+            // circle color
+                background-color: $violetBlue;
+                margin: 1.6875rem auto;
+                width: 50%;
+                border-radius: 88px;
+                min-height: 11rem;
+                text-align: center;
+            }
+            h1 {
+                color: $white;
+                padding-top: 2.5rem;
+                font-size: 4rem;
+                margin: 0;
+            }
+
+            p{
+                margin:0 auto;
+                color:$lightLavender;
+                font-size: 0.8125rem;
+            }
+
+            .info {
+                
+                h1 {
+                    padding: 0;
+                    margin: 0;
+                    color:$white;
+                    font-size: 1.5rem;
+                }
+
+                h2 {
+                    font-size: 1rem;
+                    padding-bottom: 2.8125rem;
+                    margin: 1rem 2.5rem;
+                    color:$lightLavender;
+                }
+
+            }
+        }
+
+        &__right{
+            
+            padding: 0;
+            margin: 0;
+            background-color: white;
+            // background-color: red;
+            border-radius: 0px 0px 0px 0px;
+        
+        h1 {
+            color: black;
+            font-size: 1.2rem;
+            position: absolute;
+            margin-left: 2rem;
+        }
+        .scores {
+            font-size: 1rem;
+        }
+
+
+        }
+
+       
+    }
+
+
+}

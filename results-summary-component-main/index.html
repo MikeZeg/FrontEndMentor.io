@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/results-summary-component-main/assets/styles/styles.css">
   <title>Frontend Mentor | Results summary component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -16,15 +23,39 @@
 </head>
 <body>
 
-  Your Result
-  76
-  of 100
+  <header class="side">
+    <div class="side__left">
+      <div class="part_1">
+        Your Result
+      </div>
+      <div class="result">
+        <h1>76</h1>
+        <p>of 100</p>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+      </div>
+      <div class="info">
+        <h1>Great</h1>
+        <h2>You scored higher than <span>65%</span> of the people who have taken these tests.</h2>
+      </div>
 
+    </div>
+
+    <div class="side__right">
+      <h1>Summary</h1>
+
+      <div class="scores_">
+        <img src="" alt="">
+        <div class="discription">Reaction</div>
+        <div class="score">80 / 100</div>
+      </div>
+      
+      
+      <button class="btn"></button>
+    </div>
+
+  </header>
+
+  <!-- 
   Reaction
   80 / 100
 
@@ -37,7 +68,7 @@
   Visual
   72 / 100
 
-  Continue
+  Continue -->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
