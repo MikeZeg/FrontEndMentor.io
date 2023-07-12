@@ -1,5 +1,4 @@
 html {
-  font-size: 100%;
   font-family: "Hanken Grotesk", sans-serif;
 }
 
@@ -26,7 +25,7 @@ body .side__left .part_1 {
 }
 body .side__left .result {
   background-color: hsl(256, 72%, 46%);
-  margin: 1.6875rem auto;
+  margin: 1rem auto;
   width: 50%;
   border-radius: 400px;
   min-height: 10.7rem;
@@ -51,7 +50,7 @@ body .side__left .info h1 {
 }
 body .side__left .info h2 {
   font-size: 1rem;
-  padding-bottom: 1.8125rem;
+  padding-bottom: 1rem;
   margin: 1rem 2.5rem;
   color: hsl(241, 100%, 89%);
 }
@@ -60,7 +59,6 @@ body .side__right {
   margin: 0;
   background-color: white;
   border-radius: 0px 0px 0px 0px;
-  border: 1px red solid;
 }
 body .side__right h1 {
   color: black;
@@ -70,10 +68,63 @@ body .side__right h1 {
   display: flex;
 }
 body .side__right .scores {
-  border: 1px blue solid;
-  font-size: 1rem;
+  width: 80%;
+  margin: 0 auto;
 }
-body .side__right .scores .scorse_1 {
+body .side__right .scores .scorse {
+  font-size: 0.8125rem;
+  font-weight: 500;
   display: flex;
-  color: red;
+  border: 1px red solid;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+body .side__right .scores .scorse:not(:last-child) {
+  margin-bottom: 1rem;
+}
+body .side__right .scores .scorse .img {
+  margin-left: 1rem;
+}
+body .side__right .scores .scorse .discription {
+  margin-left: 0.5rem;
+}
+body .side__right .scores .scorse .score {
+  margin-right: 0;
+  margin-left: auto;
+  float: right;
+  color: black;
+  font-weight: 700;
+}
+body .side__right .scores .scorse .score > span {
+  color: gray;
+}
+body .side__right .scores .scorse.sco_1 {
+  color: hsl(0, 100%, 67%);
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+body .side__right .scores .scorse.sco_2 {
+  color: hsl(39, 100%, 56%);
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+body .side__right .scores .scorse.sco_3 {
+  color: hsl(166, 100%, 37%);
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+body .side__right .scores .scorse.sco_4 {
+  color: hsl(234, 85%, 80%);
+  background-color: hsla(234, 85%, 80%, 0.1);
+}
+
+button {
+  width: 80%;
+  height: 2.4375rem;
+  margin-top: 1rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(224, 30%, 27%);
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 30px;
+}
+button:hover {
+  background-color: hsl(241, 81%, 54%);
 }/*# sourceMappingURL=styles.css.map */
