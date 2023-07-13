@@ -1,28 +1,58 @@
 @import "variable.scss";
+@import "resolution.scss";
 
 html {
     font-family: 'Hanken Grotesk', sans-serif;
 }
 
+.attribution{
+    position: absolute;
+    color: navy;
+
+    &a{
+        position: absolute;
+    }
+}
 
 body {
     color: $white;
     font-size: 1rem;
     margin: 0;
+    // width: 100%;
 
+    @include breakpoint-up(desktop){
+        width: 50%;
+
+    }
 
     .side {
         width: 100%;
         min-height: 21rem;
         text-align: center;
         display: inline-grid;
+
+        @include breakpoint-up(desktop){
+            display: inline-flex;
+            position: absolute;
+            width: 50%;
+            left: 50%;
+            top:50%;
+            border-radius: 32px 32px 32px 32px;
+            transform: translate(-50%,-50%);
+            box-shadow: 13px 13px 10px $paleBlue;
+        }
         
         &__left{
-            background-color: $lightRoyalBlue;
+            background: linear-gradient(180deg,$lightSlateBlue,$lightRoyalBlue);
             text-align: center;
             border-radius: 0 0 1.875rem 1.875rem;
             padding-top: 1rem;
-        
+
+            @include breakpoint-up(desktop){
+                width:inherit;
+                border-radius: 32px;
+            }
+
             .part_1{
                 font-size: 1rem;
                 color: $lightLavender
@@ -30,7 +60,7 @@ body {
             }
             .result {
             // circle color
-                background-color: $violetBlue;
+                background: linear-gradient(180deg,$violetBlue,$persianBlue);
                 margin: 1rem auto;
                 width: 50%;
                 border-radius: 400px;
@@ -69,29 +99,36 @@ body {
         }
 
         &__right{
-            
+            width: inherit;
             padding: 0;
             margin: 0;
             background-color: white;
-            border-radius: 0px 0px 0px 0px;
+
+            @include breakpoint-up(desktop){
+                padding-top: 1.2rem;
+                border-radius: 10px 32px 32px 10px;
+            }
             
             h1 {
                 color: black;
-                font-size: 1.2rem;
+                font-size: 1rem;
+                font-weight: 400;
                 margin-left: 1rem;
                 position: relative;
                 display: flex;  
             }
         .scores { 
-            // border: 1px blue solid;
             width: 80%;
             margin: 0 auto;
+
+            @include breakpoint-up(desktop){
+                
+            }
         
             .scorse{
                 font-size: 0.8125rem;
                 font-weight: 500;
                 display: flex;
-                border: 1px red solid;
                 border-radius: 5px;
                 padding: 0.5rem;
             
@@ -151,6 +188,10 @@ button {
 
     &:hover {
         background-color: $lightRoyalBlue;
+    }
+
+    @include breakpoint-up(desktop){
+        margin-top: 2.3rem;
     }
 
 }

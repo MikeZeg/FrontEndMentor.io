@@ -2,10 +2,23 @@ html {
   font-family: "Hanken Grotesk", sans-serif;
 }
 
+.attribution {
+  position: absolute;
+  color: navy;
+}
+.attributiona {
+  position: absolute;
+}
+
 body {
   color: hsl(0, 0%, 100%);
   font-size: 1rem;
   margin: 0;
+}
+@media (min-width: 26em) {
+  body {
+    width: 50%;
+  }
 }
 body .side {
   width: 100%;
@@ -13,18 +26,36 @@ body .side {
   text-align: center;
   display: inline-grid;
 }
+@media (min-width: 26em) {
+  body .side {
+    display: inline-flex;
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    top: 50%;
+    border-radius: 32px 32px 32px 32px;
+    transform: translate(-50%, -50%);
+    box-shadow: 13px 13px 10px hsl(221, 100%, 96%);
+  }
+}
 body .side__left {
-  background-color: hsl(241, 81%, 54%);
+  background: linear-gradient(180deg, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   text-align: center;
   border-radius: 0 0 1.875rem 1.875rem;
   padding-top: 1rem;
+}
+@media (min-width: 26em) {
+  body .side__left {
+    width: inherit;
+    border-radius: 32px;
+  }
 }
 body .side__left .part_1 {
   font-size: 1rem;
   color: hsl(241, 100%, 89%);
 }
 body .side__left .result {
-  background-color: hsl(256, 72%, 46%);
+  background: linear-gradient(180deg, hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
   margin: 1rem auto;
   width: 50%;
   border-radius: 400px;
@@ -55,14 +86,21 @@ body .side__left .info h2 {
   color: hsl(241, 100%, 89%);
 }
 body .side__right {
+  width: inherit;
   padding: 0;
   margin: 0;
   background-color: white;
-  border-radius: 0px 0px 0px 0px;
+}
+@media (min-width: 26em) {
+  body .side__right {
+    padding-top: 1.2rem;
+    border-radius: 10px 32px 32px 10px;
+  }
 }
 body .side__right h1 {
   color: black;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 400;
   margin-left: 1rem;
   position: relative;
   display: flex;
@@ -75,7 +113,6 @@ body .side__right .scores .scorse {
   font-size: 0.8125rem;
   font-weight: 500;
   display: flex;
-  border: 1px red solid;
   border-radius: 5px;
   padding: 0.5rem;
 }
@@ -127,4 +164,9 @@ button {
 }
 button:hover {
   background-color: hsl(241, 81%, 54%);
+}
+@media (min-width: 26em) {
+  button {
+    margin-top: 2.3rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
