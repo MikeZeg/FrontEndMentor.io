@@ -1,0 +1,21 @@
+@media (min-width:25em ){
+
+}
+
+// Desktop < 400 px
+$breakpoint-up:('desktop':'25em');
+
+// Mobile > 399
+$breakpoint-down:('mobile':'24.9375em');
+
+@mixin breakpoint-up($size){
+    @media(min-width: map-get($breakpoint-up,$size)){
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size){
+    @media(min-width: map-get($breakpoint-up,$size)){
+        @content;
+    }
+}

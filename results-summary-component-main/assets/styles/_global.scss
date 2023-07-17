@@ -22,6 +22,7 @@ body {
 
     @include breakpoint-up(desktop){
         width: 50%;
+        max-height: 150vh;
 
     }
 
