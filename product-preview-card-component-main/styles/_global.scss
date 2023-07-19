@@ -14,24 +14,49 @@ body {
 header{
     display: flex;
     max-width: 40%;
-    max-height: 60%;
+    max-height: 80%;
     top:50%;
     left:50%;
     position: absolute;
     transform: translate(-50%,-50%);
     background-color: white;
+
+    @include breakpoint-down (mobile) {
+        display: inline-table;
+        max-width: 80%;
+        min-height: 90%;
+        
+        top:0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        margin: 1.8125rem auto;
+
+        transform: none;
+        border-radius: 15px;
+    }
 }
 
 .side_left {
-    // display: grid;
     margin: 0;
     padding: 0;
     width: 50%;
+    min-width: 49%;
 
-    img{
+    @include breakpoint-down(mobile){
+        display: contents;
+        // max-height: 30%;
+    }
+
+     img{
         object-fit: cover;
         width: 100%;
         height: 100%;
+
+        @include breakpoint-down (mobile){
+            
+        }
     }
 }
 
@@ -41,7 +66,7 @@ header{
     width: 50%;
     height: 100%;
     display: grid;
-    // justify-items: center;
+    
 
     .product_cat{
         font-size: 0.625rem;
