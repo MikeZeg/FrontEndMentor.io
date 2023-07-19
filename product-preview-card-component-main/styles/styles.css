@@ -122,7 +122,6 @@ header {
   min-width: 80%;
   background-color: hsl(158, 36%, 37%);
   border-radius: 10px;
-  box-shadow: 0px 0px none;
 }
 @media (max-width: 63.9375em) {
   .side_right .btn {
