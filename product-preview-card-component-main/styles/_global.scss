@@ -20,6 +20,7 @@ header{
     position: absolute;
     transform: translate(-50%,-50%);
     background-color: white;
+    border-radius: 15px;
 
     @include breakpoint-down (mobile) {
         display: inline-table;
@@ -48,6 +49,7 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 15px 0 0 15px;
 
     @include breakpoint-down(mobile){
         margin: 0;
@@ -60,6 +62,8 @@ header{
         background-size: cover;
         border-radius: 15px 15px 0px 0px;
     }
+// Air Pads resolution - change min-height when height incres
+
 }
 
 .side_right{
