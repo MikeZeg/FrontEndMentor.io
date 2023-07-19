@@ -23,7 +23,7 @@ header{
 
     @include breakpoint-down (mobile) {
         display: inline-table;
-        max-width: 80%;
+        max-width: 91%;
         min-height: 90%;
         
         top:0;
@@ -44,19 +44,21 @@ header{
     width: 50%;
     min-width: 49%;
 
+    background-image: url('../images/image-product-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
     @include breakpoint-down(mobile){
-        display: contents;
-        // max-height: 30%;
-    }
+        margin: 0;
+        min-width: 100%;
+        min-height: 25em;
 
-     img{
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-
-        @include breakpoint-down (mobile){
-            
-        }
+        background-image: url('../images/image-product-mobile.jpg');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+        border-radius: 15px 15px 0px 0px;
     }
 }
 
@@ -66,6 +68,11 @@ header{
     width: 50%;
     height: 100%;
     display: grid;
+
+    @include breakpoint-down(mobile){
+        width: 90%;
+
+    }
     
 
     .product_cat{
@@ -75,21 +82,31 @@ header{
 
         float: left;
         max-width: 80%;
-        margin: 1rem 0 1.5625rem 0
+        margin: 1rem 0 1.5625rem 0;
+
+        @include breakpoint-down(mobile){
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.3rem;
+
+            margin-top: 0.3125rem;
+            margin-bottom: 0.75rem;
+    
+        }
     }
     .product_name {
         font-weight: 700;
-        font-size: 1.5rem;
+        font-size: 1.875rem;
         line-height: 1.3;
         font-family: 'Fraunces', serif;
         
-        max-width: 70%;
+        max-width: 90%;
         margin: 0rem 0 1rem 0
     }
     .product_description{
         color: $darkGrayishBlue;
         font-weight: 400;
-        font-size: 0.7rem;
+        font-size: 0.875rem;
         line-height: 1.6;
         font-family: 'Hanken Grotesk', sans-serif;
 
@@ -110,7 +127,7 @@ header{
             text-decoration: line-through;
             
             color: $darkGrayishBlue;
-            font-size: 0.625rem;
+            font-size: 0.875rem;
 
         }
     }
@@ -122,7 +139,14 @@ header{
         background-color: $darkCyan;
 
         border-radius: 10px;
-        box-shadow: 0px 0px;
+        box-shadow: 0px 0px none;
+    
+
+        @include breakpoint-down(mobile){
+            margin: 0 auto 0 0;
+            width: 97%;
+            font-size: 1rem;
+        }
 
         & img {
             margin-right: 0.625rem;
