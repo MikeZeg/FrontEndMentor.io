@@ -1,0 +1,22 @@
+
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 0.9375rem;
+    font-family: 'Overpass', sans-serif;
+
+    background-color: $veryDarkBlue;
+    
+}
+
+h1,h2,h3 {
+    margin: 0;
+    font-weight: 300;
+    line-height: 1.15;
+    color: $lightGrey;
+
+}
