@@ -9,7 +9,7 @@ body {
     font-size: 0.9375rem;
     font-family: 'Overpass', sans-serif;
 
-    background-color: $veryDarkBlue;
+    // background-color: $veryDarkBlue;
     
 }
 
@@ -18,5 +18,33 @@ h1,h2,h3 {
     font-weight: 300;
     line-height: 1.15;
     color: $lightGrey;
+}
+
+main {
+    border: 1px red solid;
+    border-radius: 25px;
+
+    min-height: 60%;
+    max-height: 90%;
+    min-width: 80%;
+    padding: auto 1.5625rem;
+
+
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    // margin-left: auto;
+    // margin-top: auto;
+
 
 }
+.question_part{
+    border: 1px blue solid;
+}
+
+
+.answer {
+    display: none;
+}
+

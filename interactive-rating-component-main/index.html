@@ -21,45 +21,39 @@
 </head>
 <body>
 
-  <header>
+  
     <main>
-      <section role="question">How did we do?</section>
-      <section class="description" role="description"></section>
-      <section class="rating">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+      <section class="question_part">
+        <div role="question">How did we do?</div>
+        
+        <div class="description" role="description">
+          Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!
+        </div>
+        
+        <div class="rating" role="rating">
+          <span class="digit" role="rating_1">1</span>
+          <span class="digit" role="rating_2">2</span>
+          <span class="digit" role="rating_3">3</span>
+          <span class="digit" role="rating_4">4</span>
+          <span class="digit" role="rating_5">5</span>
+        </div>
+        
+        <button class="btn" role="submit_button">Submit</button>
       </section>
-      <button>Submit</button>
+
+      <article class="answer">
+          <div class="answer_img">IMG</div>
+          <div class="answer_rating" role="answer rating">You selected <span>digit</span> out of 5</div>
+          <div class="">Thank you!</div>
+          <div class="answer_description" role="answer description">We appreciate you taking the time to give a rating. If you ever need more support, 
+            don’t hesitate to get in touch!
+          </div>
+      
+      </article>
+
     </main>
-  </header>
-
-  <!-- Rating state start -->
-
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
+  
   
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

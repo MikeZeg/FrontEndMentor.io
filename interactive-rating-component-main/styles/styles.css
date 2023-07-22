@@ -6,7 +6,6 @@ html {
 body {
   font-size: 0.9375rem;
   font-family: "Overpass", sans-serif;
-  background-color: hsl(216, 12%, 8%);
 }
 
 h1, h2, h3 {
@@ -14,4 +13,25 @@ h1, h2, h3 {
   font-weight: 300;
   line-height: 1.15;
   color: hsl(217, 12%, 54%);
+}
+
+main {
+  border: 1px red solid;
+  border-radius: 25px;
+  min-height: 60%;
+  max-height: 90%;
+  min-width: 80%;
+  padding: auto 1.5625rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.question_part {
+  border: 1px blue solid;
+}
+
+.answer {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */
