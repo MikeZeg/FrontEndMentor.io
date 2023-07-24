@@ -9,7 +9,7 @@ body {
     font-size: 0.9375rem;
     font-family: 'Overpass', sans-serif;
 
-    background-color: $veryDarkBlue;
+    background-color: black;
     
 }
 
@@ -22,7 +22,7 @@ h1,h2,h3 {
 
 main {
     border-radius: 25px;
-    background-color: $darkBlue;
+    background-color: $veryDarkBlue;
 
     min-width: 305px;
     max-width: 320px;
@@ -61,31 +61,56 @@ main {
         background-image: url("../images/icon-star.svg");
         background-repeat: no-repeat;
         background-position: center;
-        background-color: $lightGrey;
+        background-color: $darkBlue;
         border-radius: 50% 50%;
     }
     &_case {
         font-size: 1.2rem;
         color: white;
+        height: 26px;
 
     }
     &_description {
-        // margin: auto 1rem;
-
-        font-size: 0.625rem;
+        color: $lightGrey;
+        font-size: 0.725rem;
     }
     &_rating {
-        margin-bottom: 25px;
-        color: red;
+        font-size: 0.9rem;
+        min-height: 30px;
+        max-height: 40px;
+
+        max-width: 270px;
+        // max-width: 340px;
+        
+        display: flex;
+
+        margin-bottom: 35px;
+        color: $lightGrey;
+
+        > span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $darkBlue;
+            width: 40px;
+            height: 38px;
+            border-radius: 50% 50%;
+        }
+        > span:not(:last-child){
+            margin-right: 20px;
+        }
     }
     &_btn {
         border-radius: 20px;
         border: none;
+        background-color: $orange;
+        font-size: 1.1rem;
+        letter-spacing: 3px;
+
         position: absolute;
         bottom: 0;
-        margin: 1rem;
+        margin-bottom: 1rem;
         
-
         min-width: 278px;
         max-width: 340px;
 
