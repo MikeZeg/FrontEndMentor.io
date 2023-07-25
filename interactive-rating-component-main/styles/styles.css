@@ -1,3 +1,12 @@
+:export {
+  myOrange: hsl(25, 97%, 53%);
+  myWhite: hsl(0, 0%, 100%);
+  lightGrey: hsl(217, 12%, 54%);
+  mediumGrey: hsl(216, 12%, 54%);
+  darkBlue: hsl(213, 19%, 18%);
+  veryDarkBlue: hsl(216, 12%, 8%);
+}
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -79,6 +88,13 @@ main {
   height: 38px;
   border-radius: 50% 50%;
 }
+.question_rating > span:hover {
+  background-color: hsl(25, 97%, 53%);
+}
+.question_rating > span:active {
+  background-color: white;
+  color: black;
+}
 .question_rating > span:not(:last-child) {
   margin-right: 20px;
 }
@@ -95,6 +111,9 @@ main {
   max-width: 340px;
   min-height: 45px;
   max-height: 45px;
+}
+.question_btn:hover {
+  background-color: white;
 }
 .question--juSeCe {
   justify-self: center;
