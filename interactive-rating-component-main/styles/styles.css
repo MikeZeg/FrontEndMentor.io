@@ -122,4 +122,41 @@ main {
 .answer {
   display: none;
   border: 2px yellow solid;
+  background-color: hsl(213, 19%, 18%);
+  color: white;
+}
+.answer_img {
+  background-image: url("../images/illustration-thank-you.svg");
+  width: 100%;
+  min-height: 115px;
+  margin: 2rem auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: hsl(213, 19%, 18%);
+}
+.answer_rating {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  min-height: 2rem;
+  border-radius: 20px;
+  color: hsl(25, 97%, 53%);
+  background-color: hsla(216, 12%, 54%, 0.29);
+  font-size: 0.875rem;
+}
+.answer_thanks {
+  display: flex;
+  justify-content: center;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+  margin: 2rem auto 1.5rem auto;
+}
+.answer_description {
+  text-align: center;
+  font-size: 0.875rem;
+  color: hsl(217, 12%, 54%);
+  max-width: 80%;
+  margin: auto auto 1rem auto;
 }/*# sourceMappingURL=styles.css.map */

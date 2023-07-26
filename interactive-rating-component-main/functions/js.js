@@ -1,13 +1,16 @@
-// alert('Working');
-
-//hooks
-const btnQuestion = document.querySelector('#btnSubmit');
-let myDigit = document.querySelectorAll('.digit');
 
 // import styles from '../styles/styles.css';
+// ---------------------------------------------
 
+//Selected Digit
+const selectedDigit = '0';
+const 
 
 // mark digit
+   //hooks
+    const btnQuestion = document.querySelector('#btnSubmit');
+    let myDigit = document.querySelectorAll('.digit');
+
 myDigit.forEach(function(elem){
 
     elem.addEventListener("click", function(){
@@ -21,7 +24,15 @@ myDigit.forEach(function(elem){
 })
 
 // Change to thank you state
+    //hooks
+    const question = document.querySelector('.question');
+    const answer  = document.querySelector('.answer');
+
+
+
 btnQuestion.addEventListener('click', function(){
-    console.log('mam');
+
+    question.style.display = 'none';
+    answer.style.display = 'grid';
     
 })

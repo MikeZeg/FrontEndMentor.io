@@ -40,6 +40,7 @@ main {
     transform: translate(-50%,-50%);
 }
 .question{
+    // display: none;
     display: grid;
     color: white;
     line-height: 1.3rem;
@@ -133,13 +134,50 @@ main {
     &--juSeCe{
         justify-self: center;
     }
-
-
-
 }
 // hiden part
 .answer {
+    // min-width: 25rem;
     display: none;
+    // display: grid;
     border: 2px yellow solid;
+    background-color: $darkBlue;
+    color: white;
+
+    &_img{
+        background-image: url('../images/illustration-thank-you.svg');
+        width: 100%;
+        min-height: 115px;
+        margin: 2rem auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: $darkBlue;
+    }
+    &_rating {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 180px;
+        min-height: 2rem;
+        border-radius: 20px;
+        color: $orange;
+        background-color: hsl(216deg 12% 54% / 29%);;
+        font-size: 0.875rem;
+    }
+    &_thanks {
+        display: flex;
+        justify-content: center;
+        color: $white;
+        font-size: 1.5rem;
+        margin: 2rem auto 1.5rem auto;
+    }
+    &_description {
+        text-align: center;
+        font-size: 0.875rem;
+        color: $lightGrey;
+        max-width: 80%;
+        margin: auto auto 1rem auto;
+    }
 }
 
