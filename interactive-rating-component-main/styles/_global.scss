@@ -8,9 +8,7 @@ html {
 body {
     font-size: 0.9375rem;
     font-family: 'Overpass', sans-serif;
-
     background-color: black;
-    
 }
 
 h1,h2,h3 {
@@ -40,7 +38,6 @@ main {
     transform: translate(-50%,-50%);
 }
 .question{
-    // display: none;
     display: grid;
     color: white;
     line-height: 1.3rem;
@@ -51,8 +48,6 @@ main {
 
     min-height: 300px;
     max-height: 90%;
-
-    // border: 1px blue solid;
 
     &_star{
         width: 40px;
@@ -81,7 +76,6 @@ main {
         max-height: 40px;
 
         max-width: 270px;
-        // max-width: 340px;
         
         display: flex;
 
@@ -139,8 +133,7 @@ main {
 .answer {
     // min-width: 25rem;
     display: none;
-    // display: grid;
-    border: 2px yellow solid;
+    
     background-color: $darkBlue;
     color: white;
 
@@ -181,3 +174,10 @@ main {
     }
 }
 
+footer {
+    bottom: 0;
+    color: red;
+    position: fixed;
+    float: left;
+    width: 100%;
+}
