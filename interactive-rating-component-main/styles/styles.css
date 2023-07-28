@@ -90,6 +90,7 @@ main {
 }
 .question_rating > span:hover {
   background-color: hsl(25, 97%, 53%);
+  cursor: pointer;
 }
 .question_rating > span:active {
   background-color: white;
@@ -114,6 +115,7 @@ main {
 }
 .question_btn:hover {
   background-color: white;
+  cursor: pointer;
 }
 .question--juSeCe {
   justify-self: center;
@@ -166,4 +168,8 @@ footer {
   position: fixed;
   float: left;
   width: 100%;
+}
+footer a, footer a:hover, footer a:focus, footer a:active, footer a:link {
+  text-decoration: none;
+  color: inherit;
 }/*# sourceMappingURL=styles.css.map */
