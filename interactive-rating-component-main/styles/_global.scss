@@ -185,8 +185,9 @@ footer {
     float: left;
     width: 100%;
 
-    a, a:hover,a:focus,a:active, a:link{
+    a, a:hover,a:focus,a:active, a:link,a:visited:not(:last-child){
         text-decoration: none;
         color: inherit;
+        
     }
 }

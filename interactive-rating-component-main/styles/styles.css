@@ -170,7 +170,7 @@ footer {
   float: left;
   width: 100%;
 }
-footer a, footer a:hover, footer a:focus, footer a:active, footer a:link {
+footer a, footer a:hover, footer a:focus, footer a:active, footer a:link, footer a:visited:not(:last-child) {
   text-decoration: none;
   color: inherit;
 }/*# sourceMappingURL=styles.css.map */
