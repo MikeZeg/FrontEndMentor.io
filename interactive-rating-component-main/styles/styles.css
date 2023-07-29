@@ -16,6 +16,9 @@ body {
   font-size: 0.9375rem;
   font-family: "Overpass", sans-serif;
   background-color: black;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
 h1, h2, h3 {
@@ -35,10 +38,6 @@ main {
   padding: auto 1.5625rem;
   font-size: 1.2rem;
   line-height: 1.5;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .question {
@@ -76,7 +75,6 @@ main {
   max-height: 40px;
   max-width: 270px;
   display: flex;
-  margin-bottom: 60px;
   color: hsl(217, 12%, 54%);
 }
 .question_rating > span {
@@ -105,8 +103,6 @@ main {
   background-color: hsl(25, 97%, 53%);
   font-size: 1.1rem;
   letter-spacing: 3px;
-  position: absolute;
-  bottom: 0;
   margin-bottom: 1rem;
   min-width: 278px;
   max-width: 340px;
