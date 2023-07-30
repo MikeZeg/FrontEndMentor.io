@@ -7,13 +7,35 @@ body {
   display: grid;
   place-items: center;
   font-size: 18px;
+  background-color: hsl(217, 54%, 11%);
 }
 
 main {
-  border: 1px red solid;
+  background-color: hsl(216, 50%, 16%);
+  min-width: 325px;
+  min-height: 540px;
+  max-width: 375px;
+  max-height: 100%;
 }
 
-.container__secondary {
-  border: 1px pink solid .container__secondary __image;
-  border-border: 1px blue solid;
+.ntf__primary {
+  display: flex;
+  margin: 2rem auto 1rem auto;
+  border: 1px yellow solid;
+  min-width: 80%;
+  max-width: 81%;
+  min-height: 300px;
+}
+.ntf__primary__image {
+  min-width: 100%;
+  background-image: url("../images/image-equilibrium.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nft__secondary {
+  border: 1px red solid;
+  display: flex;
+  min-width: 80%;
+  max-width: 81%;
 }/*# sourceMappingURL=styles.css.map */
