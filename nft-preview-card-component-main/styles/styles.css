@@ -50,9 +50,10 @@ main {
   background-size: 2.9375rem 3rem;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 1;
 }
 .ntf__primary:hover:before {
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 .ntf__secondary {

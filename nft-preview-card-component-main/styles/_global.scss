@@ -48,6 +48,7 @@ main {
     }
 
     &__image {
+        
         border-radius: 15px;
         min-width: 17rem;
         min-height: 18.75rem;
@@ -56,11 +57,12 @@ main {
         background-size: 2.9375rem 3rem;
         background-position: center;
         background-repeat: no-repeat;
+        opacity: 1;
 
     }
 
     &:hover:before {
-        opacity: 0.4;
+        opacity: 0.3;
     }
 }
 
