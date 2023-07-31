@@ -12,6 +12,7 @@ body {
 
 main {
   background-color: hsl(216, 50%, 16%);
+  border-radius: 15px;
   min-width: 325px;
   min-height: 540px;
   max-width: 375px;
@@ -21,21 +22,91 @@ main {
 .ntf__primary {
   display: flex;
   margin: 2rem auto 1rem auto;
-  border: 1px yellow solid;
   min-width: 80%;
   max-width: 81%;
   min-height: 300px;
 }
 .ntf__primary__image {
   min-width: 100%;
+  border-radius: 15px;
   background-image: url("../images/image-equilibrium.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.nft__secondary {
-  border: 1px red solid;
-  display: flex;
+.ntf__secondary {
+  margin: 1rem auto 1rem auto;
   min-width: 80%;
   max-width: 81%;
+}
+.ntf__secondary__number {
+  font-size: 1.25rem;
+  color: hsl(0, 0%, 100%);
+}
+.ntf__secondary__description {
+  color: hsl(215, 51%, 70%);
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.ntf__secondary__info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: hsl(215, 51%, 70%);
+}
+.ntf__secondary__info__price {
+  color: hsl(178, 100%, 50%);
+  margin-bottom: 1rem;
+  background-image: url("../images/icon-ethereum.svg");
+  background-size: 11px 14px;
+  background-repeat: no-repeat;
+}
+.ntf__secondary__info__price > span {
+  margin-left: 15px;
+}
+.ntf__secondary__info__countDownTime {
+  background-image: url("../images/icon-clock.svg");
+  background-repeat: no-repeat;
+  background-size: 14px 16px;
+}
+.ntf__secondary__info__countDownTime > span {
+  margin-left: 20px;
+}
+.ntf__secondary__creator {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  color: hsl(215, 51%, 70%);
+  font-size: 0.85rem;
+}
+.ntf__secondary__creator__photo {
+  width: 32px;
+  height: 32px;
+  border: 1px hsl(0, 0%, 100%) solid;
+  border-radius: 50% 50%;
+  background-image: url("../images/image-avatar.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ntf__secondary__creator__name {
+  margin-left: 15px;
+}
+.ntf__secondary__creator__name > span {
+  color: hsl(0, 0%, 100%);
+}
+
+.line {
+  height: 1px;
+  border-top: 1px hsl(215, 32%, 27%) solid;
+  margin-bottom: 0.8rem;
+}
+
+footer {
+  font-size: 0.5rem;
+  color: rgba(150, 53, 38, 0.689);
+}
+footer a, footer a:hover, footer a:focus, footer a:visited, footer a:link, footer a:active:not(:last-child) {
+  text-decoration: none;
+  color: inherit;
 }/*# sourceMappingURL=styles.css.map */

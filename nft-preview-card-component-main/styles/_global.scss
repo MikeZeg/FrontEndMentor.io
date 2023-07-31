@@ -14,6 +14,7 @@ body {
 main {
     // border: 1px red solid;
     background-color: $veryDarkBlueCard;
+    border-radius: 15px;
     
     min-width: 325px;
     min-height: 540px;
@@ -24,7 +25,6 @@ main {
 .ntf__primary {
     display: flex;
     margin: 2rem auto 1rem auto;
-    border: 1px yellow solid;
 
     min-width: 80%;
     max-width: 81%;
@@ -32,6 +32,7 @@ main {
 
     &__image {
         min-width: 100%;
+        border-radius: 15px;
         // min-height: 100%;
 
         background-image: url('../images/image-equilibrium.jpg');
@@ -40,12 +41,91 @@ main {
     }
 }
 
-.nft__secondary {
-    border: 1px red solid;
-    display: flex;
+.ntf__secondary {
+    margin: 1rem auto 1rem auto;
     min-width: 80%;
     max-width: 81%;
+    // line-height: 1.5rem;
 
-    // min-height: 200px;
-    // min-width: none;
+    &__number {
+        font-size: 1.25rem;
+        color: $white;
+    }
+    &__description {
+        color: $softBlue;
+        font-size: 0.875rem;
+
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem; 
+        color: $softBlue;       
+
+        &__price {
+            color: $cyan;
+            margin-bottom: 1rem;
+        
+            background-image: url('../images/icon-ethereum.svg');
+            background-size: 11px 14px;
+            background-repeat: no-repeat;
+
+            > span {
+                margin-left: 15px
+            }
+        }
+        &__countDownTime{
+            background-image: url('../images/icon-clock.svg');
+            background-repeat: no-repeat;
+            background-size: 14px 16px;
+
+            > span {
+                margin-left: 20px;
+            }
+            
+        }
+    }
+    &__creator {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        
+        color: $softBlue;        
+        font-size: 0.85rem;
+
+        &__photo{
+            width: 32px;
+            height: 32px;
+            border: 1px $white solid;
+            border-radius: 50% 50%;
+            background-image: url('../images/image-avatar.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+        }
+        &__name{
+            margin-left: 15px;
+            > span {
+                color:$white;
+            }
+        }
+    }
+}
+
+.line {
+    height: 1px;
+    border-top: 1px $veryDarkBlueLine solid;
+    margin-bottom: 0.8rem;
+}
+
+footer {
+    font-size: 0.5rem;
+    color:rgba(150, 53, 38, 0.689);
+
+    a,a:hover,a:focus,a:visited, a:link,a:active:not(:last-child){
+        text-decoration: none;
+        color: inherit;
+    }
 }
