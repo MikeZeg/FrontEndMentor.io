@@ -12,7 +12,7 @@ body {
 
 main {
   background-color: hsl(216, 50%, 16%);
-  border-radius: 15px;
+  border-radius: 10px;
   min-width: 325px;
   min-height: 540px;
   max-width: 375px;
@@ -20,18 +20,39 @@ main {
 }
 
 .ntf__primary {
+  content: " ";
   display: flex;
   margin: 2rem auto 1rem auto;
   min-width: 80%;
   max-width: 81%;
   min-height: 300px;
+  cursor: pointer;
+}
+.ntf__primary:before {
+  content: " ";
+  display: flex;
+  position: absolute;
+  min-width: 272px;
+  min-height: 300px;
+  border-radius: 10px;
+  background-image: url("../images/image-equilibrium.jpg");
+  background-size: cover;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  opacity: 1;
 }
 .ntf__primary__image {
-  min-width: 100%;
   border-radius: 15px;
-  background-image: url("../images/image-equilibrium.jpg");
+  min-width: 17rem;
+  min-height: 18.75rem;
+  background-color: hsl(178, 100%, 50%);
+  background-image: url("../images/icon-view.svg");
+  background-size: 2.9375rem 3rem;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+}
+.ntf__primary:hover:before {
+  opacity: 0.4;
 }
 
 .ntf__secondary {
@@ -42,6 +63,10 @@ main {
 .ntf__secondary__number {
   font-size: 1.25rem;
   color: hsl(0, 0%, 100%);
+}
+.ntf__secondary__number:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
 }
 .ntf__secondary__description {
   color: hsl(215, 51%, 70%);
@@ -59,19 +84,19 @@ main {
   color: hsl(178, 100%, 50%);
   margin-bottom: 1rem;
   background-image: url("../images/icon-ethereum.svg");
-  background-size: 11px 14px;
+  background-size: 0.6875rem 0.875rem;
   background-repeat: no-repeat;
 }
 .ntf__secondary__info__price > span {
-  margin-left: 15px;
+  margin-left: 0.9375rem;
 }
 .ntf__secondary__info__countDownTime {
   background-image: url("../images/icon-clock.svg");
   background-repeat: no-repeat;
-  background-size: 14px 16px;
+  background-size: 0.875rem 1rem;
 }
 .ntf__secondary__info__countDownTime > span {
-  margin-left: 20px;
+  margin-left: 1.25rem;
 }
 .ntf__secondary__creator {
   display: flex;
@@ -81,8 +106,8 @@ main {
   font-size: 0.85rem;
 }
 .ntf__secondary__creator__photo {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   border: 1px hsl(0, 0%, 100%) solid;
   border-radius: 50% 50%;
   background-image: url("../images/image-avatar.png");
@@ -90,10 +115,14 @@ main {
   background-size: cover;
 }
 .ntf__secondary__creator__name {
-  margin-left: 15px;
+  margin-left: 0.9375rem;
 }
 .ntf__secondary__creator__name > span {
   color: hsl(0, 0%, 100%);
+}
+.ntf__secondary__creator__name > span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
 }
 
 .line {
@@ -105,8 +134,9 @@ main {
 footer {
   font-size: 0.5rem;
   color: rgba(150, 53, 38, 0.689);
+  cursor: pointer;
 }
-footer a, footer a:hover, footer a:focus, footer a:visited, footer a:link, footer a:active:not(:last-child) {
+footer a, footer a:hover, footer a:focus, footer a:visited, footer a:active, footer a:link:not(:last-child) {
   text-decoration: none;
   color: inherit;
 }/*# sourceMappingURL=styles.css.map */
