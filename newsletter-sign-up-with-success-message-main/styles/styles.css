@@ -1,4 +1,8 @@
 html {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+}
+
+body {
+  color: hsl(234, 29%, 20%);
 }/*# sourceMappingURL=styles.css.map */
