@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/styles.css">
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
@@ -20,16 +22,16 @@
 </head>
 <body>
 
-  <header class="header">
+  <main class="main">
+    <figure class="main__figure">
+      <!-- add img -->
+    </figure>
 
-  </header>
-
-  <main>
-    <article class="main__part">
-      <div class="main__part__heading">
+    <article class="main__firstPart">
+      <div class="main__firstPart__heading">
         <h1>Stay updated!</h1>
       </div>
-      <div class="main__part__info">
+      <div class="main__firstPart__info">
         <h2>Join 60,000+ product managers receiving monthly updates on:</h2>
         <ul>
           <li>Product discovery and building what matters</li>
@@ -39,30 +41,26 @@
       </div>
     </article>
 
-    <section class="main__part__confirm">
-      <label for='email_input' class="main_part_text">Email address</label>
-      <input id="email_input" type="email" value="email@company.com">
-      <button>Subscribe to monthly newsletter</button>
+    <section class="main__secondPart__confirm">
+      <label for='email_input' class="main__secondPart__confirm__text">Email address</label>
+      <input class="main__secondPart__confirm" id="email_input" type="email" value="email@company.com">
+      <button class="btn main__secondPart__confirm">Subscribe to monthly newsletter</button>
+    </section>
+
+<!-- hiden section -->
+    <section class="success">
+      <div class="success__image"></div>
+  
+      <div class="success__heading"><h1>Thanks for subscribing!</h1></div>
+  
+      <div class="success__info">A confirmation email has been sent to <span>ash@loremcompany.com.</span> 
+        Please open it and click the button inside to confirm your subscription.</div>
+  
+      <dutton class="success__button">Dismiss message</button>
     </section>
 
   </main>
 
-  <aside class="success">
-    <div class="success__image"></div>
-
-    <div class="success__heading"><h1>Thanks for subscribing!</h1></div>
-
-    <div class="success__info">A confirmation email has been sent to <span>ash@loremcompany.com.</span> 
-      Please open it and click the button inside to confirm your subscription.</div>
-
-    <dutton class="success__button">Dismiss message</button>
-  </aside>
-
-  <!--
-  
-  email@company.com
-
-   -->
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

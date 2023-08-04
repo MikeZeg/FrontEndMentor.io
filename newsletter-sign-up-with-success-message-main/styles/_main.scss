@@ -1,0 +1,19 @@
+.main {
+    &__figure {
+        background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+        width: 400px;
+        height: 500px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__firstPart {
+        color: blue;
+        font-size: 2rem;
+    
+        &__heading{
+            color: red;
+        }
+    }
+    
+}

@@ -5,4 +5,23 @@ html {
 
 body {
   color: hsl(234, 29%, 20%);
+}
+
+.main__figure {
+  background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+  width: 400px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main__firstPart {
+  color: blue;
+  font-size: 2rem;
+}
+.main__firstPart__heading {
+  color: red;
+}
+
+footer {
+  color: red;
 }/*# sourceMappingURL=styles.css.map */
