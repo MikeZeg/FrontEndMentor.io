@@ -3,14 +3,35 @@ html {
   font-size: 1rem;
 }
 
-body {
-  color: hsl(234, 29%, 20%);
+h1, h2 {
+  font-size: 1rem;
+  color: black;
+  font-weight: 300;
+}
+h1 > ul, h2 > ul {
+  font-size: 1rem;
 }
 
+body {
+  color: hsl(234, 29%, 20%);
+  display: flex;
+  place-items: center;
+}
+
+main {
+  display: flex;
+}
+
+.main {
+  max-width: 930px;
+  max-height: 650px;
+  border: 1px red solid;
+}
 .main__figure {
+  float: right;
   background-image: url(../assets/images/illustration-sign-up-desktop.svg);
-  width: 400px;
-  height: 500px;
+  min-width: 400px;
+  min-height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
 }

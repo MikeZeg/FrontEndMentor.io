@@ -1,8 +1,15 @@
 .main {
+    max-width: 930px;
+    max-height: 650px;
+    border: 1px red solid;
+
     &__figure {
+        // position: absolute;
+        float: right;
+
         background-image: url(../assets/images/illustration-sign-up-desktop.svg);
-        width: 400px;
-        height: 500px;
+        min-width: 400px;
+        min-height: 600px;
         background-repeat: no-repeat;
         background-size: cover;
     }
