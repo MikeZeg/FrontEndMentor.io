@@ -1,26 +1,35 @@
 .main {
-    max-width: 930px;
-    max-height: 650px;
-    border: 1px red solid;
-
-    &__figure {
-        // position: absolute;
-        float: right;
-
-        background-image: url(../assets/images/illustration-sign-up-desktop.svg);
-        min-width: 400px;
-        min-height: 600px;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
+    
+    margin: 1rem auto 1rem auto;
+    
+//first part of main
     &__firstPart {
         color: blue;
         font-size: 2rem;
+        margin: 2rem;
     
         &__heading{
             color: red;
         }
+    &__article {
+        max-width: 50%;
+
+        }
+    }
+// second part of main
+    &__figure {
+        margin:0;
+        
+        content: ' ';
+        display: flex;
+        min-width: 400px;
+        min-height: 590px;
+
+        background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+        background-position: 50% 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        // background-size: 600px 400px;
     }
     
 }

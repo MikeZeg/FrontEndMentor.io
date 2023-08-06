@@ -3,46 +3,60 @@ html {
   font-size: 1rem;
 }
 
-h1, h2 {
+h1, h2, ul, li {
   font-size: 1rem;
   color: black;
   font-weight: 300;
 }
-h1 > ul, h2 > ul {
+h1 > ul, h2 > ul, ul > ul, li > ul {
   font-size: 1rem;
 }
 
 body {
   color: hsl(234, 29%, 20%);
-  display: flex;
   place-items: center;
+  margin: 1rem 1rem;
 }
 
 main {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main {
-  max-width: 930px;
-  max-height: 650px;
-  border: 1px red solid;
-}
-.main__figure {
-  float: right;
-  background-image: url(../assets/images/illustration-sign-up-desktop.svg);
-  min-width: 400px;
-  min-height: 600px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  margin: 1rem auto 1rem auto;
 }
 .main__firstPart {
   color: blue;
   font-size: 2rem;
+  margin: 2rem;
 }
 .main__firstPart__heading {
   color: red;
 }
+.main__firstPart__article {
+  max-width: 50%;
+}
+.main__figure {
+  margin: 0;
+  content: " ";
+  display: flex;
+  min-width: 400px;
+  min-height: 590px;
+  background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+  background-position: 50% 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 footer {
   color: red;
+}
+
+.success {
+  display: none;
+  place-items: center;
+  max-width: 90%;
+  max-height: 90%;
 }/*# sourceMappingURL=styles.css.map */
