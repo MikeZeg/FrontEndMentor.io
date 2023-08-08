@@ -7,6 +7,12 @@
         color: blue;
         font-size: 2rem;
         margin: 2rem;
+
+        display: grid;
+        justify-items: start;
+        align-content: center;
+        min-width: 50%;
+        min-height: 99%; 
     
         &__heading{
             color: red;
@@ -22,14 +28,13 @@
         
         content: ' ';
         display: flex;
-        min-width: 400px;
-        min-height: 590px;
+        min-width: 50%;
+        min-height: 99%;
 
         background-image: url(../assets/images/illustration-sign-up-desktop.svg);
         background-position: 50% 0;
         background-size: contain;
         background-repeat: no-repeat;
-        // background-size: 600px 400px;
     }
     
 }

@@ -16,6 +16,8 @@ body {
 
 main {
   display: flex;
+  min-width: 90%;
+  min-height: 90%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -37,6 +39,11 @@ footer {
   color: blue;
   font-size: 2rem;
   margin: 2rem;
+  display: grid;
+  justify-items: start;
+  align-content: center;
+  min-width: 50%;
+  min-height: 99%;
 }
 .main__firstPart__heading {
   color: red;
@@ -48,8 +55,8 @@ footer {
   margin: 0;
   content: " ";
   display: flex;
-  min-width: 400px;
-  min-height: 590px;
+  min-width: 50%;
+  min-height: 99%;
   background-image: url(../assets/images/illustration-sign-up-desktop.svg);
   background-position: 50% 0;
   background-size: contain;
