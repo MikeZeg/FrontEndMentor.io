@@ -10,7 +10,7 @@ h1, h2, ul, li{
 }
 
 body {
-    color: $darkSlateGrey;
+    background-color: $darkSlateGrey;
     // place-items: center;
     // margin: 1rem 1rem;
     justify-content: center;
@@ -19,8 +19,13 @@ body {
 // all in
 main {
     display: flex;
-    min-width: 90%;
-    min-height: 90%;
+    // min-width: 90%;
+    min-width: 480px;
+    // min-height: 90%;
+    min-height: 335px;
+
+    background-color: $white;
+    border-radius: 20px;
 
 // position on middle    
     position: absolute;
@@ -28,10 +33,8 @@ main {
     left: 50%;
     transform: translate(-50%,-50%);
     margin: 0;
-    
-//move left side /main__firstPart/ to center
 
-    justify-content: center;
+    // justify-content: center;
 }
 footer {
 // change position on tablet and less width
