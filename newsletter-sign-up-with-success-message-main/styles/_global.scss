@@ -11,30 +11,28 @@ h1, h2, ul, li{
 
 body {
     background-color: $darkSlateGrey;
-    // place-items: center;
-    // margin: 1rem 1rem;
     justify-content: center;
 }
 
-// all in
 main {
     display: flex;
-    // min-width: 90%;
-    min-width: 480px;
-    // min-height: 90%;
-    min-height: 335px;
+    
+    min-width: 55rem;
+    min-height: 563px;
 
     background-color: $white;
     border-radius: 20px;
 
-// position on middle    
+// position on middle   
     position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
     margin: 0;
 
-    // justify-content: center;
+//Tablet resolution
+
+//phone resolution
 }
 footer {
 // change position on tablet and less width

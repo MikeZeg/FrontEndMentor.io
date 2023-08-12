@@ -1,10 +1,5 @@
 .main {
     
-    // margin: auto auto;
-
-    // min-width: 100%;
-    // min-height: 100%;
-    
 //first part of main
     &__firstPart {
         color: blue;
@@ -12,7 +7,7 @@
         margin: 2rem;
         margin-right: 0;
 
-        display: grid;
+        // display: grid;
         // justify-items: start;
         // align-content: center;
         min-width: 50%;
@@ -20,18 +15,65 @@
     
         &__heading{
             color: red;
+
+            h1 {
+                color: black;
+                font-size: 3rem;
+                margin-left: 1rem;
+                margin-bottom: 0;
+                font-weight: 500;
+            }
         }
-    &__article {
-        max-width: 50%;
-        min-width: 49%;
+        &__info {
+            // min-width: 40%;
+            max-width: 75%;
+            margin: 0;
+            margin-left: 1rem;
+            
+            
+            font-size: 1rem;
+            font-weight: 300;
+            
+            h2, ul, li {
+                color: $charcoalGray;
+            }
+            li {
+                list-style-image: url('../assets/images/icon-success.svg');
+                
+            }
 
         }
     }
+//Input section
+    &__secondPart__confirm {
+        margin-left: 1rem;
+    }
+
+// button, input, label
+input {
+    color:$grey;
+    min-width: 60%;
+    min-height: 25px;
+}
+label {
+    font-size: 12px;
+    color: black;
+}
+button {
+    color: $white;
+    background-color: $darkSlateGrey;
+
+    min-height: 45px;
+    min-width: 80%;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
 // second part of main
     &__figure {
         content: ' ';
 
-        min-width: 38%;
+        min-width: 43%;
         max-width: 50%;
 
         margin:0;
