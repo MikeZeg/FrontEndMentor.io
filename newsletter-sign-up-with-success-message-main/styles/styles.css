@@ -3,7 +3,7 @@ html {
   font-size: 1rem;
 }
 
-h1, h2, ul, li {
+h1, ul, li {
   font-size: 1rem;
   color: black;
   font-weight: 300;
@@ -49,7 +49,7 @@ footer {
   font-size: 3rem;
   margin-left: 1rem;
   margin-bottom: 0;
-  font-weight: 500;
+  font-weight: 700;
 }
 .main__firstPart__info {
   max-width: 75%;
@@ -58,11 +58,25 @@ footer {
   font-size: 1rem;
   font-weight: 300;
 }
-.main__firstPart__info h2, .main__firstPart__info ul, .main__firstPart__info li {
+.main__firstPart__info ul, .main__firstPart__info li {
   color: hsl(235, 18%, 26%);
+}
+.main__firstPart__info ul {
+  margin-left: -1rem;
+  font-weight: 200;
 }
 .main__firstPart__info li {
   list-style-image: url("../assets/images/icon-success.svg");
+  color: black;
+  line-height: 2.5;
+  justify-content: center;
+}
+.main__firstPart__info li li::marker {
+  margin-left: 1rem;
+}
+.main__firstPart__info h2 {
+  font-size: 1.1rem;
+  color: black;
 }
 .main__secondPart__confirm {
   margin-left: 1rem;

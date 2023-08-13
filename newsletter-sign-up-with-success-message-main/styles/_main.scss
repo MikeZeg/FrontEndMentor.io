@@ -21,7 +21,7 @@
                 font-size: 3rem;
                 margin-left: 1rem;
                 margin-bottom: 0;
-                font-weight: 500;
+                font-weight: 700;
             }
         }
         &__info {
@@ -34,14 +34,31 @@
             font-size: 1rem;
             font-weight: 300;
             
-            h2, ul, li {
+            ul, li {
                 color: $charcoalGray;
             }
+            ul {
+                margin-left: -1rem;
+                font-weight: 200;
+            }
             li {
-                list-style-image: url('../assets/images/icon-success.svg');
-                
+               list-style-image: url('../assets/images/icon-success.svg');
+               color: black;
+               line-height: 2.5;               
+
+            li::marker{
+                margin-left: 1rem;
             }
 
+            }
+
+            h2 {
+                font-size: 1.1rem;
+                color: black;
+            }
+// change marker: size, position more center
+            ul li::marker {
+                
         }
     }
 //Input section
