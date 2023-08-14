@@ -36,6 +36,7 @@
             
             ul, li {
                 color: $charcoalGray;
+                width: 100%;
             }
             ul {
                 margin-left: -1rem;
@@ -44,21 +45,21 @@
             li {
                list-style-image: url('../assets/images/icon-success.svg');
                color: black;
-               line-height: 2.5;               
-
-            li::marker{
-                margin-left: 1rem;
+            //    line-height: 2.5;               
             }
-
-            }
-
             h2 {
                 font-size: 1.1rem;
                 color: black;
             }
-// change marker: size, position more center
-            ul li::marker {
+            h3 {
+                font-size: 1rem;
+                font-weight: 300;
                 
+                position: relative;
+                top: -4px;
+                margin-left: 0.7rem;
+                
+            }
         }
     }
 //Input section
