@@ -40,16 +40,18 @@
             }
             ul {
                 margin-left: -1rem;
+                margin-top: 2rem;
                 font-weight: 200;
+
             }
             li {
                list-style-image: url('../assets/images/icon-success.svg');
                color: black;
-            //    line-height: 2.5;               
             }
             h2 {
                 font-size: 1.1rem;
                 color: black;
+                font-weight: 300;
             }
             h3 {
                 font-size: 1rem;
@@ -65,16 +67,28 @@
 //Input section
     &__secondPart__confirm {
         margin-left: 1rem;
+        margin-top: 2rem;
     }
 
 // button, input, label
 input {
     color:$grey;
+
     min-width: 60%;
-    min-height: 25px;
+    min-height: 45px;
+
+    margin-left: 0;
+    margin-top: 5px;
+    padding-left: 15px;
+    border:1px $charcoalGray solid;
+    border-radius: 7px;
 }
 label {
-    font-size: 12px;
+    display: flex;
+    justify-content: flex-start;
+
+    font-size: 10px;
+    font-weight: 700;
     color: black;
 }
 button {
@@ -83,8 +97,9 @@ button {
 
     min-height: 45px;
     min-width: 80%;
-    border-radius: 15px;
+    border-radius: 7px;
     margin-top: 20px;
+    margin-left: 0;
 }
 
 // second part of main

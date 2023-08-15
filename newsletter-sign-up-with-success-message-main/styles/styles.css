@@ -64,6 +64,7 @@ footer {
 }
 .main__firstPart__info ul {
   margin-left: -1rem;
+  margin-top: 2rem;
   font-weight: 200;
 }
 .main__firstPart__info li {
@@ -73,6 +74,7 @@ footer {
 .main__firstPart__info h2 {
   font-size: 1.1rem;
   color: black;
+  font-weight: 300;
 }
 .main__firstPart__info h3 {
   font-size: 1rem;
@@ -83,14 +85,23 @@ footer {
 }
 .main__secondPart__confirm {
   margin-left: 1rem;
+  margin-top: 2rem;
 }
 .main input {
   color: hsl(231, 7%, 60%);
   min-width: 60%;
-  min-height: 25px;
+  min-height: 45px;
+  margin-left: 0;
+  margin-top: 5px;
+  padding-left: 15px;
+  border: 1px hsl(235, 18%, 26%) solid;
+  border-radius: 7px;
 }
 .main label {
-  font-size: 12px;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 10px;
+  font-weight: 700;
   color: black;
 }
 .main button {
@@ -98,8 +109,9 @@ footer {
   background-color: hsl(234, 29%, 20%);
   min-height: 45px;
   min-width: 80%;
-  border-radius: 15px;
+  border-radius: 7px;
   margin-top: 20px;
+  margin-left: 0;
 }
 .main__figure {
   content: " ";
