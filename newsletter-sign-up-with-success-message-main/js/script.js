@@ -22,3 +22,7 @@ function contentChange (){
     figurePart.style.display = 'none';
     success.style.display = 'flex';
 }
+
+function clearButton () {
+    console.log('go clear')
+}
