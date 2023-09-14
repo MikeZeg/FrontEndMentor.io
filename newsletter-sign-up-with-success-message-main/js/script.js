@@ -1,3 +1,4 @@
+
 //grab all section - main, hidden_page, email_input, button
 const main = document.querySelector('main')
 const firstPart = document.querySelector('.main__firstPart');
@@ -5,6 +6,8 @@ const figurePart = document.querySelector('.main__figure');
 const email = document.querySelector('#email_input');
 const btnEmail = document.querySelector('#btnEmail');
 const errorNote = document.querySelector('.main__secondPart__confirm__text span');
+const emailInput = document.querySelector('#email_input');
+
 
 const success = document.querySelector('.success');
 const successEmail = document.querySelector('.success__info span');
@@ -35,8 +38,11 @@ const successEmail = document.querySelector('.success__info span');
             success.style.display = 'flex';
             successEmail.textContent = checkEmail;
         }else{
-            alert('Please add correct Email. '+ checkEmail)
-            
+// alert('Please add correct Email. '+ checkEmail)
+            errorNote.style.display = 'flex';
+            emailInput.style.color = $tomato;
+            emailInput.style.backgroundColor = 'red';
+
 
         }
     }

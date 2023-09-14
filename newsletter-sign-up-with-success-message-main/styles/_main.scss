@@ -88,9 +88,19 @@ label {
     display: flex;
     justify-content: flex-start;
 
+    width: 79%;
+
     font-size: 10px;
     font-weight: 700;
     color: black;
+
+    span {
+        display: none;
+
+        float: right;
+        margin-left: auto;
+        color: red;
+    }
 }
 button {
     color: $white;
