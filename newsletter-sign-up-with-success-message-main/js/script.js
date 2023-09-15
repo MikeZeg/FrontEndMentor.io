@@ -17,12 +17,19 @@ const successEmail = document.querySelector('.success__info span');
     email.addEventListener('click', function(){
         console.log('Access')
         email.value = ''
+
+        errorNote.style.display = 'none';
+        emailInput.style.color = 'hsl(231, 7%,60%)';
+        emailInput.style.backgroundColor = 'hsl(0,0%,100%)';
+        emailInput.style.border  =  '1px $charcoalGray solid';
+
     });
 
     function contentChange (){
         const checkEmail = email.value;
         const mailFormat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
         const easyMailFormat = /^\S+@\S+\.\S+$/;
+
 
     //check email format
         if(checkEmail.match(easyMailFormat)){
@@ -40,9 +47,9 @@ const successEmail = document.querySelector('.success__info span');
         }else{
 // alert('Please add correct Email. '+ checkEmail)
             errorNote.style.display = 'flex';
-            emailInput.style.color = $tomato;
-            emailInput.style.backgroundColor = 'red';
-
+            emailInput.style.color = 'red';
+            emailInput.style.backgroundColor = 'hsl(0, 100%, 90%)';
+            emailInput.style.border  =  '1px red solid'
 
         }
     }

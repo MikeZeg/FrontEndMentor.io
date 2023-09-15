@@ -97,6 +97,9 @@ footer {
   border: 1px hsl(235, 18%, 26%) solid;
   border-radius: 7px;
 }
+.main input:hover {
+  cursor: pointer;
+}
 .main label {
   display: flex;
   justify-content: flex-start;
@@ -119,6 +122,11 @@ footer {
   border-radius: 7px;
   margin-top: 20px;
   margin-left: 0;
+}
+.main button:hover {
+  border: 0px;
+  cursor: pointer;
+  background: linear-gradient(to right, hsl(0, 67%, 59%), hsl(23, 82%, 46%));
 }
 .main__figure {
   content: " ";
