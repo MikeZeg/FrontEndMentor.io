@@ -23,6 +23,12 @@
                 margin-left: 1rem;
                 margin-bottom: 0;
                 font-weight: 700;
+
+                @include breakpoints-down(tablet){
+                    font-size: 1.5rem;
+                    margin-top:0;
+                }
+
             }
         }
         &__info {
@@ -43,6 +49,10 @@
                 margin-left: -1rem;
                 margin-top: 2rem;
                 font-weight: 200;
+
+                @include breakpoints-down(tablet){
+                    margin-top: 1rem;
+                }
 
             }
             li {
@@ -69,6 +79,10 @@
     &__secondPart__confirm {
         margin-left: 1rem;
         margin-top: 2rem;
+
+        @include breakpoints-down(tablet){
+            margin-top: 1.3rem;
+        }
     }
 
 // button, input, label
@@ -110,7 +124,7 @@ button {
     color: $white;
     background-color: $darkSlateGrey;
 
-    min-height: 56px;
+    min-height: 3.5rem;
     min-width: 80%;
     border-radius: 7px;
     margin-top: 20px;
@@ -120,6 +134,10 @@ button {
         border: 0px ;
         cursor: pointer;
         background: $buttonHover;
+    }
+
+    @include breakpoints-down(tablet){
+        min-height: 2.8125rem;
     }
 }
 

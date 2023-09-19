@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -26,11 +27,20 @@ main {
   transform: translate(-50%, -50%);
   margin: 0;
 }
+@media (max-width: 48.9375em) {
+  main {
+    min-width: 45rem;
+    min-height: 1rem;
+    max-height: 29rem;
+  }
+}
 
 footer {
   position: absolute;
   bottom: 0;
-  left: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .main__firstPart {
@@ -51,6 +61,12 @@ footer {
   margin-bottom: 0;
   font-weight: 700;
 }
+@media (max-width: 48.9375em) {
+  .main__firstPart__heading h1 {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+}
 .main__firstPart__info {
   max-width: 75%;
   margin: 0;
@@ -66,6 +82,11 @@ footer {
   margin-left: -1rem;
   margin-top: 2rem;
   font-weight: 200;
+}
+@media (max-width: 48.9375em) {
+  .main__firstPart__info ul {
+    margin-top: 1rem;
+  }
 }
 .main__firstPart__info li {
   list-style-image: url("../assets/images/icon-success.svg");
@@ -86,6 +107,11 @@ footer {
 .main__secondPart__confirm {
   margin-left: 1rem;
   margin-top: 2rem;
+}
+@media (max-width: 48.9375em) {
+  .main__secondPart__confirm {
+    margin-top: 1.3rem;
+  }
 }
 .main input {
   color: hsl(231, 7%, 60%);
@@ -117,7 +143,7 @@ footer {
 .main button {
   color: hsl(0, 0%, 100%);
   background-color: hsl(234, 29%, 20%);
-  min-height: 56px;
+  min-height: 3.5rem;
   min-width: 80%;
   border-radius: 7px;
   margin-top: 20px;
@@ -127,6 +153,11 @@ footer {
   border: 0px;
   cursor: pointer;
   background: linear-gradient(to right, hsl(0, 67%, 59%), hsl(23, 82%, 46%));
+}
+@media (max-width: 48.9375em) {
+  .main button {
+    min-height: 2.8125rem;
+  }
 }
 .main__figure {
   content: " ";
@@ -155,7 +186,7 @@ footer {
   max-width: 90%;
   max-height: 90%;
 }
-.success__image {
+ß .success__image {
   content: "";
   min-width: 80px;
   min-height: 74px;

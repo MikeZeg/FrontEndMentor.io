@@ -31,13 +31,23 @@ main {
     margin: 0;
 
 //Tablet resolution
+    @include breakpoints-down(tablet){
+        min-width: 45rem;
+        // max-width: ;
+        min-height: 1rem;
+        max-height: 29rem;
+    }
 
 //phone resolution
+
 }
 footer {
 // change position on tablet and less width
     position: absolute;
     bottom: 0;
-    left: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
 
 }
