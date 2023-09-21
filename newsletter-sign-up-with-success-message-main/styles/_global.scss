@@ -37,9 +37,13 @@ main {
         min-height: 1rem;
         max-height: 29rem;
     }
-
 //phone resolution
-
+    @include breakpoints-down(mobile){
+        display: block;
+        min-width: 100%;
+        min-height: 100%;
+        border-radius: 0;
+    }
 }
 footer {
 // change position on tablet and less width

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -34,6 +33,14 @@ main {
     max-height: 29rem;
   }
 }
+@media (max-width: 31.625em) {
+  main {
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 0;
+  }
+}
 
 footer {
   position: absolute;
@@ -60,6 +67,7 @@ footer {
   margin-left: 1rem;
   margin-bottom: 0;
   font-weight: 700;
+  min-width: 100%;
 }
 @media (max-width: 48.9375em) {
   .main__firstPart__heading h1 {
@@ -186,7 +194,7 @@ footer {
   max-width: 90%;
   max-height: 90%;
 }
-ß .success__image {
+.success__image {
   content: "";
   min-width: 80px;
   min-height: 74px;
