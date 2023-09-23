@@ -35,7 +35,7 @@ main {
 }
 @media (max-width: 31.625em) {
   main {
-    display: block;
+    display: grid;
     min-width: 100%;
     min-height: 100%;
     border-radius: 0;
@@ -58,6 +58,15 @@ footer {
   min-width: 50%;
   min-height: 90%;
 }
+@media (max-width: 31.625em) {
+  .main__firstPart {
+    position: absolute;
+    top: 43%;
+    margin: 0;
+    max-height: 55%;
+    min-height: 53%;
+  }
+}
 .main__firstPart__heading {
   color: red;
 }
@@ -67,7 +76,6 @@ footer {
   margin-left: 1rem;
   margin-bottom: 0;
   font-weight: 700;
-  min-width: 100%;
 }
 @media (max-width: 48.9375em) {
   .main__firstPart__heading h1 {
@@ -176,6 +184,16 @@ footer {
   background-image: url(../assets/images/illustration-sign-up-desktop.svg);
   background-size: 95% 100%;
   background-repeat: no-repeat;
+}
+@media (max-width: 31.625em) {
+  .main__figure {
+    position: absolute;
+    margin: 0;
+    height: 40%;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
 
 footer {

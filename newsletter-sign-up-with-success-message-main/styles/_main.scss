@@ -8,11 +8,17 @@
         margin: 2rem;
         margin-right: 0;
 
-        // display: grid;
-        // justify-items: start;
-        // align-content: center;
         min-width: 50%;
         min-height: 90%; 
+
+        @include breakpoints-down(mobile){
+            position: absolute;
+            top:43%;
+
+            margin: 0;
+            max-height: 55%;
+            min-height: 53%;
+        }
     
         &__heading{
             color: red;
@@ -31,7 +37,8 @@
 
                 // @include breakpoints-down(mobile){
                     // margin:0;
-                    min-width: 100%;
+                    // min-width: 100%;
+                    
                 // }
 
             }
@@ -159,6 +166,18 @@ button {
         background-image: url(../assets/images/illustration-sign-up-desktop.svg);
         background-size: 95% 100%;
         background-repeat: no-repeat;
+
+        @include breakpoints-down(mobile){
+            position: absolute;
+            margin: 0;
+
+            height: 40%;
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            
+            // background-size: cover;
+        }
     }
     
 }
