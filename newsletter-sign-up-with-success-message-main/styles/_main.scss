@@ -168,15 +168,17 @@ button {
         background-repeat: no-repeat;
 
         @include breakpoints-down(mobile){
-            position: absolute;
-            margin: 0;
-
-            height: 40%;
-            width: 100%;
-            min-width: 100%;
-            max-width: 100%;
             
-            // background-size: cover;
+            content: '';
+            background-image: url(../assets/images/illustration-sign-up-mobile.svg);
+            min-width: 100%;
+            min-height: 284px;
+            max-height: 284px;
+            background-position: 0 -12px;
+            margin: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+                    
         }
     }
     
