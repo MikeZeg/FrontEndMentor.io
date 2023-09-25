@@ -37,13 +37,16 @@ main {
   main {
     display: grid;
     min-width: 100%;
-    min-height: 100%;
+    min-height: 104%;
     border-radius: 0;
   }
 }
-@media (max-height: 45.5625em) {
+@media (max-width: 23.75em) {
   main {
-    min-height: 130%;
+    display: grid;
+    min-width: 100%;
+    min-height: 129%;
+    border-radius: 0;
   }
 }
 
@@ -54,28 +57,9 @@ footer {
   margin-right: auto;
   width: 100%;
 }
-@media (min-height: 45.625em) {
-  footer {
-    bottom: 0;
-    left: 0;
-  }
-}
-@media (max-height: 45.5625em) {
-  footer {
-    bottom: -47px;
-    left: -5px;
-  }
-}
-@media (min-height: 40.625) {
-  footer {
-    display: flex;
-    color: chartreuse;
-  }
-}
-@media (max-height: 40.5625) {
+@media (max-width: 23.75em) {
   footer {
     display: none;
-    color: black;
   }
 }
 

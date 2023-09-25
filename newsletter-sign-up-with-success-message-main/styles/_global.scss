@@ -30,10 +30,9 @@ main {
     transform: translate(-50%,-50%);
     margin: 0;
 
-//Tablet resolution
+// Tablet resolution
     @include breakpoints-down(tablet){
         min-width: 45rem;
-        // max-width: ;
         min-height: 1rem;
         max-height: 29rem;
     }
@@ -41,11 +40,15 @@ main {
     @include breakpoints-down(mobile){
         display: grid;
         min-width: 100%;
-        min-height: 100%;
+        min-height: 104%;
         border-radius: 0;
     }
-    @include breakpoints-height-down(xSmallMobile){
-        min-height: 130%;
+//small phones resolution
+    @include breakpoints-down(smallMobile){
+        display: grid;
+        min-width: 100%;
+        min-height: 129%;
+        border-radius: 0;
     }
 }
 footer {
@@ -56,21 +59,8 @@ footer {
     margin-right: auto;
     width: 100%;
 
-    @include breakpoints-height-up(xSmallMobile){
-        bottom: 0;
-        left: 0;
-       }
-    @include breakpoints-height-down(xSmallMobile){
-     bottom: -47px;
-     left: -5px;
-    }
-    @include breakpoints-height-up(lowesHeight){
-        display: flex;
-        color:chartreuse;
-       }
-    @include breakpoints-height-down(lowesHeight){
+    @include breakpoints-down(smallMobile){
         display: none;
-        color:black;
-       }
+    }
    
 }
