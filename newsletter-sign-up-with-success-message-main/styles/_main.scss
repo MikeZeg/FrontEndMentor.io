@@ -31,14 +31,13 @@
                 font-weight: 700;
 
                 @include breakpoints-down(tablet){
-                    font-size: 1.5rem;
+                    font-size: 2.1rem;
                     margin-top:0;
                 }
 
                 // @include breakpoints-down(mobile){
-                    // margin:0;
-                    // min-width: 100%;
-                    
+                //     margin:0;
+                //     min-width: 100%;
                 // }
 
             }
@@ -75,6 +74,10 @@
                 font-size: 1.1rem;
                 color: black;
                 font-weight: 300;
+
+                @include breakpoints-down(mobile){
+                    font-size: 1rem;
+                }
             }
             h3 {
                 font-size: 1rem;

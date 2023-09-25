@@ -12,6 +12,11 @@
     max-width: 90%;
     max-height: 90%;
 
+    // @include breakpoints-down(mobile){
+    //     margin-top:50%;
+
+    // }
+
     &__image {
         content: '';
 
@@ -41,6 +46,15 @@
     &__button {
         width: 100%;
         margin-top: 2.1875rem;
+   
+        @include breakpoints-down(mobile){
+            position: absolute;
+            bottom: 30px;
+            margin-left: -7%;
+            margin-right: auto;
+            width: 80%;
+        }
+        
     }
 
 }
