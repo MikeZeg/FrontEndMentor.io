@@ -41,6 +41,11 @@ main {
     border-radius: 0;
   }
 }
+@media (max-height: 45.5625em) {
+  main {
+    min-height: 130%;
+  }
+}
 
 footer {
   position: absolute;
@@ -48,6 +53,30 @@ footer {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+}
+@media (min-height: 45.625em) {
+  footer {
+    bottom: 0;
+    left: 0;
+  }
+}
+@media (max-height: 45.5625em) {
+  footer {
+    bottom: -47px;
+    left: -5px;
+  }
+}
+@media (min-height: 40.625) {
+  footer {
+    display: flex;
+    color: chartreuse;
+  }
+}
+@media (max-height: 40.5625) {
+  footer {
+    display: none;
+    color: black;
+  }
 }
 
 .main__firstPart {
@@ -62,7 +91,7 @@ footer {
   .main__firstPart {
     position: absolute;
     top: 43%;
-    margin: 0;
+    margin: 0 auto 0 1.5rem;
     max-height: 55%;
     min-height: 53%;
   }
@@ -187,15 +216,15 @@ footer {
 }
 @media (max-width: 31.625em) {
   .main__figure {
-    content: "";
     background-image: url(../assets/images/illustration-sign-up-mobile.svg);
     min-width: 100%;
-    min-height: 284px;
-    max-height: 284px;
-    background-position: 0 -12px;
+    min-height: 270px;
+    max-height: 314px;
+    background-position: center bottom;
     margin: 0;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 0 0 15px 15px;
   }
 }
 

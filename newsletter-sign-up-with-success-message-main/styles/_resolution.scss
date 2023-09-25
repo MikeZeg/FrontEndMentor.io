@@ -2,20 +2,35 @@
     
 }
 
-// 375px/420px?? (26.25em), 770px, 2000px
+// 375px/ (26.25em), 770px, 2000px
 $breakpoints-up:('mobile':'31.6875em','tablet':'49em','xdesktop':'125em');
 
 //374px,1023px,1999px
 $breakpoints-down:('mobile':'31.625em','tablet':'48.9375em','xdesktop':'124.9375em');
 
+// heigh - less then 650px, 730px
+$breakpoint-height-up:('lowesHeight':'40.625','xSmallMobile':'45.625em');
+$breakpoint-height-down:('lowesHeight':'40.5625','xSmallMobile':'45.5625em');
+
+// width resolution
 @mixin breakpoints-up($size){
     @media (min-width: map-get($breakpoints-up,$size)) {
         @content;        
     }
 }
-
 @mixin breakpoints-down($size){
     @media (max-width: map-get($breakpoints-down,$size)) {
         @content;        
     }
+}
+// height resolution
+@mixin breakpoints-height-up($size){
+    @media (min-height: map-get($breakpoint-height-up,$size)){
+        @content;
+    };   
+}
+@mixin breakpoints-height-down($size){
+    @media (max-height: map-get($breakpoint-height-down,$size)){
+        @content;
+    };   
 }

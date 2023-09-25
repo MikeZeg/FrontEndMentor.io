@@ -44,6 +44,9 @@ main {
         min-height: 100%;
         border-radius: 0;
     }
+    @include breakpoints-height-down(xSmallMobile){
+        min-height: 130%;
+    }
 }
 footer {
 // change position on tablet and less width
@@ -53,5 +56,21 @@ footer {
     margin-right: auto;
     width: 100%;
 
-
+    @include breakpoints-height-up(xSmallMobile){
+        bottom: 0;
+        left: 0;
+       }
+    @include breakpoints-height-down(xSmallMobile){
+     bottom: -47px;
+     left: -5px;
+    }
+    @include breakpoints-height-up(lowesHeight){
+        display: flex;
+        color:chartreuse;
+       }
+    @include breakpoints-height-down(lowesHeight){
+        display: none;
+        color:black;
+       }
+   
 }
