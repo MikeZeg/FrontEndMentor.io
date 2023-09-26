@@ -8,9 +8,13 @@ const btnEmail = document.querySelector('#btnEmail');
 const errorNote = document.querySelector('.main__secondPart__confirm__text span');
 const emailInput = document.querySelector('#email_input');
 
-
+//success section
 const success = document.querySelector('.success');
 const successEmail = document.querySelector('.success__info span');
+
+//check resolution 
+const checkWidth = window.innerWidth;
+
 
 // magic making: 
 
@@ -34,16 +38,21 @@ const successEmail = document.querySelector('.success__info span');
     //check email format
         if(checkEmail.match(easyMailFormat)){
             console.log('work');
+            console.log(checkWidth);
         
+        if(checkWidth < 507){//add changes
+            
+        }else{
             main.style.minWidth = '25rem';
             main.style.maxWidth = '26rem'
             main.style.minHeight = '26rem';
             main.style.maxHeight = '27rem'
-
+        }
             firstPart.style.display = 'none';
             figurePart.style.display = 'none';
             success.style.display = 'flex';
             successEmail.textContent = checkEmail;
+
         }else{
 // alert('Please add correct Email. '+ checkEmail)
             errorNote.style.display = 'flex';
