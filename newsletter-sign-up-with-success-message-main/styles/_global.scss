@@ -40,14 +40,14 @@ main {
     @include breakpoints-down(mobile){
         display: grid;
         min-width: 100%;
-        min-height: 105%;
+        min-height: 117%;
         border-radius: 0;
     }
 //small phones resolution
     @include breakpoints-down(smallMobile){
         display: grid;
         min-width: 100%;
-        min-height: 104%;
+        min-height: 119%;
         border-radius: 0;
     }
 }
