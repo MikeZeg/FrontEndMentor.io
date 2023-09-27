@@ -11,7 +11,7 @@ const emailInput = document.querySelector('#email_input');
 //success section
 const success = document.querySelector('.success');
 const successEmail = document.querySelector('.success__info span');
-
+const btnSuccess = document.querySelector('.success__button');
 //check resolution 
 const checkWidth = window.innerWidth;
 
@@ -40,13 +40,15 @@ const checkWidth = window.innerWidth;
             console.log('work');
             console.log(checkWidth);
         
-        if(checkWidth < 507){//add changes
+        if(checkWidth < 507){
+            btnSuccess.style.marginTop = '70%';
             
         }else{
             main.style.minWidth = '25rem';
             main.style.maxWidth = '26rem'
             main.style.minHeight = '26rem';
-            main.style.maxHeight = '27rem'
+            main.style.maxHeight = '27rem';
+            btnSuccess.style.marginTop = '10%';
         }
             firstPart.style.display = 'none';
             figurePart.style.display = 'none';

@@ -12,10 +12,11 @@
     max-width: 90%;
     max-height: 90%;
 
-    // @include breakpoints-down(mobile){
-    //     margin-top:50%;
+    @include breakpoints-down(mobile){
+        margin-top:29%;
+        margin-left: 10%;
 
-    // }
+    }
 
     &__image {
         content: '';
@@ -33,6 +34,10 @@
         font-size: 2.3rem;
         font-weight: 700;
         letter-spacing: 3px;
+
+        @include breakpoints-down(mobile){
+            font-size: 2.6rem;
+        }
         }
     }
     &__info {
@@ -41,20 +46,14 @@
         span {
             font-weight: 700;
         }
-
+        @include breakpoints-down(mobile){
+            font-size: 1.3rem;
+        }
     }
     &__button {
+
         width: 100%;
-        margin-top: 2.1875rem;
-   
-        @include breakpoints-down(mobile){
-            position: absolute;
-            bottom: 30px;
-            margin-left: -7%;
-            margin-right: auto;
-            width: 80%;
-        }
-        
+        margin-top: 2.1875rem;        
     }
 
 }
