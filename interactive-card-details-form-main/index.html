@@ -16,6 +16,23 @@
 </head>
 <body>
 
+
+<!-- Changes details -->
+  <div class="card-component-front">
+    <p id="card-component-front-accontNumber">0000 0000 0000 0000</p>
+    <p id="card-component-front-accontName">Adam Smith</p>
+    <p id="card-component-front-expire">00 / 00</p>
+  </div>
+  <div class="card-component-reverse">
+    <p>000</p>
+  </div>
+<!-- Inputs -->
+  <div class="card-component-input">
+    <input type="text" class="card-component-input-accontNumber" id="accontNumber" required minlength="16" maxlength="16" size="20">
+
+    <input type="month" class="card-component-input-expire" id="cardExpire" min="/10/2023"  value="12/2025" size="9" required>
+  </div>
+
   <!--
     1) Start from Mobile version:
         - Start Page: first page - page have two parts plus footer
@@ -61,5 +78,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+
+  <script src="./app/JS/interactive.js"></script>
 </body>
 </html>
