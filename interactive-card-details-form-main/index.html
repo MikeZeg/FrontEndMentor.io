@@ -42,19 +42,34 @@
         id="accontNumber" 
         name="accontNumber"
         value="0000 0000 0000 0000"
-        required minlength="16" maxlength="16" 
-        size="20">
+        required minlength="16" maxlength="16" inputmode="numeric" pattern="\d*"
+        size="20"
+      />
 <!-- Date with two saparated window/cels-->
+  <!-- Month -->
     <label for="expire">EXP. DATE (MM/YY)</label>
       <input 
-        type="month" 
+        type="number" 
         name="expire" 
-        class="card-component-input-expire" 
-        id="cardExpire" 
-        min="/10/2023"  
-        value="12/2025" 
-        size="9"
-        inputmode="numeric" pattern="\d*"
+        class="card-component-input-expire-month" 
+        id="cardExpireMonth" 
+        min="00"
+        max="12"
+        value="01" 
+        size="4"
+        required minlength="2" maxlength="2"
+      />
+  <!-- Year -->
+      <input 
+        type="number"
+        name="expire"
+        class="card-component-input-expire-year"
+        id="cardExpireYear"
+        min="00"
+        max="99"
+        value="01" 
+        size="4"
+        required minlength="2" maxlength="2"
       />
     
     <label for="CVC">CVC</label>
