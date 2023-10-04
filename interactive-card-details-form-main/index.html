@@ -28,9 +28,45 @@
   </div>
 <!-- Inputs -->
   <div class="card-component-input">
-    <input type="text" class="card-component-input-accontNumber" id="accontNumber" required minlength="16" maxlength="16" size="20">
+    <label for="holdName">CARDHOLDER NAME</label>
+      <input 
+        type="text" 
+        class="card-component-input-holdName" 
+        name="holdName"
+      />
 
-    <input type="month" class="card-component-input-expire" id="cardExpire" min="/10/2023"  value="12/2025" size="9" required>
+    <label for="accontNumber">CARD NUMBER</label>
+      <input 
+        type="text" 
+        class="card-component-input-accontNumber" 
+        id="accontNumber" 
+        name="accontNumber"
+        value="0000 0000 0000 0000"
+        required minlength="16" maxlength="16" 
+        size="20">
+<!-- Date with two saparated window/cels-->
+    <label for="expire">EXP. DATE (MM/YY)</label>
+      <input 
+        type="month" 
+        name="expire" 
+        class="card-component-input-expire" 
+        id="cardExpire" 
+        min="/10/2023"  
+        value="12/2025" 
+        size="9"
+        inputmode="numeric" pattern="\d*"
+      />
+    
+    <label for="CVC">CVC</label>
+      <input 
+        type="text" 
+        name="CVC" 
+        class="card-component-input-cvc" 
+        id="cardCvc" 
+        value="123" 
+        size="5" 
+        required minlength="3" maxlength="3"
+      />
   </div>
 
   <!--
