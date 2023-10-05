@@ -8,82 +8,46 @@
   
   <title>Frontend Mentor | Interactive card details form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta
+    name="description"
+    content="Solution of challenge from frontend Mentor - interactive card details form"
+  >
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
 </head>
 <body>
 
+  <main class="container-fluid row">
+<!-- img side container -->
+    <div class="container-fluid col">
+      <img class="img-fluid w-100 h-100" src="./images/bg-main-mobile.png" alt="side image">
+    </div>
+<!-- card details side -->
+    <div class="container-fluid col ">
+      
+        <form class="row">
+          <label for="">CARDHOLDER NAME</label>
+          <input class="input">
 
-<!-- Changes details -->
-  <div class="card-component-front">
-    <p id="card-component-front-accontNumber">0000 0000 0000 0000</p>
-    <p id="card-component-front-accontName">Adam Smith</p>
-    <p id="card-component-front-expire">00 / 00</p>
-  </div>
-  <div class="card-component-reverse">
-    <p>000</p>
-  </div>
-<!-- Inputs -->
-  <div class="card-component-input">
-    <label for="holdName">CARDHOLDER NAME</label>
-      <input 
-        type="text" 
-        class="card-component-input-holdName" 
-        name="holdName"
-      />
+          <Label class="" for="">CARD NUMBER</Label>
+          <input class="input ">
 
-    <label for="accontNumber">CARD NUMBER</label>
-      <input 
-        type="text" 
-        class="card-component-input-accontNumber" 
-        id="accontNumber" 
-        name="accontNumber"
-        value="0000 0000 0000 0000"
-        required minlength="16" maxlength="16" inputmode="numeric" pattern="\d*"
-        size="20"
-      />
-<!-- Date with two saparated window/cels-->
-  <!-- Month -->
-    <label for="expire">EXP. DATE (MM/YY)</label>
-      <input 
-        type="number" 
-        name="expire" 
-        class="card-component-input-expire-month" 
-        id="cardExpireMonth" 
-        min="00"
-        max="12"
-        value="01" 
-        size="4"
-        required minlength="2" maxlength="2"
-      />
-  <!-- Year -->
-      <input 
-        type="number"
-        name="expire"
-        class="card-component-input-expire-year"
-        id="cardExpireYear"
-        min="00"
-        max="99"
-        value="01" 
-        size="4"
-        required minlength="2" maxlength="2"
-      />
-    
-    <label for="CVC">CVC</label>
-      <input 
-        type="text" 
-        name="CVC" 
-        class="card-component-input-cvc" 
-        id="cardCvc" 
-        value="123" 
-        size="5" 
-        required minlength="3" maxlength="3"
-      />
-  </div>
+          <section class="col-6">
+            <label class="row" for="">EXP. DATE [mm/yy]</label>
+            <input class="input col-4">
+            <input class="input col-4">
+          </section>
+          <section class="col-6">
+            <label class="row" for="">CVC</label>
+            <input class="input col-10">
+          </section>
+          <button type="button" class="btn btn-primary mt-4 w-60 mx-auto">Confirm</button>
+        </form>
+      
+    </div>
 
+  </main>
   <!--
     1) Start from Mobile version:
         - Start Page: first page - page have two parts plus footer
@@ -127,10 +91,11 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">MikeZeg</a>.
   </div>
 
 
   <script src="./app/JS/interactive.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
