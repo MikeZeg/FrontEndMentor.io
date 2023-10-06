@@ -13,18 +13,26 @@
     content="Solution of challenge from frontend Mentor - interactive card details form"
   >
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+    crossorigin="anonymous"
+    >
 
 </head>
 <body>
 
-  <main class="container-fluid row">
+  <main class="container-fluid row p-0 m-0 g-0 gx-0" style="height:95vh;">
 <!-- img side container -->
-    <div class="container-fluid col">
-      <img class="img-fluid w-100 h-100" src="./images/bg-main-mobile.png" alt="side image">
-    </div>
+    <section class="container-fluid g-0 col-sm-12 col-md-6" style="height: 40%;">
+      <figure class="m-0" style="height:100%;">
+        <img class="img-fluid w-100 h-100" src="./images/bg-main-mobile.png" alt="side image">
+        <figcaption class="w-0"></figcaption>
+      </figure>
+      </section>
 <!-- card details side -->
-    <div class="container-fluid col ">
+    <section class="container-fluid col-sm-12 col-md-6 " style="height:60%">
       
         <form class="row">
           <label for="">CARDHOLDER NAME</label>
@@ -45,56 +53,16 @@
           <button type="button" class="btn btn-primary mt-4 w-60 mx-auto">Confirm</button>
         </form>
       
-    </div>
-
+    </section>
   </main>
-  <!--
-    1) Start from Mobile version:
-        - Start Page: first page - page have two parts plus footer
-                      when all details done/correct - change only bottom <div/parts.
-                      JS change digit on cards image - gray only safety 3-digit, color all details
-                      add url - name to avoid info from browser when someone will be check project
-
-    
-    2) Desktop Version
-    3) Extra - 
-        SEO - add meta description
-        Performance - verification code - JS, css. 
-  -->
-
-  <!-- 0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm -->
-
-  <!-- Completed state start -->
-
-  <!-- Thank you!
-  We've added your card details
-  Continue -->
-  
-  <div class="attribution">
+ 
+<!-- <section class="footer"> -->
+  <footer class="container-fluid row-1" style="height:10vh;">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">MikeZeg</a>.
-  </div>
-
-
+  </footer>
+<!-- </section> -->
+  
   <script src="./app/JS/interactive.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
