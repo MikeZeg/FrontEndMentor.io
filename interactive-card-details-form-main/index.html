@@ -32,31 +32,49 @@
   <main class="container w-100 g-0 m-0" style="height:95vh;">
     <section class="row text-center h-100">
 <!-- img side container (chanege style:height:100%/100vh to cover siede)-->
-    <section class="g-0 col-sm-12 col-md-6" style="height: 40%;">
+    <section class="g-0 col-sm-12 col-md-6" style="height: 35%;">
       <figure class="m-0" style="height:100%;">
         <img class="img-fluid w-100 h-100" src="./images/bg-main-mobile.png" alt="side image">
         <figcaption class="w-0"></figcaption>
       </figure>
       </section>
 <!-- card details side -->
-    <section class="col-sm-12 col-md-6 " style="height:60%">
+    <section class="col-sm-12 col-md-6" style="height:60%">
       
-        <form class="row">
-          <label for="">CARDHOLDER NAME</label>
-          <input class="input">
+        <form class="row mx-4">
 
-          <Label class="" for="">CARD NUMBER</Label>
-          <input class="input ">
+        <div class="input-group mb-3 p-0"> 
+          <label class="form-label row m-0" for="">CARDHOLDER NAME</label>
+          <div class="input-group">
+            <input class="form-control" type="text" id="cardHolderName" aria-describedby="cardHolderName">
+          </div>
+        </div>
 
-          <section class="col-6">
-            <label class="row" for="">EXP. DATE [mm/yy]</label>
-            <input class="input col-4">
-            <input class="input col-4">
-          </section>
-          <section class="col-6">
-            <label class="row" for="">CVC</label>
-            <input class="input col-10">
-          </section>
+        <div class="input-group mb-3 p-0"> 
+          <label class="form-label row mx-0" for="">CARD NUMBER</label>
+          <div class="input-group">
+            <input class="form-control" placeholder="0000-0000-0000-0000" type="text" id="cardNumber" aria-describedby="cardNumber">
+          </div>
+        </div>
+<!-- in one line - Expired date pluse CVC -->
+        <div class="input-group p-0">
+<!-- col 1 -->
+          <div class="col-6">
+              <label class="form-label" for="">EXP. DATE [MM/YY]</label>
+              <div class="form-group row m-0">
+                <input class="form-control me-2" placeholder="MM" type="text" id="cardNumber" aria-describedby="cardNumber" style="width: 75px;">
+                <input class="form-control" placeholder="YY" type="text" id="cardNumber" aria-describedby="cardNumber" style="width: 75px;">
+              </div>
+          </div>
+<!-- col 2-->
+          <div class="col-5 ms-4">
+              <label class="form-label row mx-2" for="">CVC</label>
+              <div class="input-group">
+                <input class="form-control" placeholder="CVC" type="text" id="cvc" aria-describedby="cvc" style="width: 70px;">
+              </div>
+          </div> 
+        </div>
+         
           <button type="button" class="btn btn-primary mt-4 w-60 mx-auto">Confirm</button>
         </form>
       
