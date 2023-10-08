@@ -1,0 +1,37 @@
+cardDetails {
+    height: 60%;
+    margin-top: 50px;
+
+    &__form {
+        
+
+        &__cardHolderName {
+            color:blue;
+        }
+        &__cardNumber {
+            color: pink;
+        }
+        &__expireDate {
+            color:aqua;
+
+
+            &__month {
+                color: white;
+            }
+            &__year{
+                color: lawngreen;
+            }
+            &__cvc {
+                color: firebrick;
+            }
+        }
+
+        &__btn {
+            width: 360px;
+            height: 10px;
+            margin:10px;
+            border: 1px solid red;
+        }
+    }
+
+}

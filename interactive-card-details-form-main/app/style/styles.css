@@ -62,4 +62,33 @@
 }
 .cards__image__2__accountDetails h4 span {
   margin-left: 120px;
+}
+
+cardDetails {
+  height: 60%;
+  margin-top: 50px;
+}
+cardDetails__form__cardHolderName {
+  color: blue;
+}
+cardDetails__form__cardNumber {
+  color: pink;
+}
+cardDetails__form__expireDate {
+  color: aqua;
+}
+cardDetails__form__expireDate__month {
+  color: white;
+}
+cardDetails__form__expireDate__year {
+  color: lawngreen;
+}
+cardDetails__form__expireDate__cvc {
+  color: firebrick;
+}
+cardDetails__form__btn {
+  width: 360px;
+  height: 10px;
+  margin: 10px;
+  border: 1px solid red;
 }/*# sourceMappingURL=styles.css.map */
