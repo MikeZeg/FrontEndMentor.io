@@ -1,0 +1,65 @@
+.cards {
+  min-height: 280px;
+  width: 100%;
+  position: fixed;
+  margin-top: -260px;
+  margin-left: 20px;
+}
+.cards__image__1 {
+  content: " ";
+  width: 290px;
+  height: 160px;
+  background-image: url("../../images/bg-card-back.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+.cards__image__1 span {
+  margin-top: 58px;
+  margin-left: 480px;
+}
+.cards__image__1 span h2 {
+  color: white;
+  font-size: 1rem;
+  margin-top: 44px;
+  margin-left: 189px;
+}
+.cards__image__2 {
+  content: " ";
+  position: absolute;
+  width: 290px;
+  height: 160px;
+  background-image: url("../../images/bg-card-front.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-left: 25px;
+  margin-top: -70px;
+}
+.cards__image__2__smallImage {
+  content: " ";
+  position: absolute;
+  width: 89px;
+  height: 47px;
+  background-image: url("../../images/card-logo.svg");
+  background-size: 62%;
+  background-repeat: no-repeat;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+.cards__image__2__accountDetails {
+  margin-top: 85px;
+}
+.cards__image__2__accountDetails h3 {
+  font-size: 1.4rem;
+  color: white;
+}
+.cards__image__2__accountDetails h4 {
+  font-size: 0.8rem;
+  color: white;
+  width: 100%;
+  margin-top: 20px;
+}
+.cards__image__2__accountDetails h4 span {
+  margin-left: 120px;
+}/*# sourceMappingURL=styles.css.map */
