@@ -35,62 +35,62 @@
     <!-- row - md ?? -->
     <section class="row text-center h-100">
 <!-- img side container (chanege style:height:100%/100vh to cover siede)-->
-    <section class="g-0 col-sm-12 col-md-6" style="height: 40%;">
-      <figure class="m-0" style="height:100%;">
-        <img class="img-fluid w-100 h-100" src="./images/bg-main-mobile.png" alt="side image">
-        <figcaption class="w-0"></figcaption>
-      </figure>
+      <section class="g-0 col-sm-12 col-md-6" style="height: 40%;">
+        <figure class="m-0" style="height:100%;">
+          <img class="img-fluid w-100 h-100" src="./images/bg-main-mobile.png" alt="side image">
+          <figcaption class="w-0"></figcaption>
+        </figure>
       </section>
 <!-- Cards image-->
-    <section class="cards p-0">
-      <div class="cards__image__1">
+      <section class="cards p-0">
+        <div class="cards__image__1">
           <span><h2>CVC</h2></span>
-       </div>
-      <div class="cards__image__2">
-        <div class="cards__image__2__smallImage"></div>
-        <div class="cards__image__2__accountDetails">
-          <h3 class="">0000 0000 0000 0000</h3>
-          <h4> Adam Smith <span id="cardExpDate">00/00</span></h4>
+        </div>
+        <div class="cards__image__2">
+          <div class="cards__image__2__smallImage"></div>
+          <div class="cards__image__2__accountDetails">
+            <h3 class="">0000 0000 0000 0000</h3>
+            <h4> Adam Smith <span id="cardExpDate">00/00</span></h4>
           </div>
         </div>
-    </section>
+      </section>
 
 <!-- Card details inputs -->
-    <section class="col-sm-12 col-md-6" style="height:60%; margin-top:50px;">
+      <section class="col-sm-12 col-md-6 cardDetails" style="height:60%; margin-top:50px;">
       
-        <form class="row mx-4">
+        <form class="row mx-4 cardDetails__form">
 
-        <div class="input-group mb-3"> 
-          <label class="form-label row m-0" for="">CARDHOLDER NAME</label>
-          <div class="input-group">
-            <input class="form-control" type="text" id="cardHolderName" aria-describedby="cardHolderName">
+          <div class="input-group mb-3 cardDetails__form__cardHolderName"> 
+            <label class="form-label row m-0" for="">CARDHOLDER NAME</label>
+            <div class="input-group">
+              <input class="form-control" type="text" id="cardHolderName" aria-describedby="cardHolderName">
+            </div>
           </div>
-        </div>
 
-        <div class="input-group mb-3"> 
-          <label class="form-label row mx-0" for="">CARD NUMBER</label>
-          <div class="input-group">
-            <input class="form-control" placeholder="0000-0000-0000-0000" type="text" id="cardNumber" aria-describedby="cardNumber">
+          <div class="input-group mb-3 cardDetails__form__cardNumber"> 
+            <label class="form-label row mx-0" for="">CARD NUMBER</label>
+            <div class="input-group">
+              <input class="form-control" placeholder="0000-0000-0000-0000" type="text" id="cardNumber" aria-describedby="cardNumber">
+            </div>
           </div>
-        </div>
 <!-- Card Details -->
-        <div class="input-group card_Details">
+          <div class="input-group cardDetails__form__expireDate">
 <!-- col 1 -->
-          <div class="col-6">
-              <label class="form-label" for="">EXP. DATE [MM/YY]</label>
-              <div class="form-group row m-0">
-                <input class="form-control me-2" placeholder="MM" type="text" id="cardNumber" aria-describedby="cardNumber" style="width: 75px;">
-                <input class="form-control" placeholder="YY" type="text" id="cardNumber" aria-describedby="cardNumber" style="width: 75px;">
-              </div>
-          </div>
+            <div class="col-6">
+                <label class="form-label" for="" style="margin-left:-30px">EXP. DATE [MM/YY]</label>
+                <div class="form-group row m-0">
+                  <input class="form-control me-2" placeholder="MM" type="text" id="cardExpireMouth" aria-describedby="cardNumber" style="width: 75px;">
+                  <input class="form-control" placeholder="YY" type="text" id="cardExpireYear" aria-describedby="cardNumber" style="width: 75px;">
+                </div>
+            </div>
 <!-- col 2-->
-          <div class="col-5 ms-4">
-              <label class="form-label row mx-2" for="">CVC</label>
-              <div class="input-group">
-                <input class="form-control" placeholder="CVC" type="text" id="cvc" aria-describedby="cvc" style="width: 70px;">
-              </div>
-          </div> 
-        </div>
+            <div class="col-5 ms-4 cardDetails__form__cvc">
+                <label class="form-label row mx-2" for="cvc">CVC</label>
+                <div class="input-group">
+                  <input class="form-control" placeholder="CVC" type="text" id="cvc" aria-describedby="cvc" style="width: 70px;">
+                </div>
+            </div> 
+          </div>
          
           <button type="button" class="btn btn-primary mt-4 mx-auto" style="width: 360px">Confirm</button>
         </form>
