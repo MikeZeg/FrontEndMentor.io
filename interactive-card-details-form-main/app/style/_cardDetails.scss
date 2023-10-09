@@ -2,6 +2,11 @@
     
     margin-top: 70px!important;
 
+    input::placeholder {
+        // font-weight: 500!important;
+        color: $LightGrayishViolet!important;
+    }
+
     &__form {
         
 
@@ -29,7 +34,7 @@
         &__btn {
             width: 355px;
             height: 50px;
-            // background-color: ;
+            background-color: $VeryDarkViolet!important;
         }
     }
 
