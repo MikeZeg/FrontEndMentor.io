@@ -1,0 +1,33 @@
+.successForm {
+    display: grid;
+    
+ 
+    figure {
+        
+    
+        img{
+            width: 80px;
+        }
+    
+    }
+    &__text {
+
+        h1{
+            font-size: 2rem!important;
+            // font-weight: 700!important;
+            color: $VeryDarkViolet;
+        }
+        h2{
+            
+            color: $DarkGrayishViolet!important;
+            font-size: 1.2rem!important;
+            font-weight: 700!important;
+        }
+    }
+    &__btn {
+            width: 355px;
+            height: 55px;
+            background-color: $VeryDarkViolet!important;
+    }
+
+}

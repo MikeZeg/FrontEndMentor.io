@@ -71,6 +71,7 @@ body {
 }
 
 .cardDetails {
+  display: none;
   margin-top: 70px !important;
 }
 .cardDetails input::-moz-placeholder {
@@ -82,5 +83,26 @@ body {
 .cardDetails__form__btn {
   width: 355px;
   height: 50px;
+  background-color: hsl(278, 68%, 11%) !important;
+}
+
+.successForm {
+  display: grid;
+}
+.successForm figure img {
+  width: 80px;
+}
+.successForm__text h1 {
+  font-size: 2rem !important;
+  color: hsl(278, 68%, 11%);
+}
+.successForm__text h2 {
+  color: hsl(279, 6%, 55%) !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+}
+.successForm__btn {
+  width: 355px;
+  height: 55px;
   background-color: hsl(278, 68%, 11%) !important;
 }/*# sourceMappingURL=styles.css.map */
