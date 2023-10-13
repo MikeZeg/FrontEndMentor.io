@@ -71,7 +71,6 @@ body {
 }
 
 .cardDetails {
-  display: none;
   margin-top: 70px !important;
 }
 .cardDetails input::-moz-placeholder {
@@ -87,7 +86,8 @@ body {
 }
 
 .successForm {
-  display: grid;
+  display: none;
+  margin: 0;
 }
 .successForm figure img {
   width: 80px;
