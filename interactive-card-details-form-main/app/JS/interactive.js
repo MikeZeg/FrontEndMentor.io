@@ -19,14 +19,11 @@ cardHolder.innerHTML = 'Adam Smith';
 // Card Input
 const catchCardName = document.querySelector('#cardHolderName');
 const catchCardNumber = document.querySelector('#cardNumber');
-
 const catchCardExpMonth =document.querySelector('#cardExpireMonth');
-
 const catchCardExpYear = document.querySelector('#cardExpireYear');
-
 const catchCvc = document.querySelector('#cvc');
 
-//AddEventListtenre
+//AddEventListenre
     catchCardName.addEventListener('input',(e)=>{
         cardHolder.textContent = e.target.value;
     });
@@ -55,6 +52,35 @@ cardExpDate.innerHTML = month +'/'+ year;
 // Function
 const btnPress = () =>{
 
+    console.log('Work')
+    checkInputName();
     
+
+
 }
 
+// check input data
+    //Name
+        const checkInputName = () =>{
+            const name = catchCardName.value;
+            console.log(name);
+
+            if(name !== blank){
+
+            }
+
+        }
+    // Card Number
+        const checkInputNumber = () => {
+            const number = catchCardNumber.value
+            console.log(number)
+        }
+    // Card CVC
+        const checkInputCvc = () => {
+            const cvc = catchCvc.value;
+            console.log(cvc)
+        }
+    // Expire date
+    
+
+// Wrong data - change windows values
