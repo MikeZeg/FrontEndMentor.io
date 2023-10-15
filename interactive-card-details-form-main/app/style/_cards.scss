@@ -62,21 +62,53 @@
         margin-top: 85px;
 
         h3 {
+          border: 1px solid red;
+
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+
           font-size: 1.4rem;
+          letter-spacing: 1.3px;
           color: white;
         }
-        h4 {
-          
-            font-size: 0.8rem;
-            color: white;
-            width: 100%;
+        &__bottom{
+          margin-left: 0;
+          margin-top: 10px;
 
-            margin-top:20px;
-        
-          span {
-            margin-left: 120px;
+          display: flex;
+          width: 100%;
+
+          &__name {
+            
+            h4 {
+              text-align: left;
+              margin-left: 25px;
+
+              font-size: 0.9rem;
+              color: white;
+              
+              width: 100%;
+            }
+          }
+          &__expDate {
+            
+
+            h4{
+              text-align: right;
+              margin-right: 25px;
+
+              font-size: 0.9rem;
+              color: white;
+
+              
+            }
           }
         }
+
+
+
+        
       }
 
       

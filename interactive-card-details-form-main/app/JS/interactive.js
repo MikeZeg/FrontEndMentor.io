@@ -1,11 +1,6 @@
 // alert('work')
 
-// //variable
-// let expMonth = '';
-// let expYear = '';
-// let cardFullName = '';
-
-// catch  - check ????
+// Card Image Replace
 const cardCvc = document.querySelector(".cards__image__1 span h2");
 const cardNumber = document.querySelector(".cards__image__2__accountDetails h3");
 const cardHolder = document.querySelector(".cards__image__2__accountDetails__bottom__name h4");
@@ -13,8 +8,14 @@ const cardExpDate = document.querySelector(".cards__image__2__accountDetails__bo
 
 // change dispaly details
 cardCvc.innerHTML = '123';
-cardNumber.innerHTML = '1111 1111 1111 1111 1111';
-cardHolder.innerHTML = 'My name iss.....';
+cardNumber.innerHTML = 'xxx xxxx xxxx xxxx';
+cardHolder.innerHTML = 'Adam Smith';
+cardExpDate.innerHTML = 'dziala'
+
+// year
+let month = '010';
+let year = '99';
+
 
 // Card Input
 const catchCardName = document.querySelector('#cardHolderName');
@@ -28,21 +29,31 @@ const catchCardExpYear = document.querySelector('#cardExpireYear');
 const catchCvc = document.querySelector('#cvc');
 
 //AddEventListtenre
-catchCardName.addEventListener('input',(e)=>{
-    cardHolder.textContent = e.target.value;
-});
+    catchCardName.addEventListener('input',(e)=>{
+        cardHolder.textContent = e.target.value;
+    });
+    catchCvc.addEventListener('input',(e)=>{
+        cardCvc.textContent = e.target.value;
+    });
+// Date
+    catchCardExpMonth.addEventListener('input',(e)=>{
+        month = catchCardExpMonth.value;
+        
+        cardExpDate.innerHTML = month +'/'+year ;
+        
+    });
+    catchCardExpYear.addEventListener('input',(e)=>{
+        year = catchCardExpYear.value;
+        
+        cardExpDate.innerHTML = month +'/'+year ;
+    });
+
+cardExpDate.innerHTML = month +'/'+ year;
 
 
-catchCardExpYear.addEventListener('input',(e)=>{
-    expDate = e.target.value;
-});
-catchCvc.addEventListener('input',(e)=>{
-    cardCvc.textContent = e.target.value;
-});
-
+// Function
 const btnPress = () =>{
 
-    cardCvc.innerHTML = '123';
-    cardNumber.innerHTML = '1111 1111 1111 1111 1111'
+    
 }
 
