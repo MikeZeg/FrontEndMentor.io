@@ -1,5 +1,9 @@
 // alert('work')
 
+// Date variables 
+    let month = '01';
+    let year = '99';
+
 // Card Image Replace
 const cardCvc = document.querySelector(".cards__image__1 span h2");
 const cardNumber = document.querySelector(".cards__image__2__accountDetails h3");
@@ -8,18 +12,12 @@ const cardExpDate = document.querySelector(".cards__image__2__accountDetails__bo
 
 // change dispaly details
 cardCvc.innerHTML = '123';
-cardNumber.innerHTML = 'xxx xxxx xxxx xxxx';
+cardNumber.innerHTML = '0000 0000 0000 0000';
 cardHolder.innerHTML = 'Adam Smith';
-cardExpDate.innerHTML = 'dziala'
-
-// year
-let month = '010';
-let year = '99';
-
+// cardExpDate.innerHTML = '';
 
 // Card Input
 const catchCardName = document.querySelector('#cardHolderName');
-
 const catchCardNumber = document.querySelector('#cardNumber');
 
 const catchCardExpMonth =document.querySelector('#cardExpireMonth');
@@ -38,15 +36,18 @@ const catchCvc = document.querySelector('#cvc');
 // Date
     catchCardExpMonth.addEventListener('input',(e)=>{
         month = catchCardExpMonth.value;
-        
         cardExpDate.innerHTML = month +'/'+year ;
         
     });
     catchCardExpYear.addEventListener('input',(e)=>{
         year = catchCardExpYear.value;
-        
         cardExpDate.innerHTML = month +'/'+year ;
     });
+// Card Number
+    catchCardNumber.addEventListener('input',(e)=>{
+        cardNumber.textContent = e.target.value;
+    })
+    
 
 cardExpDate.innerHTML = month +'/'+ year;
 
