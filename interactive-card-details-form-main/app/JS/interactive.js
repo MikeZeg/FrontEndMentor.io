@@ -20,6 +20,7 @@ const cardExpDate = document.querySelector(".cards__image__2__accountDetails__bo
 //Hidden info below input
 const hiddenCardHolderName = document.querySelector('.hidden__cardHolderName');
 const hiddenCardNumber = document.querySelector('.hidden__cardNumber');
+const hiddenCvc = document.querySelector('.hidden__cvc')
 
 // change dispaly details
 cardCvc.innerHTML = '123';
@@ -61,12 +62,12 @@ cardExpDate.innerHTML = month +'/'+ year;
 
 
 // Main Function Function
-const btnPress = () =>{
+const btnPress = () => {
 
     console.log('Work')
     // checkInputName();
-    // checkInputName();
-    checkInputNumber();
+    // checkInputNumber();
+    checkInputCvc();
 }
 
 // check input data
@@ -93,7 +94,11 @@ const btnPress = () =>{
             const checkNumbers = /^[0-9]+$/;
             console.log(number);
 
-            if(!(number.match(checkNumbers))){
+            if(number.length === 0){
+                hiddenCardNumber.style.display = 'flex';
+                hiddenCardNumber.innerHTML = 'Please add card Number';
+
+            }else if(!(number.match(checkNumbers))){
                 hiddenCardNumber.style.display = 'flex';
                 hiddenCardNumber.innerHTML = 'Only Numbers';
 
@@ -107,7 +112,28 @@ const btnPress = () =>{
     // Card CVC
         const checkInputCvc = () => {
             const cvc = catchCvc.value;
-            console.log(cvc)
+            const checkNumbers = /^[0-9]+$/;
+            
+            if(cvc.length === 0 ) {
+                console.log(cvc)
+                hiddenCvc.style.display = 'flex';
+            }else if(cvc.length <= 2) {
+                console.log(cvc);
+                hiddenCvc.style.display = 'flex';
+                hiddenCvc.innerHTML = 'To short';
+            }else{
+
+                if(!(cvc.match(checkNumbers))){
+                    console.log(cvc);
+                    hiddenCvc.style.display = 'flex';
+                    hiddenCvc.innerHTML = 'Only Digit';
+
+                }else{
+                    hiddenCvc.style.display = 'none';
+                }
+                
+            }
+            
         }
     // Expire date
         const checkDate = () => {
