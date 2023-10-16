@@ -1,14 +1,25 @@
 // alert('work')
+// Check date - That date is minium to add in Input
+let date = new Date();
+    
+let getYear = date.getFullYear();
+let getMonth = date.getMonth()+1; 
+console.log(getMonth + ' / ' + getYear)
 
 // Date variables 
-    let month = '01';
-    let year = '99';
+    let month = String(date.getMonth()+1).padStart(2,'0');
+    let year = String(getYear);
+    let acctualDate = new Date();
+    console.log(month + '/'+ year)
 
 // Card Image Replace
 const cardCvc = document.querySelector(".cards__image__1 span h2");
 const cardNumber = document.querySelector(".cards__image__2__accountDetails h3");
 const cardHolder = document.querySelector(".cards__image__2__accountDetails__bottom__name h4");
 const cardExpDate = document.querySelector(".cards__image__2__accountDetails__bottom__expDate h4");
+//Hidden info below input
+const hiddenCardHolderName = document.querySelector('.hidden__cardHolderName');
+const hiddenCardNumber = document.querySelector('.hidden__cardNumber');
 
 // change dispaly details
 cardCvc.innerHTML = '123';
@@ -49,31 +60,49 @@ const catchCvc = document.querySelector('#cvc');
 cardExpDate.innerHTML = month +'/'+ year;
 
 
-// Function
+// Main Function Function
 const btnPress = () =>{
 
     console.log('Work')
-    checkInputName();
-    
-
-
+    // checkInputName();
+    // checkInputName();
+    checkInputNumber();
 }
 
 // check input data
-    //Name
+    //Name - no blank, only letters
         const checkInputName = () =>{
             const name = catchCardName.value;
-            console.log(name);
+            const letters = /^[A-Za-z\s]+$/;
 
-            if(name !== blank){
-
+            if(name.length == 0){
+                console.log('Empty space - action')
+                hiddenCardHolderName.style.display = 'flex';
+            }else if(!(name.match(letters))) {
+                hiddenCardHolderName.innerHTML = 'Only letter'
+                hiddenCardHolderName.style.display = 'flex'
+            }else{
+                console.log('No blank')
+                hiddenCardHolderName.style.display = 'none';
             }
 
         }
-    // Card Number
+    // Card Number - only digit, to short between 15-16
         const checkInputNumber = () => {
             const number = catchCardNumber.value
-            console.log(number)
+            const checkNumbers = /^[0-9]+$/;
+            console.log(number);
+
+            if(!(number.match(checkNumbers))){
+                hiddenCardNumber.style.display = 'flex';
+                hiddenCardNumber.innerHTML = 'Only Numbers';
+
+            }else if(number.length < 14){
+                hiddenCardNumber.style.display = 'flex';
+                hiddenCardNumber.innerHTML = 'Number to short, Please check'
+            }else{
+                hiddenCardNumber.style.display = 'none';
+            }
         }
     // Card CVC
         const checkInputCvc = () => {
@@ -81,6 +110,12 @@ const btnPress = () =>{
             console.log(cvc)
         }
     // Expire date
+        const checkDate = () => {
+            const month = catchCardExpMonth.value;
+            const year = catchCardExpYear.value;
+            console.log(month);
+            console.log(year);
+        }
     
 
 // Wrong data - change windows values

@@ -4,6 +4,28 @@ body {
   font-weight: 500 !important;
 }
 
+.hidden {
+  display: none;
+  color: red;
+  font-size: 0.7rem;
+}
+.hidden__cardHolderName {
+  width: 100%;
+  text-align: left;
+}
+.hidden__cardNumber {
+  width: 100%;
+  text-align: left;
+}
+.hidden__expDate {
+  width: 100%;
+  text-align: left;
+}
+.hidden__cvc {
+  width: 100%;
+  text-align: left;
+}
+
 .cards {
   min-height: 280px;
   width: 100%;

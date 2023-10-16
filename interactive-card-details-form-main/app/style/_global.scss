@@ -7,3 +7,27 @@ body {
     font-family: 'Space Grotesk', sans-serif!important;
     font-weight: 500!important;
 }
+.hidden{
+    // display: flex;
+    display: none;
+    color: red;
+    font-size: 0.7rem;
+    &__cardHolderName{
+        width: 100%;
+        text-align: left;
+    }
+    &__cardNumber {
+        width: 100%;
+        text-align: left;
+
+    }
+    &__expDate {
+        width: 100%;
+        text-align: left;
+        
+    }
+    &__cvc {
+        width: 100%;
+        text-align: left; 
+    }
+}

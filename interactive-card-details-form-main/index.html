@@ -86,12 +86,17 @@
                 aria-describedby="cardHolderName"
               >
             </div>
+            <label class="hidden hidden__cardHolderName" for="cardHolderName">Can't be empty</label>
           </div>
 
           <div class="input-group mb-3 cardDetails__form__cardNumber"> 
             <label class="form-label row mx-0" for="cardNumber">CARD NUMBER</label>
             <div class="input-group">
-              <input 
+              <input
+                type="text"
+                value = ''
+                minlength="15"
+                maxlength="16"
                 class = "form-control" 
                 placeholder = "0000-0000-0000-0000" 
                 type="text" 
@@ -100,6 +105,7 @@
                 aria-describedby = "cardNumber"
               >
             </div>
+            <label class="hidden hidden__cardNumber" for="cardNumber">Wrong Format, numbers only</label>
           </div>
 <!-- Card Details -->
           <div class="input-group cardDetails__form__expireDate">
@@ -107,7 +113,14 @@
             <div class="col-6 cardDetails__form__expireDate__month">
                 <label class="form-label" for="" style="margin-left:-30px">EXP. DATE [MM/YY]</label>
                 <div class="form-group row m-0">
-                  <input 
+                  <input
+                    type="text"
+                    inputmode="numeric"
+                    value =''
+                    min="01"
+                    max="12"
+                    minlength="2"
+                    maxlength="2"
                     class="form-control me-2" 
                     placeholder="MM" type="text" 
                     id="cardExpireMonth" 
@@ -115,13 +128,20 @@
                     style="width: 75px;"
                   >
                   <input 
+                    type="text"
+                    inputmode="numeric"
+                    value=""
+                    min="2023"
+                    max="2099"
+                    minlength="4"
+                    maxlength="4"
                     class="form-control" 
-                    placeholder="YY" 
-                    type="text" 
+                    placeholder="YY"  
                     id="cardExpireYear" 
                     aria-describedby="cardExpireYear" 
                     style="width: 75px;">
                 </div>
+                <label class="hidden hidden__expDate" for="">Can't be blank</label>
             </div>
 <!-- col 2-->
             <div class="col-5 ms-4 cardDetails__form__expireDate__cvc">
@@ -135,6 +155,7 @@
                     aria-describedby="cvc" 
                     style="width: 70px;">
                 </div>
+                <label class="hidden hidden__cvc" for="cvc">Can't be blank</label>
             </div> 
           </div>
          
