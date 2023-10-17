@@ -7,10 +7,10 @@ let getMonth = date.getMonth()+1;
 console.log(getMonth + ' / ' + getYear)
 
 // Date variables 
-    let month = String(date.getMonth()+1).padStart(2,'0');
-    let year = String(getYear);
+    let currentMonth = String(date.getMonth()+1).padStart(2,'0');
+    let currentYear = String(getYear);
     let acctualDate = new Date();
-    console.log(month + '/'+ year)
+    // console.log(currentMonth + '/'+ currentYear)
 
 // Card Image Replace
 const cardCvc = document.querySelector(".cards__image__1 span h2");
@@ -26,7 +26,7 @@ const hiddenCvc = document.querySelector('.hidden__cvc')
 cardCvc.innerHTML = '123';
 cardNumber.innerHTML = '0000 0000 0000 0000';
 cardHolder.innerHTML = 'Adam Smith';
-// cardExpDate.innerHTML = '';
+// cardExpDate.innerHTML = currentMonth +'/'+ currentYear;
 
 // Card Input
 const catchCardName = document.querySelector('#cardHolderName');
@@ -36,38 +36,39 @@ const catchCardExpYear = document.querySelector('#cardExpireYear');
 const catchCvc = document.querySelector('#cvc');
 
 //AddEventListenre
+    //Name
     catchCardName.addEventListener('input',(e)=>{
         cardHolder.textContent = e.target.value;
     });
     catchCvc.addEventListener('input',(e)=>{
         cardCvc.textContent = e.target.value;
     });
-// Date
+    // Date
     catchCardExpMonth.addEventListener('input',(e)=>{
         month = catchCardExpMonth.value;
-        cardExpDate.innerHTML = month +'/'+year ;
+        year = catchCardExpYear.value;
+        cardExpDate.innerHTML = month + '/' + year ;
         
     });
     catchCardExpYear.addEventListener('input',(e)=>{
         year = catchCardExpYear.value;
-        cardExpDate.innerHTML = month +'/'+year ;
+        month = catchCardExpMonth.value;
+        cardExpDate.innerHTML = month +'/'+ year ;
     });
-// Card Number
+    // Card Number
     catchCardNumber.addEventListener('input',(e)=>{
         cardNumber.textContent = e.target.value;
     })
-    
-
-cardExpDate.innerHTML = month +'/'+ year;
-
 
 // Main Function Function
 const btnPress = () => {
 
-    console.log('Work')
+    console.log('Main btn function Work')
     // checkInputName();
     // checkInputNumber();
-    checkInputCvc();
+    // checkInputCvc();
+    checkDate();
+
 }
 
 // check input data
@@ -131,17 +132,26 @@ const btnPress = () => {
                 }else{
                     hiddenCvc.style.display = 'none';
                 }
-                
             }
-            
         }
     // Expire date
         const checkDate = () => {
             const month = catchCardExpMonth.value;
             const year = catchCardExpYear.value;
-            console.log(month);
-            console.log(year);
-        }
-    
+            const checkMonth = /^(0[1-9]|1[1,2])+$/;
+            
+            // console.log(month);
+            // console.log(year);
+// check if month is between 1-12
+// check if year is greater than current year
+// set up HTML min = currentYear
 
-// Wrong data - change windows values
+            if(month.length === 0 ){
+                console.log("Can't be blank")
+            }else if(!(month.match(checkMonth))){
+                console.log('Wrong date')
+            }
+
+
+
+        }
