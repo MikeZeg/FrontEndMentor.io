@@ -21,6 +21,7 @@ const cardExpDate = document.querySelector(".cards__image__2__accountDetails__bo
 const hiddenCardHolderName = document.querySelector('.hidden__cardHolderName');
 const hiddenCardNumber = document.querySelector('.hidden__cardNumber');
 const hiddenCvc = document.querySelector('.hidden__cvc')
+const hiddenDate = document.querySelector('.hidden__expDate')
 
 // change dispaly details
 cardCvc.innerHTML = '123';
@@ -47,9 +48,21 @@ const catchCvc = document.querySelector('#cvc');
     catchCardExpMonth.addEventListener('input',(e)=>{
         month = catchCardExpMonth.value;
         year = catchCardExpYear.value;
-        cardExpDate.innerHTML = month + '/' + year ;
-        
+        const checkMonth = /^(0[1-9]|1[1,2])+$/;
+
+        if(!(month.match(checkMonth))){
+            hiddenDate.style.display = 'flex'
+            console.log('Wrong')
+        }else if(month > 12){
+            console.log('Date is incorrect')
+            hiddenDate.style.display = 'flex'
+//check for 10 ??
+        }else{
+            cardExpDate.innerHTML = month + '/' + year;
+            hiddenDate.style.display = 'none'
+        }        
     });
+
     catchCardExpYear.addEventListener('input',(e)=>{
         year = catchCardExpYear.value;
         month = catchCardExpMonth.value;
@@ -151,7 +164,4 @@ const btnPress = () => {
             }else if(!(month.match(checkMonth))){
                 console.log('Wrong date')
             }
-
-
-
         }
