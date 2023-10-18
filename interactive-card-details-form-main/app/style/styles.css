@@ -107,7 +107,7 @@ body {
 }
 
 .cardDetails {
-  margin-top: 70px !important;
+  margin-top: 55px !important;
 }
 .cardDetails input::-moz-placeholder {
   color: hsl(270, 3%, 87%) !important;

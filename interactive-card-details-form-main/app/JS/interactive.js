@@ -1,40 +1,46 @@
 // alert('work')
-// Check date - That date is minium to add in Input
-let date = new Date();
+
+// Check date/time
+    let date = new Date();
     
-let getYear = date.getFullYear();
-let getMonth = date.getMonth()+1; 
-console.log(getMonth + ' / ' + getYear)
+    let getYear = date.getFullYear();
+    let getMonth = date.getMonth()+1; 
+    console.log(getMonth + ' / ' + getYear)
 
 // Date variables 
     let currentMonth = String(date.getMonth()+1).padStart(2,'0');
     let currentYear = String(getYear);
     let acctualDate = new Date();
-    // console.log(currentMonth + '/'+ currentYear)
 
-// Card Image Replace
-const cardCvc = document.querySelector(".cards__image__1 span h2");
-const cardNumber = document.querySelector(".cards__image__2__accountDetails h3");
-const cardHolder = document.querySelector(".cards__image__2__accountDetails__bottom__name h4");
-const cardExpDate = document.querySelector(".cards__image__2__accountDetails__bottom__expDate h4");
+// Card Image Replace - Injextion HTML
+    const cardCvc = document.querySelector(".cards__image__1 span h2");
+    const cardNumber = document.querySelector(".cards__image__2__accountDetails h3");
+    const cardHolder = document.querySelector(".cards__image__2__accountDetails__bottom__name h4");
+    const cardExpDate = document.querySelector(".cards__image__2__accountDetails__bottom__expDate h4");
 //Hidden info below input
-const hiddenCardHolderName = document.querySelector('.hidden__cardHolderName');
-const hiddenCardNumber = document.querySelector('.hidden__cardNumber');
-const hiddenCvc = document.querySelector('.hidden__cvc')
-const hiddenDate = document.querySelector('.hidden__expDate')
+    const hiddenCardHolderName = document.querySelector('.hidden__cardHolderName');
+    const hiddenCardNumber = document.querySelector('.hidden__cardNumber');
+    const hiddenCvc = document.querySelector('.hidden__cvc')
+    const hiddenDate = document.querySelector('.hidden__expDate')
+//Style injection
+    const styleMonth = document.querySelector("#cardExpireMonth").style;
+    const styleYear = document.querySelector('#cardExpireYear').style;
+    const styleCvc = document.querySelector("#cvc").style;
+    const styleCardNumber = document.querySelector("#cardNumber").style;
+    const styleCardName = document.querySelector("#cardHolderName").style;
 
 // change dispaly details
-cardCvc.innerHTML = '123';
-cardNumber.innerHTML = '0000 0000 0000 0000';
-cardHolder.innerHTML = 'Adam Smith';
+// cardCvc.innerHTML = '123';
+// cardNumber.innerHTML = '0000 0000 0000 0000';
+// cardHolder.innerHTML = 'Adam Smith';
 // cardExpDate.innerHTML = currentMonth +'/'+ currentYear;
 
 // Card Input
-const catchCardName = document.querySelector('#cardHolderName');
-const catchCardNumber = document.querySelector('#cardNumber');
-const catchCardExpMonth =document.querySelector('#cardExpireMonth');
-const catchCardExpYear = document.querySelector('#cardExpireYear');
-const catchCvc = document.querySelector('#cvc');
+    const catchCardName = document.querySelector('#cardHolderName');
+    const catchCardNumber = document.querySelector('#cardNumber');
+    const catchCardExpMonth =document.querySelector('#cardExpireMonth');
+    const catchCardExpYear = document.querySelector('#cardExpireYear');
+    const catchCvc = document.querySelector('#cvc');
 
 //AddEventListenre
     //Name
@@ -48,7 +54,7 @@ const catchCvc = document.querySelector('#cvc');
     catchCardExpMonth.addEventListener('input',(e)=>{
         month = catchCardExpMonth.value;
         year = catchCardExpYear.value;
-        const checkMonth = /^(0[1-9]|1[1,2])+$/;
+        const checkMonth = /^(0[1-9]|1[0,1,2])+$/;
 
         if(!(month.match(checkMonth))){
             hiddenDate.style.display = 'flex'
@@ -56,7 +62,6 @@ const catchCvc = document.querySelector('#cvc');
         }else if(month > 12){
             console.log('Date is incorrect')
             hiddenDate.style.display = 'flex'
-//check for 10 ??
         }else{
             cardExpDate.innerHTML = month + '/' + year;
             hiddenDate.style.display = 'none'
@@ -77,11 +82,10 @@ const catchCvc = document.querySelector('#cvc');
 const btnPress = () => {
 
     console.log('Main btn function Work')
-    // checkInputName();
-    // checkInputNumber();
-    // checkInputCvc();
-    checkDate();
-
+        checkInputName();
+        checkInputNumber();
+        checkInputCvc();
+        checkDate();
 }
 
 // check input data
@@ -93,12 +97,15 @@ const btnPress = () => {
             if(name.length == 0){
                 console.log('Empty space - action')
                 hiddenCardHolderName.style.display = 'flex';
+                styleCardName.border = '1px solid red';
             }else if(!(name.match(letters))) {
-                hiddenCardHolderName.innerHTML = 'Only letter'
-                hiddenCardHolderName.style.display = 'flex'
+                hiddenCardHolderName.innerHTML = 'Only letter';
+                hiddenCardHolderName.style.display = 'flex';
+                styleCardName.border = '1px solid red';
             }else{
                 console.log('No blank')
                 hiddenCardHolderName.style.display = 'none';
+                styleCardName.border = '';
             }
 
         }
@@ -111,16 +118,20 @@ const btnPress = () => {
             if(number.length === 0){
                 hiddenCardNumber.style.display = 'flex';
                 hiddenCardNumber.innerHTML = 'Please add card Number';
+                styleCardNumber.border = '1px solid red';
 
             }else if(!(number.match(checkNumbers))){
                 hiddenCardNumber.style.display = 'flex';
                 hiddenCardNumber.innerHTML = 'Only Numbers';
+                styleCardNumber.border = '1px solid red';
 
             }else if(number.length < 14){
                 hiddenCardNumber.style.display = 'flex';
-                hiddenCardNumber.innerHTML = 'Number to short, Please check'
+                hiddenCardNumber.innerHTML = 'Number to short, Please check';
+                styleCardNumber.border = '1px solid red';
             }else{
                 hiddenCardNumber.style.display = 'none';
+                styleCardNumber.border = '';
             }
         }
     // Card CVC
@@ -131,19 +142,23 @@ const btnPress = () => {
             if(cvc.length === 0 ) {
                 console.log(cvc)
                 hiddenCvc.style.display = 'flex';
+                styleCvc.border = '1px solid red';
             }else if(cvc.length <= 2) {
                 console.log(cvc);
                 hiddenCvc.style.display = 'flex';
                 hiddenCvc.innerHTML = 'To short';
+                styleCvc.border = '1px solid red';
             }else{
 
                 if(!(cvc.match(checkNumbers))){
                     console.log(cvc);
                     hiddenCvc.style.display = 'flex';
                     hiddenCvc.innerHTML = 'Only Digit';
+                    styleCvc.border = '1px solid red';
 
                 }else{
                     hiddenCvc.style.display = 'none';
+                    styleCvc.border = '';
                 }
             }
         }
@@ -151,17 +166,40 @@ const btnPress = () => {
         const checkDate = () => {
             const month = catchCardExpMonth.value;
             const year = catchCardExpYear.value;
-            const checkMonth = /^(0[1-9]|1[1,2])+$/;
-            
-            // console.log(month);
-            // console.log(year);
-// check if month is between 1-12
-// check if year is greater than current year
-// set up HTML min = currentYear
+            const checkMonth = /^(0[1-9]|1[0,1,2])+$/;
+            const checkYear = /^(0[2-9]|[0-9])+$/;
+            let dateFlag = false;
 
+// Split for two different statment - monthCheck and yearCheck ?? -
             if(month.length === 0 ){
                 console.log("Can't be blank")
+                hiddenDate.style.display = 'flex';
+                styleMonth.border = '1px solid red'; 
+                styleYear.border = '1px solid red';
+                dateFlag = false;
             }else if(!(month.match(checkMonth))){
                 console.log('Wrong date')
+                hiddenDate.style.display = 'flex';
+                styleMonth.border = '1px solid red'; 
+                dateFlag = false;
+            }else{
+                hiddenDate.style.display = 'none';
+                styleMonth.border = '';
+                dateFlag = true;
+            } 
+            
+            if(year < currentYear){
+                console.log("add correct date / year")
+                console.log(currentYear);
+                hiddenDate.style.display = 'flex';
+                hiddenDate.innerHTML = 'Add correct date' 
+                styleYear.border = '1px solid red';
+                dateFlag = false;
+            }else{
+                hiddenDate.style.display = 'none';
+                styleYear.border = ''
             }
+
+            const checkDateFlag = dateFlag != true ? hiddenDate.style.display= 'flex' : hiddenDate.style.display= 'none' ;
+
         }
