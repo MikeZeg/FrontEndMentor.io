@@ -2,17 +2,18 @@
 
 // Check date/time
     let date = new Date();
-    
     let getYear = date.getFullYear();
     let getMonth = date.getMonth()+1; 
     console.log(getMonth + ' / ' + getYear)
+    // Date variables 
+        let currentMonth = String(date.getMonth()+1).padStart(2,'0');
+        let currentYear = String(getYear);
+        let acctualDate = new Date();
 
-// Date variables 
-    let currentMonth = String(date.getMonth()+1).padStart(2,'0');
-    let currentYear = String(getYear);
-    let acctualDate = new Date();
-
-// Card Image Replace - Injextion HTML
+// Success part 
+    const successPage = document.querySelector(".successForm")
+    const startPage = document.querySelector(".cardDetails");
+// Card Image Replace - Injection HTML
     const cardCvc = document.querySelector(".cards__image__1 span h2");
     const cardNumber = document.querySelector(".cards__image__2__accountDetails h3");
     const cardHolder = document.querySelector(".cards__image__2__accountDetails__bottom__name h4");
@@ -28,12 +29,6 @@
     const styleCvc = document.querySelector("#cvc").style;
     const styleCardNumber = document.querySelector("#cardNumber").style;
     const styleCardName = document.querySelector("#cardHolderName").style;
-
-// change dispaly details
-// cardCvc.innerHTML = '123';
-// cardNumber.innerHTML = '0000 0000 0000 0000';
-// cardHolder.innerHTML = 'Adam Smith';
-// cardExpDate.innerHTML = currentMonth +'/'+ currentYear;
 
 // Card Input
     const catchCardName = document.querySelector('#cardHolderName');
@@ -82,6 +77,21 @@
 const btnPress = () => {
 
     console.log('Main btn function Work')
+    let pass = false;
+    // let pass = true;
+
+
+    if(pass != true){
+        successPage.style.display = 'none';
+        startPage.style.display = 'grid';
+    }else if(pass == true){
+        successPage.style.display = 'grid';
+        startPage.style.display = 'none';
+        
+    }else {
+        console.log('error')
+    }
+
         checkInputName();
         checkInputNumber();
         checkInputCvc();
@@ -103,9 +113,9 @@ const btnPress = () => {
                 hiddenCardHolderName.style.display = 'flex';
                 styleCardName.border = '1px solid red';
             }else{
-                console.log('No blank')
                 hiddenCardHolderName.style.display = 'none';
                 styleCardName.border = '';
+                
             }
 
         }
@@ -113,7 +123,7 @@ const btnPress = () => {
         const checkInputNumber = () => {
             const number = catchCardNumber.value
             const checkNumbers = /^[0-9]+$/;
-            console.log(number);
+            // console.log(number);
 
             if(number.length === 0){
                 hiddenCardNumber.style.display = 'flex';
@@ -132,6 +142,7 @@ const btnPress = () => {
             }else{
                 hiddenCardNumber.style.display = 'none';
                 styleCardNumber.border = '';
+                
             }
         }
     // Card CVC
@@ -159,6 +170,7 @@ const btnPress = () => {
                 }else{
                     hiddenCvc.style.display = 'none';
                     styleCvc.border = '';
+                    
                 }
             }
         }
@@ -198,6 +210,7 @@ const btnPress = () => {
             }else{
                 hiddenDate.style.display = 'none';
                 styleYear.border = ''
+                
             }
 
             const checkDateFlag = dateFlag != true ? hiddenDate.style.display= 'flex' : hiddenDate.style.display= 'none' ;
