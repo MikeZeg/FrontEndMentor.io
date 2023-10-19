@@ -40,7 +40,7 @@
 //AddEventListenre
     //Name
     catchCardName.addEventListener('input',(e)=>{
-        cardHolder.textContent = e.target.value;
+        cardHolder.textContent = e.target.value.toUpperCase();
     });
     catchCvc.addEventListener('input',(e)=>{
         cardCvc.textContent = e.target.value;
@@ -77,25 +77,49 @@
 const btnPress = () => {
 
     console.log('Main btn function Work')
+    
+    console.log('Pass start');
     let pass = false;
-    // let pass = true;
-
-
-    if(pass != true){
-        successPage.style.display = 'none';
-        startPage.style.display = 'grid';
-    }else if(pass == true){
-        successPage.style.display = 'grid';
-        startPage.style.display = 'none';
-        
-    }else {
-        console.log('error')
-    }
 
         checkInputName();
         checkInputNumber();
         checkInputCvc();
         checkDate();
+
+        if(checkInputName() != true){
+            console.log('BTN - card name - eror')
+            successPage.style.display = 'none';
+            startPage.style.display = '';
+        }else if(checkInputNumber() != true){
+            console.log('BTN - Card Number - error')
+            successPage.style.display = 'none';
+            startPage.style.display = '';
+        }else if(checkInputCvc() != true){
+            console.log('BTN - Cvc - eror')
+            successPage.style.display = 'none';
+            startPage.style.display = '';
+        }else if(checkDate() != true){
+            console.log('BTN - Date - eror')
+            successPage.style.display = 'none';
+            startPage.style.display = '';
+        }else if(checkDate() == true && checkInputCvc() == true && checkInputNumber() == true && checkInputName() == true){
+            console.log('if statment in check BTN - pass')
+            successPage.style.display = 'grid';
+            startPage.style.display = 'none';
+        }else {console.log('Error')}
+
+    // if(pass != true){
+    //     successPage.style.display = 'none';
+    //     startPage.style.display = 'grid';
+    //     console.log('if statment in check BTN - false')
+    // }else if(pass == true){
+    //     console.log('if statment in check BTN - pass')
+    //     successPage.style.display = 'grid';
+    //     startPage.style.display = 'none';
+    // }else {
+    //     console.log('if statment in check BTN - error')
+    //     console.log('error')
+    // }
 }
 
 // check input data
@@ -103,77 +127,104 @@ const btnPress = () => {
         const checkInputName = () =>{
             const name = catchCardName.value;
             const letters = /^[A-Za-z\s]+$/;
+            pass = true;
 
             if(name.length == 0){
+                pass = false;
                 console.log('Empty space - action')
                 hiddenCardHolderName.style.display = 'flex';
                 styleCardName.border = '1px solid red';
+                console.log(pass+ "check Input name - length error") 
+                return pass;
             }else if(!(name.match(letters))) {
+                pass = false;
                 hiddenCardHolderName.innerHTML = 'Only letter';
                 hiddenCardHolderName.style.display = 'flex';
                 styleCardName.border = '1px solid red';
+                console.log(pass+ "check Input name - rex error")
+                return pass;
             }else{
+                pass = true;
                 hiddenCardHolderName.style.display = 'none';
                 styleCardName.border = '';
                 
+                console.log(pass+ "check Input name - pass all good");
+                return pass;
             }
-
         }
+
     // Card Number - only digit, to short between 15-16
         const checkInputNumber = () => {
             const number = catchCardNumber.value
             const checkNumbers = /^[0-9]+$/;
-            // console.log(number);
+            let pass = false;
+            
 
             if(number.length === 0){
+                pass = false
                 hiddenCardNumber.style.display = 'flex';
                 hiddenCardNumber.innerHTML = 'Please add card Number';
                 styleCardNumber.border = '1px solid red';
+                return pass;
 
             }else if(!(number.match(checkNumbers))){
+                pass = false;
                 hiddenCardNumber.style.display = 'flex';
                 hiddenCardNumber.innerHTML = 'Only Numbers';
                 styleCardNumber.border = '1px solid red';
+                return pass;
 
             }else if(number.length < 14){
+                pass = false;
                 hiddenCardNumber.style.display = 'flex';
                 hiddenCardNumber.innerHTML = 'Number to short, Please check';
                 styleCardNumber.border = '1px solid red';
+                return pass;
             }else{
+                pass = true;
                 hiddenCardNumber.style.display = 'none';
                 styleCardNumber.border = '';
+                return pass;
                 
             }
         }
+
     // Card CVC
         const checkInputCvc = () => {
             const cvc = catchCvc.value;
             const checkNumbers = /^[0-9]+$/;
+            let pass = false;
             
             if(cvc.length === 0 ) {
+                pass = false;
                 console.log(cvc)
                 hiddenCvc.style.display = 'flex';
                 styleCvc.border = '1px solid red';
+                return pass;
             }else if(cvc.length <= 2) {
+                pass = false;
                 console.log(cvc);
                 hiddenCvc.style.display = 'flex';
                 hiddenCvc.innerHTML = 'To short';
                 styleCvc.border = '1px solid red';
+                return pass;
             }else{
-
                 if(!(cvc.match(checkNumbers))){
+                    pass = false;
                     console.log(cvc);
                     hiddenCvc.style.display = 'flex';
                     hiddenCvc.innerHTML = 'Only Digit';
                     styleCvc.border = '1px solid red';
-
+                    return pass = false;
                 }else{
+                    pass = true;
                     hiddenCvc.style.display = 'none';
                     styleCvc.border = '';
-                    
+                    return pass;
                 }
             }
         }
+
     // Expire date
         const checkDate = () => {
             const month = catchCardExpMonth.value;
@@ -181,23 +232,26 @@ const btnPress = () => {
             const checkMonth = /^(0[1-9]|1[0,1,2])+$/;
             const checkYear = /^(0[2-9]|[0-9])+$/;
             let dateFlag = false;
+            let pass = false;
 
-// Split for two different statment - monthCheck and yearCheck ?? -
             if(month.length === 0 ){
                 console.log("Can't be blank")
                 hiddenDate.style.display = 'flex';
                 styleMonth.border = '1px solid red'; 
                 styleYear.border = '1px solid red';
                 dateFlag = false;
+                pass = false;
             }else if(!(month.match(checkMonth))){
                 console.log('Wrong date')
                 hiddenDate.style.display = 'flex';
                 styleMonth.border = '1px solid red'; 
                 dateFlag = false;
+                pass = flase;
             }else{
                 hiddenDate.style.display = 'none';
                 styleMonth.border = '';
                 dateFlag = true;
+                pass = true;
             } 
             
             if(year < currentYear){
@@ -207,12 +261,13 @@ const btnPress = () => {
                 hiddenDate.innerHTML = 'Add correct date' 
                 styleYear.border = '1px solid red';
                 dateFlag = false;
+                pass = false;
+                
             }else{
                 hiddenDate.style.display = 'none';
                 styleYear.border = ''
-                
+                pass = true;   
             }
-
-            const checkDateFlag = dateFlag != true ? hiddenDate.style.display= 'flex' : hiddenDate.style.display= 'none' ;
-
+        const checkDateFlag = dateFlag != true ? hiddenDate.style.display= 'flex' : hiddenDate.style.display= 'none';
+        return pass;
         }
