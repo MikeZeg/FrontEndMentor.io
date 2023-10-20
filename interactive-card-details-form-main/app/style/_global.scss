@@ -7,6 +7,35 @@ body {
     font-family: 'Space Grotesk', sans-serif!important;
     font-weight: 500!important;
 }
+main {
+    // background-color: blue;
+
+
+    @include breakpoint-up(medium){
+        height: 92vh;
+    }
+    
+}
+.main{
+
+    @include breakpoint-up(medium){
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+
+}
+footer{
+    height: 1vh;
+}
+.figure {
+    height: 40%;
+
+    @include breakpoint-up(medium){
+        height: 100%;
+    }
+}
 .hidden{
     // display: flex;
     display: none;

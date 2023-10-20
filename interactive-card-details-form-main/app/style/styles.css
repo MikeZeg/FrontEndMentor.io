@@ -4,6 +4,33 @@ body {
   font-weight: 500 !important;
 }
 
+@media (min-width: 64em) {
+  main {
+    height: 92vh;
+  }
+}
+
+@media (min-width: 64em) {
+  .main {
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+footer {
+  height: 1vh;
+}
+
+.figure {
+  height: 40%;
+}
+@media (min-width: 64em) {
+  .figure {
+    height: 100%;
+  }
+}
+
 .hidden {
   display: none;
   color: red;
@@ -41,7 +68,12 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   margin-left: 100px;
-  margin-top: 30px;
+  margin-top: 50px;
+}
+@media (min-width: 64em) {
+  .cards__image__1 {
+    margin-left: 240px;
+  }
 }
 .cards__image__1 span {
   margin-top: 58px;

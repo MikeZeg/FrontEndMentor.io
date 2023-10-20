@@ -86,6 +86,9 @@ const btnPress = () => {
         checkInputCvc();
         checkDate();
 
+/* Below Test by each function */
+    /* From here  |    */
+   /*             V   */
         if(checkInputName() != true){
             console.log('BTN - card name - eror')
             successPage.style.display = 'none';
@@ -101,25 +104,12 @@ const btnPress = () => {
         }else if(checkDate() != true){
             console.log('BTN - Date - eror')
             successPage.style.display = 'none';
-            startPage.style.display = '';
+            startPage.style.display = ''; /*  <--- That code from above can be removed */
         }else if(checkDate() == true && checkInputCvc() == true && checkInputNumber() == true && checkInputName() == true){
             console.log('if statment in check BTN - pass')
             successPage.style.display = 'grid';
             startPage.style.display = 'none';
         }else {console.log('Error')}
-
-    // if(pass != true){
-    //     successPage.style.display = 'none';
-    //     startPage.style.display = 'grid';
-    //     console.log('if statment in check BTN - false')
-    // }else if(pass == true){
-    //     console.log('if statment in check BTN - pass')
-    //     successPage.style.display = 'grid';
-    //     startPage.style.display = 'none';
-    // }else {
-    //     console.log('if statment in check BTN - error')
-    //     console.log('error')
-    // }
 }
 
 // check input data
