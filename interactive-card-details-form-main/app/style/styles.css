@@ -72,7 +72,9 @@ footer {
 }
 @media (min-width: 64em) {
   .cards__image__1 {
-    margin-left: 240px;
+    position: absolute;
+    margin-left: 130px;
+    margin-top: 150px;
   }
 }
 .cards__image__1 span {
@@ -95,6 +97,13 @@ footer {
   background-repeat: no-repeat;
   margin-left: 25px;
   margin-top: -70px;
+}
+@media (min-width: 64em) {
+  .cards__image__2 {
+    position: absolute;
+    margin-top: -4%;
+    margin-left: 80px;
+  }
 }
 .cards__image__2__smallImage {
   content: " ";

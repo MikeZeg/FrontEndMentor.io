@@ -19,7 +19,10 @@
         margin-top: 50px;
 
         @include breakpoint-up(medium){
-          margin-left: 240px;
+          position:absolute;
+          margin-left: 130px;
+          margin-top: 150px;
+          //
         }
 
         span{
@@ -48,6 +51,12 @@
 
       margin-left: 25px;
       margin-top: -70px;
+
+      @include breakpoint-up(medium){
+        position: absolute;
+        margin-top: -4%;
+        margin-left: 80px;
+      }
 
       &__smallImage {
         content: " ";
