@@ -2,12 +2,22 @@
     // display: none;
     margin-top: 55px!important;
 
+    @include breakpoint-up(tablet){
+        margin-left: 19%;
+        width: 60%!important;
+    }
+    @include breakpoint-up(medium){
+        margin-left: 15%;
+        width:  41.66666667%!important;
+        // margin-top: 55px!important;
+    }
+    
+
     input::placeholder {
         // font-weight: 500!important;
         color: $LightGrayishViolet!important;
     }
 
-    
 
     &__form {
         

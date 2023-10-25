@@ -4,12 +4,19 @@ body {
   font-weight: 500 !important;
 }
 
+main {
+  height: 80vh;
+}
 @media (min-width: 64em) {
   main {
-    height: 92vh;
+    height: 100vh;
   }
 }
-
+@media (max-width: 47.9375em) {
+  main {
+    height: 87vh;
+  }
+}
 @media (min-width: 64em) {
   .main {
     align-items: center;
@@ -20,6 +27,11 @@ body {
 
 footer {
   height: 1vh;
+}
+@media (min-width: 64em) {
+  footer {
+    display: none;
+  }
 }
 
 .figure {
@@ -60,6 +72,12 @@ footer {
   margin-top: -260px;
   margin-left: 20px;
 }
+@media (min-width: 48em) {
+  .cards {
+    width: 100%;
+    position: fixed;
+  }
+}
 .cards__image__1 {
   content: " ";
   width: 290px;
@@ -67,14 +85,24 @@ footer {
   background-image: url("../../images/bg-card-back.png");
   background-size: 100%;
   background-repeat: no-repeat;
-  margin-left: 100px;
+  margin-left: 93px;
   margin-top: 50px;
+}
+@media (min-width: 48em) {
+  .cards__image__1 {
+    margin-left: 340px;
+  }
 }
 @media (min-width: 64em) {
   .cards__image__1 {
     position: absolute;
     margin-left: 130px;
     margin-top: 150px;
+  }
+}
+@media (max-width: 24em) {
+  .cards__image__1 {
+    margin-left: 55px;
   }
 }
 .cards__image__1 span {
@@ -103,6 +131,11 @@ footer {
     position: absolute;
     margin-top: -4%;
     margin-left: 80px;
+  }
+}
+@media (min-width: 48em) {
+  .cards__image__2 {
+    margin-left: 105px;
   }
 }
 .cards__image__2__smallImage {
@@ -150,6 +183,18 @@ footer {
 .cardDetails {
   margin-top: 55px !important;
 }
+@media (min-width: 48em) {
+  .cardDetails {
+    margin-left: 19%;
+    width: 60% !important;
+  }
+}
+@media (min-width: 64em) {
+  .cardDetails {
+    margin-left: 15%;
+    width: 41.66666667% !important;
+  }
+}
 .cardDetails input::-moz-placeholder {
   color: hsl(270, 3%, 87%) !important;
 }
@@ -165,6 +210,17 @@ footer {
 .successForm {
   display: none;
   margin: 0;
+  margin-top: 20px;
+}
+@media (min-width: 48em) {
+  .successForm {
+    margin-left: 24%;
+  }
+}
+@media (min-width: 64em) {
+  .successForm {
+    margin-left: 10%;
+  }
 }
 .successForm figure img {
   width: 80px;

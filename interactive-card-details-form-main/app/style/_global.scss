@@ -6,13 +6,19 @@ body {
     font-family: 'Roboto', sans-serif!important;
     font-family: 'Space Grotesk', sans-serif!important;
     font-weight: 500!important;
+
 }
 main {
-    // background-color: blue;
-
+    height: 80vh;
 
     @include breakpoint-up(medium){
-        height: 92vh;
+        height: 100vh;
+    }
+    @include breakpoint-down(tablet){
+        height: 87vh;
+    }
+    @include breakpoint-down(mobileSmall){
+        
     }
     
 }
@@ -28,9 +34,18 @@ main {
 }
 footer{
     height: 1vh;
+    
+
+    @include breakpoint-up(medium){
+        display:none;
+    }
 }
 .figure {
     height: 40%;
+
+    // @include breakpoint-up(tablet){
+    //     width: 100%;
+    // }
 
     @include breakpoint-up(medium){
         height: 100%;

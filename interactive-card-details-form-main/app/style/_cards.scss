@@ -6,6 +6,11 @@
   margin-top: -260px;
   margin-left: 20px;
 
+  @include breakpoint-up(tablet){
+    width: 100%;
+    position: fixed;
+  }
+
     &__image__1 {
         content: " ";
         width: 290px;
@@ -15,14 +20,19 @@
         background-size: 100%;
         background-repeat: no-repeat;
 
-        margin-left: 100px;
+        margin-left: 93px;
         margin-top: 50px;
 
+        @include breakpoint-up(tablet){
+          margin-left: 340px;
+        }
         @include breakpoint-up(medium){
           position:absolute;
           margin-left: 130px;
           margin-top: 150px;
-          //
+        }
+        @include breakpoint-down(mobileSmall){
+          margin-left:55px;
         }
 
         span{
@@ -56,6 +66,9 @@
         position: absolute;
         margin-top: -4%;
         margin-left: 80px;
+      }
+      @include breakpoint-up(tablet){
+        margin-left: 105px;
       }
 
       &__smallImage {

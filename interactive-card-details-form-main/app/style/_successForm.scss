@@ -1,7 +1,18 @@
 .successForm {
     display: none;
     margin: 0;
- 
+    margin-top: 20px;
+
+    @include breakpoint-up(tablet){
+        margin-left: 24%;
+    }
+    @include breakpoint-up(medium){
+        margin-left: 10%;
+    }
+    @include breakpoint-down(mobileSmall){
+        
+    }
+
     figure {
         
     
