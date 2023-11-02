@@ -28,7 +28,7 @@
         }
         @include breakpoint-up(medium){
           position:absolute;
-          margin-left: 15%;
+          margin-left: 18%;
           margin-top: 150px;
         }
         @include breakpoint-down(mobileSmall){
@@ -69,13 +69,14 @@
       margin-left: 25px;
       margin-top: -70px;
 
+      
+      @include breakpoint-up(tablet){
+        margin-left: 105px;
+      }
       @include breakpoint-up(medium){
         position: absolute;
         margin-top: -4%;
-        margin-left: 80px;
-      }
-      @include breakpoint-up(tablet){
-        margin-left: 105px;
+        margin-left:150px;
       }
 // change ?? no bootstrap ;)
       @include breakpoint-up(large){
