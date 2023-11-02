@@ -96,13 +96,23 @@ footer {
 @media (min-width: 64em) {
   .cards__image__1 {
     position: absolute;
-    margin-left: 130px;
+    margin-left: 15%;
     margin-top: 150px;
   }
 }
 @media (max-width: 24em) {
   .cards__image__1 {
     margin-left: 55px;
+  }
+}
+@media (min-width: 85.375em) {
+  .cards__image__1 {
+    margin-left: 20%;
+  }
+}
+@media (min-width: 100em) {
+  .cards__image__1 {
+    margin-left: 28%;
   }
 }
 .cards__image__1 span {
@@ -136,6 +146,16 @@ footer {
 @media (min-width: 48em) {
   .cards__image__2 {
     margin-left: 105px;
+  }
+}
+@media (min-width: 85.375em) {
+  .cards__image__2 {
+    margin-left: 15%;
+  }
+}
+@media (min-width: 100em) {
+  .cards__image__2 {
+    margin-left: 25%;
   }
 }
 .cards__image__2__smallImage {

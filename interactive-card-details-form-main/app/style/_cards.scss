@@ -28,11 +28,18 @@
         }
         @include breakpoint-up(medium){
           position:absolute;
-          margin-left: 130px;
+          margin-left: 15%;
           margin-top: 150px;
         }
         @include breakpoint-down(mobileSmall){
           margin-left:55px;
+        }
+
+        @include breakpoint-up(large){
+          margin-left: 20%;          
+        }
+        @include breakpoint-up(xlarge){
+          margin-left: 28%;
         }
 
         span{
@@ -69,6 +76,14 @@
       }
       @include breakpoint-up(tablet){
         margin-left: 105px;
+      }
+// change ?? no bootstrap ;)
+      @include breakpoint-up(large){
+        margin-left: 15%;
+      }
+      @include breakpoint-up(xlarge){
+        margin-left: 25%;
+        
       }
 
       &__smallImage {
