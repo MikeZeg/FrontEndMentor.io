@@ -34,9 +34,9 @@ const btnPress = async()=>{
 
 // check function/s
 
-    function checkFun (){
-        btnPress()
+    // function checkFun (){
+    //     btnPress()
 
-        setTimeout(checkFun,3000);
-    }
-    checkFun();
+    //     setTimeout(checkFun,3000);
+    // }
+    // checkFun();
