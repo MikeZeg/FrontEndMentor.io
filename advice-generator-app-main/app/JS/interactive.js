@@ -11,8 +11,6 @@ const adviceText = document.querySelector('.advice__card__container__text');
 // Btn
 const button = document.querySelector('.btn');
 
-
-
 // Function/s
 const btnPress = async()=>{
     console.log('Working')
@@ -31,6 +29,8 @@ const btnPress = async()=>{
     adviceText.innerHTML = slipText;
     // or adviceText.innerHTML = `"${slipText}"`
 }
+
+btnPress();
 
 // check function/s
 
