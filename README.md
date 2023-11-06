@@ -14,4 +14,4 @@ Junior
 |--|--|--|--|
 | [Live](https://mikezeg.github.io/FrontEndMentor.io/newsletter-sign-up-with-success-message-main/) | Newsletter sign up - in progress | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/results-summary-component-main) | HTML, JS, CSS - Sass |
 |[Live](https://mikezeg.github.io/FrontEndMentor.io/interactive-card-details-form-main)|Interactive card details form main | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/interactive-card-details-form-main) | HTML, JS, CSS - Bootstrap + scss|
-| [Live]()| Advice Generator App | HTML, JS-API, CSS - Sass | [Code]() |
+| [Live]()| Advice Generator App | [Code]() | HTML, JS-API, CSS - Sass |
