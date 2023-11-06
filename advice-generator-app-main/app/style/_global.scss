@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+:root{
+
+}
+*{
+    font-family: 'Manrope', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    
+    background: $darkBlue;
+    color: white;
+}
+.btn{
+
+}
+.advice__card{
+
+    width: 75%;
+    height: 39%;
+    background: $darkGrayishBlue;
+
+    
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+
+    border: 1px solid black;
+    border-radius: 50px;
+
+    &__container{
+
+        p{
+            color: $neonGreen;
+            padding: 15px;
+            letter-spacing: 2px;
+        }
+        h1{
+            margin: 0 2rem 0 2rem;
+    
+        }
+    
+    }
+    &__figure{
+        margin: 1rem 0 1rem 0;
+
+        &__img{
+
+        }
+    }
+    &__btn{
+        width: 60px;
+        height: 60px;
+        background: $neonGreen;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+
+        position: absolute;
+        margin-top: 262px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &:hover{
+            filter: drop-shadow(0 0 1rem hsl(150, 100%, 66%));
+            transition: all 0.2s ease-in-out;
+        }
+    }
+}
+.footer{
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+}
