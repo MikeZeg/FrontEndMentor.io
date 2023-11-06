@@ -9,8 +9,8 @@
     margin: 0;
 }
 body{
-    height: 100vh;
-    
+    min-height: 100vh;
+    display: flex;
     background: $darkBlue;
     color: white;
 }
@@ -18,18 +18,15 @@ body{
 
 }
 .advice__card{
-
-    width: 75%;
-    height: 39%;
+    width: 47%;
+    height: 38%;
     background: $darkGrayishBlue;
-
     
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%,-50%);
     
-
     display: grid;
     align-content: center;
     justify-items: center;
@@ -47,20 +44,18 @@ body{
         }
         h1{
             margin: 0 2rem 0 2rem;
-    
         }
-    
     }
     &__figure{
         margin: 1rem 0 1rem 0;
 
         &__img{
-
+            //below 425px?
         }
     }
     &__btn{
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         background: $neonGreen;
         border-radius: 50%;
         border: none;
@@ -68,6 +63,7 @@ body{
 
         position: absolute;
         margin-top: 262px;
+        bottom: -29px;
         
         display: flex;
         align-items: center;
@@ -85,4 +81,31 @@ body{
     display: flex;
     position: absolute;
     justify-content: center;
+
+}
+a:hover{
+    filter: drop-shadow(0 0 0.5rem hsl(50.6, 100%, 50%));
+    transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width:1024px){
+    .advice__card{
+        width: 90%;
+    
+        &__figure__img{
+            width: 80%;
+        }
+    }
+    .footer {
+        font-size: 0.8125rem;
+    }
+}
+@media screen and (min-width:2500px) {
+    body{
+        font-size: 2rem;
+    }
+    .advice__card__figure__img{
+        width: 100%;
+        height: 70%;
+    }
 }
