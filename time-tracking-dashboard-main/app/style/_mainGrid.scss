@@ -1,0 +1,14 @@
+.grid{
+    border: 1px solid red;
+    align-items: center;
+}
+.grid__main{
+    display: grid;
+    gap:15px;
+    grid-template-columns: repeat(4,1fr);
+}
+.grid__main__user{
+    // background-color: lightcoral;
+    // grid-column-start: 1;
+    grid-row: 1 / span 2;
+}
