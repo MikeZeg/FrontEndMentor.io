@@ -37,8 +37,44 @@ main {
   display: grid;
   gap: 15px;
   grid-template-columns: repeat(4, 1fr);
+  height: 320px;
 }
 
 .grid__main__user {
+  grid-column-start: 1;
   grid-row: 1/span 2;
+  height: 100%;
+}
+.grid__main__user .grid__main__user__info {
+  background-color: hsl(235, 45%, 61%);
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  border-radius: 21px;
+  height: 65%;
+}
+.grid__main__user .grid__main__user__info__figure {
+  margin: 0;
+}
+.grid__main__user .grid__main__user__info__figure img {
+  width: 70px;
+  margin: 0;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  border-radius: 50%;
+  border: 3px solid hsl(0, 0%, 100%);
+}
+.grid__main__user .grid__main__user__info__name {
+  margin: auto;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+}
+.grid__main__user__swap {
+  margin: 0;
+  margin-top: -1rem;
+  padding: 0;
+  z-index: 2;
+  height: 40%;
+  background-color: hsl(235, 46%, 20%);
+  border: 1px solid blue;
 }/*# sourceMappingURL=styles.css.map */

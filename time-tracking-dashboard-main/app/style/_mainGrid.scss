@@ -6,9 +6,54 @@
     display: grid;
     gap:15px;
     grid-template-columns: repeat(4,1fr);
+
+    height: 320px;
 }
 .grid__main__user{
     // background-color: lightcoral;
-    // grid-column-start: 1;
+    grid-column-start: 1;
     grid-row: 1 / span 2;
+
+    height: 100%;
+
+    .grid__main__user__info{
+        background-color: $desaturated;
+        margin:0;
+        padding: 0;
+        z-index: 1;
+        border-radius: 21px;
+
+        height: 65%;
+        
+        &__figure{
+            margin:0;
+            
+            img{
+                width: 70px;
+                
+                margin: 0;
+                margin-top:1rem;
+                margin-left: 1rem;
+                border-radius: 50%;
+            
+                border: 3px solid $whiteBorder;
+            }
+
+        }
+        &__name{
+            margin:auto;
+            margin-left:1.5rem;
+            margin-top: 1.5rem;
+        }
+    }
+    &__swap{
+        margin: 0;
+        margin-top: -1rem;
+        padding: 0;
+        z-index: 2;
+
+        height: 40%;
+        background-color: $darkBlue;
+        border: 1px solid blue;
+    }
 }
