@@ -16,6 +16,10 @@ main {
   transform: translate(-50%, -50%);
 }
 
+.second__section {
+  height: 100%;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -49,9 +53,10 @@ main {
   background-color: hsl(235, 45%, 61%);
   margin: 0;
   padding: 0;
+  height: 65%;
+  position: relative;
   z-index: 1;
   border-radius: 21px;
-  height: 65%;
 }
 .grid__main__user .grid__main__user__info__figure {
   margin: 0;
@@ -74,7 +79,23 @@ main {
   margin-top: -1rem;
   padding: 0;
   z-index: 2;
+  font-size: 0.8125rem;
   height: 40%;
   background-color: hsl(235, 46%, 20%);
   border: 1px solid blue;
+}
+.grid__main__user__swap ul {
+  margin-top: 2.1rem;
+  width: 30%;
+  list-style-type: none;
+  color: hsl(235, 45%, 61%);
+}
+.grid__main__user__swap ul :hover {
+  cursor: pointer;
+}
+.grid__main__user__swap ul li {
+  margin-left: -20px;
+}
+.grid__main__user__swap ul li:not(:last-child) {
+  margin-bottom: 0.7rem;
 }/*# sourceMappingURL=styles.css.map */
