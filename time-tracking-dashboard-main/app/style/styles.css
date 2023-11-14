@@ -16,8 +16,26 @@ main {
   transform: translate(-50%, -50%);
 }
 
+.top__part {
+  height: 22%;
+  background-color: orange;
+}
+
 .second__section {
   height: 100%;
+}
+
+.figure__img {
+  margin: 0;
+  height: 100%;
+}
+
+.bottom__part {
+  height: 78%;
+  border-radius: 25px;
+  background-color: blue;
+  position: relative;
+  z-index: 1;
 }
 
 .footer {
@@ -39,7 +57,7 @@ main {
 
 .grid__main {
   display: grid;
-  gap: 15px;
+  gap: 30px;
   grid-template-columns: repeat(4, 1fr);
   height: 320px;
 }
