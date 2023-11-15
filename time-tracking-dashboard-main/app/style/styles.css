@@ -10,6 +10,7 @@ body {
 }
 
 main {
+  width: 100vh;
   top: 50%;
   position: relative;
   left: 50%;
@@ -19,8 +20,7 @@ main {
 .grid__main {
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(4, 4fr);
-  justify-items: center;
+  grid-template-columns: repeat(4, auto);
 }
 
 .footer {
