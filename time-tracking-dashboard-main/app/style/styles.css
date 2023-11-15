@@ -16,26 +16,11 @@ main {
   transform: translate(-50%, -50%);
 }
 
-.top__part {
-  height: 22%;
-  background-color: orange;
-}
-
-.second__section {
-  height: 100%;
-}
-
-.figure__img {
-  margin: 0;
-  height: 100%;
-}
-
-.bottom__part {
-  height: 78%;
-  border-radius: 25px;
-  background-color: blue;
-  position: relative;
-  z-index: 1;
+.grid__main {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, 4fr);
+  justify-items: center;
 }
 
 .footer {
@@ -53,13 +38,6 @@ main {
 .grid {
   border: 1px solid red;
   align-items: center;
-}
-
-.grid__main {
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(4, 1fr);
-  height: 320px;
 }
 
 .grid__main__user {
@@ -98,7 +76,7 @@ main {
   padding: 0;
   z-index: 2;
   font-size: 0.8125rem;
-  height: 40%;
+  height: 38%;
   background-color: hsl(235, 46%, 20%);
   border: 1px solid blue;
 }

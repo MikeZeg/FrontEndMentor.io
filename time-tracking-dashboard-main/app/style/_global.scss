@@ -14,34 +14,18 @@ main{
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.top__part{
-    height: 22%;
-    
-    background-color: orange;
-}
-.second__section{
-    height: 100%;
-}
-.figure__img{
-    margin: 0;
-    height: 100%;   
-}
-.bottom__part{
-    height: 78%;
-    border-radius: 25px;
-    
-    background-color: blue;
+.grid__main{
+    display: grid;
+    gap:30px;
+    grid-template-columns: repeat(4,4fr);
+    justify-items: center;
 
-    position: relative;
-    z-index: 1;
 }
-
 
 .footer{
     position: absolute;
     bottom: 0;
     width: 100%;
-    // justify-content: center;
 
     text-decoration: none;
 
