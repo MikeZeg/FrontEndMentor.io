@@ -10,17 +10,12 @@ body {
 }
 
 main {
-  width: 100vh;
-  top: 50%;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.grid__main {
   display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(4, auto);
+  gap: 25px;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
+  grid-template-areas: "user work play study" "user exercise social selfCare";
 }
 
 .footer {
@@ -35,63 +30,73 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
-.grid {
+.box:not(:first-child) {
+  height: 200px;
+  width: 200px;
   border: 1px solid red;
-  align-items: center;
 }
 
-.grid__main__user {
-  grid-column-start: 1;
-  grid-row: 1/span 2;
-  height: 100%;
+.user {
+  grid-area: user;
+  width: 200px;
+  border: 1px solid orange;
 }
-.grid__main__user .grid__main__user__info {
-  background-color: hsl(235, 45%, 61%);
-  margin: 0;
-  padding: 0;
-  height: 65%;
-  position: relative;
-  z-index: 1;
-  border-radius: 21px;
+.user__details {
+  height: 320px;
+  background-color: hsl(246, 80%, 60%);
 }
-.grid__main__user .grid__main__user__info__figure {
-  margin: 0;
+.user__details__img img {
+  margin: 25px 0 0 25px;
+  width: 80px;
+  height: 80px;
 }
-.grid__main__user .grid__main__user__info__figure img {
-  width: 70px;
-  margin: 0;
-  margin-top: 1rem;
-  margin-left: 1rem;
-  border-radius: 50%;
-  border: 3px solid hsl(0, 0%, 100%);
+.user__details__name {
+  margin: 0 0 0 25px;
 }
-.grid__main__user .grid__main__user__info__name {
-  margin: auto;
-  margin-left: 1.5rem;
-  margin-top: 1.5rem;
+.user__details__name h1 {
+  font-size: 15px;
 }
-.grid__main__user__swap {
-  margin: 0;
-  margin-top: -1rem;
-  padding: 0;
-  z-index: 2;
-  font-size: 0.8125rem;
-  height: 38%;
+.user__details__name p {
+  font-size: 23px;
+}
+.user__period {
+  height: 165px;
   background-color: hsl(235, 46%, 20%);
-  border: 1px solid blue;
+  margin-top: -55px;
 }
-.grid__main__user__swap ul {
-  margin-top: 2.1rem;
-  width: 30%;
-  list-style-type: none;
-  color: hsl(235, 45%, 61%);
+.user__period ul {
+  padding: 0;
+  margin-left: 25px;
+  padding-top: 40px;
+  font-size: 13px;
 }
-.grid__main__user__swap ul :hover {
-  cursor: pointer;
+.user__period li {
+  list-style: none;
 }
-.grid__main__user__swap ul li {
-  margin-left: -20px;
+.user__period li:not(:last-child) {
+  margin-bottom: 15px;
 }
-.grid__main__user__swap ul li:not(:last-child) {
-  margin-bottom: 0.7rem;
+
+.work {
+  grid-area: work;
+}
+
+.play {
+  grid-area: play;
+}
+
+.study {
+  grid-area: study;
+}
+
+.exercise {
+  grid-area: exercise;
+}
+
+.social {
+  grid-area: social;
+}
+
+.selfCare {
+  grid-area: selfCare;
 }/*# sourceMappingURL=styles.css.map */
