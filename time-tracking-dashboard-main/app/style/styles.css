@@ -40,7 +40,6 @@ main {
 .user {
   grid-area: user;
   width: 200px;
-  border: 1px solid orange;
 }
 .user__details {
   height: 310px;
@@ -52,6 +51,8 @@ main {
   margin: 25px 0 0 25px;
   width: 80px;
   height: 80px;
+  border: 5px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
 }
 .user__details__name {
   margin: 10px 20px 0px 20px;

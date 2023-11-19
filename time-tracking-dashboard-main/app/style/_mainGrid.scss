@@ -1,3 +1,7 @@
+.box{
+    
+
+}
 .box:not(:first-child) {
     height: 200px;
     width: 200px;
@@ -7,8 +11,6 @@
 .user {
     grid-area: user;
     width: 200px;
-
-    border: 1px solid orange;
 
     &__details {
         height: 310px;
@@ -24,6 +26,9 @@
                 margin: 25px 0 0 25px;
                 width: 80px;
                 height: 80px;
+
+                border: 5px solid $whiteBorder;
+                border-radius: 50%;
             }
         }
         &__name {
@@ -69,8 +74,7 @@
             position: relative;
 
             &:hover{
-                color: $whiteBorder;
-                
+                color: $whiteBorder; 
             }
         }
         li:not(:last-child){
@@ -78,6 +82,7 @@
         }
     }
 }
+
 .work {
     grid-area: work;
 }
