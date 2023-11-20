@@ -1,12 +1,11 @@
 .box{
     
-
 }
 .box:not(:first-child) {
     height: 200px;
     width: 200px;
 
-    border: 1px solid red;
+    // border: 1px solid red;
 }
 .user {
     grid-area: user;
@@ -57,7 +56,6 @@
         margin-top: -55px;
         border-radius: 15px;
 
-        // position:relative;
 
        ul{
             padding: 0;
@@ -81,23 +79,4 @@
             margin-bottom: 15px;
         }
     }
-}
-
-.work {
-    grid-area: work;
-}
-.play {
-    grid-area: play;
-}
-.study {
-    grid-area: study;
-}
-.exercise {
-    grid-area: exercise;
-}
-.social {
-    grid-area: social;
-}
-.selfCare {
-    grid-area: selfCare;
 }

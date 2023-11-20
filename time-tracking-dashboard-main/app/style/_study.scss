@@ -1,0 +1,70 @@
+.study {
+    grid-area: study;
+    color: $paleBlue;
+    background-color: $lightRed;
+    border-radius: 20px;
+
+    &__img {
+        
+        height: 45px;
+
+        img {
+            height: 79px;
+            width: 79px;
+            
+            margin-left: 110px;
+        }
+    }
+    &__details {
+        background-color: $darkBlue;
+        color: $paleBlue;
+
+        height: 155px;
+
+        position: relative;
+        border-radius: 15px;
+
+        &__title {
+            margin: 0 20px 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: relative;
+
+            h1 {
+                margin-top: 23px;
+
+                font-size: 1rem;
+                font-weight: 400;
+
+            }
+            p {
+                margin: 0;
+                font-size: 1.4375rem;
+
+                &:hover {color: $whiteBorder;}
+            }
+        }
+        &__info {
+            margin: 0;
+            margin-left: 20px;
+            
+            h2 {
+                margin: 0;
+                margin-top: 8px;
+
+                font-size: 2.5rem;
+                font-weight: 400;
+            }
+            h3 {
+                font-size: 10px;
+                font-weight: 400;
+            }
+        }
+    
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

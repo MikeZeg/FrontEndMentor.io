@@ -3,9 +3,9 @@
     font-family: 'Rubik', sans-serif;    
 }
 body {
-    height: 100vh   ;
+    height: 100vh;
     color:white;
-    background-color: darkgray;
+    background-color: $veryDark;
 }
 main {
     display: grid;
@@ -26,10 +26,14 @@ main {
 
     text-align: center;
 
-    text-decoration: none;
+    a {
+        color: white;
+        text-decoration: none;
+    }
 
     a:hover {
         cursor: pointer;
+        color: hsl(50.6, 100%,50%);
         filter: drop-shadow(0 0 0.9rem hsl(50.6, 100%, 50%));
         transition: all 0.3s ease-in-out;
     }
