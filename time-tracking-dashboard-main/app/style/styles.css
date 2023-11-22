@@ -8,7 +8,6 @@ body {
   color: white;
   background-color: hsl(226, 43%, 10%);
 }
-
 main {
   display: grid;
   gap: 25px;
@@ -17,12 +16,39 @@ main {
   align-content: center;
   grid-template-areas: "user work play study" "user exercise social selfCare";
 }
+@media (max-width: 900px) {
+  main {
+    display: block;
+    width: 80vh;
+    height: auto;
+    margin: 10px auto 10px auto;
+    grid-template-areas: " user " " work " " play " " study " " exercise " " social " " selfCare ";
+  }
+}
+@media (max-width: 500px) {
+  main {
+    display: block;
+    width: 46vh;
+  }
+}
+@media (max-width: 400px) {
+  main {
+    display: block;
+    width: 41vh;
+  }
+}
 
 .footer {
   position: absolute;
   bottom: 0px;
   width: 100%;
   text-align: center;
+}
+@media (max-width: 900px) {
+  .footer {
+    display: none;
+    top: 0;
+  }
 }
 .footer a {
   color: white;
@@ -35,20 +61,52 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
+@media (max-width: 900px) {
+  .box {
+    margin-bottom: 20px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
 .box:not(:first-child) {
   height: 200px;
   width: 200px;
+}
+@media (max-width: 900px) {
+  .box:not(:first-child) {
+    height: auto;
+    width: auto;
+  }
 }
 
 .user {
   grid-area: user;
   width: 200px;
 }
+@media (max-width: 900px) {
+  .user {
+    width: 100%;
+  }
+}
 .user__details {
   height: 310px;
   border-radius: 20px;
   background-color: hsl(246, 80%, 60%);
   position: relative;
+}
+@media (max-width: 900px) {
+  .user__details {
+    display: flex;
+    justify-content: center;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media (max-width: 900px) {
+  .user__details__img {
+    margin-bottom: 20px;
+  }
 }
 .user__details__img img {
   margin: 25px 0 0 25px;
@@ -62,6 +120,12 @@ main {
   width: 80%;
   height: 100%;
 }
+@media (max-width: 900px) {
+  .user__details__name {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
 .user__details__name h1 {
   margin-top: 30px;
   font-weight: 400;
@@ -73,17 +137,35 @@ main {
   color: hsl(0, 0%, 100%);
   font-weight: 300;
 }
+@media (max-width: 900px) {
+  .user__details__name p {
+    margin-top: 10px;
+  }
+}
 .user__period {
   height: 165px;
   background-color: hsl(235, 46%, 20%);
   margin-top: -55px;
   border-radius: 15px;
 }
+@media (max-width: 900px) {
+  .user__period {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
 .user__period ul {
   padding: 0;
   margin-left: 25px;
   padding-top: 60px;
   font-size: 13px;
+}
+@media (max-width: 900px) {
+  .user__period ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 60px 10px 60px;
+  }
 }
 .user__period li {
   list-style: none;
@@ -97,6 +179,15 @@ main {
 }
 .user__period li:not(:last-child) {
   margin-bottom: 15px;
+}
+
+@media (max-width: 900px) {
+  .flex-box {
+    margin: 0 20px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .work {

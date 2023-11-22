@@ -23,8 +23,17 @@ Please be happy to left the comment on https://www.frontendmentor.io/solutions/.
         - Switch between viewing Daily, Weekly, and Monthly stats
 
 ### Links
+    
+    - [Live](https://mikezeg.github.io/FrontEndMentor.io/time-tracking-dashboard-main)
+
 ### Used Technology
+
+    - HTML5 Semantic
+    - CSS 
+    - Grid
+    - Flexbox
+    - Sass
+    - JS
 
 ## Author
  -- FrontEnd Mentor -> [MikeZeg](https://www.frontendmentor.io/profile/MikeZeg)
-I used grid to make more responsive site. To make easy to use that dash board the layout will be change when width it's less then 1000px.

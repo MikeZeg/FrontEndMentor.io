@@ -15,4 +15,4 @@ Junior
 | [Live](https://mikezeg.github.io/FrontEndMentor.io/newsletter-sign-up-with-success-message-main/) | Newsletter sign up - in progress | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/results-summary-component-main) | HTML, JS, CSS - Sass |
 |[Live](https://mikezeg.github.io/FrontEndMentor.io/interactive-card-details-form-main)|Interactive card details form main | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/interactive-card-details-form-main) | HTML, JS, CSS - Bootstrap + scss|
 | [Live](https://mikezeg.github.io/FrontEndMentor.io/advice-generator-app-main/)| Advice Generator App | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/advice-generator-app-main) | HTML, JS-API, CSS - Sass |
-|[Live]()| Time Tracking Dashboard |[Code]() | HTML, JS, CSS|
+|[Live](https://mikezeg.github.io/FrontEndMentor.io/time-tracking-dashboard-main)| Time Tracking Dashboard |[Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/time-tracking-dashboard-main/) | HTML, JS, CSS - Sass|

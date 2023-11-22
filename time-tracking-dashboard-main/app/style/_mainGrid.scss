@@ -1,15 +1,28 @@
 .box{
-    
+    @media (max-width:900px) {
+        margin-bottom: 20px;
+
+        width: fit-content;
+    }
 }
 .box:not(:first-child) {
     height: 200px;
     width: 200px;
 
-    // border: 1px solid red;
+    @media(max-width:900px) {
+        height: auto;
+        width: auto;
+
+        
+    }
 }
 .user {
     grid-area: user;
     width: 200px;
+
+    @media (max-width:900px) {
+        width: 100%;
+    }
 
     &__details {
         height: 310px;
@@ -18,8 +31,19 @@
         background-color: $blue;
 
         position:relative;
-        
+
+        @media (max-width:900px) {
+            display: flex;
+            justify-content: center;
+
+            height: fit-content;
+        }
+    
         &__img {
+
+            @media (max-width:900px) {
+                margin-bottom: 20px;                
+            }
             
             img {
                 margin: 25px 0 0 25px;
@@ -35,6 +59,10 @@
             width: 80%;
             height: 100%;
 
+            @media (max-width:900px) {
+                width: fit-content;  
+            }
+
             h1 {
                 margin-top: 30px;
 
@@ -46,6 +74,11 @@
                 font-size: 23px;
                 color: $whiteBorder;
                 font-weight: 300;
+                
+                @media (max-width:900px) {
+                    
+                    margin-top: 10px;
+                }
             }
         }
     }
@@ -56,12 +89,22 @@
         margin-top: -55px;
         border-radius: 15px;
 
+        @media (max-width:900px) {
+            height: fit-content;
+        }
+
 
        ul{
             padding: 0;
             margin-left: 25px;
             padding-top: 60px;
             font-size: 13px;
+
+            @media (max-width:900px) {
+                display: flex;
+                justify-content: space-between;
+                margin: 10px 60px 10px 60px;
+            }
             
         }
         li {
@@ -78,5 +121,15 @@
         li:not(:last-child){
             margin-bottom: 15px;
         }
+    }
+}
+
+.flex-box {
+    @media (max-width:900px) {
+        // margin-left: 0!important;
+        margin: 0 20px!important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
