@@ -30,16 +30,18 @@ const catchMonthly = document.querySelector('#monthly__list');
     const selfCareNow = document.querySelector('.selfCare__details__info h2');
     const selfCareLast = document.querySelector('.selfCare__details__info h3 span');
 
-// check if can push data to div name and keep data for period time x3, if not ...? start over
-// make IF on the begin of FOR and make other arr with name of div
+
+// Main Funtion
 function myfun (period) {
     let period1 = period;
 
-
+    // Created 2 arrays 
+    const divArrNow = [workNow, playNow, studyNow, exerciseNow, socialNow, selfCareNow];
+    const divArrLast = [workLast,playLast,studyLast,exerciseLast,socialLast,selfCareLast];
 
     console.log(period)
-    // check forEach()
-    for(let i=0; i<myData.length; i++){
+    // check forEach() - to speed up algorithm - can check what time period was pressed to looking only that in DATA.json
+    for(let i=0; i < myData.length; i++){
         console.log('Round: ' + [i] )
 
         let day1 = myData[i].timeframes.daily.current;
@@ -51,37 +53,30 @@ function myfun (period) {
         let month1 = myData[i].timeframes.monthly.current;
         let month2 = myData[i].timeframes.monthly.previous;
 
-        console.log('Day current: ' + day1 + ". Day previous: " + day2 + ". Week current: " + week1 + ". Week previous: " + week2 + ". Month current: " + month1 + ". Month previous: " + month2 );
-
-
-//if dayli add day if weekly add week ...
-// add for all div solo because [i] - will give you last in that number in arr,
-        if (period1 === 'daily') {
-            workNow.innerHTML = myData[0].timeframes.daily.current;
-            workLast.innerHTML = myData[0].timeframes.daily.previous;
-            playNow.innerHTML = day1;
-            playLast.innerHTML = day2;
-            studyNow.innerHTML = day1;
-            studyLast.innerHTML = day1;
-            exerciseNow.innerHTML = day1;
-            exerciseLast.innerHTML = day1;
-            socialNow.innerHTML = day1;
-            socialLast.innerHTML = day1;
-            selfCareNow.innerHTML = day1;
-            selfCareLast.innerHTML = day1;
-        }if (period1 === 'weekly') {
-            
-        } if (period1 === 'monthly') {
-            
-        } else {
-            console.log('nooooooooooooo')
-        }
+        // check what period/tiem are pressed
+            if (period1 === 'daily') {
+                console.log('Daily: current: '+day1+', last: '+day2)
+                divArrNow[i].innerHTML = day1;
+                divArrLast[i].innerHTML = day2;
+                
+            }if (period1 === 'weekly') {
+                console.log('Weekly: current: '+day1+', last: '+day2)
+                divArrNow[i].innerHTML = week1;
+                divArrLast[i].innerHTML = week2;
+                
+            } if (period1 === 'monthly') {
+                console.log('Mothly: current: '+day1+', last: '+day2)
+                divArrNow[i].innerHTML = month1;
+                divArrLast[i].innerHTML = month2;
+            } else {
+                console.log('nooooooooooooo')
+            }
     }   
 }
 
 // add that event to main function to push data when CLICK
 catchDaily.addEventListener('click', (e)=>{
-    // alert('work daily');
+    
     catchDaily.style.color= "black";
     myfun('daily');
 });
@@ -91,3 +86,17 @@ catchWeekly.addEventListener('click', (e)=>{
 catchMonthly.addEventListener('click', (e)=>{
     myfun('monthly');
 });
+
+// Info
+    // workNow.innerHTML = myData[0].timeframes.daily.current;
+    // workLast.innerHTML = myData[0].timeframes.daily.previous;
+    // playNow.innerHTML = day1;
+    // playLast.innerHTML = day2;
+    // studyNow.innerHTML = day1;
+    // studyLast.innerHTML = day1;
+    // exerciseNow.innerHTML = day1;
+    // exerciseLast.innerHTML = day1;
+    // socialNow.innerHTML = day1;
+    // socialLast.innerHTML = day1;
+    // selfCareNow.innerHTML = day1;
+    // selfCareLast.innerHTML = day1;
