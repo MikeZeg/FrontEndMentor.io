@@ -25,7 +25,7 @@ main {
     grid-template-areas: " user " " work " " play " " study " " exercise " " social " " selfCare ";
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 620px) {
   main {
     display: block;
     width: 46vh;
