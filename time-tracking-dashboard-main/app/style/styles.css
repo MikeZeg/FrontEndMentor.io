@@ -174,9 +174,6 @@ main {
   width: fit-content;
   position: relative;
 }
-.user__period li:hover {
-  color: hsl(0, 0%, 100%);
-}
 .user__period li:not(:last-child) {
   margin-bottom: 15px;
 }
@@ -188,6 +185,11 @@ main {
     justify-content: space-between;
     align-items: center;
   }
+}
+
+.list:hover {
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
 }
 
 .work {

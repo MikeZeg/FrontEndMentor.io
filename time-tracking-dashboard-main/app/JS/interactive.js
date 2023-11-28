@@ -1,7 +1,7 @@
-// JSON
-import data from '../../data.json'assert {type: 'json'};
-console.log(data);
 
+// JSON
+import data from '../../data.json' assert {type: 'json'};
+// import data from '../../data.json';
 const myData = data;
 
 // catch links - Selection options Daily, Weekly, Monthly
@@ -25,11 +25,9 @@ const catchMonthly = document.querySelector('#monthly__list');
     //Social
     const socialNow = document.querySelector('.social__details__info h2');
     const socialLast = document.querySelector('.social__details__info h3 span');
-
     //Self Care
     const selfCareNow = document.querySelector('.selfCare__details__info h2');
     const selfCareLast = document.querySelector('.selfCare__details__info h3 span');
-
 
 // Main Funtion
 function myfun (period) {
@@ -53,7 +51,7 @@ function myfun (period) {
         let month1 = myData[i].timeframes.monthly.current;
         let month2 = myData[i].timeframes.monthly.previous;
 
-        // check what period/tiem are pressed
+        // check what period/time are pressed
             if (period1 === 'daily') {
                 console.log('Daily: current: '+day1+', last: '+day2)
                 divArrNow[i].innerHTML = day1;
@@ -76,27 +74,23 @@ function myfun (period) {
 
 // add that event to main function to push data when CLICK
 catchDaily.addEventListener('click', (e)=>{
-    
-    catchDaily.style.color= "black";
     myfun('daily');
+    catchDaily.style.color = 'white';
+    catchWeekly.style.color = 'hsl(236, 100%, 87%)';
+    catchMonthly.style.color = 'hsl(236, 100%, 87%)';
+    
 });
 catchWeekly.addEventListener('click', (e)=>{
     myfun('weekly')
+    catchDaily.style.color = "hsl(236, 100%, 87%)";
+    catchWeekly.style.color = 'white';
+    catchMonthly.style.color = 'hsl(236, 100%, 87%)';
 });
 catchMonthly.addEventListener('click', (e)=>{
     myfun('monthly');
+    catchDaily.style.color = 'hsl(236, 100%, 87%)';
+    catchDaily.style.color = 'hsl(236, 100%, 87%)';
+    catchWeekly.style.color = 'hsl(236, 100%, 87%)';
+    catchMonthly.style.color = 'white';
 });
 
-// Info
-    // workNow.innerHTML = myData[0].timeframes.daily.current;
-    // workLast.innerHTML = myData[0].timeframes.daily.previous;
-    // playNow.innerHTML = day1;
-    // playLast.innerHTML = day2;
-    // studyNow.innerHTML = day1;
-    // studyLast.innerHTML = day1;
-    // exerciseNow.innerHTML = day1;
-    // exerciseLast.innerHTML = day1;
-    // socialNow.innerHTML = day1;
-    // socialLast.innerHTML = day1;
-    // selfCareNow.innerHTML = day1;
-    // selfCareLast.innerHTML = day1;
