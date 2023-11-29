@@ -175,7 +175,7 @@ main {
   position: relative;
 }
 .user__period li:hover {
-  color: white;
+  color: hsl(0, 0%, 100%);
   cursor: pointer;
 }
 .user__period li:not(:last-child) {
