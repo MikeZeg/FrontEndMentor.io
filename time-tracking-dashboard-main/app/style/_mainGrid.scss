@@ -12,8 +12,6 @@
     @media(max-width:900px) {
         height: auto;
         width: auto;
-
-        
     }
 }
 .user {
@@ -99,7 +97,7 @@
             margin-left: 25px;
             padding-top: 60px;
             font-size: 13px;
-            // color: $paleBlue;
+            
 
             @media (max-width:900px) {
                 display: flex;
@@ -108,7 +106,6 @@
             }
             
         }
-        
         li {
             list-style: none;
             color: $paleBlue;
@@ -116,10 +113,10 @@
             
             position: relative;
 
-            // &:hover{
-            //     color: white; 
-            //     cursor: pointer;
-            // }
+            &:hover{
+                color: white; 
+                cursor: pointer;
+            }
         }
         li:not(:last-child){
             margin-bottom: 15px;
@@ -134,11 +131,5 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-}
-.list {
-    &:hover {
-        color: $whiteBorder;
-        cursor: pointer;
     }
 }

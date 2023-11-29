@@ -75,22 +75,24 @@ function myfun (period) {
 // add that event to main function to push data when CLICK
 catchDaily.addEventListener('click', (e)=>{
     myfun('daily');
-    catchDaily.style.color = 'white';
-    catchWeekly.style.color = 'hsl(236, 100%, 87%)';
-    catchMonthly.style.color = 'hsl(236, 100%, 87%)';
+    catchDaily.style.color += 'color: white';
+    catchWeekly.style.color += 'color: hsl(236, 100%, 87%)';
+    catchMonthly.style.color += 'color: hsl(236, 100%, 87%)';
     
 });
 catchWeekly.addEventListener('click', (e)=>{
     myfun('weekly')
-    catchDaily.style.color = "hsl(236, 100%, 87%)";
-    catchWeekly.style.color = 'white';
-    catchMonthly.style.color = 'hsl(236, 100%, 87%)';
+    catchDaily.style.color += "color: hsl(236, 100%, 87%)";
+    catchWeekly.style.color += 'color: white';
+    catchMonthly.style.color += 'color: hsl(236, 100%, 87%)';
 });
 catchMonthly.addEventListener('click', (e)=>{
     myfun('monthly');
-    catchDaily.style.color = 'hsl(236, 100%, 87%)';
-    catchDaily.style.color = 'hsl(236, 100%, 87%)';
-    catchWeekly.style.color = 'hsl(236, 100%, 87%)';
-    catchMonthly.style.color = 'white';
+    catchDaily.style.color += 'color: hsl(236, 100%, 87%)';
+    catchWeekly.style.color += 'color: hsl(236, 100%, 87%)';
+    catchMonthly.style.color += 'color: white';
 });
 
+//
+let hoverOff = `.hover {color:white}`
+let hoverOn = `.list {color:$paleBlue; &:hover {color:$whiteBorder;coursor:pointer}}`
