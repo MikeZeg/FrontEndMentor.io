@@ -1,7 +1,10 @@
 
 // JSON
-import data from '../../data.json' assert {type: 'json'};
-// import data from '../../data.json';
+// import data from '../../data.json' assert {type: 'json'};
+const {default: data } = await import ('../../data.json', {assert:{type:'json'}});
+// console.log(data);
+
+// const myData = json;
 const myData = data;
 
 // catch links - Selection options Daily, Weekly, Monthly
@@ -30,7 +33,7 @@ const catchMonthly = document.querySelector('#monthly__list');
     const selfCareLast = document.querySelector('.selfCare__details__info h3 span');
 
 // Main Funtion
-function myfun (period) {
+async function myfun (period) {
     let period1 = period;
 
     // Created 2 arrays 
@@ -38,7 +41,7 @@ function myfun (period) {
     const divArrLast = [workLast,playLast,studyLast,exerciseLast,socialLast,selfCareLast];
 
     console.log(period)
-    // check forEach() - to speed up algorithm - can check what time period was pressed to looking only that in DATA.json
+    // check forEach() - to speed up algorithm
     for(let i=0; i < myData.length; i++){
         console.log('Round: ' + [i] )
 
@@ -53,17 +56,17 @@ function myfun (period) {
 
         // check what period/time are pressed
             if (period1 === 'daily') {
-                console.log('Daily: current: '+day1+', last: '+day2)
+                // console.log('Daily: current: '+day1+', last: '+day2)
                 divArrNow[i].innerHTML = day1;
                 divArrLast[i].innerHTML = day2;
                 
             }if (period1 === 'weekly') {
-                console.log('Weekly: current: '+day1+', last: '+day2)
+                // console.log('Weekly: current: '+day1+', last: '+day2)
                 divArrNow[i].innerHTML = week1;
                 divArrLast[i].innerHTML = week2;
                 
             } if (period1 === 'monthly') {
-                console.log('Mothly: current: '+day1+', last: '+day2)
+                // console.log('Mothly: current: '+day1+', last: '+day2)
                 divArrNow[i].innerHTML = month1;
                 divArrLast[i].innerHTML = month2;
             } else {
