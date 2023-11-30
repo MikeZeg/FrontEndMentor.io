@@ -7,6 +7,7 @@ const {default: data } = await import ('../../data.json', {assert:{type:'json'}}
 // const myData = json;
 const myData = data;
 
+
 // catch links - Selection options Daily, Weekly, Monthly
 const catchDaily = document.querySelector('#daily__list');
 const catchWeekly = document.querySelector('#weekly__list');
@@ -61,12 +62,12 @@ async function myfun (period) {
                 divArrLast[i].innerHTML = day2;
                 
             }if (period1 === 'weekly') {
-                // console.log('Weekly: current: '+day1+', last: '+day2)
+                // console.log('Weekly: current: '+week1+', last: '+week2)
                 divArrNow[i].innerHTML = week1;
                 divArrLast[i].innerHTML = week2;
                 
             } if (period1 === 'monthly') {
-                // console.log('Mothly: current: '+day1+', last: '+day2)
+                // console.log('Mothly: current: '+month1+', last: '+month2)
                 divArrNow[i].innerHTML = month1;
                 divArrLast[i].innerHTML = month2;
             } else {
