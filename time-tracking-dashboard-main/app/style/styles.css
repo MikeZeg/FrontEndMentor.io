@@ -62,12 +62,12 @@ main {
 }
 
 .over {
-  border: 1px dotted pink;
+  border: 2px dotted red;
 }
 
 .pressDotts {
-  font-size: 15px !important;
-  color: red;
+  font-size: 12px !important;
+  color: hsl(235, 45%, 61%);
 }
 
 @media (max-width: 900px) {

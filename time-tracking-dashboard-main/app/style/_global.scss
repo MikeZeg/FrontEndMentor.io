@@ -84,12 +84,9 @@ main {
 }
 
 .over {
-    border: 1px dotted pink;
+    border: 2px dotted red;
 }
 .pressDotts {
-    font-size: 15px!important;
-    color: red;
-}
-.draggable {
-    opacity: 0.6;
+    font-size: 12px!important;
+    color: $desaturated;
 }

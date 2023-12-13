@@ -1,16 +1,10 @@
 // global
 let active = false;
+let dragElement ;
+console.log(dragElement);
 
 // TASK
-// add dragEventStart to div or can be allready over that div-s?
-// add cursor: move;
-//
-    //-----------------------------------------
-// Box Grab
-    // const work_Grab = document.querySelector('.work .grab');
-    // console.log(work_Grab);
-    // const play_Grab = document.querySelector('.play .grab')
-    // console.log(play_Grab);
+// check transferData to move only grid-area CSS
 
 // boxes 
 const workBox = document.querySelector('.work');
@@ -21,29 +15,36 @@ const socialBox = document.querySelector('.social');
 const selfCareBox = document.querySelector('.selfCare');
 
 const boxArr = [workBox, playBox, studyBox, exerciseBox,socialBox,selfCareBox]
-//--------------------------------------------------
-// Start
+
+// <--------- Grab Elements -------------------------------->
     let items = document.querySelectorAll('.grab')
     items.forEach((item)=> item.addEventListener('click', pressDotts))
 
-function pressDotts(e) {
+// <--------------- Main Function ----------------->
+    function pressDotts(e) {
 
-// Pressed Dotts - active boxe's movment
-    if(active != true){
-        boxArr.forEach((item)=>{
-            item.setAttribute('draggable', true);
+        if(active != true) {
+            boxArr.forEach((box)=>{
+                box.setAttribute('draggable', true);
+
+//<--- Boxes ------ Boxes ------ Boxes ------ Boxes --->
+            box.addEventListener('dragstart', onDragStart);
+            box.addEventListener('dragend', dragEnd)
+            box.addEventListener('dragenter', dragEnter );
+            box.addEventListener('dragleave', dragleave);
+            box.addEventListener('dragover', onDragOver); //check
+            box.addEventListener('drop', onDrop); //NOK
+//<------ End ------ End ------ End ------ End --->
         })
-        // Plus info ?
+        
         items.forEach((item)=>{
-            item.innerHTML = 'move box';
+            item.innerHTML = 'unlocked';
             item.classList.add('pressDotts');
         });
         active = true;
-        console.log('after press: '+active)
-    }else{
-        boxArr.forEach((item)=>{
-            item.setAttribute('draggable', false);
-        })
+        // console.log('after press: ' + active)
+    }else {
+        boxArr.forEach((item)=>{item.setAttribute('draggable', false);})
         // Plus info ?
         items.forEach((item)=>{
             item.innerHTML = '...';
@@ -51,44 +52,59 @@ function pressDotts(e) {
             active = false;
         });
     }
-// change for all 
-    // boxArr.forEach((box)=>{
-    //     box.addEventListener('mousedown', onDragStart)
-    //     box.addEventListener('mouseup', onDrop);
-    //     box.addEventListener('dragover',onDragOver);
-    //     box.addEventListener('dragleave', dragleave);
-    //     box.addEventListener('drop', onDrop);
-    // })
-
 }
-// Supporting functions
-    //Drag Start
+
+
+// <--------------- Supporting functions ------------------->
 function onDragStart(e) {
+    this.style.opacity = '0.4';
+
+    dragElement = this;
+    
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/html',this.innerHTML)
 
 }
-// Over that point 
+
+function dragEnd(e) {
+    this.style.opacity = '1';
+
+    boxArr.forEach((box)=>{
+        box.classList.remove('over')
+    })
+}
+
+function dragEnter(e) {
+    this.classList.add('over');
+}
+
+function dragleave(e) {
+
+    this.classList.remove('over');
+    this.style.opacity = '1';
+}
+
 function onDragOver(e) {
     
+    this.style.opacity = '0.4';
     this.classList.add('over');
     e.preventDefault();
     return false;
 }
-//Drag leave
-function dragleave(e) {
 
-    this.classList.remove('over');
-}
-// Dorp on point
 function onDrop(e) {
-
-    workBox.style.opacity = '1';
-    workBox.setAttribute('draggable',false);
-
+    
     boxArr.forEach((box)=> {
         box.style.opacity= '1';
         box.classList.remove('over');
     })
-
+    console.log(this.innerHTML)
     e.stopPropagation();
+
+    if(dragElement != this) {
+        dragElement.innerHTML = this.innerHTML;
+        this.innerHTML = e.dataTransfer.getData('text/html')
+    }
+
     return false;
 }
