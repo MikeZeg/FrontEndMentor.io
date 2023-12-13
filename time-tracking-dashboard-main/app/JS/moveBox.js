@@ -1,8 +1,11 @@
+// global
+let active = false;
+
 // TASK
 // add dragEventStart to div or can be allready over that div-s?
 // add cursor: move;
-// 
-//-----------------------------------------
+//
+    //-----------------------------------------
 // Box Grab
     // const work_Grab = document.querySelector('.work .grab');
     // console.log(work_Grab);
@@ -20,28 +23,63 @@ const selfCareBox = document.querySelector('.selfCare');
 const boxArr = [workBox, playBox, studyBox, exerciseBox,socialBox,selfCareBox]
 //--------------------------------------------------
 // Start
-function onDragStart(e) {
-    workBox.style.opacity = '0.4';
-    workBox.setAttribute('draggable',true);
+    let items = document.querySelectorAll('.grab')
+    items.forEach((item)=> item.addEventListener('click', pressDotts))
 
-    e.dataTransfer.effectAllowed = 'move';
-    e.dataTransfer.setData('text/html', this.innerHTML);
-    
+function pressDotts(e) {
+
+// Pressed Dotts - active boxe's movment
+    if(active != true){
+        boxArr.forEach((item)=>{
+            item.setAttribute('draggable', true);
+        })
+        // Plus info ?
+        items.forEach((item)=>{
+            item.innerHTML = 'move box';
+            item.classList.add('pressDotts');
+        });
+        active = true;
+        console.log('after press: '+active)
+    }else{
+        boxArr.forEach((item)=>{
+            item.setAttribute('draggable', false);
+        })
+        // Plus info ?
+        items.forEach((item)=>{
+            item.innerHTML = '...';
+            item.classList.remove('pressDotts');
+            active = false;
+        });
+    }
+// change for all 
+    // boxArr.forEach((box)=>{
+    //     box.addEventListener('mousedown', onDragStart)
+    //     box.addEventListener('mouseup', onDrop);
+    //     box.addEventListener('dragover',onDragOver);
+    //     box.addEventListener('dragleave', dragleave);
+    //     box.addEventListener('drop', onDrop);
+    // })
+
 }
-// Over to point 
-function onDragOver(e) {
-    this.classList.add('over');
+// Supporting functions
+    //Drag Start
+function onDragStart(e) {
 
-//?
+}
+// Over that point 
+function onDragOver(e) {
+    
+    this.classList.add('over');
     e.preventDefault();
     return false;
 }
 //Drag leave
 function dragleave(e) {
+
     this.classList.remove('over');
 }
-// Dorp
-function onDrop(e){
+// Dorp on point
+function onDrop(e) {
 
     workBox.style.opacity = '1';
     workBox.setAttribute('draggable',false);
@@ -49,24 +87,8 @@ function onDrop(e){
     boxArr.forEach((box)=> {
         box.style.opacity= '1';
         box.classList.remove('over');
-        // console.log(box);
     })
 
     e.stopPropagation();
     return false;
 }
-// add event listener - add forEach Main Function and add all functions
-    let items = document.querySelectorAll('.grab');
-
-//--------- Function Main
-    items.forEach((item)=> {
-     //good
-        item.addEventListener('mousedown',onDragStart);
-        item.addEventListener('mouseup', onDrop);
-        
-//bad
-        item.addEventListener('dragover',onDragOver);
-        item.addEventListener('dragleave', dragleave);
-        item.addEventListener('drop', onDrop);
-
-    });

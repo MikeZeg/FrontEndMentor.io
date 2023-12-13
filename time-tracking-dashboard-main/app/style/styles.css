@@ -65,6 +65,11 @@ main {
   border: 1px dotted pink;
 }
 
+.pressDotts {
+  font-size: 15px !important;
+  color: red;
+}
+
 @media (max-width: 900px) {
   .box {
     margin-bottom: 20px;
