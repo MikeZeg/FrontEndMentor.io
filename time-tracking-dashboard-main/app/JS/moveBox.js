@@ -40,7 +40,7 @@ const boxGridArr = [work, play, study, exercise, social, selfCare]
 // console.log('after press: ' + active)
         }else {
             boxUnActive();
-//Dotts UnActive ?
+//Dotts UnActive
             dottsUnActive();
         }
     }
