@@ -1,6 +1,8 @@
 // global
 let active = false;
 let dragElement ;
+let swapGrid ;
+let swapedGrid ;
 
 // TASK
 // check transferData to move only grid-area CSS
@@ -26,12 +28,18 @@ const selfCare = selfCareBox.style.gridArea
 const boxGridArr = [work, play, study, exercise, social, selfCare]
 
 // <--------- Grab Elements -------------------------------->
+
     let items = document.querySelectorAll('.grab')
     items.forEach((item)=> item.addEventListener('click', pressDotts))
+    // document.addEventListener("DOMContentLoaded", ()=>{
+    //     let items = document.querySelectorAll('.grab')
+    //     items.forEach((item)=>item.addEventListener('click', pressDotts))
+    // })
 
 // <--------------- Main Function ----------------->
-    function pressDotts(e) {
 
+    function pressDotts(e) {
+    
         if(active != true) {
             boxActive();
 //Dotts Active
@@ -45,15 +53,24 @@ const boxGridArr = [work, play, study, exercise, social, selfCare]
         }
     }
 
+//<------------------- End Main -------------------->
+/////////////////////////////////////////////////////
 // <--------------- Supporting functions ------------------->
 function onDragStart(e) {
     this.style.opacity = '0.4';
-    console.log(this.style.gridArea)
+    console.log(this.id + ': area grid');
+
+    // console.log(this.id)
+    // swapGrid = this.id;
+
     dragElement = this;
 
+    console.log(dragElement.id + ': drag elelment')
+
+
     e.dataTransfer.effectAllowed = 'move';
-    e.dataTransfer.setData('text/html',this.innerHTML)
-    // e.dataTransfer.setData('text/html',this.style.gridArea);
+    // e.dataTransfer.setData('text/html',this.innerHTML)
+    // e.dataTransfer.setData('id');
 }
 
 function dragEnd(e) {
@@ -87,14 +104,26 @@ function onDrop(e) {
         box.style.opacity= '1';
         box.classList.remove('over');
     })
-    // console.log(this.innerHTML)
+    // console.log(this.style.gridArea.textContnet)
     e.stopPropagation();
+    e.preventDefault();
+    
 
     if(dragElement != this) {
-        dragElement.innerHTML = this.innerHTML;
-        this.innerHTML = e.dataTransfer.getData('text/html')
+        // dragElement.innerHTML = this.innerHTML;
+        // this.innerHTML = e.dataTransfer.getData('text/html')
+//// - Add and save changes 
+        let saveGrid = document.querySelector('main');
+        saveGrid.style.gridTemplateAreas = `"user ${dragElement.id} play study" "user exercise social selfCare" `
 
-        // this.target.appendChild(getData)
+        console.log('dragged Element: ' + dragElement.id);
+        console.log('Element moved: ' + this.id);
+
+        this.style.gridArea = dragElement.id
+        dragElement.style.gridArea = this.id
+
+        this.id = dragElement.id
+        dragElement.id = this.id
     }
     return false;
 }
@@ -118,7 +147,7 @@ function dottsUnActive() {
 
 function boxActive() {
     boxArr.forEach((box)=>{
-                box.setAttribute('draggable', true);
+            box.setAttribute('draggable', true);
 //<--- Boxes ------ Boxes ------ Boxes ------ Boxes --->
             box.addEventListener('dragstart', onDragStart);
             box.addEventListener('dragend', dragEnd)
@@ -126,6 +155,7 @@ function boxActive() {
             box.addEventListener('dragleave', dragleave);
             box.addEventListener('dragover', onDragOver);
             box.addEventListener('drop', onDrop);
+    
 //<------ End ------ End ------ End ------ End --->
         })
 }
