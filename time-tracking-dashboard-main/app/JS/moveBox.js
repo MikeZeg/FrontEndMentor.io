@@ -110,17 +110,20 @@ function onDrop(e) {
     
 
     if(dragElement != this) {
-        // dragElement.innerHTML = this.innerHTML;
-        // this.innerHTML = e.dataTransfer.getData('text/html')
-//// - Add and save changes 
-        let saveGrid = document.querySelector('main');
-        saveGrid.style.gridTemplateAreas = `"user ${dragElement.id} play study" "user exercise social selfCare" `
-
+    
         console.log('dragged Element: ' + dragElement.id);
         console.log('Element moved: ' + this.id);
 
-        this.style.gridArea = dragElement.id
-        dragElement.style.gridArea = this.id
+        let valueDragedElement = window.getComputedStyle(dragElement).gridArea
+        let valueElementMoved = window.getComputedStyle(this).gridArea
+
+        console.log(window.getComputedStyle(this).gridArea)
+
+        // console.log(valueDragedElement + ': draged Element')
+        // console.log(valueElementMoved + ' : other Element')
+
+        this.style.gridArea = valueDragedElement;
+        dragElement.style.gridArea = valueElementMoved;
 
         this.id = dragElement.id
         dragElement.id = this.id
