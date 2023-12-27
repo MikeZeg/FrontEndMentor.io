@@ -4,9 +4,6 @@ let dragElement ;
 let swapGrid ;
 let swapedGrid ;
 
-// TASK
-// check transferData to move only grid-area CSS
-
 // boxes 
 const workBox = document.querySelector('.work');
 const playBox = document.querySelector('.play');
@@ -31,10 +28,6 @@ const boxGridArr = [work, play, study, exercise, social, selfCare]
 
     let items = document.querySelectorAll('.grab')
     items.forEach((item)=> item.addEventListener('click', pressDotts))
-    // document.addEventListener("DOMContentLoaded", ()=>{
-    //     let items = document.querySelectorAll('.grab')
-    //     items.forEach((item)=>item.addEventListener('click', pressDotts))
-    // })
 
 // <--------------- Main Function ----------------->
 
@@ -60,13 +53,9 @@ function onDragStart(e) {
     this.style.opacity = '0.4';
     console.log(this.id + ': area grid');
 
-    // console.log(this.id)
-    // swapGrid = this.id;
-
     dragElement = this;
 
     console.log(dragElement.id + ': drag elelment')
-
 
     e.dataTransfer.effectAllowed = 'move';
     // e.dataTransfer.setData('text/html',this.innerHTML)
@@ -104,7 +93,6 @@ function onDrop(e) {
         box.style.opacity= '1';
         box.classList.remove('over');
     })
-    // console.log(this.style.gridArea.textContnet)
     e.stopPropagation();
     e.preventDefault();
     
@@ -119,14 +107,12 @@ function onDrop(e) {
 
         console.log(window.getComputedStyle(this).gridArea)
 
-        // console.log(valueDragedElement + ': draged Element')
-        // console.log(valueElementMoved + ' : other Element')
-
         this.style.gridArea = valueDragedElement;
         dragElement.style.gridArea = valueElementMoved;
 
         this.id = dragElement.id
         dragElement.id = this.id
+// Save changes if user refresh browser
     }
     return false;
 }
@@ -158,7 +144,6 @@ function boxActive() {
             box.addEventListener('dragleave', dragleave);
             box.addEventListener('dragover', onDragOver);
             box.addEventListener('drop', onDrop);
-    
 //<------ End ------ End ------ End ------ End --->
         })
 }
