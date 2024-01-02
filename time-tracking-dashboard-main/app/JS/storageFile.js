@@ -1,16 +1,12 @@
+import {boxArr} from './moveBox.js';
+
 console.log(localStorage)
 
 // Variables global
 let myData;
 
 //get elements - create 6 elements and 
-//              add to local storage to save the changes by user
-const mainStyle = document.querySelector('main');
-
-
-// Main Data - don't need? add one by one for change
-myData = window.getComputedStyle(mainStyle).gridTemplateAreas;
-console.log(myData)
+//      add to local storage to save the changes by user
 
 
 // Function Local Storage -
@@ -18,12 +14,27 @@ console.log(myData)
 //              if not compare changes and display
 //              save changes if user do any movement.
 
-export function saveStorage(arg) {
-    if(localStorage != false){
-        console.log('Local Storage empty')
+export function saveStorage(arg1, arg2) {
 
-        localStorage.
+    if(localStorage.length == 0){
+        console.log('Local Sorage is empty')
     }else {
-        console.log('Add' + arg)
+        console.log(localStorage.length)
+        
+        for(let i = 0; i < boxArr.length; i++) {
+            // console.log(boxArr[i].id)
+            // console.log(window.getComputedStyle(boxArr[i]).gridArea)
+            // console.log(boxArr[i].id)
+            
+            // console.log('Local Storage:' + localStorage.getItem(boxArr[i].id))
+            if(window.getComputedStyle(boxArr[i]).gridArea === localStorage.getItem(boxArr[i].id) ){
+                console.log('same')
+            }else {
+                console.log('Not same: ' + boxArr[i].id)
+
+            }
+        }
+
     }
+
 }

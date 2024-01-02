@@ -1,4 +1,4 @@
-// Export
+// Import
 import {saveStorage} from './storageFile.js';
 
 // global
@@ -15,17 +15,7 @@ const exerciseBox = document.querySelector('.exercise');
 const socialBox = document.querySelector('.social');
 const selfCareBox = document.querySelector('.selfCare');
 
-const boxArr = [workBox, playBox, studyBox, exerciseBox,socialBox,selfCareBox]
-
-// boxes to grid
-const work = workBox.style.gridArea
-const play = playBox.style.gridArea
-const study = studyBox.style.gridArea
-const exercise = exerciseBox.style.gridArea
-const social = socialBox.style.gridArea
-const selfCare = selfCareBox.style.gridArea
-
-const boxGridArr = [work, play, study, exercise, social, selfCare]
+export const boxArr = [workBox, playBox, studyBox, exerciseBox,socialBox,selfCareBox]
 
 // <--------- Grab Elements -------------------------------->
 
@@ -116,7 +106,7 @@ function onDrop(e) {
         this.id = dragElement.id
         dragElement.id = this.id
 // Save changes if user refresh browser
-        saveStorage(this);
+        saveStorage(this,dragElement);
     }
     return false;
 }
