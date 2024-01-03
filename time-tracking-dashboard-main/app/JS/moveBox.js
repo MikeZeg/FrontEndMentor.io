@@ -1,11 +1,9 @@
 // Import
 import {saveStorage} from './storageFile.js';
 
-// global
+// all file scope 
 let active = false;
 let dragElement ;
-let swapGrid ;
-let swapedGrid ;
 
 // boxes 
 const workBox = document.querySelector('.work');
@@ -15,7 +13,7 @@ const exerciseBox = document.querySelector('.exercise');
 const socialBox = document.querySelector('.social');
 const selfCareBox = document.querySelector('.selfCare');
 
-export const boxArr = [workBox, playBox, studyBox, exerciseBox,socialBox,selfCareBox]
+var boxArr = [workBox, playBox, studyBox, exerciseBox,socialBox,selfCareBox]
 
 // <--------- Grab Elements -------------------------------->
 
@@ -147,3 +145,6 @@ function boxUnActive() {
         item.setAttribute('draggable', false);
     });
 }
+
+// console.log(boxArr)
+export { boxArr };
