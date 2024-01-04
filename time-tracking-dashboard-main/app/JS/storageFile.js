@@ -1,44 +1,30 @@
 // import
 import {boxArr} from './moveBox.js';
 
-// Variables scope file
-let myData;
-let boxes;
 
 // variables import asynchronously
 setTimeout(()=>{
-    // console.log(boxArr);
+    if(!localStorage.length){
+        console.log('Local Storage Empty')
+        return ' ';
+    }else {
+        console.log(localStorage)
     let boxes = [...boxArr]
+        console.log(boxes)
+        boxes.forEach((box,i)=>{
+            console.log(window.getComputedStyle(box).gridArea)
+            console.log(localStorage.key(i))
+            box.style.gridArea = localStorage.key(i)
+        });
+    }
 },10);
 
-
-// function to check local Storage
-    // if local storage have data
-    // if same as the render
-    // swap windows between if diffrent
-
-export function checkStorage() {
-    if(!localStorage){
-        console.log("Local Storage empty")
-    }else {
-        console.log("Compare with local storage: ")
-        console.log(localStorage)
-    }   
-}
-
-
 // save Data in local storage
-    // 
 export function saveStorage(arg1, arg2) {
 
     if(localStorage.length == 0){
         console.log('Local Sorage is empty')
     }else {
-        console.log(localStorage.length)
+        // console.log(localStorage.length)
     }        
 }
-
-    
-
-// Start
-checkStorage();
