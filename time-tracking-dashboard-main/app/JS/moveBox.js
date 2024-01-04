@@ -103,6 +103,7 @@ function onDrop(e) {
 
         this.id = dragElement.id
         dragElement.id = this.id
+        
 // Save changes if user refresh browser
         saveStorage(this,dragElement);
     }
