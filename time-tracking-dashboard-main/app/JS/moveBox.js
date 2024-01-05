@@ -104,9 +104,13 @@ function onDrop(e) {
         this.id = dragElement.id
         dragElement.id = this.id
         
+
+        console.log('Looking value: '+ valueDragedElement)
 // Save changes if user refresh browser
-        saveStorage(this,dragElement);
+        // saveStorage(dragElement.id, valueElementMoved);
+        saveStorage(dragElement, this, valueDragedElement);
     }
+    
     return false;
 }
 
