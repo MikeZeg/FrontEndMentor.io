@@ -42,11 +42,11 @@ var boxArr = [workBox, playBox, studyBox, exerciseBox,socialBox,selfCareBox]
 // <--------------- Supporting functions ------------------->
 function onDragStart(e) {
     this.style.opacity = '0.4';
-    console.log(this.id + ': area grid');
+    // console.log(this.id + ': area grid');
 
     dragElement = this;
 
-    console.log(dragElement.id + ': drag elelment')
+    // console.log(dragElement.id + ': drag elelment')
 
     e.dataTransfer.effectAllowed = 'move';
     // e.dataTransfer.setData('text/html',this.innerHTML)
@@ -87,16 +87,17 @@ function onDrop(e) {
     e.stopPropagation();
     e.preventDefault();
     
-
     if(dragElement != this) {
     
         console.log('dragged Element: ' + dragElement.id);
         console.log('Element moved: ' + this.id);
+        console.log('Element moved - grid area: ' + this.style.gridArea);
+        
 
         let valueDragedElement = window.getComputedStyle(dragElement).gridArea
         let valueElementMoved = window.getComputedStyle(this).gridArea
-
-        console.log(window.getComputedStyle(this).gridArea)
+console.log('Swapped element: '+ valueElementMoved)
+        console.log('What element : ' + window.getComputedStyle(this).gridArea)
 
         this.style.gridArea = valueDragedElement;
         dragElement.style.gridArea = valueElementMoved;
@@ -104,13 +105,10 @@ function onDrop(e) {
         this.id = dragElement.id
         dragElement.id = this.id
         
-
-        console.log('Looking value: '+ valueDragedElement)
+        // console.log('Looking value: '+ valueDragedElement)
 // Save changes if user refresh browser
-        // saveStorage(dragElement.id, valueElementMoved);
-        saveStorage(dragElement, this, valueDragedElement);
+        saveStorage(dragElement, this);
     }
-    
     return false;
 }
 

@@ -30,15 +30,19 @@ setTimeout(()=>{
 },10);
 
 // save Data in local storage
-export function saveStorage(arg1, arg2,arg3) {
-    // console.log(`${arg1.style.gridArea} to jest argument pierwszy`)
-    // console.log(`${arg2.style.gridArea} to jest argument drugi`)
-// check arguments what is what - id I boxa i wartos a pozneij II id boxa i wartosc
+export function saveStorage(arg1, arg2, arg3) {
     
-    console.log('It swaping element:' + arg1.style.gridArea)
-    console.log('It catche element:' + arg2.id)
-    console.log('It other value:' + arg3)
+    // arg1 - box grabed - location Storage - key
+    // agr2 - must be second box    
+    // arg3 - it that location to go -location Storage - value 
+
     
-    localStorage.setItem(arg2.id, arg1.style.gridArea)
-    localStorage.setItem(arg1.style.gridArea,arg3 )
+    
+    // localStorage.setItem(arg2.id, arg1.style.gridArea)
+    // localStorage.setItem(arg1.style.gridArea,arg2.id)
+    // localStorage.setItem(arg1.style.gridArea,arg3)
+
+    // localStorage.setItem(arg1, arg1)
+    // localStorage.setItem(arg3,arg2)
+    // localStorage.setItem(arg1,arg3)
 }
