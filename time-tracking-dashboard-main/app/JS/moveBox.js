@@ -91,23 +91,18 @@ function onDrop(e) {
     
         console.log('dragged Element: ' + dragElement.id);
         console.log('Element moved: ' + this.id);
-        console.log('Element moved - grid area: ' + this.style.gridArea);
         
-
         let valueDragedElement = window.getComputedStyle(dragElement).gridArea
         let valueElementMoved = window.getComputedStyle(this).gridArea
-console.log('Swapped element: '+ valueElementMoved)
-        console.log('What element : ' + window.getComputedStyle(this).gridArea)
+// console.log('What element : ' +  valueDragedElement)
+// console.log('Swapped element: '+ valueElementMoved)
 
         this.style.gridArea = valueDragedElement;
         dragElement.style.gridArea = valueElementMoved;
 
-        this.id = dragElement.id
-        dragElement.id = this.id
-        
-        // console.log('Looking value: '+ valueDragedElement)
 // Save changes if user refresh browser
-        saveStorage(dragElement, this);
+saveStorage(dragElement.id, this.id, valueDragedElement, valueElementMoved);
+        
     }
     return false;
 }
