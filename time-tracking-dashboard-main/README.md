@@ -26,6 +26,8 @@ Please be happy to left the comment on https://www.frontendmentor.io/solutions/.
     I added extra features to that challenge to be more functional. 
 When user press dotts, that boxes can be grabbed and swap with another boxes. When user desactive that feature and refresh page, boxes stay on same location - boxes location will be save in local Storage. 
 
+Inline-style:
+![feature-working](https://github.com/mikezeg/time-tracking-dashboard-main/gif,movie,img/Screen Recording 2024-01-07 at 20.34.15.mov)
 
 
 ### Links
@@ -40,6 +42,9 @@ When user press dotts, that boxes can be grabbed and swap with another boxes. Wh
     - Flexbox
     - Sass
     - JS
+
+![deskopt-performance](https://github.com/MikeZeg/FrontEndMentor.io/blob/main/time-tracking-dashboard-main/gif,movie,img/Screenshot 2024-01-07 at 20.31.43.png)
+![mobile-performance](https://github.com/MikeZeg/FrontEndMentor.io/blob/main/time-tracking-dashboard-main/gif,movie,img/Screenshot 2024-01-07 at 20.32.08.png)
 
 ## Author
  -- FrontEnd Mentor -> [MikeZeg](https://www.frontendmentor.io/profile/MikeZeg)
