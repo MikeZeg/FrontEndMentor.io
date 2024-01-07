@@ -1,9 +1,6 @@
 // import
 import {boxArr} from './moveBox.js';
 
-// Check bug with moving same box second time, why other boxes losing value gridArea
-
-
 // variables import asynchronously
 setTimeout(()=>{
     let boxes = [...boxArr]
@@ -17,8 +14,6 @@ setTimeout(()=>{
                         ));
         return ' ';
     }else {
-        // console.log("not empty: "+localStorage)
-        // console.log(boxes)
         boxes.forEach((box,i)=>{
             box.style.gridArea = localStorage.getItem(window.getComputedStyle(box).gridArea)
         });
