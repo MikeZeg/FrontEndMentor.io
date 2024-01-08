@@ -11,9 +11,9 @@ Please be happy to left the comment on https://www.frontendmentor.io/solutions/.
     - [The Challenge](#The-challenge)
     - [Link](#Links)
     - [Used Technology](#Used-Technology)
-    - [Performance](###Performance)
+    - [Performance](##Performance)
         - [Dektop](###Desktop)
-        - [Mobile]()
+        - [Mobile](###Mobile)
 - [Author](#Author)
 
 # Preview
@@ -32,8 +32,10 @@ Your users should be able to:
   - See hover, active, and focus states for interactive elements on the page.
 
 ## Links
-    
-[Live](https://mikezeg.github.io/FrontEndMentor.io/interactive-card-details-form-main/)
+- |||
+  |:----|:----|
+  |Live URL|[live](https://mikezeg.github.io/FrontEndMentor.io/interactive-card-details-form-main/) |
+  |||
 
 ## Used Technology
 
@@ -47,10 +49,9 @@ Your users should be able to:
 
 
 ## Performance
-  ## Desktop
+  ### Desktop
 ![deskopt-performance](./images/Screenshot%202024-01-08%20at%2018.28.23.png)
-  ## Mobile
-![mobile-performance](./images/)
-
+  ### Mobile
+![mobile-performance](./images/Screenshot%202024-01-08%20at%2018.28.03.png)
 ## Author
  -- FrontEnd Mentor -> [MikeZeg](https://www.frontendmentor.io/profile/MikeZeg)
