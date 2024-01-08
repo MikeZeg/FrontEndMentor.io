@@ -27,16 +27,7 @@ const btnPress = async()=>{
     adviceNumber.innerHTML = slipId;
     // or advceNumber.innerHTML = `Advice #${slipId}`
     adviceText.innerHTML = slipText;
-    // or adviceText.innerHTML = `"${slipText}"`
+    
 }
 
 btnPress();
-
-// check function/s
-
-    // function checkFun (){
-    //     btnPress()
-
-    //     setTimeout(checkFun,3000);
-    // }
-    // checkFun();

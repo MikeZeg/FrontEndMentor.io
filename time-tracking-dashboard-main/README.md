@@ -28,8 +28,6 @@ When user press dotts, that boxes can be grabbed and swap with another boxes. Wh
 
 ![Moved Boxes](https://github.com/MikeZeg/FrontEndMentor.io/assets/79936348/6ee71fd0-168b-4a10-830f-5a240b979354)
 
-
-
 ### Links
     
     - [Live](https://mikezeg.github.io/FrontEndMentor.io/time-tracking-dashboard-main)
