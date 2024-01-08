@@ -1,20 +1,28 @@
-# Frontend Mentor - Interactive rating component
+# 👋 All Please check solution - Frontend Mentor - Interactive rating component 
 
-![Design preview for the Interactive rating component coding challenge](./design/desktop-preview.jpg)
+Please check my solution on that challeng. If you see somethink to improve, please say somethink.
 
-## Welcome! 👋
-
-Thanks for checking out this front-end coding challenge.
+Please be happy to left the comment on https://www.frontendmentor.io/solutions/. 
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+# Table of contents
+- [Preview](#overview)
+    - [The Challenge](#The-challenge)
+    - [Link](#Links)
+    - [Used Technology](#Used-Technology)
+    - [Performance](##Performance)
+        - [Dektop](###Desktop)
+        - [Mobile](###Mobile)
+- [Author](#Author)
 
-## The challenge
+# Preview
+
+![Preview](./design/desktop-preview.jpg)
+
+## The Challenge
 
 Your challenge is to build out this interactive rating component and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
 Your users should be able to:
 
@@ -23,7 +31,30 @@ Your users should be able to:
 - Select and submit a number rating
 - See the "Thank you" card state after submitting a rating
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+## Links
+
+[live](https://mikezeg.github.io/FrontEndMentor.io/interactive-rating-component-main/)
+
+## Used Technology
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
+
+## Used Tools
+![VS Code](https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Google](https://img.shields.io/badge/google-DA4437?style=for-the-badge&logo=google&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
+
+## Performance
+  ### Desktop
+![deskopt-performance](./)
+  ### Mobile
+![mobile-performance](./)
+## Author
+ -- FrontEnd Mentor -> [MikeZeg](https://www.frontendmentor.io/profile/MikeZeg)
+
+
+-------------------------------------------------
 
 ## Where to find everything
 

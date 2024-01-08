@@ -32,10 +32,8 @@ Your users should be able to:
   - See hover, active, and focus states for interactive elements on the page.
 
 ## Links
-- |||
-  |:----|:----|
-  |Live URL|[live](https://mikezeg.github.io/FrontEndMentor.io/interactive-card-details-form-main/) |
-  |||
+
+[live](https://mikezeg.github.io/FrontEndMentor.io/interactive-card-details-form-main/)
 
 ## Used Technology
 
