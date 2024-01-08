@@ -1,6 +1,4 @@
-![Design preview for the Advice - generator - app, coding challenge](./design/desktop-preview.jpg)
-
-# My solution 👋 - Time Tracking Dashboard. 
+# My solution 👋 - Advice Generator App. 
 
 Please check my solution on that challeng. If you see somethink to improve, please say somethink.
 
@@ -9,11 +7,17 @@ Please be happy to left the comment on https://www.frontendmentor.io/solutions/.
 [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
-- [Overview](#overview)
+- [Preview](#overview)
     -[The Challenge](#The-challenge)
     -[Link](#Links)
     -[Used Technology](#Used-Technology)
+    -[Performance](## Performance)
 -[Author](#Author)
+
+## Preview
+
+-[Preview](./design/desktop-preview.jpg)
+
 
 ### The Challenge
 
@@ -21,7 +25,7 @@ Challenge is to build out this advice generator app using the Advice Slip API an
 
 ### Links
     
-    - [Live](https://mikezeg.github.io/FrontEndMentor.io/time-tracking-dashboard-main)
+    - [Live](https://mikezeg.github.io/FrontEndMentor.io/advice-generator-app-main/)
 
 ### Used Technology
 
@@ -29,8 +33,10 @@ Challenge is to build out this advice generator app using the Advice Slip API an
     - CSS - Sass
     - JS - (API)
 
-![deskopt-performance]()
-![mobile-performance]()
+### Performance - Deskopt and Mobile
+
+![deskopt-performance](./design/Screenshot%202024-01-08%20at%2016.52.20.png)
+![mobile-performance](./design/Screenshot%202024-01-08%20at%2016.52.03.png)
 
 ## Author
  -- FrontEnd Mentor -> [MikeZeg](https://www.frontendmentor.io/profile/MikeZeg)
