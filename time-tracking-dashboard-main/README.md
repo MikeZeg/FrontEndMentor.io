@@ -26,8 +26,8 @@ Please be happy to left the comment on https://www.frontendmentor.io/solutions/.
     I added extra features to that challenge to be more functional. 
 When user press dotts, that boxes can be grabbed and swap with another boxes. When user desactive that feature and refresh page, boxes stay on same location - boxes location will be save in local Storage. 
 
-Inline-style:
-![feature-working](https://github.com/mikezeg/time-tracking-dashboard-main/gif,movie,img/Screen Recording 2024-01-07 at 20.34.15.mov)
+![Moved Boxes](https://github.com/MikeZeg/FrontEndMentor.io/assets/79936348/6ee71fd0-168b-4a10-830f-5a240b979354)
+
 
 
 ### Links
@@ -43,8 +43,9 @@ Inline-style:
     - Sass
     - JS
 
-![deskopt-performance](https://github.com/MikeZeg/FrontEndMentor.io/blob/main/time-tracking-dashboard-main/gif,movie,img/Screenshot 2024-01-07 at 20.31.43.png)
-![mobile-performance](https://github.com/MikeZeg/FrontEndMentor.io/blob/main/time-tracking-dashboard-main/gif,movie,img/Screenshot 2024-01-07 at 20.32.08.png)
+![deskopt-performance](https://github.com/MikeZeg/FrontEndMentor.io/assets/79936348/3b7fa0fa-ecbe-4590-9031-4c519e9bd378)
+
+![mobile-performance](https://github.com/MikeZeg/FrontEndMentor.io/assets/79936348/5b546511-3c30-4b02-bfc3-e135b86d1872)
 
 ## Author
  -- FrontEnd Mentor -> [MikeZeg](https://www.frontendmentor.io/profile/MikeZeg)
