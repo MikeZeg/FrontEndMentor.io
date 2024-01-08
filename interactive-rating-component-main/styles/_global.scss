@@ -37,12 +37,6 @@ main {
 
     font-size: 1.2rem;
     line-height: 1.5;
-    
-//hard way to center component
-    // position: absolute;
-    // left:50%;
-    // top:50%;
-    // transform: translate(-50%,-50%);
 }
 
 .question{
@@ -76,7 +70,7 @@ main {
     }
     &_description {
         color: $lightGrey;
-        font-size: 0.725rem;
+        font-size: 0.9rem;
     }
     &_rating {
         font-size: 0.9rem;

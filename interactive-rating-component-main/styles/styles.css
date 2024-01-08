@@ -67,7 +67,7 @@ main {
 }
 .question_description {
   color: hsl(217, 12%, 54%);
-  font-size: 0.725rem;
+  font-size: 0.9rem;
 }
 .question_rating {
   font-size: 0.9rem;
