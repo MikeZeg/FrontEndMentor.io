@@ -33,7 +33,7 @@ Your users should be able to:
 
 ## Links
     
-    - [Live](https://mikezeg.github.io/FrontEndMentor.io/interactive-card-details-form-main/)
+[Live](https://mikezeg.github.io/FrontEndMentor.io/interactive-card-details-form-main/)
 
 ## Used Technology
 

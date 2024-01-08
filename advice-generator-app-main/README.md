@@ -27,7 +27,7 @@ Challenge is to build out this advice generator app using the Advice Slip API an
 
 ## Links
     
-    - [Live](https://mikezeg.github.io/FrontEndMentor.io/advice-generator-app-main/)
+[Live](https://mikezeg.github.io/FrontEndMentor.io/advice-generator-app-main/)
 
 ## Used Technology
 
