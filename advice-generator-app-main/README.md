@@ -12,8 +12,8 @@ Please be happy to left the comment on https://www.frontendmentor.io/solutions/.
     - [Link](#Links)
     - [Used Technology](#Used-Technology)
     - [Performance](###Performance)
-        -[Dektop](###Desktop)
-        -[Mobile]()
+        - [Dektop](###Desktop)
+        - [Mobile](###Mobile)
 - [Author](#Author)
 
 # Preview
