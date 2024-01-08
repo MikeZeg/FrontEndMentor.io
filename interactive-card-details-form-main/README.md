@@ -48,10 +48,10 @@ See hover, active, and focus states for interactive elements on the page.
 
 
 ## Performance
-### Desktop
+  ## Desktop
 ![deskopt-performance](./images/Screenshot%202024-01-08%20at%2018.28.23.png)
-### Mobile
-![mobile-performance](./images/Screenshot%202024-01-08%20at%2018.28.03.png)
+  ## Mobile
+![mobile-performance](./images/)
 
 ## Author
  -- FrontEnd Mentor -> [MikeZeg](https://www.frontendmentor.io/profile/MikeZeg)
