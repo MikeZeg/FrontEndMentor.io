@@ -1,7 +1,7 @@
-# 👋 All.
-## This is a solution to the Results Summary Component. [Frontend Mentor](https://www.frontendmentor.io) - Please be happy to check challengs, that help you improve your coding skills by building realistic projects. 
+## 👋 All.
+### This is a solution to the Results Summary Component. [Frontend Mentor](https://www.frontendmentor.io) - Please be happy to check challengs, that help you improve your coding skills by building realistic projects. 
 
-## Table of contents
+### Table of contents
 
 - [Preview](#overview)
     - [The Challenge](#The-challenge)
@@ -12,11 +12,11 @@
         - [Mobile](###Mobile)
 - [Author](#Author)
 
-## Preview
+### Preview
 
 ![Preview](./design/desktop-preview.jpg)
 
-## The Challenge
+### The Challenge
 
 Your challenge is to build out this Newsletter project component and get it looking as close to the design as possible.
 
@@ -25,25 +25,25 @@ Users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-## Links
+### Links
 
 [live](https://mikezeg.github.io/FrontEndMentor.io/results-summary-component-main/)
 
-## Used Technology
+### Used Technology
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-## Used Tools
+### Used Tools
 ![VS Code](https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Google](https://img.shields.io/badge/google-DA4437?style=for-the-badge&logo=google&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
-## Performance
+### Performance
 
-  ### Desktop
+  #### Desktop
 ![deskopt-performance](./design/Screenshot%202024-01-09%20at%2019.19.22.png)
 
-  ### Mobile
+  #### Mobile
 ![mobile-performance](./design/Screenshot%202024-01-09%20at%2019.19.12.png)
 
-## Author 🚀
+### Author 🚀
  -- FrontEnd Mentor -> [MikeZeg](https://www.frontendmentor.io/profile/MikeZeg)
