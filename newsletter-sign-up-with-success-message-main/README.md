@@ -1,4 +1,5 @@
-# 👋 All This is a solution to the Newsletter sign-up form. [Frontend Mentor](https://www.frontendmentor.io) - Please be happy to check challengs, that help you improve your coding skills by building realistic projects. 
+# 👋 All.
+## This is a solution to the Newsletter sign-up form. [Frontend Mentor](https://www.frontendmentor.io) - Please be happy to check challengs, that help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
