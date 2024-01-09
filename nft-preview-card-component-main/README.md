@@ -40,10 +40,10 @@ Users should be able to:
 ## Performance
 
   ### Desktop
-![deskopt-performance](./design/)
+![deskopt-performance](./design/Screenshot%202024-01-09%20at%2018.37.19.png)
 
   ### Mobile
-![mobile-performance](./design/)
+![mobile-performance](./design/Screenshot%202024-01-09%20at%2018.37.07.png)
 
 ## Author 🚀
  -- FrontEnd Mentor -> [MikeZeg](https://www.frontendmentor.io/profile/MikeZeg)
