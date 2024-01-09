@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta
+    name="description"
+    content="This is my solution of challenge from FrontEndMentor. To complite that challenge I used HTML5 and Css - Sass."
+  />
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <link rel="stylesheet" href="./styles/styles.css">
@@ -21,25 +24,25 @@
   </style>
 </head>
 <body class="container">
-  <main role="main">
+  <main id="main">
     <section class="ntf__primary">
-      <div class="ntf__primary__image" role="ntfImage"></div>
+      <div class="ntf__primary__image" id="ntfImage"></div>
     </section>
 
-    <section class="ntf__secondary" role="NTFdetails">
-      <div class="ntf__secondary__number" role="ntfNameAndNumber">Equilibrium #3429</div>
-      <div class="ntf__secondary__description" role="description">Our Equilibrium collection promotes balance and calm.</div>
+    <section class="ntf__secondary" id="NTFdetails">
+      <div class="ntf__secondary__number" id="ntfNameAndNumber">Equilibrium #3429</div>
+      <div class="ntf__secondary__description" id="description">Our Equilibrium collection promotes balance and calm.</div>
 
       <div class="ntf__secondary__info">
-        <div class="ntf__secondary__info__price" role="priceInfo"><span>0.041 ETH</span></div>
-        <div class="ntf__secondary__info__countDownTime" role="time left"><span>3 days left</span></div>
+        <div class="ntf__secondary__info__price" id="priceInfo"><span>0.041 ETH</span></div>
+        <div class="ntf__secondary__info__countDownTime" id="time left"><span>3 days left</span></div>
       </div>
 
       <div class="line"></div>
 
-      <div class="ntf__secondary__creator" role="informationAboutCreator">
-        <div class="ntf__secondary__creator__photo" role="creatorPhoto"></div>
-        <div class="ntf__secondary__creator__name" role="creatorName">Creation of <span>Jules Wyvern</span></div>
+      <div class="ntf__secondary__creator">
+        <div class="ntf__secondary__creator__photo" id="creatorPhoto"></div>
+        <div class="ntf__secondary__creator__name" id="creatorName">Creation of <span>Jules Wyvern</span></div>
       </div>
     </section>
   </main>

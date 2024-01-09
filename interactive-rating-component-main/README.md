@@ -4,19 +4,19 @@ Please check my solution on that challeng. If you see somethink to improve, plea
 
 Please be happy to left the comment on https://www.frontendmentor.io/solutions/. 
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+[Frontend Mentor] challenges help you improve your coding skills by building realistic projects.
 
 # Table of contents
-- [Preview](#overview)
-    - [The Challenge](#The-challenge)
+- [Preview](#Preview)
+    - [The Challenge](#The-Challenge)
     - [Link](#Links)
     - [Used Technology](#Used-Technology)
     - [Performance](##Performance)
-        - [Dektop](###Desktop)
+        - [Desktop](###Desktop)
         - [Mobile](###Mobile)
 - [Author](#Author)
 
-# Preview
+## Preview
 
 ![Preview](./design/desktop-preview.jpg)
 
