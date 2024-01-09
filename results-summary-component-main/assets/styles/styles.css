@@ -2,14 +2,6 @@ html {
   font-family: "Hanken Grotesk", sans-serif;
 }
 
-.attribution {
-  position: absolute;
-  color: navy;
-}
-.attributiona {
-  position: absolute;
-}
-
 body {
   color: hsl(0, 0%, 100%);
   font-size: 1rem;
@@ -170,4 +162,20 @@ button:hover {
   button {
     margin-top: 2.3rem;
   }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  color: black;
+  margin-left: 35%;
+  margin-right: auto;
+  text-decoration: none;
+}
+footer a {
+  text-decoration: none;
+  color: black;
+}
+footer a:hover {
+  color: hsl(39, 100%, 56%);
 }/*# sourceMappingURL=styles.css.map */
