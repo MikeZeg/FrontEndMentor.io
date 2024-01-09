@@ -71,14 +71,14 @@ main {
 }
 .ntf__secondary__description {
   color: hsl(215, 51%, 70%);
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 .ntf__secondary__info {
   display: flex;
   justify-content: space-between;
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   color: hsl(215, 51%, 70%);
 }
 .ntf__secondary__info__price {
@@ -104,7 +104,7 @@ main {
   align-content: center;
   align-items: center;
   color: hsl(215, 51%, 70%);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 .ntf__secondary__creator__photo {
   width: 2rem;
@@ -133,11 +133,14 @@ main {
 }
 
 footer {
-  font-size: 0.5rem;
-  color: rgba(150, 53, 38, 0.689);
+  font-size: 0.9rem;
+  color: hsl(215, 51%, 70%);
   cursor: pointer;
 }
-footer a, footer a:hover, footer a:focus, footer a:visited, footer a:active, footer a:link:not(:last-child) {
+footer a {
   text-decoration: none;
-  color: inherit;
+  color: hsl(215, 51%, 70%);
+}
+footer a:hover {
+  color: hsl(178, 100%, 50%);
 }/*# sourceMappingURL=styles.css.map */

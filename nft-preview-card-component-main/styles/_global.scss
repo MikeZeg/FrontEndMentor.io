@@ -82,7 +82,7 @@ main {
     }
     &__description {
         color: $softBlue;
-        font-size: 0.875rem;
+        font-size: 0.9rem;
 
         margin-top: 1rem;
         margin-bottom: 1rem;
@@ -90,7 +90,7 @@ main {
     &__info{
         display: flex;
         justify-content: space-between;
-        font-size: 0.75rem; 
+        font-size: 0.95rem; 
         color: $softBlue;       
 
         &__price {
@@ -122,7 +122,7 @@ main {
         align-items: center;
         
         color: $softBlue;        
-        font-size: 0.85rem;
+        font-size: 0.95rem;
 
         &__photo{
             width: 2rem;
@@ -154,12 +154,15 @@ main {
 }
 
 footer {
-    font-size: 0.5rem;
-    color:rgba(150, 53, 38, 0.689);
+    font-size: 0.9rem;
+    color:$softBlue;
     cursor: pointer;
-
-    a,a:hover,a:focus,a:visited,a:active,a:link:not(:last-child){
+    
+    a {
         text-decoration: none;
-        color: inherit;
+        color: $softBlue;
+    }
+    a:hover {
+        color: $cyan;
     }
 }
