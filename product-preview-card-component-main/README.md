@@ -18,7 +18,7 @@
 
 ## The Challenge
 
-Your challenge is to build out this Newsletter project component and get it looking as close to the design as possible.
+Your challenge is to build out this project component and get it looking as close to the design as possible.
 
 Your users should be able to:
 
@@ -41,10 +41,10 @@ Your users should be able to:
 ## Performance
 
   ### Desktop
-![deskopt-performance](./design)
+![deskopt-performance](./design/Screenshot%202024-01-09%20at%2018.54.21.png)
 
   ### Mobile
-![mobile-performance](./design)
+![mobile-performance](./design/Screenshot%202024-01-09%20at%2018.54.10.png)
 
 ## Author 🚀
  -- FrontEnd Mentor -> [MikeZeg](https://www.frontendmentor.io/profile/MikeZeg)
