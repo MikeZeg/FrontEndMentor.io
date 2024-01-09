@@ -46,8 +46,11 @@ When user press dotts, that boxes can be grabbed and swap with another boxes. Wh
 ### Used Tools
 ![VS Code](https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Google](https://img.shields.io/badge/google-DA4437?style=for-the-badge&logo=google&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
-![deskopt-performance](https://github.com/MikeZeg/FrontEndMentor.io/assets/79936348/3b7fa0fa-ecbe-4590-9031-4c519e9bd378)
+### Performance
 
+#### Desktop
+![deskopt-performance](https://github.com/MikeZeg/FrontEndMentor.io/assets/79936348/3b7fa0fa-ecbe-4590-9031-4c519e9bd378)
+#### Mobile
 ![mobile-performance](https://github.com/MikeZeg/FrontEndMentor.io/assets/79936348/5b546511-3c30-4b02-bfc3-e135b86d1872)
 
 ## Author
