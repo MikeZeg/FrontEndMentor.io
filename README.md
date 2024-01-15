@@ -8,7 +8,7 @@ NewBie
 | [Live](https://mikezeg.github.io/FrontEndMentor.io/product-preview-card-component-main/) | Product preview component | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/product-preview-card-component-main) | HTML, CSS - Sass |
 | [Live](https://mikezeg.github.io/FrontEndMentor.io/interactive-rating-component-main/) | Interactive rating component | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/interactive-rating-component-main) | HTML, CSS - Sass |
 | [Live](https://mikezeg.github.io/FrontEndMentor.io/nft-preview-card-component-main/) | NTF preview card component | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/nft-preview-card-component-main) | HTML, CSS - Sass |
-| [Live](https://mikezeg.github.io/FrontEndMentor.io/blog-preview-card-main/) | Blog - Preview Card | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/blog-preview-card-main) | React, HTML, CSS |
+| [Live](https://mikezeg.github.io/FrontEndMentor.io/blog-preview-card-main) | Blog - Preview Card | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/blog-preview-card-main) | React, HTML, CSS |
 
 Junior
 | Live | Challange Name | Code | Tech |
