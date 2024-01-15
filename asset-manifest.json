@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/FrontEndMentor/blog-preview-card-main/static/js/main.631e6200.js",
-    "static/media/illustration-article.svg": "/FrontEndMentor/blog-preview-card-main/static/media/illustration-article.082cca317c8b4b2c973fa73013373085.svg",
-    "static/media/image-avatar.webp": "/FrontEndMentor/blog-preview-card-main/static/media/image-avatar.79dc6fdb93748b6b0120.webp",
-    "index.html": "/FrontEndMentor/blog-preview-card-main/index.html",
-    "main.631e6200.js.map": "/FrontEndMentor/blog-preview-card-main/static/js/main.631e6200.js.map"
+    "main.js": "/FrontEndMentor.io/blog-preview-card-main/static/js/main.39b77963.js",
+    "static/media/illustration-article.svg": "/FrontEndMentor.io/blog-preview-card-main/static/media/illustration-article.082cca317c8b4b2c973fa73013373085.svg",
+    "static/media/image-avatar.webp": "/FrontEndMentor.io/blog-preview-card-main/static/media/image-avatar.79dc6fdb93748b6b0120.webp",
+    "index.html": "/FrontEndMentor.io/blog-preview-card-main/index.html",
+    "main.39b77963.js.map": "/FrontEndMentor.io/blog-preview-card-main/static/js/main.39b77963.js.map"
   },
   "entrypoints": [
-    "static/js/main.631e6200.js"
+    "static/js/main.39b77963.js"
   ]
 }
