@@ -7,6 +7,9 @@ import userLogo from './assets/images/image-avatar.webp'
 // const rootStyle = {
 //   backgroundColor: 'hsl(47, 88%, 63%)',
 //   fontSize: '1rem',
+// "homepage": "https://mikezeg.github.io/FrontEndMentor.io/blog-preview-card-main",
+// "predeploy": "npm run build",
+// "deploy": "gh-pages -d build",
 // }
 const user = {
   firstName: 'Greg',
