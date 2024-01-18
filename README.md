@@ -8,7 +8,7 @@ Frontend Mentor challanges - my solutions.
 | [Live](https://mikezeg.github.io/FrontEndMentor.io/product-preview-card-component-main/) | Product preview component | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/product-preview-card-component-main) | HTML, CSS - Sass |
 | [Live](https://mikezeg.github.io/FrontEndMentor.io/interactive-rating-component-main/) | Interactive rating component | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/interactive-rating-component-main) | HTML, CSS - Sass |
 | [Live](https://mikezeg.github.io/FrontEndMentor.io/nft-preview-card-component-main/) | NTF preview card component | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/nft-preview-card-component-main) | HTML, CSS - Sass |
-| [Live](https://curious-malabi-315b39.netlify.app) | Blog - Preview Card | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/blog-preview-card-main) | React, HTML, CSS |
+| [Live](https://curious-malabi-315b39.netlify.app/) | Blog - Preview Card | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/blog-preview-card-main) | React, HTML, CSS |
 
 ###Junior
 | Live | Challange Name | Code | Tech |
