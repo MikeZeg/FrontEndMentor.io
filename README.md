@@ -14,7 +14,7 @@
 
 ### Preview
 
-![Preview](./design/desktop-preview.jpg)
+![Preview](./src/design/desktop-preview.jpg)
 
 ### The Challenge
 
@@ -40,10 +40,10 @@ Users should be able to:
 ### Performance
 
   #### Desktop
-![deskopt-performance](./design/)
+![deskopt-performance](./src/design/desktop.png)
 
   #### Mobile
-![mobile-performance](./design/)
+![mobile-performance](./src/design/phone.png)
 
 ### Author 🚀
  -- FrontEnd Mentor -> [MikeZeg](https://www.frontendmentor.io/profile/MikeZeg)
