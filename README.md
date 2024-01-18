@@ -1,7 +1,7 @@
 # FrontEndMentor.io
 Frontend Mentor challanges - my solutions.
 
-NewBie
+###NewBie
 | Live | Challange Name | Code | Tech |
 |--|--|--|--|
 | [Live](https://mikezeg.github.io/FrontEndMentor.io/results-summary-component-main/) | Results summary component | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/results-summary-component-main) | HTML, CSS-Sass |
@@ -10,7 +10,7 @@ NewBie
 | [Live](https://mikezeg.github.io/FrontEndMentor.io/nft-preview-card-component-main/) | NTF preview card component | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/nft-preview-card-component-main) | HTML, CSS - Sass |
 | [Live](https://curious-malabi-315b39.netlify.app) | Blog - Preview Card | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/blog-preview-card-main) | React, HTML, CSS |
 
-Junior
+###Junior
 | Live | Challange Name | Code | Tech |
 |--|--|--|--|
 | [Live](https://mikezeg.github.io/FrontEndMentor.io/newsletter-sign-up-with-success-message-main/) | Newsletter sign up - in progress | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/results-summary-component-main) | HTML, JS, CSS - Sass |
