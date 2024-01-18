@@ -3,11 +3,6 @@ import ReactDOM from 'react-dom/client';
 import logoImage from './assets/images/illustration-article.svg';
 import userLogo from './assets/images/image-avatar.webp'
 
-// Root Css
-// const rootStyle = {
-//   backgroundColor: 'hsl(47, 88%, 63%)',
-//   fontSize: '1rem',
-// }
 const user = {
   firstName: 'Greg',
   lastName: 'Hooper',
@@ -122,7 +117,13 @@ const contentStyle__article__h2 = {
     width: '100px',
     height: '50px',
    }
-   
+// Hover actions
+   function onHover(event) {
+    event.target.style.color = 'yellow';
+   }
+   function offHover(event) {
+    event.target.style.color = '';
+   }
 
   return (
     <main style={styleCard}>
@@ -139,7 +140,7 @@ const contentStyle__article__h2 = {
 
     <section style={contentStyle}>    
       <article style={contentStyle__article}>
-        <h1 style={contentStyle__article__h1}> HTML & CSS fundations</h1>
+        <h1 style={contentStyle__article__h1} onMouseLeave={offHover} onMouseOver={onHover}> HTML & CSS fundations</h1>
         <h2 style={contentStyle__article__h2}>These languages are the backbone of every website, defining structure, content and presentation.</h2>
       </article>
     </section>
