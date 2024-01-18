@@ -7,6 +7,14 @@ const user = {
   firstName: 'Greg',
   lastName: 'Hooper',
 }
+// Hover actions
+function onHover(event) {
+  event.target.style.color = 'yellow';
+  
+ }
+ function offHover(event) {
+  event.target.style.color = 'hsl(0, 0%, 7%)';
+ }
 
 const MainCard = () => {
   const styleCard={
@@ -117,13 +125,7 @@ const contentStyle__article__h2 = {
     width: '100px',
     height: '50px',
    }
-// Hover actions
-   function onHover(event) {
-    event.target.style.color = 'yellow';
-   }
-   function offHover(event) {
-    event.target.style.color = '';
-   }
+
 
   return (
     <main style={styleCard}>
@@ -159,22 +161,23 @@ const Footer = () => {
     bottom: '0',
     width: '100%',
     textAlign: 'center',
+    textDecoration: 'inherit',
   }
   const footerStyle__div = {
     color: 'hsl(0,0%,7%)',
   }
   const footerStyle__a__frontEnd = {
-    textDecoration: 'none',
+    textDecoration: 'inherit',
     color: 'hsl(0,0%,7%)',
   }
   const footerStyle__a__mikeZeg = {
-    textDecoration: 'none',
+    textDecoration: 'inherit',
     color: 'hsl(0,0%,7%)',
   }
   return (
     <footer style={footerStyle}>
-      <div style={footerStyle__div}> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" style={footerStyle__a__frontEnd}> Frontend Mentor</a>. 
-        Coded by <a href="https://github.com/MikeZeg" target="_blank" style={footerStyle__a__mikeZeg}> MikeZeg</a>.
+      <div style={footerStyle__div}> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" style={footerStyle__a__frontEnd} onMouseLeave={offHover} onMouseOver={onHover}> Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/MikeZeg" target="_blank" style={footerStyle__a__mikeZeg } onMouseOver={onHover} onMouseLeave={offHover}> MikeZeg</a>.
       </div>
   </footer>
   )
