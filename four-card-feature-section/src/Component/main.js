@@ -6,7 +6,8 @@ import supervisior from '../images/icon-supervisor.svg'
 // import '../style/main.css'
 
 // Helping data
-const data = [{
+const data = [
+{
     title: 'Team Builder',
     article: 'Scans out talented network to create the optimal team for you project',
     url: teamBuildLogo,
@@ -30,7 +31,7 @@ const data = [{
 
 // Image element -------------------------------
 const Image = (props) => {
-    return <img src={teamBuildLogo} alt='logo'></img>
+    return <img src={props.url} alt='logo'></img>
 }
 
 // Box element ---------------------------------
@@ -40,31 +41,29 @@ const BoxElement = (props) =>{
             <div>
                 <section>
                     <h1>
-                        {/* {props.title} */}
-                        Team Builder
+                        {props.title}
                     </h1>
                 </section>
                 <section>
                     <h2>
-                        {/* {props.article} */}
-                    Scans out talented network to create the optimal team for you project
+                        {props.article}
                     </h2>
                 </section>
                 <figure>
 {/* Add element with prop for all boxes*/}
-                    <Image />
+                    <Image url={props.url}/>
                 </figure>
             </div>
         </article>
     )
 }
-
 // Main component ------------------------------------
 class Main extends React.Component {
-    // constructor(props) {
-    //     super(props)   
-    // }
+    constructor(props) {
+        super(props)   
+    }
     
+
     render(props){
 const mainStyle = {
     border: '1px solid red',
@@ -73,19 +72,28 @@ const mainStyle = {
 }
 const box = {
     border: '1px solid blue',
-    
-
 }
 const boxTop = {
     border: '1px solid black',
-
 }
-// console.log(props.myData)
+//----------- Data from App/props ----------
+const thatData = props
+console.log(thatData)
+// const {title, article, url} = thatData
+
+// create by map() forEach 
+let titleOne = data[0].title
+let articleOne = data[0].article
+let urlOne = data[0].url
 
         return(
             <main style={mainStyle}>
-                <div >
-                    <BoxElement elements = {props} style={boxTop}/>
+                <div>
+                    <BoxElement style={boxTop}
+                    title = {titleOne}
+                    article = {articleOne}
+                    url = {urlOne}
+                    />
                 </div>
                 {/* <div>
                     <BoxElement/>

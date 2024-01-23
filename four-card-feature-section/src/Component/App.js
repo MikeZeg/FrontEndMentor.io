@@ -11,25 +11,26 @@ import supervisior from '../images/icon-supervisor.svg'
 
 
 // Data - destruction that data and send to component by PROPS
-const data = [{
-  title: 'Team Builder',
-  article: 'Scans out talented network to create the optimal team for you project',
-  url: teamBuildLogo,
+const data = [
+  {
+    title: 'Team Builder',
+    article: 'Scans out talented network to create the optimal team for you project',
+    url: teamBuildLogo,
 },
 {
-  title: 'Calculator',
-  article: 'Scans out talented network to create the optimal team for you project',
-  url: calculatorLogo
+    title: 'Calculator',
+    article: 'Scans out talented network to create the optimal team for you project',
+    url: calculatorLogo,   
 },
 {
-  title: 'Team Builder',
-  article: 'Scans out talented network to create the optimal team for you project',
-  url: karmaLogo,
+    title: 'Karma',
+    article: 'Scans out talented network to create the optimal team for you project',
+    url: karmaLogo,
 },
-{
-  title: 'Team Builder',
-  article: 'Scans out talented network to create the optimal team for you project',
-  url: supervisior,
+{  
+    title: 'Supervisior',
+    article: 'Scans out talented network to create the optimal team for you project',
+    url: supervisior,
 }
 ]
 
@@ -38,11 +39,12 @@ class App extends React.Component {
     super(props)
   }
   render() {
-    const myData = {
-      title: 'Work',
-      article: 'Lorem cos tam by sprawdzic',
-      url: supervisior,
-    }
+// Data to destruction - made destruction in App not in Main
+console.log(data[0])
+const sendData = data[0]
+
+// console.log(myData)
+
     return (
       <div>
 
@@ -53,7 +55,9 @@ add font family
 check how add SASS */}
 
         <Header />
-        <Main elements={myData}/>
+        <Main 
+          myData = {sendData}
+        />
         <Footer/>
       </div>
     )};
