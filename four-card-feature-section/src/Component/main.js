@@ -5,6 +5,7 @@ import karmaLogo from '../images/icon-karma.svg'
 import supervisior from '../images/icon-supervisor.svg'
 // import '../style/main.css'
 
+// Helping data
 const data = [{
     title: 'Team Builder',
     article: 'Scans out talented network to create the optimal team for you project',
@@ -27,46 +28,74 @@ const data = [{
 }
 ]
 
-const Image = () => {
+// Image element -------------------------------
+const Image = (props) => {
     return <img src={teamBuildLogo} alt='logo'></img>
 }
 
-// Element for all boxes 
-const BoxElement = () =>{
+// Box element ---------------------------------
+const BoxElement = (props) =>{
     return (
         <article>
-            <section>
-                <h1>
-                Team Builder
-                </h1>
-            </section>
-            <section>
-                <h2> 
-                Scans out talented network to create the optimal team for you project
-                </h2>
-            </section>
-            <figure>
+            <div>
+                <section>
+                    <h1>
+                        {/* {props.title} */}
+                        Team Builder
+                    </h1>
+                </section>
+                <section>
+                    <h2>
+                        {/* {props.article} */}
+                    Scans out talented network to create the optimal team for you project
+                    </h2>
+                </section>
+                <figure>
 {/* Add element with prop for all boxes*/}
-                <Image />
-            </figure>
+                    <Image />
+                </figure>
+            </div>
         </article>
     )
 }
 
-
+// Main component ------------------------------------
 class Main extends React.Component {
-    constructor(props){
-        super(props)
-    }
-    render(){
-const style = {
+    // constructor(props) {
+    //     super(props)   
+    // }
+    
+    render(props){
+const mainStyle = {
     border: '1px solid red',
     width: '250px',
     height: '250px',
 }
+const box = {
+    border: '1px solid blue',
+    
+
+}
+const boxTop = {
+    border: '1px solid black',
+
+}
+// console.log(props.myData)
+
         return(
-            <main style={style}>
-                <BoxElement/>
+            <main style={mainStyle}>
+                <div >
+                    <BoxElement elements = {props} style={boxTop}/>
+                </div>
+                {/* <div>
+                    <BoxElement/>
+                </div>
+                <div>
+                    <BoxElement/>
+                </div>
+                <div>
+                    <BoxElement/>
+                </div> */}
             </main>
         )
     }
