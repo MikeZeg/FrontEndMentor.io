@@ -12,26 +12,26 @@ import supervisior from '../images/icon-supervisor.svg'
 
 // Data - destruction that data and send to component by PROPS
 const data = [
-  {
-    title: 'Team Builder',
-    article: 'Scans out talented network to create the optimal team for you project',
-    url: teamBuildLogo,
-},
-{
-    title: 'Calculator',
-    article: 'Scans out talented network to create the optimal team for you project',
-    url: calculatorLogo,   
-},
-{
-    title: 'Karma',
-    article: 'Scans out talented network to create the optimal team for you project',
-    url: karmaLogo,
-},
-{  
-    title: 'Supervisior',
-    article: 'Scans out talented network to create the optimal team for you project',
-    url: supervisior,
-}
+    {
+      title: 'Team Builder',
+      article: 'Scans out talented network to create the optimal team for you project',
+      url: teamBuildLogo,
+    },
+    {
+      title: 'Calculator',
+      article: 'Scans out talented network to create the optimal team for you project',
+      url: calculatorLogo,   
+    },
+    {
+      title: 'Karma',
+      article: 'Scans out talented network to create the optimal team for you project',
+      url: karmaLogo,
+    },
+    {  
+      title: 'Supervisior',
+      article: 'Scans out talented network to create the optimal team for you project',
+      url: supervisior,
+    }
 ]
 
 class App extends React.Component {
@@ -40,10 +40,7 @@ class App extends React.Component {
   }
   render() {
 // Data to destruction - made destruction in App not in Main
-console.log(data[0])
-const sendData = data[0]
-
-// console.log(myData)
+    const myData = data
 
     return (
       <div>
@@ -56,7 +53,8 @@ check how add SASS */}
 
         <Header />
         <Main 
-          myData = {sendData}
+          // myData = {myData}
+          myData = {myData}
         />
         <Footer/>
       </div>

@@ -5,29 +5,33 @@ import karmaLogo from '../images/icon-karma.svg'
 import supervisior from '../images/icon-supervisor.svg'
 // import '../style/main.css'
 
-// Helping data
-const data = [
-{
-    title: 'Team Builder',
-    article: 'Scans out talented network to create the optimal team for you project',
-    url: teamBuildLogo,
-},
-{
-    title: 'Calculator',
-    article: 'Scans out talented network to create the optimal team for you project',
-    url: calculatorLogo,   
-},
-{
-    title: 'Karma',
-    article: 'Scans out talented network to create the optimal team for you project',
-    url: karmaLogo,
-},
-{  
-    title: 'Supervisior',
-    article: 'Scans out talented network to create the optimal team for you project',
-    url: supervisior,
+//Style
+const boxStyle = {        
+    border: '1px solid blue',
+    
 }
-]
+const boxTop = {
+    backgroundColor: 'lightPink',
+    border: '1px solid black',
+    fontSize: '12px',
+}
+const boxLeft = {
+    border: '1px solid red',
+    backgroundColor: 'lightgray',
+    fontSize: '12px',
+
+}
+const boxRight = {
+    border: '1px solid yellow',
+    backgroundColor: 'lightYellow',
+    fontSize: '12px'
+
+}
+const boxBottom = {
+    border: '1px solid blue',
+    backgroundColor: 'lightblue',
+    fontSize: '12px',
+}
 
 // Image element -------------------------------
 const Image = (props) => {
@@ -37,7 +41,7 @@ const Image = (props) => {
 // Box element ---------------------------------
 const BoxElement = (props) =>{
     return (
-        <article>
+        <article style={props.style}>
             <div>
                 <section>
                     <h1>
@@ -57,53 +61,55 @@ const BoxElement = (props) =>{
         </article>
     )
 }
+
+
 // Main component ------------------------------------
 class Main extends React.Component {
     constructor(props) {
         super(props)   
     }
-    
-
-    render(props){
-const mainStyle = {
-    border: '1px solid red',
-    width: '250px',
-    height: '250px',
-}
-const box = {
-    border: '1px solid blue',
-}
-const boxTop = {
-    border: '1px solid black',
-}
+    render(){
+        const mainStyle = {
+            border: '1px solid red',
+            width: '100vh',
+            height: '80vh',
+            marginLeft: 'auto',
+            marginRight: 'auto'
+        }
 //----------- Data from App/props ----------
-const thatData = props
-console.log(thatData)
-// const {title, article, url} = thatData
-
-// create by map() forEach 
-let titleOne = data[0].title
-let articleOne = data[0].article
-let urlOne = data[0].url
+// Data sent from App file
+// const {title,article,url} = this.props.myData[0]
 
         return(
             <main style={mainStyle}>
                 <div>
                     <BoxElement style={boxTop}
-                    title = {titleOne}
-                    article = {articleOne}
-                    url = {urlOne}
+                    title = {this.props.myData[0].title}
+                    article = {this.props.myData[0].article}
+                    url = {this.props.myData[0].url}
                     />
                 </div>
-                {/* <div>
-                    <BoxElement/>
+                <div>
+                    <BoxElement style={boxLeft}
+                    title = {this.props.myData[1].title}
+                    article = {this.props.myData[1].article}
+                    url = {this.props.myData[1].url}
+                    />
                 </div>
                 <div>
-                    <BoxElement/>
+                    <BoxElement style={boxRight}
+                    title = {this.props.myData[2].title}
+                    article = {this.props.myData[2].article}
+                    url = {this.props.myData[2].url}
+                    />
                 </div>
                 <div>
-                    <BoxElement/>
-                </div> */}
+                    <BoxElement style={boxBottom}
+                    title = {this.props.myData[3].title}
+                    article = {this.props.myData[3].article}
+                    url = {this.props.myData[3].url}
+                    />
+                </div>
             </main>
         )
     }
