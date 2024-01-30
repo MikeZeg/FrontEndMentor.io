@@ -1,0 +1,67 @@
+.main_Style {
+    width: 100vh;
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 1px solid yellow;
+    background-color: aqua;
+
+    justify-content: center;
+    align-content: center;
+
+    border: 1px solid pink;
+
+    display: grid;
+    gap: 25px;
+
+    grid-template-areas: 
+    '. boxTop .'
+    'boxLeft boxTop boxRight'
+    'boxLeft boxBottom boxRight'
+    '. boxBottom .'
+    
+    ;
+
+}
+.box_Top {
+    background-color: white;
+    border-radius: 5px;
+
+    font-size: 12px;
+    grid-area: boxTop;
+    
+}
+.box_Top h1 {
+    margin: 2rem auto 1.5rem 2rem ;
+
+    font-size: 20px;
+    color: black;
+}
+.box_Top h2 {
+    margin: 0 2rem 2rem 2rem;
+    font-size: 12px;
+    font-weight: 300;
+    color: hsl(229, 6%, 66%);
+}
+.box_Left {
+    border: 1px solid red;
+    background-color: lightgray;
+    font-size: 12px;
+
+    grid-area: boxLeft;
+}
+.box_Right {
+    border: 1px solid yellow;
+    background-color: lightYellow;
+    font-size: 12px;
+
+    grid-area: boxRight;
+}
+.box_Bottom {
+    border: 1px solid blue;
+    background-color: lightblue;
+    font-size: 12px;
+
+    grid-area: boxBottom;
+}

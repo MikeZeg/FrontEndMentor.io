@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/App.css';
+import '../styles/App.css';
 import Header from './header.js'
 import Main from './main.js'
 import Footer from './footer.js'
@@ -8,7 +8,6 @@ import teamBuildLogo from '../images/icon-team-builder.svg'
 import calculatorLogo from '../images/icon-calculator.svg'
 import karmaLogo from '../images/icon-karma.svg'
 import supervisior from '../images/icon-supervisor.svg'
-
 
 // Data - destruction that data and send to component by PROPS
 const data = [
@@ -44,16 +43,8 @@ class App extends React.Component {
 
     return (
       <div>
-
-{/* App All Ready to use.
-Create Compontents - Headeer, Main, Footer
-Made Css file to all components<
-add font family
-check how add SASS */}
-
         <Header />
         <Main 
-          // myData = {myData}
           myData = {myData}
         />
         <Footer/>
