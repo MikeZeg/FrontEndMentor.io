@@ -4,8 +4,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    border: 1px solid yellow;
-    background-color: aqua;
+    background-color: hsl(0, 0%, 98%);
 
     justify-content: center;
     align-content: center;
@@ -19,30 +18,33 @@
     '. boxTop .'
     'boxLeft boxTop boxRight'
     'boxLeft boxBottom boxRight'
-    '. boxBottom .'
-    
-    ;
-
+    '. boxBottom .';
 }
 .box_Top {
     background-color: white;
     border-radius: 5px;
-
     font-size: 12px;
+
     grid-area: boxTop;
     
-}
-.box_Top h1 {
-    margin: 2rem auto 1.5rem 2rem ;
+    h1 {
+        margin: 2rem auto 1.5rem 2rem ;
 
-    font-size: 20px;
-    color: black;
-}
-.box_Top h2 {
-    margin: 0 2rem 2rem 2rem;
-    font-size: 12px;
-    font-weight: 300;
-    color: hsl(229, 6%, 66%);
+        font-size: 20px;
+        color: black;
+    }
+    h2 {
+        margin: 0 2rem 2rem 2rem;
+        
+        font-size: 12px;
+        font-weight: 300;
+        color: hsl(229, 6%, 66%);
+    }
+    img {
+        display: flex;
+        right: 0;
+        margin-left: auto;
+    }
 }
 .box_Left {
     border: 1px solid red;

@@ -37,12 +37,14 @@ class App extends React.Component {
   constructor(props) {
     super(props)
   }
+  
   render() {
+
 // Data to destruction - made destruction in App not in Main
     const myData = data
 
     return (
-      <div>
+      <div >
         <Header />
         <Main 
           myData = {myData}
