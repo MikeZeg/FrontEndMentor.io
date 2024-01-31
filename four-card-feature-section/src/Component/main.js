@@ -17,7 +17,7 @@ const BoxElement = (props) =>{
     return (
         
         <article className={props.style}>
-            <div>
+            <div className="boxColor"></div>
                 <section>
                     <h1>
                         {props.title}
@@ -32,7 +32,6 @@ const BoxElement = (props) =>{
 {/* Add element with prop for all boxes*/}
                     <Image url={props.url}/>
                 </figure>
-            </div>
         </article>
     )
 }

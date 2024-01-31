@@ -43,8 +43,12 @@ class App extends React.Component {
 // Data to destruction - made destruction in App not in Main
     const myData = data
 
+    const appStyle = {
+      backgroundColor: 'hsl(0, 0%, 98%)',
+    }
+
     return (
-      <div >
+      <div style={appStyle}>
         <Header />
         <Main 
           myData = {myData}
