@@ -18,17 +18,17 @@ const data = [
     },
     {
       title: 'Calculator',
-      article: 'Scans out talented network to create the optimal team for you project',
+      article: 'Used data from past projects to provide beter delivery estimates',
       url: calculatorLogo,   
     },
     {
       title: 'Karma',
-      article: 'Scans out talented network to create the optimal team for you project',
+      article: 'Regularly evaluates our talent to ensure quality',
       url: karmaLogo,
     },
     {  
       title: 'Supervisior',
-      article: 'Scans out talented network to create the optimal team for you project',
+      article: 'Monitors activity to identify project roadblocks',
       url: supervisior,
     }
 ]

@@ -1,6 +1,6 @@
 .main_Style {
     width: 100vh;
-    height: 85vh;
+    height: 80vh;
     margin-left: auto;
     margin-right: auto;
     /* margin-top: -40px; */
@@ -12,13 +12,38 @@
     align-content: center;
     
     display: grid;
-    gap: 25px;
+    gap: 30px;
 
     grid-template-areas: 
     '. boxTop .'
     'boxLeft boxTop boxRight'
     'boxLeft boxBottom boxRight'
     '. boxBottom .';
+
+/* Media query 
+    check other options on media query:
+     sizing the boxes
+     change layout - between 770px 1200px
+*/
+    @media (max-width: 1200px){
+        background-color: red;
+        gap: 20px;
+    grid-template-areas: 
+    'boxTop boxLeft'
+    'boxTop boxLeft'
+    'boxRight boxBottom'
+    'boxRight boxBottom'
+    ;
+    }
+    @media (max-width: 770px) {
+       display: inline;
+       /* margin: 0;
+       padding: 0; */
+    }
+    @media (max-width: 370px) {
+/* change box size */
+
+    }
 }
 .box_Top {
     grid-area: boxTop;
@@ -32,6 +57,19 @@
 
     font-size: 12px;
     box-shadow: hsl(229,6%,66%) 1px 5px 11px 0px;
+
+/* Media query */
+@media (max-width: 1200px) {
+    height: 230px;
+    width: 300px;
+}
+    @media (max-width: 770px) {
+        margin-left: auto;
+        margin-right:auto;
+
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
 
     .boxColor {
         background-color: red;
@@ -71,6 +109,18 @@
     background-color: white;
     font-size: 12px;
     box-shadow: hsl(229,6%,66%) 1px 5px 11px 0px;
+
+/* Media query */
+@media (max-width: 1200px) {
+    height: 230px;
+    width: 300px;
+}
+    @media (max-width: 770px) {
+        margin-left: auto;
+        margin-right:auto;
+
+        margin-bottom: 30px;
+    }
     
     .boxColor {
         background-color: hsl(180, 62%, 55%);
@@ -111,6 +161,18 @@
     font-size: 12px;
     box-shadow: hsl(229,6%,66%) 1px 5px 11px 0px;
     
+/* Media Query */
+@media (max-width: 1200px) {
+    height: 230px;
+    width: 300px;
+}
+    @media (max-width: 770px) {
+        margin-left: auto;
+        margin-right:auto;
+
+        margin-bottom: 30px;
+    }
+    
     .boxColor {
         background-color: hsl(212, 86%, 64%);
         height: 3px;
@@ -149,6 +211,18 @@
     background-color: white;
     font-size: 12px;
     box-shadow: hsl(229,6%,66%) 1px 5px 11px 0px;
+
+/* Media Query */
+@media (max-width: 1200px) {
+    height: 230px;
+    width: 300px;
+}
+@media (max-width: 770px) {
+    margin-left: auto;
+    margin-right:auto;
+
+    margin-bottom: 30px;
+}
 
     .boxColor {
         background-color: hsl(34, 97%, 64%);

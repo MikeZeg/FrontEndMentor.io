@@ -7,7 +7,11 @@
     margin-right: auto;
 
     width:45%;
-    line-height: auto;
+
+/* media query */
+@media (max-width: 770px) {
+    width: 90%;       
+}
 
 }
 .font_Margin_Top {
@@ -17,32 +21,32 @@
     margin-top: 15px;
     margin-bottom: 12px;
 }
-
 .h1_Font {
     font-size: 26px;
     line-height: 6px;
     font-weight: 300;
-    
 }
-
 .font_Weight {
     font-weight: 500;
 }
-
 .h2_Font {
     font-weight: 300;
     font-size:12px;
 
     height: 100%;
-    width:61%;
+    max-width: 400px;
 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow-wrap: break-word;
     text-align: center;
-}
 
+/* Media Query */
+@media (max-width: 770px) {
+    max-width: 300px;   
+}
+}
 .font_Color {
     color: hsl(229, 6%, 66%);
 }
