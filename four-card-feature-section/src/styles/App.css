@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: hsl(0, 0%, 98%);
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {

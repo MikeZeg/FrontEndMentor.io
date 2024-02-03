@@ -1,0 +1,38 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    /* text-decoration: none; */
+
+    color: black;
+
+    @media (max-width: 900px) {
+        display: none;
+    }
+
+}
+.footerStyle {
+ /* color: yellow */
+}
+.frontEndStyle {
+    text-decoration: inherit;
+    color: black;
+
+    &:hover {
+        filter: drop-shadow(0 0 0.5rem hsl(50.6, 100%, 50%));
+        transition: all 0.3s ease-in-out;
+        color: hsla(50, 95%, 41%, 0.79)
+    }
+
+}
+.mikeZegStyle {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        filter: drop-shadow(0 0 0.5rem hsl(50.6, 100%, 50%));
+        transition: all 0.3s ease-in-out;
+        color: hsla(50, 95%, 41%, 0.79)
+    }
+}
