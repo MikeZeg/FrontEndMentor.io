@@ -25,15 +25,15 @@
      sizing the boxes
      change layout - between 770px 1200px
 */
-    @media (max-width: 1200px){
-        background-color: red;
+    @media (max-width: 1000px){
+    
         gap: 20px;
-    grid-template-areas: 
-    'boxTop boxLeft'
-    'boxTop boxLeft'
-    'boxRight boxBottom'
-    'boxRight boxBottom'
-    ;
+        grid-template-areas: 
+            'boxTop boxLeft'
+            'boxTop boxLeft'
+            'boxRight boxBottom'
+            'boxRight boxBottom'
+            ;
     }
     @media (max-width: 770px) {
        display: inline;
@@ -221,7 +221,7 @@
     margin-left: auto;
     margin-right:auto;
 
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
     .boxColor {
