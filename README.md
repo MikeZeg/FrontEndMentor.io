@@ -9,6 +9,7 @@ Frontend Mentor challanges - my solutions.
 | [Live](https://mikezeg.github.io/FrontEndMentor.io/interactive-rating-component-main/) | Interactive rating component | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/interactive-rating-component-main) | HTML, CSS - Sass |
 | [Live](https://mikezeg.github.io/FrontEndMentor.io/nft-preview-card-component-main/) | NTF preview card component | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/nft-preview-card-component-main) | HTML, CSS - Sass |
 | [Live](https://curious-malabi-315b39.netlify.app/) | Blog - Preview Card | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/blog-preview-card-main) | React, HTML, CSS |
+| [Live](https://harmonious-melomakarona-b076f5.netlify.app/) |  Four card feature - section | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/four-card-feature-section) | React, HTML, CSS (not nesting for Safari) |
 
 ###Junior
 | Live | Challange Name | Code | Tech |
