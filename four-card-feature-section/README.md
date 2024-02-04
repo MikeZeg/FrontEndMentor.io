@@ -42,7 +42,7 @@ Users should be able to:
 ![deskopt-performance](./src/design/desktop.png)
 
   #### Mobile
-![mobile-performance](./src/design/phone.png)
+![mobile-performance](./src/design/mobile.png)
 
 ### Author 🚀
  -- FrontEnd Mentor -> [MikeZeg](https://www.frontendmentor.io/profile/MikeZeg)
