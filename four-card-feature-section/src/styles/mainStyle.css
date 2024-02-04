@@ -11,26 +11,9 @@
     display: grid;
     gap: 30px;
 
-    grid-template-areas: 
-    '. boxTop .'
-    'boxLeft boxTop boxRight'
-    'boxLeft boxBottom boxRight'
-    '. boxBottom .';
-
-/*---------- Media query ------------------------*/
-    @media (max-width: 1000px){
-        gap: 20px;
-        grid-template-areas: 
-            'boxTop boxLeft'
-            'boxTop boxLeft'
-            'boxRight boxBottom'
-            'boxRight boxBottom'
-            ;
-    }
-    @media (max-width: 770px) {
-       display: inline;
-    }
+    grid-template-areas:'. boxTop .''boxLeft boxTop boxRight''boxLeft boxBottom boxRight''. boxBottom .';
 }
+
 .box_Top {
     grid-area: boxTop;
 
@@ -42,48 +25,13 @@
 
     font-size: 12px;
     box-shadow: hsl(229,6%,66%) 1px 5px 11px 0px;
-
-/*----------- Media query ----------------*/
-    @media (max-width: 1200px) {
-        height: 230px;
-        width: 300px;
-    }
-    @media (max-width: 770px) {
-        margin-left: auto;
-        margin-right:auto;
-
-        margin-bottom: 30px;
-        margin-top: 30px;
-    }
-
-    .boxColor {
-        background-color: red;
-        height: 3px;
-        border-radius: 10px 10px 0 0;
-    }
-    h1 {
-        margin: 2rem auto 1.5rem 2rem ;
-
-        font-size: 20px;
-        color: black;
-    }
-    h2 {
-        margin: 0 2rem 2rem 2rem;
-        
-        font-size: 12px;
-        font-weight: 300;
-        color: hsl(229, 6%, 66%);
-    }
-    figure {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    img {
-        display: flex;
-        margin-right: 2rem;
-        margin-left: auto;        
-    }
 }
+.box_Top .boxColor {
+    background-color: red;
+    height: 3px;
+    border-radius: 10px 10px 0 0;
+}
+
 .box_Left {
     grid-area: boxLeft;
 
@@ -94,47 +42,13 @@
     background-color: white;
     font-size: 12px;
     box-shadow: hsl(229,6%,66%) 1px 5px 11px 0px;
-
-/*-------- Media query ------------*/
-    @media (max-width: 1200px) {
-        height: 230px;
-        width: 300px;
-    }
-    @media (max-width: 770px) {
-        margin-left: auto;
-        margin-right:auto;
-
-        margin-bottom: 30px;
-    }
-    
-    .boxColor {
-        background-color: hsl(180, 62%, 55%);
-        height: 3px;
-        border-radius: 10px 10px 0 0;
-    }
-    h1 {
-        margin: 2rem auto 1.5rem 2rem ;
-
-        font-size: 20px;
-        color: black;
-    }
-    h2 {
-        margin: 0 2rem 2rem 2rem;
-        
-        font-size: 12px;
-        font-weight: 300;
-        color: hsl(229, 6%, 66%);
-    }
-    figure {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    img {
-        display: flex;
-        margin-right: 2rem;
-        margin-left: auto;        
-    }
 }
+.box_Left .boxColor {
+    background-color: hsl(180, 62%, 55%);
+    height: 3px;
+    border-radius: 10px 10px 0 0;
+}
+
 .box_Right {
     grid-area: boxRight;
 
@@ -145,47 +59,13 @@
     background-color: white;
     font-size: 12px;
     box-shadow: hsl(229,6%,66%) 1px 5px 11px 0px;
-    
-/*-------- Media query ------------*/
-    @media (max-width: 1200px) {
-        height: 230px;
-        width: 300px;
-    }
-    @media (max-width: 770px) {
-        margin-left: auto;
-        margin-right:auto;
-
-        margin-bottom: 30px;
-    }
-    
-    .boxColor {
-        background-color: hsl(212, 86%, 64%);
-        height: 3px;
-        border-radius: 10px 10px 0 0;
-    }
-    h1 {
-        margin: 2rem auto 1.5rem 2rem ;
-
-        font-size: 20px;
-        color: black;
-    }
-    h2 {
-        margin: 0 2rem 2rem 2rem;
-        
-        font-size: 12px;
-        font-weight: 300;
-        color: hsl(229, 6%, 66%);
-    }
-    figure {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    img {
-        display: flex;
-        margin-right: 2rem;
-        margin-left: auto;        
-    }
 }
+.box_Right .boxColor {
+    background-color: hsl(212, 86%, 64%);
+    height: 3px;
+    border-radius: 10px 10px 0 0;
+}
+
 .box_Bottom {
     grid-area: boxBottom;
 
@@ -196,45 +76,58 @@
     background-color: white;
     font-size: 12px;
     box-shadow: hsl(229,6%,66%) 1px 5px 11px 0px;
+}
+.box_Bottom .boxColor {
+    background-color: hsl(34, 97%, 64%);
+    height: 3px;
+    border-radius: 10px 10px 0 0;
+}
 
-/*-------- Media query ------------*/
-    @media (max-width: 1200px) {
-        height: 230px;
-        width: 300px;
-    }
-    @media (max-width: 770px) {
-        margin-left: auto;
-        margin-right:auto;
-
-        margin-bottom: 10px;
-    }
-
-    .boxColor {
-        background-color: hsl(34, 97%, 64%);
-        height: 3px;
-        border-radius: 10px 10px 0 0;
-    }
-    h1 {
+ /*---------Used box Not nesting for old Safari ----------*/
+.box h1 {
         margin: 2rem auto 1.5rem 2rem ;
 
         font-size: 20px;
         color: black;
-    }
-    h2 {
-        margin: 0 2rem 2rem 2rem;
+}
+.box h2 {
+    margin: 0 2rem 2rem 2rem;
         
-        font-size: 12px;
-        font-weight: 300;
-        color: hsl(229, 6%, 66%);
-    }
-    figure {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    img {
+    font-size: 12px;
+    font-weight: 300;
+    color: hsl(229, 6%, 66%);
+}
+.box figure {
+    margin-left: 0;
+    margin-right: 0;
+}
+.box figure img {
         display: flex;
         margin-right: 2rem;
-        margin-left: auto;        
+        margin-left: auto;    
+}
+
+/*---------- Media query / not nesting for older Safari ------------------------*/
+@media (max-width: 1200px) {
+    .box_Top,.box_Right,.box_Bottom,.box_Left{
+        height: 230px;
+        width: 300px;
     }
-    
+}
+@media (max-width: 1000px) {
+    .main_Style {
+        grid-template-areas:'boxTop boxLeft''boxTop boxLeft''boxRight boxBottom''boxRight boxBottom';
+    }
+}
+@media (max-width: 770px) {
+    .main_Style {
+        display: inline;
+    }
+    .box_Top, .box_Right, .box_Bottom, .box_Left{
+        margin-left: auto;
+        margin-right:auto;
+
+        margin-bottom: 30px;
+        margin-top: 30px;
+     }
 }

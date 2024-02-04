@@ -46,25 +46,25 @@ class Main extends React.Component {
         return(
             <main className="main_Style">
                 
-                    <BoxElement style={'box_Top'}
+                    <BoxElement style={'box_Top box'}
                     title = {this.props.myData[0].title}
                     article = {this.props.myData[0].article}
                     url = {this.props.myData[0].url}
                     />
                 
-                    <BoxElement style={'box_Left'}
+                    <BoxElement style={'box_Left box'}
                     title = {this.props.myData[3].title}
                     article = {this.props.myData[3].article}
                     url = {this.props.myData[3].url}
                     />
                 
-                    <BoxElement style={'box_Right'}
+                    <BoxElement style={'box_Right box'}
                     title = {this.props.myData[1].title}
                     article = {this.props.myData[1].article}
                     url = {this.props.myData[1].url}
                     />
                 
-                    <BoxElement style={'box_Bottom'}
+                    <BoxElement style={'box_Bottom box'}
                     title = {this.props.myData[2].title}
                     article = {this.props.myData[2].article}
                     url = {this.props.myData[2].url}

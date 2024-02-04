@@ -8,12 +8,6 @@
     margin-right: auto;
 
     width:45%;
-
-/*-------- Media query ------------*/
-    @media (max-width: 770px) {
-        width: 90%;       
-    }
-
 }
 .font_Margin_Top {
     margin-top: 30px;
@@ -23,7 +17,7 @@
     margin-bottom: 12px;
 }
 .h1_Font {
-    font-size: 26px;
+    font-size: 25px;
     line-height: 6px;
     font-weight: 300;
 }
@@ -42,12 +36,18 @@
     align-items: center;
     overflow-wrap: break-word;
     text-align: center;
-
-/*-------- Media query ------------*/
-    @media (max-width: 770px) {
-        max-width: 300px;   
-    }
 }
 .font_Color {
     color: hsl(229, 6%, 66%);
+}
+
+/*-------- Media query --- not nesting for older Safari ---------*/
+@media (max-width: 770px) {
+    .header_Style {
+        width: 90%;
+    }
+    .h2_Font {
+        max-width: 300px;
+    }
+    
 }
