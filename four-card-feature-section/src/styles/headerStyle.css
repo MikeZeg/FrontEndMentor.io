@@ -9,10 +9,10 @@
 
     width:45%;
 
-/* media query */
-@media (max-width: 770px) {
-    width: 90%;       
-}
+/*-------- Media query ------------*/
+    @media (max-width: 770px) {
+        width: 90%;       
+    }
 
 }
 .font_Margin_Top {
@@ -43,10 +43,10 @@
     overflow-wrap: break-word;
     text-align: center;
 
-/* Media Query */
-@media (max-width: 770px) {
-    max-width: 300px;   
-}
+/*-------- Media query ------------*/
+    @media (max-width: 770px) {
+        max-width: 300px;   
+    }
 }
 .font_Color {
     color: hsl(229, 6%, 66%);

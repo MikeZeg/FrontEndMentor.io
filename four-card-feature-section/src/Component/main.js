@@ -9,7 +9,7 @@ import { style } from '../styles/mainStyle.css'
 
 // Image element -------------------------------
 const Image = (props) => {
-    return <img src={props.url} alt='logo'></img>
+    return <img src={props.url} alt='logo' width={'64px'} height={'64px'}></img>
 }
 
 // Box element ---------------------------------

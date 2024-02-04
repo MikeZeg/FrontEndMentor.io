@@ -3,10 +3,10 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
-    /* text-decoration: none; */
 
     color: black;
 
+/*-------- Media query ------------*/
     @media (max-width: 900px) {
         display: none;
     }
