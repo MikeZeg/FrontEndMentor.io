@@ -1,0 +1,41 @@
+footer {
+    position: relative;
+    height: 8rem;
+
+    color: black;
+
+    background-image: url('../images/pattern-bg-desktop.png');
+    background-size: cover;
+}
+
+.footerStyle {
+    bottom: 0;
+    text-align: center;
+    
+}
+.frontEndStyle {
+    text-decoration: inherit;
+    color: black;
+}
+.mikeZegStyle {
+    text-decoration: none;
+    color: black;
+}
+.frontEndStyle:hover {
+    filter: drop-shadow(0 0 0.5rem hsl(50.6, 100%, 50%));
+        transition: all 0.3s ease-in-out;
+        color: hsla(50, 95%, 41%, 0.79)
+}
+.mikeZegStyle:hover {
+    filter: drop-shadow(0 0 0.5rem hsl(50.6, 100%, 50%));
+    transition: all 0.3s ease-in-out;
+    color: hsla(50, 95%, 41%, 0.79)
+}
+
+/*-------------- Media query / older Safari ---------- */
+@media (max-width: 900px) {
+    footer {
+        display: none;
+    }
+    
+}

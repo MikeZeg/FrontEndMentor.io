@@ -1,0 +1,121 @@
+.headerStyle {
+
+    height: 31vh;
+    min-width: 100vh;
+   
+    background-image: url('../images/pattern-bg-desktop.png');
+    background-size: cover;
+}
+/* --------- Header Text ---------- */
+.headerStyle__h1 {
+    color: white;
+
+    font-size: 1.6rem;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    p {
+        color: white;
+        margin-top: 20px;
+    }
+}
+/* ---------- input style --------- */
+.form {
+    /* border: 1px solid red; */
+
+    height: 3.625;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.input {
+    font-size: 1.5rem;
+    padding: 1.1rem;
+
+    width: 31rem;
+
+    font-weight: 400;
+
+    border: none;
+    border-radius: 15px 0px 0px 15px;
+
+    cursor: pointer;
+}   
+button {
+    border-radius: 0 15px 15px 0;
+    border-color: transparent;
+    padding: 1px;
+    cursor: pointer;
+
+    background-color: black;
+
+    .img {
+        background-size: contain;
+        height: 45px;
+        background-color: white;
+    }
+}
+.form__btn_i {
+    font-size: 1rem;
+    color: white;
+    /* font-family: ; */
+    /* font-weight: 900; */
+}
+
+/* ------ Info Style --------- */
+.headerStyle__info {
+    position: absolute;
+    margin-top: 2.2rem;
+
+    left: 50%;
+    
+    -moz-transform: translate(-50, 0%); /* Firefox */
+    -ms-transform: translate(-50%, 0%);  /* IE 9 */
+    -webkit-transform: translate(-50%, 0%); /* Safari and Chrome*/
+    -o-transform: translate(-50%, 0%); /* Opera */
+    transform: translate(-50%, 0%);
+
+    color: gray;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 20px;
+    box-shadow: 0 0 1.2rem hsl(0, 2%, 44%);
+
+    width: 80%;
+    min-height: 15vh;
+    z-index: 500;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-size: 0.8rem;
+    }
+}
+p {
+    color: black;
+    font-size: 1.3125rem;
+    padding: 0;
+    /* margin: 0; */
+}
+.box {
+    /* padding: 1rem 2rem; */
+    padding: 0;
+    padding-left: 2rem;
+    margin-top: 22px;
+    margin-right: 10px;
+    
+    width: 25%;
+}
+.box__border {
+    border-left: 1px solid gray;
+}
