@@ -26,8 +26,6 @@
 }
 /* ---------- input style --------- */
 .form {
-    /* border: 1px solid red; */
-
     height: 3.625;
 
     position: relative;
@@ -50,17 +48,23 @@
     cursor: pointer;
 }   
 button {
+    width: 50px;
+
     border-radius: 0 15px 15px 0;
     border-color: transparent;
     padding: 1px;
     cursor: pointer;
 
     background-color: black;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: hsla(0, 5%, 11%, 0.639);
+    }
 
     .img {
-        background-size: contain;
-        height: 45px;
-        background-color: white;
+        /* border-radius: 0 15px 15px 0; */
+        height: 12px;
     }
 }
 .form__btn_i {

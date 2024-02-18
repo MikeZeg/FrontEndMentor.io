@@ -2,10 +2,13 @@ footer {
     position: relative;
     height: 8rem;
 
-    color: black;
+    color: white;
 
     background-image: url('../images/pattern-bg-desktop.png');
     background-size: cover;
+}
+.footerStyle__div {
+    padding-top: 40px;
 }
 
 .footerStyle {
@@ -15,11 +18,11 @@ footer {
 }
 .frontEndStyle {
     text-decoration: inherit;
-    color: black;
+    color: white;
 }
 .mikeZegStyle {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .frontEndStyle:hover {
     filter: drop-shadow(0 0 0.5rem hsl(50.6, 100%, 50%));

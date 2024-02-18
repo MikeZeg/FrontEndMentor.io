@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../styles/headerStyle.css'
 import myData from '../API/GeoAPI.js'
-import img from '../images/right-arrow.svg'
+import img from '../images/icon-arrow.svg'
 
 console.log(myData)
 
@@ -13,6 +13,7 @@ export function InputForm() {
                         className='form__input input'
                         type="text"
                         value={ipAddress}
+                        placeholder='Search for any IP address or domain'
                         onChange={(e)=> setIpAddress(e.target.value)}
                     />
                     <button type='submit' className='form__btn btn'>
