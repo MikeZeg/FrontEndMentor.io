@@ -21,7 +21,7 @@
 
     p {
         color: white;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 }
 /* ---------- input style --------- */
@@ -40,7 +40,9 @@
 
     width: 31rem;
 
+    font-size: 0.75rem;
     font-weight: 400;
+    color: gray;
 
     border: none;
     border-radius: 15px 0px 0px 15px;
