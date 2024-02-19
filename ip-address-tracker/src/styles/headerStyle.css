@@ -79,7 +79,7 @@ button {
 /* ------ Info Style --------- */
 .headerStyle__info {
     position: absolute;
-    margin-top: 2.2rem;
+    margin-top: 4.3rem;
 
     left: 50%;
     
@@ -106,22 +106,46 @@ button {
     h2 {
         font-size: 0.8rem;
     }
+/* ------ Media Query ----- */
+    /* margin-top for safari and others*/
+@media (min-width: 1900px) {
+    margin-top: 4.3rem;
+}
+@media (min-width: 451px) and (max-width: 1200px) {
+    margin-top: 4.3rem;
+}
+/* @media (max-width: 451px) and (max-width: 800px) {
+    margin-top: 3.3rem;
+} */
+@media (max-width: 450px) {
+    display: grid;
+    width: 540px;
+    left: 85%;
+    margin-top: 2rem;
+    justify-items: center;
+}
 }
 p {
     color: black;
     font-size: 1.3125rem;
     padding: 0;
-    /* margin: 0; */
 }
 .box {
-    /* padding: 1rem 2rem; */
     padding: 0;
     padding-left: 2rem;
     margin-top: 22px;
     margin-right: 10px;
     
     width: 25%;
+
+    @media (max-width: 450px) {
+        width: 100%;
+    }
 }
 .box__border {
     border-left: 1px solid gray;
+
+    @media (max-width: 450px) {
+        border-left:none;
+    }
 }
