@@ -35,7 +35,7 @@ class Header extends React.Component {
 {/* ------- Input ------- */}
                 <InputForm/>
                 <section className='headerStyle__info'>
-                    <h2 className='headerStyle__info__ip box'>IP Address: <p className='headerStyle___info__IP__p'>{myData.name}</p></h2>
+                    <h2 className='headerStyle__info__ip box'><span className='top__span'>IP Address: </span><p className='headerStyle___info__IP__p'>{myData.name}</p></h2>
                     <h2 className='headerStyle__info__location box box__border'>Location: <p className='headerStyle__info__location__p'>{myData.address.city}</p></h2>
                     <h2 className='headerStyle__info__time box box__border'>Time Zone: <p className='headerStyle__info__time__p'>{myData.address.street}</p></h2>
                     <h2 className='headerStyle__info__isp box box__border'>ISP: <p className='headerStyle__info__isp__p'>{myData.email}</p></h2>

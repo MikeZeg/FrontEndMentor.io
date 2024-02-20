@@ -105,25 +105,30 @@ button {
 
     h2 {
         font-size: 0.8rem;
+
+        @media (max-width:450px) {
+            display:contents;         
+        }
     }
 /* ------ Media Query ----- */
     /* margin-top for safari and others*/
-@media (min-width: 1900px) {
-    margin-top: 4.3rem;
-}
-@media (min-width: 451px) and (max-width: 1200px) {
-    margin-top: 4.3rem;
-}
+    @media (min-width: 1900px) {
+        margin-top: 4.3rem;
+    }
+    @media (min-width: 451px) and (max-width: 1200px) {
+        margin-top: 4.3rem;
+    }
 /* @media (max-width: 451px) and (max-width: 800px) {
     margin-top: 3.3rem;
 } */
-@media (max-width: 450px) {
-    display: grid;
-    width: 540px;
-    left: 85%;
-    margin-top: 2rem;
-    justify-items: center;
-}
+    @media (max-width: 450px) {
+        display: grid;
+        /* width: 100%; */
+        width: 57vh;
+        left: 85%;
+        margin-top: 2rem;
+        justify-items: center;
+    }
 }
 p {
     color: black;
@@ -144,8 +149,11 @@ p {
 }
 .box__border {
     border-left: 1px solid gray;
+}
+.top__span {
 
-    @media (max-width: 450px) {
-        border-left:none;
+
+    @media (max-width:450px) {
+        margin-top: 20px;
     }
 }

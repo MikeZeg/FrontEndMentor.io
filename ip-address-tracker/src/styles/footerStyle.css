@@ -36,7 +36,7 @@ footer {
 }
 
 /*-------------- Media query / older Safari ---------- */
-@media (max-width: 900px) {
+@media (max-width: 930px) {
     footer {
         display: none;
     }
