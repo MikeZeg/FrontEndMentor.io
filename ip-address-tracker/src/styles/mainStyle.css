@@ -3,11 +3,21 @@
 }
 .mapStyle {
     width: 100%;
-    height: 68vh;
-}
+    height: 55vh;
 
- /* add other dimension to map container 
-    check header below 920px
-    check form 63% width
- 
- */
+    @media (max-width:929px) {
+        height: 69vh;
+    }
+    /* @media (max-width: ) {
+        
+    } */
+    @media (max-width: 449px) {
+        height: 69vh;
+    }
+}
+.leaflet-control-zoom {
+
+    @media (max-width: 449px) {
+        display: none;
+    }
+}
