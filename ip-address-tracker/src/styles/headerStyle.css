@@ -6,6 +6,7 @@
     background-image: url('../images/pattern-bg-desktop.png');
     background-size: cover;
 }
+
 /* --------- Header Text ---------- */
 .headerStyle__h1 {
     color: white;
@@ -21,14 +22,17 @@
 
     p {
         color: white;
+        font-weight: 500;
         margin-top: 30px;
 
+/* ------------ Media Query -------------- */
         @media (max-width:449px) {
             font-size: 2rem;
             margin-bottom: 0.5rem;
         }
     }
 }
+
 /* --------------- input style ------------- */
 .form {
     height: 3.625;
@@ -116,8 +120,9 @@ button {
             display:contents;         
         }
     }
+
 /* ------ Media Query ----- */
-    /* margin-top for safari and others*/
+                                        /* margin-top for safari and others*/
     @media (min-width: 1900px) {
         margin-top: 4.3rem;
     }
@@ -145,6 +150,8 @@ p {
     margin-top: 22px;
     margin-right: 10px;
     
+    font-weight: 700;
+
     width: 25%;
 
     @media (max-width: 450px) {
