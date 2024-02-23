@@ -89,7 +89,7 @@ button {
 /* --------------- Info Style -------------- */
 .headerStyle__info {
     position: absolute;
-    margin-top: 4.3rem;
+    margin-top: 2.3rem;
 
     left: 50%;
     
@@ -122,22 +122,26 @@ button {
     }
 
 /* ------ Media Query ----- */
-                                        /* margin-top for safari and others*/
-    @media (min-width: 1900px) {
-        margin-top: 4.3rem;
-    }
-    @media (min-width: 451px) and (max-width: 1200px) {
-        margin-top: 4.3rem;
-    }
-/* @media (max-width: 451px) and (max-width: 800px) {
-    margin-top: 3.3rem;
-} */
-    @media (max-width: 450px) {
-        display: grid;
-        width: 87%;
-        margin-top: 2rem;
-        justify-items: center;
-    }
+        
+    /* margin-top for safari and others*/
+        @media (min-width: 1900px) {
+            margin-top: 4.3rem;
+        }
+        @media (min-width:1450px) {
+            margin-top: 6rem;
+        }
+        @media (min-width: 900px) and (max-width: 1449px) {
+            margin-top: 2.3rem;
+        }
+        @media (min-width: 451px) and (max-width: 899px) {
+            margin-top: 4.3rem;
+        }
+        @media (max-width: 450px) {
+            display: grid;
+            width: 87%;
+            margin-top: 2rem;
+            justify-items: center;
+        }
 }
 p {
     color: black;
@@ -162,7 +166,6 @@ p {
     border-left: 1px solid gray;
 }
 .top__span {
-
 
     @media (max-width:450px) {
         margin-top: 20px;
