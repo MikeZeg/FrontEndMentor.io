@@ -16,7 +16,4 @@ const myURL = 'https://jsonplaceholder.typicode.com/todos/1';
 const myData = await response.json();
 
 
-
-
-
 export default myData

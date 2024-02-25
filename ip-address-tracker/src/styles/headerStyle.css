@@ -134,7 +134,15 @@ button {
             margin-top: 2.3rem;
         }
         @media (min-width: 451px) and (max-width: 899px) {
+
             margin-top: 4.3rem;
+        }
+        @media (min-width:451px) and (max-width: 750px) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 60%;
+            
         }
         @media (max-width: 450px) {
             display: grid;
@@ -166,6 +174,7 @@ p {
     border-left: 1px solid gray;
 }
 .top__span {
+
 
     @media (max-width:450px) {
         margin-top: 20px;
