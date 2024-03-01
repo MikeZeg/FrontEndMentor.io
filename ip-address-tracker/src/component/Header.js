@@ -1,17 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/headerStyle.css'
 import myData from '../API/GeoAPI.js'
 import { buttonAPI } from '../API/GeoAPI.js'
 import img from '../images/icon-arrow.svg'
 
-console.log(myData)
+console.log('Data in Header component', myData)
 
-export function InputForm(props) {
-     
+export const InputForm = (props)=> {
     const [ipAddress, setIpAddress] = useState("");
-    
-    console.log(ipAddress)
-    
+    // console.log(ipAddress)
     return (
         <form className='form'>
                     <input
@@ -27,22 +24,42 @@ export function InputForm(props) {
         </form>
     )}
 
+export const Info = (props) => {
+
+    const [data, setData] = useState(myData)
+    console.log('Info compo in Header: ',myData)
+    
+    return (
+        <section className='headerStyle__info'>
+            <h2 className='headerStyle__info__ip box'><span className='top__span'>IP ADDRESS </span><p className='headerStyle___info__IP__p'>{myData.ip}</p></h2>
+            <h2 className='headerStyle__info__location box box__border'>LOCATION <p className='headerStyle__info__location__p'>{myData.location.city}, {myData.location.region}, {myData.location.country_name}</p></h2>
+            <h2 className='headerStyle__info__time box box__border'>Time ZONE <p className='headerStyle__info__time__p'>{myData.location.timezone}</p></h2>
+            <h2 className='headerStyle__info__isp box box__border'>ISP <p className='headerStyle__info__isp__p'>{myData.isp}</p></h2>
+        </section>
+    )
+}
+
 class Header extends React.Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
     }
+    
     render() {
+        
         return (
             <header className='headerStyle'>
                 <h1 className='headerStyle__h1'><p>IP Address Tracker</p></h1>
-{/* ------- Input ------- */}
+{/* ------- Input ---------------*/}
                 <InputForm/>
-                <section className='headerStyle__info'>
+{/* ------- INFO ----------------*/}
+                <Info/>
+
+                {/* <section className='headerStyle__info'>
                     <h2 className='headerStyle__info__ip box'><span className='top__span'>IP ADDRESS </span><p className='headerStyle___info__IP__p'>{myData.ip}</p></h2>
                     <h2 className='headerStyle__info__location box box__border'>LOCATION <p className='headerStyle__info__location__p'>{myData.location.city}, {myData.location.region}, {myData.location.country_name}</p></h2>
                     <h2 className='headerStyle__info__time box box__border'>Time ZONE <p className='headerStyle__info__time__p'>{myData.location.timezone}</p></h2>
                     <h2 className='headerStyle__info__isp box box__border'>ISP <p className='headerStyle__info__isp__p'>{myData.isp}</p></h2>
-                </section>
+                </section> */}
             </header>
         )
     }
