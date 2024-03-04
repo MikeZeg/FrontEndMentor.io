@@ -1,6 +1,6 @@
 import { API_KEY }  from '../component/config'
-import { useEffect } from 'react';
-import Main from '../component/Main.js';
+import { useEffect, useState } from 'react';
+
 
 // API url
 const urlWeb = `https://ipapi.co/`;
@@ -10,35 +10,28 @@ const urlCountry = `https://geo.ipify.org/api/v2/country?apiKey=${API_KEY}`;
 const myURL = 'https://jsonplaceholder.typicode.com/todos/1';
 
 export const myData = {
-    ip:'123.12.1.1',
-    location: {
-        region:"NY",
-        city:'NY',
+    ip:'111.11.1.1',
+    location:{
         country_name:'USA',
-        timezone:'+3',
-        lat: '40',
-        lng: '-76'
+        city:'NY',
+        region:'New York',
+        lat:'50',
+        lng:'10',
+        timezone:"+01:00",
     },
-    isp:'123'
+    asn:'Vodafone',
 }
-
 
 // API GEO
 // const response = await fetch('https://jsonplaceholder.typicode.com/users/1')
 // const response = await fetch(urlGeoApi)
 // const myData = await response.json();
 
-// ----- Function Button  ------
-export function buttonAPI(val,e) {
+// -------------- Function Button  ------------------------
+export const buttonAPI = (val,e) => {
+
 
     e.preventDefault();
-    console.log('Event: ',e)
-    console.log('Button Pressed');
-    console.log('Value send to GeoAPI: ',val);
-
-    const main = `../component/Header.js`;
-
-    console.log(main)
 
     let link = `https://ipapi.co/${val}/json/`;
     
@@ -53,24 +46,31 @@ export function buttonAPI(val,e) {
                     longitude,
                     utc_offset,
                     region,
-                    asn,
+                    asn
+                    
                 } = res
-                    myData.ip = ip
-                    myData.location.lat = latitude
-                    myData.location.lng = longitude
-                    myData.location.city = city;
-                    myData.location.country_name = country_name;
-                    myData.location.region = region;
-                    myData.location.timezone = utc_offset;
 
+                console.log('Button: ',res)
+                myData.ip = ip
+                myData.location.lat = latitude
+                myData.location.lng = longitude
+                myData.location.city = city;
+                myData.location.country_name = country_name;
+                myData.location.region = region;
+                myData.location.timezone = utc_offset;
+
+                // console.log('in function then: ',myData)
+                
                 if(asn) {
-                    console.log('ASN: ',asn)
+                    // console.log("ASN", asn)
+                    myData.asn = asn
                 }
-                console.log("dziala: ",myData)
+
+                console.log('Data after fetch: ',myData)
+                return myData
 
             })
             .catch((error)=>console.log("Connection Issues, please check require."))
 }       
-
 
 export default myData

@@ -4,11 +4,11 @@ import myData from '../API/GeoAPI.js'
 import { buttonAPI } from '../API/GeoAPI.js'
 import img from '../images/icon-arrow.svg'
 
-console.log('Data in Header component', myData)
 
 export const InputForm = (props)=> {
     const [ipAddress, setIpAddress] = useState("");
-    // console.log(ipAddress)
+    // console.log('IP addres Header: ',ipAddress)
+
     return (
         <form className='form'>
                     <input
@@ -25,16 +25,27 @@ export const InputForm = (props)=> {
     )}
 
 export const Info = (props) => {
+    
+    const [data, setData] = useState({
+        isp:"",
+        ip:"",
+        timezone:"",
+        city:"",
+        region:"",
+        country_name:"",
+    })
 
-    const [data, setData] = useState(myData)
-    console.log('Info compo in Header: ',myData)
+    console.log('header IP: ', props.ip)
+
+    const {isp,ip} = myData
+    const {timezone,city,region,country_name} = myData.location
     
     return (
         <section className='headerStyle__info'>
-            <h2 className='headerStyle__info__ip box'><span className='top__span'>IP ADDRESS </span><p className='headerStyle___info__IP__p'>{myData.ip}</p></h2>
-            <h2 className='headerStyle__info__location box box__border'>LOCATION <p className='headerStyle__info__location__p'>{myData.location.city}, {myData.location.region}, {myData.location.country_name}</p></h2>
-            <h2 className='headerStyle__info__time box box__border'>Time ZONE <p className='headerStyle__info__time__p'>{myData.location.timezone}</p></h2>
-            <h2 className='headerStyle__info__isp box box__border'>ISP <p className='headerStyle__info__isp__p'>{myData.isp}</p></h2>
+            <h2 className='headerStyle__info__ip box'><span className='top__span'>IP ADDRESS </span><p className='headerStyle___info__IP__p'>{ip}</p></h2>
+            <h2 className='headerStyle__info__location box box__border'>LOCATION <p className='headerStyle__info__location__p'>{city}, {region}, {country_name}</p></h2>
+            <h2 className='headerStyle__info__time box box__border'>Time ZONE <p className='headerStyle__info__time__p'>{timezone}</p></h2>
+            <h2 className='headerStyle__info__isp box box__border'>ISP <p className='headerStyle__info__isp__p'>{isp}</p></h2>
         </section>
     )
 }
