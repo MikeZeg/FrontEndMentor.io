@@ -4,21 +4,18 @@ import '../styles/mainStyle.css'
 import { myData } from '../API/GeoAPI'
 
 
-class Main extends React.Component{
-    constructor(props){
-        super(props);
+const Main = (props) =>{
+    console.log('My data from props',props)
 
-    }
+    const {lat,lng} = props
     
-    render(){
         return(
         <main className="mainStyle">
             <MapComponent 
-                // lat1 = {this.positions.position1}
-                // lng1 = {this.positions.position2}
+                lat = {lat}
+                lng = {lng}
             className='mainStyle'/>
         </main>
     )}
-}
 
-export default Main
+export default Main;

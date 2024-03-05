@@ -4,35 +4,27 @@ import Main from './Main'
 import Footer from './Footer.js'
 import myData from '../API/GeoAPI.js';
 import {buttonAPI} from '../API/GeoAPI.js' 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-function App() {
+const  App = () => {
 
-
-  // const [details, setDetails] = useState({
-  //   timezone:'',
-  //   city:'',
-  //   region:'',
-  //   country_name:'',
-  //   ip:''
-  // })
-  // const [position, setPosition] = useState({
-  //   lat:'',
-  //   lng:''
-  // })
-  const [details, setDetails] = useState({myData})
-
+  const {city, country_name, lat,lng,region,timezone} = myData.location
   
-
+  console.log(city)
 
   return (
     <div >
         <Header 
-          // ip={myData.ip}
-          // ip = {myData}
+          ip={myData.ip}
+          isp={myData.asn}
+          city={city}
+          country_name = {country_name}
+          region = {region}
+          timezone = {timezone}
         />
         <Main
-        
+        lat={lat}
+        lng={lng}
         />
         <Footer/>
     </div>

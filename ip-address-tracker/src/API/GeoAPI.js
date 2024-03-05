@@ -30,10 +30,10 @@ export const myData = {
 // -------------- Function Button  ------------------------
 export const buttonAPI = (val,e) => {
 
-
     e.preventDefault();
 
     let link = `https://ipapi.co/${val}/json/`;
+    // let link2 = `https://freeipapi.com/api/json/${val}`;
     
         fetch(link)
             .then((response)=> response.json())
@@ -47,7 +47,6 @@ export const buttonAPI = (val,e) => {
                     utc_offset,
                     region,
                     asn
-                    
                 } = res
 
                 console.log('Button: ',res)
@@ -67,6 +66,7 @@ export const buttonAPI = (val,e) => {
                 }
 
                 console.log('Data after fetch: ',myData)
+                
                 return myData
 
             })
