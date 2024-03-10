@@ -8,16 +8,10 @@ import {useButtonAPI} from '../API/GeoAPI.js'
 import { useEffect, useState } from 'react';
 
 const  App = (props) => {
-
   
-
-  // const [ myData , reloadData ] = useButtonAPI();
-  // // console.log('App: ',myData)
   return ( 
     <div > 
-        <Header
-            // ip={myData.ip}
-        />
+        <Header/>
         <Main/>
         <Footer/>
     </div>

@@ -11,13 +11,6 @@ export const InputForm = (props)=> {
 
     const [ data , reloadData ] = useButtonAPI();
 
-    // console.log('Show data: ', data)
-
-    // console.log('Data from Effect: ',
-    //     data.ip,
-    //     data.country_name
-    // )
-
     return (
         <form className='form'>
                     <input
@@ -48,37 +41,22 @@ export const Info = (props) => {
 
     const Header = (props) =>{
 
-        const data = {
-        ip:'',
-        region:'',
-        city:'',
-        country_name:'',
-        latitude:'',
-        longitude:'',
-        timezone:'',
-        asn:'',
-    }
-
-    // console.log('Header: ', data)
-
-    const [ myData , reloadData ] = useButtonAPI();
-    // console.log('Header main: ',myData)
+    const [ data , reloadData ] = useButtonAPI();
 
         return (
             <header className='headerStyle'>
                 <h1 className='headerStyle__h1'><p>IP Address Tracker</p></h1>
                 <InputForm/>
                 <Info
-                    ip = {myData.ip}
-                    city = {myData.city}
-                    country_name = {myData.country_name}
-                    region = {myData.region}
-                    timezone = {myData.timezone}
-                    isp = {myData.asn}
-
+                    ip = {data.ipAddress}
+                    city = {data.cityName}
+                    country_name = {data.countryName}
+                    region = {data.regionName}
+                    timezone = {data.timeZone}
+                    // isp = {data.asn}
                 />
             </header>
         )
     }
 
-export default Header
+export default Header;

@@ -1,28 +1,34 @@
-import React, {useRef, useState} from 'react'
+import React, { useState} from 'react'
 import '../styles/mainStyle.css'
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
 import { useButtonAPI } from './GeoAPI'
 
 
-const MapComponent = (props) => {
-    
-    const [myData, reload] = useButtonAPI();
-    console.log('Map Api: ', myData.latitude, myData.longitude)
+const MapComponent = () => {
+
+    const [data, setData] = useButtonAPI();
+
+    console.log('Map Api: ', data.ipAddress)
+    console.log('Map Api: ', data.latitude, data.longitude)
+
+    const ip = data.ipAddress;
+    const lat = data.latitude
+    const lng = data.longitude
+
 
     return (
         <MapContainer 
-        center={[myData.latitude,myData.longitude]} zoom={13} scrollWheelZoom={false} className='mapStyle'>
+            center={[lat,lng]} zoom={10} scrollWheelZoom={false} className='mapStyle'>
             <TileLayer
-
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[myData.latitude, myData.longitude ]}>
+            <Marker position={[lat, lng]}>
                 <Popup>
-                    User Location. <br /> User IP Location.
+                    User Location: {data.cityName}. <br /> User IP Location {ip}.
                 </Popup>
             </Marker>
         </MapContainer>
     )}
-    
+
 export default MapComponent
