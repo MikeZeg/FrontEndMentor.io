@@ -1,34 +1,28 @@
+import React from 'react';
+
 import '../styles/appStyle.css';
 import Header from './Header';
 import Main from './Main'
 import Footer from './Footer.js'
-import myData from '../API/GeoAPI.js';
-import {buttonAPI} from '../API/GeoAPI.js' 
+import {useButtonAPI} from '../API/GeoAPI.js' 
 import { useEffect, useState } from 'react';
 
-const  App = () => {
+const  App = (props) => {
 
-  const {city, country_name, lat,lng,region,timezone} = myData.location
   
-  console.log(city)
 
-  return (
-    <div >
-        <Header 
-          ip={myData.ip}
-          isp={myData.asn}
-          city={city}
-          country_name = {country_name}
-          region = {region}
-          timezone = {timezone}
+  // const [ myData , reloadData ] = useButtonAPI();
+  // // console.log('App: ',myData)
+  return ( 
+    <div > 
+        <Header
+            // ip={myData.ip}
         />
-        <Main
-        lat={lat}
-        lng={lng}
-        />
+        <Main/>
         <Footer/>
     </div>
   );
 }
+
 
 export default App;
