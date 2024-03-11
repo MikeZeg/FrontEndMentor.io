@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/headerStyle.css'
-import myData from '../API/GeoAPI.js'
+// import myData from '../API/GeoAPI.js'
 import { useButtonAPI } from '../API/GeoAPI.js'
 import img from '../images/icon-arrow.svg'
 
 
+
+// ---------------------------- InputForm -------------------------
 export const InputForm = (props)=> {
 
     const [ipAddress, setIpAddress] = useState("");
 
     const [ data , reloadData ] = useButtonAPI();
+
+    useButtonAPI(ipAddress);
 
     return (
         <form className='form'>
@@ -25,9 +29,8 @@ export const InputForm = (props)=> {
                     </button>
         </form>
     )}
-
+// --------------------------- INFO ----------------------
 export const Info = (props) => {
-
 
     return (
         <section className='headerStyle__info'>
@@ -38,7 +41,7 @@ export const Info = (props) => {
         </section>
     )
 }
-
+// -------------------------------- HEADER ----------------------
     const Header = (props) =>{
 
     const [ data , reloadData ] = useButtonAPI();

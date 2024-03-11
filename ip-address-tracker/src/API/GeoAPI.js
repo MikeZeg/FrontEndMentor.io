@@ -7,7 +7,6 @@ const urlGeoApi = `https://geo.ipify.org/api/v2/country,city,vpn?apiKey=${API_KE
 const urlCountry = `https://geo.ipify.org/api/v2/country?apiKey=${API_KEY}`;
 const myURL = 'https://jsonplaceholder.typicode.com/todos/1';
 
-// console.log(ipAddress)
 
 // API GEO
 // const response = await fetch('https://jsonplaceholder.typicode.com/users/1')
@@ -17,8 +16,11 @@ const myURL = 'https://jsonplaceholder.typicode.com/todos/1';
 // -------------- Function BTN ------------------------
 export const useButtonAPI = (val,e) => {
 
-    let link = `https://ipapi.co/123.12.1.1/json/`;
-    let link1 = `https://freeipapi.com/api/json/199.12.1.1`;
+    console.log('useButtonAPI: ',val)
+
+    let checkLink;
+    let link = `https://ipapi.co/123.12.2.1/json/`;
+    let link1 = `https://freeipapi.com/api/json/109.12.1.1`;
 
     const initData = {
         ipAddress:'',
@@ -34,9 +36,19 @@ export const useButtonAPI = (val,e) => {
     const [reload, reloadData] = useState()
     const [data , setData ] = useState(initData)
 
+// IF val false use urlGeoApi, if val true add val to link1
+
+    if(!val){
+        console.log('App start: ')
+        checkLink = urlGeoApi;
+    } else {
+        console.log('Value is add: ',val)
+    }
+
 // ------- FIRST Start -------    
     useEffect((e)=>{
         console.log('First start: ', data)
+        
         
         fetch(link1)
             .then(response => response.json())

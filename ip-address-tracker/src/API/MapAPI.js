@@ -1,31 +1,42 @@
-import React, { useState} from 'react'
+import React, { useEffect, useState} from 'react'
 import '../styles/mainStyle.css'
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
 import { useButtonAPI } from './GeoAPI'
+import { latLng } from 'leaflet'
 
 
-const MapComponent = () => {
+
+const MapComponent = (props) => {
+
+    console.log('MapApi: ',props.latitude)
 
     const [data, setData] = useButtonAPI();
+    const lat1 = props.latitude;
+    const lng1 = props.longitude;
+    const lat = 52.505;
+    const lng = -3.1;
+    const position = [lat1,lng1]
 
-    console.log('Map Api: ', data.ipAddress)
-    console.log('Map Api: ', data.latitude, data.longitude)
+    useEffect(()=> {
+        console.log('Current position: ',position)
+    })
 
-    const ip = data.ipAddress;
-    const lat = data.latitude
-    const lng = data.longitude
+
 
 
     return (
-        <MapContainer 
-            center={[lat,lng]} zoom={10} scrollWheelZoom={false} className='mapStyle'>
-            <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={[lat, lng]}>
+        <MapContainer
+            center={position}
+            zoom={13}
+            scrollWheelZoom={false}
+            className='mapStyle'>
+        <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+            <Marker position={position}>
                 <Popup>
-                    User Location: {data.cityName}. <br /> User IP Location {ip}.
+                    User Location: {props.cityName}. <br /> User IP Location {props.ip}.
                 </Popup>
             </Marker>
         </MapContainer>
