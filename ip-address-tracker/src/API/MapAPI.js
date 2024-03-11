@@ -4,29 +4,22 @@ import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
 import { useButtonAPI } from './GeoAPI'
 import { latLng } from 'leaflet'
 
-
-
 const MapComponent = (props) => {
 
-    console.log('MapApi: ',props.latitude)
-
     const [data, setData] = useButtonAPI();
-    const lat1 = props.latitude;
-    const lng1 = props.longitude;
-    const lat = 52.505;
-    const lng = -3.1;
-    const position = [lat1,lng1]
+    
+    let position = [props.latitude,props.longitude]
 
-    useEffect(()=> {
-        console.log('Current position: ',position)
-    })
-
-
-
+const MyFun = () => {
+    const map = useMap()
+    useEffect(()=>{
+        map.setView(position)
+    },[position])
+}
 
     return (
         <MapContainer
-            center={position}
+            center = {position}
             zoom={13}
             scrollWheelZoom={false}
             className='mapStyle'>
@@ -39,6 +32,7 @@ const MapComponent = (props) => {
                     User Location: {props.cityName}. <br /> User IP Location {props.ip}.
                 </Popup>
             </Marker>
+           <MyFun></MyFun>
         </MapContainer>
     )}
 

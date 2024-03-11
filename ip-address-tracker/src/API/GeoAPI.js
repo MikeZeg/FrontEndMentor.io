@@ -20,7 +20,7 @@ export const useButtonAPI = (val,e) => {
 
     let checkLink;
     let link = `https://ipapi.co/123.12.2.1/json/`;
-    let link1 = `https://freeipapi.com/api/json/109.12.1.1`;
+    let link1 = `https://freeipapi.com/api/json/145.12.1.1`;
 
     const initData = {
         ipAddress:'',

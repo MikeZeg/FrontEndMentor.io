@@ -21,4 +21,5 @@ const Main = () =>{
             className='mainStyle'/>
         </main>
     )}
+    
 export default Main;
