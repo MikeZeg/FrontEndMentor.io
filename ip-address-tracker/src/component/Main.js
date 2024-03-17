@@ -4,22 +4,17 @@ import '../styles/mainStyle.css'
 import {useButtonAPI} from '../API/GeoAPI.js' 
 
 
-const Main = () =>{
+const Main = (props) =>{
 
-    const  [data, setData] = useButtonAPI();
-    console.log('Data from Main: ',data)
-
-    console.log('Main lat', data.latitude)
-    // console.log('Main lng', data.longitude)
     return(
         <main className="mainStyle">
             <MapComponent
-                latitude = {data.latitude}
-                longitude = {data.longitude}
-                ip = {data.ip}
-                cityName = {data.cityName}
+                latitude = {props.latitude}
+                longitude = {props.longitude}
+                ip = {props.ip}
+                cityName = {props.cityName}
             className='mainStyle'/>
         </main>
     )}
-    
+
 export default Main;

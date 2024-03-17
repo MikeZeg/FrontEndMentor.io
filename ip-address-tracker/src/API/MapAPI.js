@@ -6,8 +6,6 @@ import { latLng } from 'leaflet'
 
 const MapComponent = (props) => {
 
-    const [data, setData] = useButtonAPI();
-    
     let position = [props.latitude,props.longitude]
 
 const MyFun = () => {
@@ -16,7 +14,6 @@ const MyFun = () => {
         map.setView(position)
     },[position])
 }
-
     return (
         <MapContainer
             center = {position}

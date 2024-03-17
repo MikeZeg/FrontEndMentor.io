@@ -7,12 +7,25 @@ import Footer from './Footer.js'
 import {useButtonAPI} from '../API/GeoAPI.js' 
 import { useEffect, useState } from 'react';
 
-const  App = (props) => {
-  
+const  App = () => {
+
+  const  [data, setData] = useButtonAPI();
+
   return ( 
     <div > 
-        <Header/>
-        <Main/>
+        <Header
+          ip = {data.ipAddress}
+          city = {data.cityName}
+          country_name = {data.countryName}
+          region = {data.regionName}
+          timezone = {data.timeZone}
+        />
+        <Main
+            latitude = {data.latitude}
+            longitude = {data.longitude}
+            ip = {data.ip}
+            cityName = {data.cityName}
+        />
         <Footer/>
     </div>
   );

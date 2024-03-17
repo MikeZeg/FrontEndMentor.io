@@ -10,8 +10,8 @@ import img from '../images/icon-arrow.svg'
 export const InputForm = (props)=> {
 
     const [ipAddress, setIpAddress] = useState("");
-
-    const [ data , reloadData ] = useButtonAPI();
+    const [ data ] = useButtonAPI();
+    const [reloadData] = useState()
 
     useButtonAPI(ipAddress);
 
@@ -24,7 +24,7 @@ export const InputForm = (props)=> {
                         placeholder='Search for any IP address or domain'
                         onChange={(e)=> setIpAddress(e.target.value)}
                     />
-                    <button className='form__btn btn' onClick={reloadData} type='subit'>
+                    <button className='form__btn btn' onClick={reloadData} type='submit'>
                         <img className='form__btn__img img' src={img} alt="arrow image" />
                     </button>
         </form>
@@ -43,20 +43,19 @@ export const Info = (props) => {
 }
 // -------------------------------- HEADER ----------------------
     const Header = (props) =>{
-
-    const [ data , reloadData ] = useButtonAPI();
+        console.log('Header props: ', props)
 
         return (
             <header className='headerStyle'>
                 <h1 className='headerStyle__h1'><p>IP Address Tracker</p></h1>
                 <InputForm/>
                 <Info
-                    ip = {data.ipAddress}
-                    city = {data.cityName}
-                    country_name = {data.countryName}
-                    region = {data.regionName}
-                    timezone = {data.timeZone}
-                    // isp = {data.asn}
+                    ip = {props.ip}
+                    city = {props.city}
+                    country_name = {props.country_name}
+                    region = {props.region}
+                    timezone = {props.timezone}
+                    // isp = {props.asn}
                 />
             </header>
         )

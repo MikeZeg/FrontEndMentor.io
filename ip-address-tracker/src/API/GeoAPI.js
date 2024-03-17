@@ -1,6 +1,5 @@
 import { API_KEY }  from '../component/config'
 import { useEffect, useState } from 'react';
-// import { ipAddress } from '../component/Header.js'
 
 // API url
 const urlGeoApi = `https://geo.ipify.org/api/v2/country,city,vpn?apiKey=${API_KEY}`
@@ -14,13 +13,11 @@ const myURL = 'https://jsonplaceholder.typicode.com/todos/1';
 // const myData = await response.json();
 
 // -------------- Function BTN ------------------------
-export const useButtonAPI = (val,e) => {
-
-    console.log('useButtonAPI: ',val)
-
+export const useButtonAPI = (val) => {
+    
     let checkLink;
     let link = `https://ipapi.co/123.12.2.1/json/`;
-    let link1 = `https://freeipapi.com/api/json/145.12.1.1`;
+    let link1 = `https://freeipapi.com/api/json/155.12.1.1`;
 
     const initData = {
         ipAddress:'',
@@ -33,36 +30,40 @@ export const useButtonAPI = (val,e) => {
         asn:'',
     }
 
-    const [reload, reloadData] = useState()
+    const [reload, reloadData] = useState('')
     const [data , setData ] = useState(initData)
 
 // IF val false use urlGeoApi, if val true add val to link1
+if(!val){
+    console.log('App start no VALUE !! ')
+    // checkLink = urlGeoApi;
+    val = link1
+    
+} else {
+    console.log('Value is add: ',val)
+    checkLink = `https://freeipapi.com/api/json/${val}`
+}
+    
 
-    if(!val){
-        console.log('App start: ')
-        checkLink = urlGeoApi;
-    } else {
-        console.log('Value is add: ',val)
-    }
-
-// ------- FIRST Start -------    
-    useEffect((e)=>{
+// ------- FIRST Start -------   
+    useEffect(()=>{
         console.log('First start: ', data)
+        console.log('Check value in Effect: ', val)
+    
+    const fetchData = async () => {
+
+        let response = await fetch(val)
+        response = await response.json();
         
-        
-        fetch(link1)
-            .then(response => response.json())
-            .then((res)=> {
-                    console.log('Data after catch: ',res)
-                    console.log('First data lat: ',res.latitude)
-                    setData({...res})
-                    // setData({...data,[e.target.name]:e.target.value})
-                    
-            })
-            .catch((error)=> console.log(error))
-    },[reload])
+        setData(response)
+    }
+        fetchData()
+            .catch(console.error)
+            
+    },[])
 
 // ----- After Press -------
+
 //     useEffect((e)=>{
 // console.log('After press button: ', data)
 //             fetch(link1)
@@ -99,6 +100,6 @@ export const useButtonAPI = (val,e) => {
                 
 //     }, [reload])
 
-    return [data, reloadData]
+    return [data]
     
 }
