@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/headerStyle.css'
-// import myData from '../API/GeoAPI.js'
-import { useButtonAPI } from '../API/GeoAPI.js'
 import img from '../images/icon-arrow.svg'
-
-
+import { useButtonAPI } from '../API/GeoAPI';
 
 // ---------------------------- InputForm -------------------------
 export const InputForm = (props)=> {
-
+    
     const [ipAddress, setIpAddress] = useState("");
-    const [ data ] = useButtonAPI();
-    const [reloadData] = useState()
+    const [ip, setIP] = useState('')
+    const [data, fetch] = useButtonAPI()
 
-    useButtonAPI(ipAddress);
+    useButtonAPI(ip)
 
     return (
         <form className='form'>
@@ -24,7 +21,14 @@ export const InputForm = (props)=> {
                         placeholder='Search for any IP address or domain'
                         onChange={(e)=> setIpAddress(e.target.value)}
                     />
-                    <button className='form__btn btn' onClick={reloadData} type='submit'>
+                    <button 
+                        className='form__btn btn' 
+                        onClick={(e)=>{
+                            e.preventDefault()
+                            setIP(ipAddress)
+                        }}
+                        // type='submit'
+                    >
                         <img className='form__btn__img img' src={img} alt="arrow image" />
                     </button>
         </form>
@@ -43,7 +47,6 @@ export const Info = (props) => {
 }
 // -------------------------------- HEADER ----------------------
     const Header = (props) =>{
-        console.log('Header props: ', props)
 
         return (
             <header className='headerStyle'>
@@ -55,10 +58,9 @@ export const Info = (props) => {
                     country_name = {props.country_name}
                     region = {props.region}
                     timezone = {props.timezone}
-                    // isp = {props.asn}
+                    isp = {props.asn}
                 />
             </header>
-        )
-    }
+        )}
 
 export default Header;

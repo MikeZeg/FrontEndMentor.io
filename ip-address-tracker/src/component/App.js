@@ -1,24 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import '../styles/appStyle.css';
 import Header from './Header';
 import Main from './Main'
 import Footer from './Footer.js'
 import {useButtonAPI} from '../API/GeoAPI.js' 
-import { useEffect, useState } from 'react';
 
 const  App = () => {
 
-  const  [data, setData] = useButtonAPI();
+  const  [data, fetchData] = useButtonAPI('');
+
+  console.log(useButtonAPI)
+  console.log(fetchData)
 
   return ( 
     <div > 
         <Header
-          ip = {data.ipAddress}
-          city = {data.cityName}
-          country_name = {data.countryName}
-          region = {data.regionName}
-          timezone = {data.timeZone}
+          // ip = {data.ipAddress}
+          // city = {data.cityName}
+          // country_name = {data.countryName}
+          // region = {data.regionName}
+          // timezone = {data.timeZone}
+        // ---------------------
+
+        ip = {data.ipAddress}
+        city = {data.cityName}
+        country_name = {data.countryName}
+        region = {data.regionName}
+        timezone = {data.timeZone}
+        asn = {data.org}
         />
         <Main
             latitude = {data.latitude}
@@ -30,6 +40,5 @@ const  App = () => {
     </div>
   );
 }
-
 
 export default App;

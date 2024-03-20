@@ -1,8 +1,8 @@
 import React, { useEffect, useState} from 'react'
 import '../styles/mainStyle.css'
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
-import { useButtonAPI } from './GeoAPI'
-import { latLng } from 'leaflet'
+
+// import { latLng } from 'leaflet'
 
 const MapComponent = (props) => {
 
