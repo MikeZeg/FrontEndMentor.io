@@ -37,29 +37,29 @@ export const useButtonAPI = (val) => {
     const fetchData = async (link) => {
         console.log('Show link: ',link)
         const res = await fetch(link);
-        const data = await res.json();
-        console.log('Response: ', data)
+        const data1 = await res.json();
+        console.log('Response: ', data1)
         
-        setData(data)
-        
+        setData(data1)
     }
 
 // ------ USE Effect -----------
     if(!val){
-        console.log('false',val)
+        console.log('false', val)
         useLink = `https://freeipapi.com/api/json/192.12.1.1`
     }if(val){
-        console.log('True',val)
+        console.log('True', val)
         useLink = `https://freeipapi.com/api/json/${val}`
     }
+    // -------------------
         console.log('before effect', val)
     useEffect((val)=>{
-
+        console.log('After effect:', useLink)
         fetchData(useLink)
             .catch(console.error)
 
     },[val])
 
     console.log('Return Data from function: ', data)
-    return [ data, fetchData ]
+    return [data] 
 }

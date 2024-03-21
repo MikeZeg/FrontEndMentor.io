@@ -8,10 +8,10 @@ import {useButtonAPI} from '../API/GeoAPI.js'
 
 const  App = () => {
 
-  const  [data, fetchData] = useButtonAPI('');
+  const  [data,setData, fetchData] = useButtonAPI('');
 
   console.log(useButtonAPI)
-  console.log(fetchData)
+  console.log('App: ------>>>>', data)
 
   return ( 
     <div > 

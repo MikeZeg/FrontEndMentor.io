@@ -4,13 +4,16 @@ import img from '../images/icon-arrow.svg'
 import { useButtonAPI } from '../API/GeoAPI';
 
 // ---------------------------- InputForm -------------------------
-export const InputForm = (props)=> {
+export const InputForm = ()=> {
     
     const [ipAddress, setIpAddress] = useState("");
     const [ip, setIP] = useState('')
-    const [data, fetch] = useButtonAPI()
-
+    const [data, setData] = useButtonAPI()
     useButtonAPI(ip)
+
+
+    console.log('Data from info --------->:', data)
+
 
     return (
         <form className='form'>
