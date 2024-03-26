@@ -37,10 +37,10 @@ export const useButtonAPI = (val) => {
     const fetchData = async (link) => {
         console.log('Show link: ',link)
         const res = await fetch(link);
-        const data1 = await res.json();
-        console.log('Response: ', data1)
+        const data = await res.json();
+        console.log('Response: ', data)
         
-        setData(data1)
+        setData(data)
     }
 
 // ------ USE Effect -----------
@@ -53,6 +53,7 @@ export const useButtonAPI = (val) => {
     }
     // -------------------
         console.log('before effect', val)
+        
     useEffect((val)=>{
         console.log('After effect:', useLink)
         fetchData(useLink)
@@ -61,5 +62,5 @@ export const useButtonAPI = (val) => {
     },[val])
 
     console.log('Return Data from function: ', data)
-    return [data] 
+    return [data, val] 
 }

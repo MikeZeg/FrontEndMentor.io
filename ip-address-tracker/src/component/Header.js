@@ -4,33 +4,39 @@ import img from '../images/icon-arrow.svg'
 import { useButtonAPI } from '../API/GeoAPI';
 
 // ---------------------------- InputForm -------------------------
-export const InputForm = ()=> {
+export const InputForm = (props)=> {
     
     const [ipAddress, setIpAddress] = useState("");
     const [ip, setIP] = useState('')
-    const [data, setData] = useButtonAPI()
-    useButtonAPI(ip)
 
-
-    console.log('Data from info --------->:', data)
-
+    const handleChange = (e)=>{
+        setIpAddress(e.target.value)
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        props.onSubmit(ipAddress)
+        console.log('INPUT: Send IP to header', ipAddress)
+    }
 
     return (
-        <form className='form'>
+        <form className='form' onSubmit={handleSubmit}>
                     <input
                         className='form__input input'
                         type="text"
                         value={ipAddress}
                         placeholder='Search for any IP address or domain'
-                        onChange={(e)=> setIpAddress(e.target.value)}
+                        onChange={(e)=> {
+                            setIpAddress(e.target.value)
+                            handleChange(e)
+                        }}
                     />
                     <button 
                         className='form__btn btn' 
-                        onClick={(e)=>{
-                            e.preventDefault()
-                            setIP(ipAddress)
-                        }}
-                        // type='submit'
+                        // onClick={(e)=>{
+                        //     e.preventDefault()
+                        //     setIP(ipAddress)
+                        // }}
+                        type='submit'
                     >
                         <img className='form__btn__img img' src={img} alt="arrow image" />
                     </button>
@@ -50,11 +56,26 @@ export const Info = (props) => {
 }
 // -------------------------------- HEADER ----------------------
     const Header = (props) =>{
+        const [ip, setIp] = useState('')
+        
+        console.log('Check IP in header: ', ip)
+        
+        const inputData = (data) => {
+            console.log('--- Header ---> Received IP from Info Input', data)
+            setIp(data)
+        }
+
+// Send IP to App.js - each time when IP from InputForm Change
+        useEffect(()=>{
+            props.changeIp(ip)
+        },[ip])
 
         return (
             <header className='headerStyle'>
                 <h1 className='headerStyle__h1'><p>IP Address Tracker</p></h1>
-                <InputForm/>
+                <InputForm
+                    onSubmit={inputData}
+                />
                 <Info
                     ip = {props.ip}
                     city = {props.city}
