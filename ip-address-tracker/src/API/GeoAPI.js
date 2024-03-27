@@ -19,7 +19,7 @@ export const useButtonAPI = (val) => {
     // let link1 = `https://ipapi.co/${val}/json/`;
     let link11 = `https://freeipapi.com/api/json/`;
 
-
+// ToDo list -> Check initData for first start
     const initData = {
         ipAddress:'',
         regionName:'',
@@ -28,39 +28,47 @@ export const useButtonAPI = (val) => {
         latitude:'',
         longitude:'',
         timeZone:'',
-        asn:'',
+        asn:'unknow',
         org:'',
     }
-    const [data , setData ] = useState(initData)
+    const [data, setData ] = useState(initData)
 
-// --------------- Fetch Data -------------
-    const fetchData = async (link) => {
-        console.log('Show link: ',link)
-        const res = await fetch(link);
-        const data = await res.json();
-        console.log('Response: ', data)
-        
-        setData(data)
-    }
+    const [ip, setIP] = useState()
 
-// ------ USE Effect -----------
-    if(!val){
-        console.log('false', val)
+    console.log('setIP: ',ip)
+
+
+// ------ If statment ----------- ToDo -> change first link to correct
+    if(!ip){
+        console.log('false', ip)
         useLink = `https://freeipapi.com/api/json/192.12.1.1`
-    }if(val){
-        console.log('True', val)
-        useLink = `https://freeipapi.com/api/json/${val}`
+    }if(ip){
+        console.log('True', ip)
+        useLink = `https://freeipapi.com/api/json/${ip}`
     }
-    // -------------------
-        console.log('before effect', val)
+// -------- Use Effect -----------
+        console.log('before effect', ip)
         
-    useEffect((val)=>{
+    useEffect((ip)=>{
+
         console.log('After effect:', useLink)
+
+        const fetchData = async (link) => {
+            console.log('Show link: ',link)
+            const res = await fetch(link);
+            const data = await res.json();
+            console.log('Response: ', data)
+            
+            setData(data)
+        }
+
         fetchData(useLink)
             .catch(console.error)
 
-    },[val])
+//when IP change UseEffect working agian
+    },[ip])
 
     console.log('Return Data from function: ', data)
-    return [data, val] 
+
+    return [data, val, setIP] 
 }

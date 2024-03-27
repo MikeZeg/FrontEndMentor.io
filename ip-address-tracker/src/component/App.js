@@ -10,21 +10,22 @@ import {handleSubmit} from '../component/Header.js'
 
 const  App = () => {
 
-  const  [data, setData] = useButtonAPI('');
+// data -> received from useButtonAPI
+// setIP -> setUp new IP and sending to useButtonAPI
+// ipFromHeader -> received IP from Header but Header received from InputForm
+
+  const  [data, setData, setIP] = useButtonAPI('');
   const [ipFromHeader, setIpFromHeader] = useState('');
-
-
 
   console.log('App: ------>>>>', data);
   console.log('App !!--> Received IP from Head:', ipFromHeader);
 
   useEffect(()=>{
-    console.log('Change Ip from Header')
-
-  },[])
-
-  useButtonAPI(ipFromHeader)
-  // Now we need to send value to useButtonAPI
+// that sending new IP to useButtonAPI and refresh data on all pages :)
+    if(ipFromHeader){
+      setIP(ipFromHeader)
+    }
+  },[ipFromHeader])
 
   return ( 
     <div >
