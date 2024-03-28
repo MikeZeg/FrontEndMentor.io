@@ -5,13 +5,16 @@ import { useButtonAPI } from '../API/GeoAPI';
 
 // ---------------------------- InputForm -------------------------
 export const InputForm = (props)=> {
-    
+
+
+// check IP address before send forward
     const [ipAddress, setIpAddress] = useState("");
     const [ip, setIP] = useState('')
 
     const handleChange = (e)=>{
         setIpAddress(e.target.value)
     }
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         props.onSubmit(ipAddress)
@@ -42,6 +45,7 @@ export const InputForm = (props)=> {
                     </button>
         </form>
     )}
+
 // --------------------------- INFO ----------------------
 export const Info = (props) => {
 
@@ -57,11 +61,10 @@ export const Info = (props) => {
 // -------------------------------- HEADER ----------------------
     const Header = (props) =>{
         const [ip, setIp] = useState('')
-        
-        console.log('Check IP in header: ', ip)
-        
+
+// Received IP from Input Form
         const inputData = (data) => {
-            console.log('--- Header ---> Received IP from Info Input', data)
+            // console.log('--- Header ---> Received IP from Info Input', data)
             setIp(data)
         }
 
@@ -74,6 +77,7 @@ export const Info = (props) => {
             <header className='headerStyle'>
                 <h1 className='headerStyle__h1'><p>IP Address Tracker</p></h1>
                 <InputForm
+                // function connecting data between Input and Header
                     onSubmit={inputData}
                 />
                 <Info

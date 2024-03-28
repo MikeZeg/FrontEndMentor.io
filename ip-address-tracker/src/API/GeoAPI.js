@@ -33,9 +33,8 @@ export const useButtonAPI = (val) => {
     }
     const [data, setData ] = useState(initData)
 
+// That part send forward Value to component/s
     const [ip, setIP] = useState()
-
-    console.log('setIP: ',ip)
 
 
 // ------ If statment ----------- ToDo -> change first link to correct

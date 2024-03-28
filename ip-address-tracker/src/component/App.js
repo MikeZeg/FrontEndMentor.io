@@ -20,6 +20,7 @@ const  App = () => {
   console.log('App: ------>>>>', data);
   console.log('App !!--> Received IP from Head:', ipFromHeader);
 
+// UseEffect send data to useButtonAPI by setIP
   useEffect(()=>{
 // that sending new IP to useButtonAPI and refresh data on all pages :)
     if(ipFromHeader){
@@ -31,13 +32,6 @@ const  App = () => {
     <div >
         <Header
         changeIp = {ip => setIpFromHeader(ip)}
-
-          // ip = {data.ipAddress}
-          // city = {data.cityName}
-          // country_name = {data.countryName}
-          // region = {data.regionName}
-          // timezone = {data.timeZone}
-        // ---------------------
 
         ip = {data.ipAddress}
         city = {data.cityName}
