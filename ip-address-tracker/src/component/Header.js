@@ -15,10 +15,13 @@ export const InputForm = (props)=> {
         setIpAddress(e.target.value)
     }
     
+//check value if not regx and clear address after enter above ?
     const handleSubmit = (e) => {
         e.preventDefault();
         props.onSubmit(ipAddress)
         console.log('INPUT: Send IP to header', ipAddress)
+        setIpAddress('')
+        
     }
 
     return (
@@ -27,7 +30,7 @@ export const InputForm = (props)=> {
                         className='form__input input'
                         type="text"
                         value={ipAddress}
-                        placeholder='Search for any IP address or domain'
+                        placeholder = 'Search for any IP address or domain'
                         onChange={(e)=> {
                             setIpAddress(e.target.value)
                             handleChange(e)
