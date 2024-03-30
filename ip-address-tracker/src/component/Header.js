@@ -17,11 +17,21 @@ export const InputForm = (props)=> {
     
 //check value if not regx and clear address after enter above ?
     const handleSubmit = (e) => {
+        console.log(' --> What ? -->',ipAddress)
+        const regx = /^(?!0)(?!.*\.$)((1?\d?\d|25[0-5]|2[0-4]\d)(\.|$)){4}$/;
+
         e.preventDefault();
-        props.onSubmit(ipAddress)
-        console.log('INPUT: Send IP to header', ipAddress)
-        setIpAddress('')
-        
+
+        if( ipAddress.match(regx)){
+            console.log('Ok')
+            e.preventDefault();
+            props.onSubmit(ipAddress)
+            console.log('INPUT: Send IP to header', ipAddress)
+            setIpAddress('')
+        }else {
+            alert('!! add correct IP address !!')
+            setIpAddress('')
+        }
     }
 
     return (
