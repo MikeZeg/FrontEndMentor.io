@@ -164,7 +164,7 @@ p {
 }
 .box {
     padding: 0;
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
     margin-top: 22px;
     margin-right: 10px;
     
@@ -172,8 +172,13 @@ p {
 
     width: 25%;
 
+    min-height: 22vh;
+    text-align: center;
+    align-content: center;
+
     @media (min-width:451px) and (max-width: 750px) {
         width: 60%;
+        min-height: 0;
         
     }
     @media (max-width: 450px) {
@@ -181,6 +186,7 @@ p {
     }
 }
 .box__border {
+    
     border-left: 1px solid gray;
 
     /* min-height: 100%; */

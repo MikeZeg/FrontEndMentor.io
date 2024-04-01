@@ -2,9 +2,8 @@ import { API_KEY }  from '../component/config'
 import { useEffect, useState } from 'react';
 
 // API url
-const urlGeoApi = `https://geo.ipify.org/api/v2/country,city,vpn?apiKey=${API_KEY}`
-const urlCountry = `https://geo.ipify.org/api/v2/country?apiKey=${API_KEY}`;
-const myURL = 'https://jsonplaceholder.typicode.com/todos/1';
+// const urlGeoApi = `https://geo.ipify.org/api/v2/country,city,vpn?apiKey=${API_KEY}`
+// const urlCountry = `https://geo.ipify.org/api/v2/country?apiKey=${API_KEY}`;
 
 // -------------- Function BTN ------------------------
 export const useButtonAPI = (val) => {
@@ -34,10 +33,10 @@ export const useButtonAPI = (val) => {
     const [ip, setIP] = useState()
 
 
-// ------ If statment ----------- ToDo -> change first link to correct
+// ----------------------- If statment ------------------------
     if(!ip){
         console.log('false', ip)
-        useLink = `https://freeipapi.com/api/json/192.12.1.1`
+        useLink = `https://freeipapi.com/api/json`
     }if(ip){
         console.log('True', ip)
         useLink = `https://freeipapi.com/api/json/${ip}`
