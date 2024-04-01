@@ -138,10 +138,16 @@ button {
             margin-top: 4.3rem;
         }
         @media (min-width:451px) and (max-width: 750px) {
-            display: flex;
+            /* display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            width: 60%;
+            width: 60%; */
+
+            display: grid;
+            width: 87%;
+            margin-top: 2rem;
+            justify-items: center;
+            text-align: center;
             
         }
         @media (max-width: 450px) {
@@ -166,15 +172,24 @@ p {
 
     width: 25%;
 
+    @media (min-width:451px) and (max-width: 750px) {
+        width: 60%;
+        
+    }
     @media (max-width: 450px) {
         width: 100%;
     }
 }
 .box__border {
     border-left: 1px solid gray;
+
+    /* min-height: 100%; */
+
+    @media (min-width:451px) and (max-width: 750px) {
+        border-left: none;
+    }
 }
 .top__span {
-
 
     @media (max-width:450px) {
         margin-top: 20px;

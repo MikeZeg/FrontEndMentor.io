@@ -77,7 +77,6 @@ export const Info = (props) => {
 
 // Received IP from Input Form
         const inputData = (data) => {
-            // console.log('--- Header ---> Received IP from Info Input', data)
             setIp(data)
         }
 
@@ -90,7 +89,7 @@ export const Info = (props) => {
             <header className='headerStyle'>
                 <h1 className='headerStyle__h1'><p>IP Address Tracker</p></h1>
                 <InputForm
-                // function connecting data between Input and Header
+// function connecting data between Input and Header
                     onSubmit={inputData}
                 />
                 <Info

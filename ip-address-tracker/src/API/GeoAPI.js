@@ -1,13 +1,10 @@
 import { API_KEY }  from '../component/config'
 import { useEffect, useState } from 'react';
 
-
 // API url
 const urlGeoApi = `https://geo.ipify.org/api/v2/country,city,vpn?apiKey=${API_KEY}`
 const urlCountry = `https://geo.ipify.org/api/v2/country?apiKey=${API_KEY}`;
 const myURL = 'https://jsonplaceholder.typicode.com/todos/1';
-
-
 
 // -------------- Function BTN ------------------------
 export const useButtonAPI = (val) => {
