@@ -1,5 +1,10 @@
 # FrontEndMentor.io
-Frontend Mentor challanges - my solutions.
+Please check below my completed FrontEnd Mentor challenges. 
+Each challenge includes links to the code with descriptions and a live demo.
+
+FrontEnd Mentor website provides an excellent opportunity to apply your knowledge and continue developong your skills.
+
+Please note that these challenges work best when viewed in the Chrome browser. If you have any additional information, please don't hesitate to contact me.
 
 ### NewBie
 | Live | Challange Name | Code | Tech |
