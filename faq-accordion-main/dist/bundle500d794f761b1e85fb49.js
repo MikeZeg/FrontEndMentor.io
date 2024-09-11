@@ -529,7 +529,7 @@ module.exports = styleTagTransform;
   \****************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "909e4faac8822880e462.ttf";
+module.exports = __webpack_require__.p + "WorkSans-Italic-VariableFont_wght.ttf";
 
 /***/ }),
 
@@ -539,7 +539,17 @@ module.exports = __webpack_require__.p + "909e4faac8822880e462.ttf";
   \*********************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "a0297787a1a192213b53.ttf";
+module.exports = __webpack_require__.p + "WorkSans-VariableFont_wght.ttf";
+
+/***/ }),
+
+/***/ "./src/assets/images/patternDesktop.svg":
+/*!**********************************************!*\
+  !*** ./src/assets/images/patternDesktop.svg ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "patternDesktop.svg";
 
 /***/ })
 
@@ -686,11 +696,11 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/main.scss */ "./src/style/main.scss");
+/* harmony import */ var _assets_images_patternDesktop_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/images/patternDesktop.svg */ "./src/assets/images/patternDesktop.svg");
 
 
-console.log('Hello World!')
-
-console.log('webpack add')
+console.log('Hello World!');
+console.log('webpack add');
 /******/ })()
 ;
-//# sourceMappingURL=bundleb0be01b3a6911738dc5f.js.map
+//# sourceMappingURL=bundle500d794f761b1e85fb49.js.map
