@@ -39,3 +39,19 @@ main {
     background-color: white;
     border-radius: 10px;
 }
+summary {
+    display: flex;
+    width: 100%;
+}
+summary::after{
+    content: "+";
+    
+}
+details[open] > summary::after {
+    content: "-";
+}
+.seporator {
+    width: 100%;
+    height: 5px;
+    background-color: gray;
+}
