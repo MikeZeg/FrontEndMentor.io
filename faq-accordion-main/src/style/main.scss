@@ -16,5 +16,26 @@ $secondary-color: hsl(217, 69%, 66%);
 body {
     background-color: $primary-color;
     font-family: workSans;
-    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-image: url('../assets/images/patternDesktop.svg');
+    position: absolute;
+    height: 33%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+main {
+    width: 50%;
+    height: 60%;
+    position: absolute;
+
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+
+    background-color: white;
+    border-radius: 10px;
 }

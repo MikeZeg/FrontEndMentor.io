@@ -24,9 +24,11 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/fonts/WorkSans-VariableFont_wght.ttf */ "./src/assets/fonts/WorkSans-VariableFont_wght.ttf"), __webpack_require__.b);
 var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/fonts/WorkSans-Italic-VariableFont_wght.ttf */ "./src/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/images/patternDesktop.svg */ "./src/assets/images/patternDesktop.svg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `@font-face {
   font-family: workSans;
@@ -43,7 +45,15 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@font-face {
 body {
   background-color: hsl(0, 7%, 55%);
   font-family: workSans;
-}`, "",{"version":3,"sources":["webpack://./src/style/main.scss"],"names":[],"mappings":"AAGA;EACI,qBAAA;EACA,4CAAA;AAFJ;AAIA;EACI,2BAAA;EACA,4CAAA;AAFJ;AAKA;EACI,sBAAA;AAHJ;;AAKA;EACI,iCAhBY;EAiBZ,qBAAA;AAFJ","sourceRoot":""}]);
+  background-size: cover;
+}
+
+header {
+  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
+  position: absolute;
+  height: 33%;
+  width: 100%;
+}`, "",{"version":3,"sources":["webpack://./src/style/main.scss"],"names":[],"mappings":"AAGA;EACI,qBAAA;EACA,4CAAA;AAFJ;AAIA;EACI,2BAAA;EACA,4CAAA;AAFJ;AAKA;EACI,sBAAA;AAHJ;;AAKA;EACI,iCAhBY;EAiBZ,qBAAA;EACA,sBAAA;AAFJ;;AAIA;EACI,yDAAA;EACA,kBAAA;EACA,WAAA;EACA,WAAA;AADJ","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -699,8 +709,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_images_patternDesktop_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/images/patternDesktop.svg */ "./src/assets/images/patternDesktop.svg");
 
 
+var backgroundImg = document.querySelector('body');
+backgroundImg.src = _assets_images_patternDesktop_svg__WEBPACK_IMPORTED_MODULE_1__;
+console.log(backgroundImg);
+console.log(_assets_images_patternDesktop_svg__WEBPACK_IMPORTED_MODULE_1__);
 console.log('Hello World!');
 console.log('webpack add');
 /******/ })()
 ;
-//# sourceMappingURL=bundle500d794f761b1e85fb49.js.map
+//# sourceMappingURL=bundled5ba599df6d9d371b2b4.js.map
