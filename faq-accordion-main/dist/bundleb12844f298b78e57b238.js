@@ -45,7 +45,20 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@font-face {
 body {
   background-color: hsl(0, 7%, 55%);
   font-family: workSans;
-  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
 }
 
 header {
@@ -53,7 +66,55 @@ header {
   position: absolute;
   height: 33%;
   width: 100%;
-}`, "",{"version":3,"sources":["webpack://./src/style/main.scss"],"names":[],"mappings":"AAGA;EACI,qBAAA;EACA,4CAAA;AAFJ;AAIA;EACI,2BAAA;EACA,4CAAA;AAFJ;AAKA;EACI,sBAAA;AAHJ;;AAKA;EACI,iCAhBY;EAiBZ,qBAAA;EACA,sBAAA;AAFJ;;AAIA;EACI,yDAAA;EACA,kBAAA;EACA,WAAA;EACA,WAAA;AADJ","sourceRoot":""}]);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 50%;
+  max-width: 600px;
+  height: 70%;
+  max-height: 560px;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+}
+
+summary {
+  display: flex;
+  width: 100%;
+}
+
+summary:hover {
+  color: hsl(292, 16%, 49%);
+}
+
+summary::after {
+  content: "+";
+  color: hsl(0, 0%, 100%);
+  width: 15px;
+  height: 15px;
+  margin-right: 20px;
+  margin-left: auto;
+  border-radius: 50%;
+  border: 1px solid red;
+  background-color: hsl(292, 16%, 49%);
+}
+
+details[open] > summary::after {
+  content: "-";
+  background-color: hsl(0, 0%, 0%);
+}
+
+.separator {
+  width: 90%;
+  height: 3px;
+  background-color: gray;
+  border-radius: 30%;
+}`, "",{"version":3,"sources":["webpack://./src/style/main.scss"],"names":[],"mappings":"AAeA;EACI,qBAAA;EACA,4CAAA;AAdJ;AAgBA;EACI,2BAAA;EACA,4CAAA;AAdJ;AAgBA;EACI,sBAAA;AAdJ;;AAgBA;EACI,iCA3BY;EA4BZ,qBAAA;EACA,SAAA;EACA,UAAA;AAbJ;;AAeA;EACI,eApBW;AAQf;;AAcA;EACI,eAzBO;AAcX;;AAaA;EACI,eA5BO;AAkBX;;AAYA;EACI,yDAAA;EACA,kBAAA;EACA,WAAA;EACA,WAAA;EACA,SAAA;EACA,UAAA;AATJ;;AAWA;EACI,UAAA;EACA,gBAAA;EACA,WAAA;EACA,iBAAA;EACA,kBAAA;EAEA,SAAA;EACA,QAAA;EACA,gCAAA;EAEA,uBAAA;EACA,mBAAA;AAVJ;;AAeA;EACI,aAAA;EACA,WAAA;AAZJ;;AAeA;EACI,yBAjEa;AAqDjB;;AAcA;EACI,YAAA;EACA,uBAxEU;EAyEV,WAAA;EACA,YAAA;EACA,kBAAA;EACA,iBAAA;EAEA,kBAAA;EACA,qBAAA;EACA,oCA7Ea;AAiEjB;;AAcA;EACI,YAAA;EACA,gCAnFS;AAwEb;;AAaA;EACI,UAAA;EACA,WAAA;EACA,sBAAA;EACA,kBAAA;AAVJ","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -717,4 +778,4 @@ console.log('Hello World!');
 console.log('webpack add');
 /******/ })()
 ;
-//# sourceMappingURL=bundled5ba599df6d9d371b2b4.js.map
+//# sourceMappingURL=bundleb12844f298b78e57b238.js.map
