@@ -61,6 +61,8 @@ h2 {
 
 p {
   font-size: 16px;
+  color: hsl(292, 16%, 49%);
+  line-height: 19px;
 }
 
 header {
@@ -92,11 +94,17 @@ main {
   margin-right: 40px;
 }
 
+#top {
+  display: flex;
+  align-items: center;
+}
+
 #star {
   width: 50px;
   height: 50px;
   background-image: url(${___CSS_LOADER_URL_REPLACEMENT_3___});
   background-size: cover;
+  margin-right: 20px;
 }
 
 summary {
@@ -138,7 +146,7 @@ details[open] > summary::after {
   width: 90%;
   height: 2px;
   background-color: hsla(0, 0%, 50%, 0.29);
-}`, "",{"version":3,"sources":["webpack://./src/style/main.scss"],"names":[],"mappings":"AAeA;EACI,qBAAA;EACA,4CAAA;AAdJ;AAgBA;EACI,2BAAA;EACA,4CAAA;AAdJ;AAgBA;EACI,sBAAA;AAdJ;;AAgBA;EACI,qCArBQ;EAsBR,qBAAA;EACA,SAAA;EACA,UAAA;AAbJ;;AAeA;EACI,eApBW;AAQf;;AAcA;EACI,eAzBO;AAcX;;AAaA;EACI,eA5BO;AAkBX;;AAYA;EACI,yDAAA;EACA,kBAAA;EACA,WAAA;EACA,WAAA;EACA,SAAA;EACA,UAAA;AATJ;;AAWA;EACI,UAAA;EACA,gBAAA;EACA,WAAA;EACA,iBAAA;EACA,kBAAA;EAEA,SAAA;EACA,QAAA;EACA,gCAAA;EAEA,uBAAA;EACA,mBAAA;EACA,+CAAA;AAVJ;;AAYA;EACI,aAAA;EACA,iBAAA;EACA,kBAAA;AATJ;;AAcA;EACI,WAAA;EACA,YAAA;EACA,yDAAA;EACA,sBAAA;AAXJ;;AAaA;EACI,aAAA;EACA,WAAA;EACA,mBAAA;EACA,yBA1EU;AAgEd;;AAYA;EACI,yBA9Ea;AAqEjB;;AAWA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EAEA,WAAA;EACA,YAAA;EACA,kBAAA;EACA,iBAAA;EAEA,YAAA;EACA,uBA9FU;EA+FV,kBAAA;EACA,oCA7Fa;AAmFjB;;AAYA;EACI,gBAAA;EACA,mBAAA;AATJ;;AAWA;EACI,YAAA;EACA,gCAvGS;AA+Fb;;AAUA;EACI,UAAA;EACA,WAAA;EACA,wCAAA;AAPJ","sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/style/main.scss"],"names":[],"mappings":"AAeA;EACI,qBAAA;EACA,4CAAA;AAdJ;AAgBA;EACI,2BAAA;EACA,4CAAA;AAdJ;AAgBA;EACI,sBAAA;AAdJ;;AAgBA;EACI,qCArBQ;EAsBR,qBAAA;EACA,SAAA;EACA,UAAA;AAbJ;;AAeA;EACI,eApBW;AAQf;;AAcA;EACI,eAzBO;AAcX;;AAaA;EACI,eA5BO;EA6BP,yBAjCa;EAkCb,iBAAA;AAVJ;;AAYA;EACI,yDAAA;EACA,kBAAA;EACA,WAAA;EACA,WAAA;EACA,SAAA;EACA,UAAA;AATJ;;AAWA;EACI,UAAA;EACA,gBAAA;EACA,WAAA;EACA,iBAAA;EACA,kBAAA;EAEA,SAAA;EACA,QAAA;EACA,gCAAA;EAEA,uBAAA;EACA,mBAAA;EACA,+CAAA;AAVJ;;AAYA;EACI,aAAA;EACA,iBAAA;EACA,kBAAA;AATJ;;AAWA;EACI,aAAA;EACA,mBAAA;AARJ;;AAUA;EACI,WAAA;EACA,YAAA;EACA,yDAAA;EACA,sBAAA;EACA,kBAAA;AAPJ;;AASA;EACI,aAAA;EACA,WAAA;EACA,mBAAA;EACA,yBA9EU;AAwEd;;AAQA;EACI,yBAlFa;AA6EjB;;AAOA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EAEA,WAAA;EACA,YAAA;EACA,kBAAA;EACA,iBAAA;EAEA,YAAA;EACA,uBAlGU;EAmGV,kBAAA;EACA,oCAjGa;AA2FjB;;AAQA;EACI,gBAAA;EACA,mBAAA;AALJ;;AAOA;EACI,YAAA;EACA,gCA3GS;AAuGb;;AAMA;EACI,UAAA;EACA,WAAA;EACA,wCAAA;AAHJ","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -808,12 +816,44 @@ __webpack_require__.r(__webpack_exports__);
 
 var backgroundImg = document.querySelector('body');
 backgroundImg.src = _assets_images_patternDesktop_svg__WEBPACK_IMPORTED_MODULE_1__;
-console.log(backgroundImg);
-console.log(_assets_images_patternDesktop_svg__WEBPACK_IMPORTED_MODULE_1__);
 var backgroundStar = document.getElementById('star');
 backgroundStar.src = _assets_images_icon_star_svg__WEBPACK_IMPORTED_MODULE_2__;
-console.log('Hello World!');
-console.log('webpack add');
+var questionsArr = document.querySelectorAll('details');
+var summarys = Array.from(document.querySelectorAll('details'));
+summarys.forEach(function (summary, index) {
+  //if same detail clicked change 0
+  var flag = null;
+  summary.addEventListener('click', function (e) {
+    console.log('that clicked: ', summary);
+    console.log('flag', flag);
+    console.log('location: ', index);
+    // flag = index;
+
+    if (index != flag) {
+      summarys.forEach(function (close) {
+        return close.open = false;
+      });
+      summary.open = true;
+      flag = indexof(close);
+    } else {
+      summarys.forEach(function (close) {
+        return close.open = false;
+      });
+      console.log('close all');
+    }
+
+    // if(flag == index){
+    //     summarys.forEach((close)=> close.open = false)
+    //     console.log('close all')
+    // }else {
+    //     summarys.forEach((close) => {
+    //         close.open = false;
+    //     })
+    //     summary.open = true;
+    //     console.log('new one');
+    // }
+  });
+});
 /******/ })()
 ;
-//# sourceMappingURL=bundled29b097008256a473ad6.js.map
+//# sourceMappingURL=bundle9ed833a349ff4b21c5af.js.map
