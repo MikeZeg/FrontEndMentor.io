@@ -820,40 +820,34 @@ var backgroundStar = document.getElementById('star');
 backgroundStar.src = _assets_images_icon_star_svg__WEBPACK_IMPORTED_MODULE_2__;
 var questionsArr = document.querySelectorAll('details');
 var summarys = Array.from(document.querySelectorAll('details'));
+var detailsIndex;
 summarys.forEach(function (summary, index) {
-  //if same detail clicked change 0
-  var flag = null;
   summary.addEventListener('click', function (e) {
-    console.log('that clicked: ', summary);
-    console.log('flag', flag);
     console.log('location: ', index);
-    // flag = index;
+    // detailsIndex = index;
 
-    if (index != flag) {
-      summarys.forEach(function (close) {
-        return close.open = false;
+    if (detailsIndex === index) {
+      console.log('clicked in same detail');
+      detailsIndex = index;
+      console.log(summary);
+      summarys.forEach(function (summ) {
+        summ.open = false;
       });
-      summary.open = true;
-      flag = indexof(close);
-    } else {
-      summarys.forEach(function (close) {
-        return close.open = false;
-      });
-      console.log('close all');
+      summary.open = false;
     }
-
-    // if(flag == index){
-    //     summarys.forEach((close)=> close.open = false)
-    //     console.log('close all')
-    // }else {
-    //     summarys.forEach((close) => {
-    //         close.open = false;
-    //     })
-    //     summary.open = true;
-    //     console.log('new one');
-    // }
+    if (detailsIndex != index) {
+      console.log("clicked in other ");
+      detailsIndex = index;
+      summarys.forEach(function (summ) {
+        return summ.open = false;
+      });
+    }
+    if (detailsIndex == null) {
+      console.log('first time clicked');
+      detailsIndex = index;
+    }
   });
 });
 /******/ })()
 ;
-//# sourceMappingURL=bundle9ed833a349ff4b21c5af.js.map
+//# sourceMappingURL=bundle12a6a1b2731360033925.js.map

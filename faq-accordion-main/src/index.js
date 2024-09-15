@@ -12,22 +12,22 @@ const questionsArr = document.querySelectorAll('details')
 const summarys = Array.from(document.querySelectorAll('details'));
 let detailsIndex ;
     summarys.forEach((summary, index)=>{
-        summary.addEventListener('click', (e) => {
+        summary.addEventListener('mousedown', (e) => {
             console.log('location: ', index)
-            // detailsIndex = index;
+
+            console.log(e)
+            let what = e.target
             
             if(detailsIndex === index){
-                console.log('clicked in same detail')
+                console.log('clicked in same detail');
                 detailsIndex = index;
                 console.log(summary)
-                summarys.forEach((summ)=> { summ.open = false; })
-                summary.open = false;
             }if(detailsIndex != index) {
-                console.log("clicked in other ")
+                console.log("clicked in other ");
                 detailsIndex = index;
                 summarys.forEach((summ)=> summ.open = false)
             }if(detailsIndex == null){
-                console.log('first time clicked')
+                console.log('first time clicked');
                 detailsIndex = index;
             }
     })
