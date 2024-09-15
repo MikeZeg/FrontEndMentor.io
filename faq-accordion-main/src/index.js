@@ -30,5 +30,5 @@ let detailsIndex ;
                 console.log('first time clicked');
                 detailsIndex = index;
             }
-    })
+        })
     })

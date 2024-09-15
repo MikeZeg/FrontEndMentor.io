@@ -77,8 +77,8 @@ header {
 main {
   width: 50%;
   max-width: 600px;
-  height: 70%;
-  max-height: 560px;
+  max-height: 565px;
+  height: fit-content;
   position: absolute;
   left: 50%;
   top: 45%;
@@ -112,6 +112,7 @@ summary {
   width: 100%;
   align-items: center;
   color: hsl(292, 42%, 14%);
+  list-style-type: none;
 }
 
 summary:hover {
@@ -132,6 +133,10 @@ summary::after {
   background-color: hsl(292, 16%, 49%);
 }
 
+summary::marker {
+  color: red;
+}
+
 details {
   margin-top: 16px;
   margin-bottom: 16px;
@@ -146,7 +151,47 @@ details[open] > summary::after {
   width: 90%;
   height: 2px;
   background-color: hsla(0, 0%, 50%, 0.29);
-}`, "",{"version":3,"sources":["webpack://./src/style/main.scss"],"names":[],"mappings":"AAeA;EACI,qBAAA;EACA,4CAAA;AAdJ;AAgBA;EACI,2BAAA;EACA,4CAAA;AAdJ;AAgBA;EACI,sBAAA;AAdJ;;AAgBA;EACI,qCArBQ;EAsBR,qBAAA;EACA,SAAA;EACA,UAAA;AAbJ;;AAeA;EACI,eApBW;AAQf;;AAcA;EACI,eAzBO;AAcX;;AAaA;EACI,eA5BO;EA6BP,yBAjCa;EAkCb,iBAAA;AAVJ;;AAYA;EACI,yDAAA;EACA,kBAAA;EACA,WAAA;EACA,WAAA;EACA,SAAA;EACA,UAAA;AATJ;;AAWA;EACI,UAAA;EACA,gBAAA;EACA,WAAA;EACA,iBAAA;EACA,kBAAA;EAEA,SAAA;EACA,QAAA;EACA,gCAAA;EAEA,uBAAA;EACA,mBAAA;EACA,+CAAA;AAVJ;;AAYA;EACI,aAAA;EACA,iBAAA;EACA,kBAAA;AATJ;;AAWA;EACI,aAAA;EACA,mBAAA;AARJ;;AAUA;EACI,WAAA;EACA,YAAA;EACA,yDAAA;EACA,sBAAA;EACA,kBAAA;AAPJ;;AASA;EACI,aAAA;EACA,WAAA;EACA,mBAAA;EACA,yBA9EU;AAwEd;;AAQA;EACI,yBAlFa;AA6EjB;;AAOA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EAEA,WAAA;EACA,YAAA;EACA,kBAAA;EACA,iBAAA;EAEA,YAAA;EACA,uBAlGU;EAmGV,kBAAA;EACA,oCAjGa;AA2FjB;;AAQA;EACI,gBAAA;EACA,mBAAA;AALJ;;AAOA;EACI,YAAA;EACA,gCA3GS;AAuGb;;AAMA;EACI,UAAA;EACA,WAAA;EACA,wCAAA;AAHJ","sourceRoot":""}]);
+}
+
+@media (width < 1150px) {
+  main {
+    height: fit-content;
+    max-height: 600px;
+  }
+  summary::after {
+    margin-right: 0px;
+  }
+  h2 {
+    width: 80%;
+  }
+}
+@media (width < 899px) {
+  main {
+    width: 80%;
+    height: auto;
+    max-height: fit-content;
+  }
+  h2 {
+    width: 70%;
+  }
+  summary::after {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+@media (width < 550px) {
+  main {
+    width: 90%;
+  }
+  .container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  summary::after {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}`, "",{"version":3,"sources":["webpack://./src/style/main.scss"],"names":[],"mappings":"AAeA;EACI,qBAAA;EACA,4CAAA;AAdJ;AAgBA;EACI,2BAAA;EACA,4CAAA;AAdJ;AAgBA;EACI,sBAAA;AAdJ;;AAgBA;EACI,qCArBQ;EAsBR,qBAAA;EACA,SAAA;EACA,UAAA;AAbJ;;AAeA;EACI,eApBW;AAQf;;AAcA;EACI,eAzBO;AAcX;;AAaA;EACI,eA5BO;EA6BP,yBAjCa;EAkCb,iBAAA;AAVJ;;AAYA;EACI,yDAAA;EACA,kBAAA;EACA,WAAA;EACA,WAAA;EACA,SAAA;EACA,UAAA;AATJ;;AAWA;EACI,UAAA;EACA,gBAAA;EACA,iBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,SAAA;EACA,QAAA;EACA,gCAAA;EAEA,uBAAA;EACA,mBAAA;EACA,+CAAA;AAVJ;;AAYA;EACI,aAAA;EACA,iBAAA;EACA,kBAAA;AATJ;;AAWA;EACI,aAAA;EACA,mBAAA;AARJ;;AAUA;EACI,WAAA;EACA,YAAA;EACA,yDAAA;EACA,sBAAA;EACA,kBAAA;AAPJ;;AASA;EACI,aAAA;EACA,WAAA;EACA,mBAAA;EACA,yBA9EU;EA+EV,qBAAA;AANJ;;AAQA;EACI,yBAnFa;AA8EjB;;AAOA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EAEA,WAAA;EACA,YAAA;EACA,kBAAA;EACA,iBAAA;EAEA,YAAA;EACA,uBAnGU;EAoGV,kBAAA;EACA,oCAlGa;AA4FjB;;AAQA;EACI,UAAA;AALJ;;AAOA;EACI,gBAAA;EACA,mBAAA;AAJJ;;AAMA;EACI,YAAA;EACA,gCA/GS;AA4Gb;;AAKA;EACI,UAAA;EACA,WAAA;EACA,wCAAA;AAFJ;;AAIA;EACI;IACI,mBAAA;IACA,iBAAA;EADN;EAGE;IACI,iBAAA;EADN;EAGE;IACI,UAAA;EADN;AACF;AAIA;EACI;IACI,UAAA;IACA,YAAA;IACA,uBAAA;EAFN;EAIE;IACI,UAAA;EAFN;EAIE;IACI,eAAA;IACA,iBAAA;EAFN;AACF;AAIA;EACI;IACI,UAAA;EAFN;EAIE;IACI,iBAAA;IACA,kBAAA;EAFN;EAIE;IACI,eAAA;IACA,iBAAA;EAFN;AACF","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -822,18 +867,14 @@ var questionsArr = document.querySelectorAll('details');
 var summarys = Array.from(document.querySelectorAll('details'));
 var detailsIndex;
 summarys.forEach(function (summary, index) {
-  summary.addEventListener('click', function (e) {
+  summary.addEventListener('mousedown', function (e) {
     console.log('location: ', index);
-    // detailsIndex = index;
-
+    console.log(e);
+    var what = e.target;
     if (detailsIndex === index) {
       console.log('clicked in same detail');
       detailsIndex = index;
       console.log(summary);
-      summarys.forEach(function (summ) {
-        summ.open = false;
-      });
-      summary.open = false;
     }
     if (detailsIndex != index) {
       console.log("clicked in other ");
@@ -850,4 +891,4 @@ summarys.forEach(function (summary, index) {
 });
 /******/ })()
 ;
-//# sourceMappingURL=bundle12a6a1b2731360033925.js.map
+//# sourceMappingURL=bundlef221b1eb0f88269cd808.js.map

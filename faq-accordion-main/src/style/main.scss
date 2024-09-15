@@ -52,8 +52,8 @@ header {
 main {
     width: 50%;
     max-width: 600px;
-    height: 70%;
-    max-height: 560px;
+    max-height: 565px;
+    height: fit-content;
     position: absolute;
 
     left: 50%;
@@ -85,9 +85,14 @@ summary {
     width: 100%;
     align-items: center;
     color: $dark-purple;
+    // list-style-type: none;
+}
+summary::-webkit-details-marker {
+  display: none;
 }
 summary:hover {
     color: $grayish-purple;
+    cursor: pointer;
 }
 summary::after {
     display: flex;
@@ -116,4 +121,43 @@ details[open] > summary::after {
     width: 90%;
     height: 2px;
     background-color: hsla(0, 0%, 50%, 0.29);
+}
+@media (width < 1150px) {
+    main {
+        height: fit-content;
+        max-height: 600px;
+    }
+    summary::after {
+        margin-right: 0px;
+    }
+    h2 {
+        width: 80%;
+    }
+}
+@media (width < 899px) {
+    main {
+        width: 80%;
+        height: auto;
+        max-height: fit-content;
+    }
+    h2 {
+        width: 70%;
+    }
+    summary::after {
+        margin-right: 0;
+        margin-left: auto;
+    }
+}
+@media (width < 550px) {
+    main {
+        width: 90%;
+    }
+    .container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    summary::after {
+        margin-right: 0;
+        margin-left: auto;
+    }
 }
