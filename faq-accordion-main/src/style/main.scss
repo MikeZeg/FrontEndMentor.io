@@ -54,6 +54,7 @@ main {
     max-width: 600px;
     max-height: 565px;
     height: fit-content;
+    max-height: -webkit-fit-content;
     position: absolute;
 
     left: 50%;
@@ -82,10 +83,13 @@ main {
 }
 summary {
     display: flex;
+    display: -webkit-flex;
     width: 100%;
     align-items: center;
     color: $dark-purple;
     // list-style-type: none;
+    flex-wrap: nowrap;
+
 }
 summary::-webkit-details-marker {
   display: none;
@@ -122,10 +126,10 @@ details[open] > summary::after {
     height: 2px;
     background-color: hsla(0, 0%, 50%, 0.29);
 }
-@media (width < 1150px) {
+@media (max-width: 1150px) {
     main {
         height: fit-content;
-        max-height: 600px;
+        height: -webkit-fit-content;
     }
     summary::after {
         margin-right: 0px;
@@ -134,11 +138,12 @@ details[open] > summary::after {
         width: 80%;
     }
 }
-@media (width < 899px) {
+@media (max-width: 899px) {
     main {
         width: 80%;
         height: auto;
         max-height: fit-content;
+        max-height: -webkit-fit-content;
     }
     h2 {
         width: 70%;
@@ -148,7 +153,7 @@ details[open] > summary::after {
         margin-left: auto;
     }
 }
-@media (width < 550px) {
+@media (max-width: 550px) {
     main {
         width: 90%;
     }

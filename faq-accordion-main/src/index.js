@@ -8,15 +8,12 @@ backgroundImg.src = patternDesktop;
 const backgroundStar = document.getElementById('star');
 backgroundStar.src = star;
 
-const questionsArr = document.querySelectorAll('details')
+
 const summarys = Array.from(document.querySelectorAll('details'));
 let detailsIndex ;
     summarys.forEach((summary, index)=>{
         summary.addEventListener('mousedown', (e) => {
             console.log('location: ', index)
-
-            console.log(e)
-            let what = e.target
             
             if(detailsIndex === index){
                 console.log('clicked in same detail');
