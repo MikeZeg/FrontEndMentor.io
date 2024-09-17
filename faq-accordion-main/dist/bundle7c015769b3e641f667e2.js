@@ -79,6 +79,7 @@ main {
   max-width: 600px;
   max-height: 565px;
   height: fit-content;
+  max-height: -webkit-fit-content;
   position: absolute;
   left: 50%;
   top: 45%;
@@ -109,9 +110,11 @@ main {
 
 summary {
   display: flex;
+  display: -webkit-flex;
   width: 100%;
   align-items: center;
   color: hsl(292, 42%, 14%);
+  flex-wrap: nowrap;
 }
 
 summary::-webkit-details-marker {
@@ -153,10 +156,10 @@ details[open] > summary::after {
   background-color: hsla(0, 0%, 50%, 0.29);
 }
 
-@media (width < 1150px) {
+@media (max-width: 1150px) {
   main {
     height: fit-content;
-    max-height: 600px;
+    height: -webkit-fit-content;
   }
   summary::after {
     margin-right: 0px;
@@ -165,11 +168,12 @@ details[open] > summary::after {
     width: 80%;
   }
 }
-@media (width < 899px) {
+@media (max-width: 899px) {
   main {
     width: 80%;
     height: auto;
     max-height: fit-content;
+    max-height: -webkit-fit-content;
   }
   h2 {
     width: 70%;
@@ -179,7 +183,7 @@ details[open] > summary::after {
     margin-left: auto;
   }
 }
-@media (width < 550px) {
+@media (max-width: 550px) {
   main {
     width: 90%;
   }
@@ -191,7 +195,7 @@ details[open] > summary::after {
     margin-right: 0;
     margin-left: auto;
   }
-}`, "",{"version":3,"sources":["webpack://./src/style/main.scss"],"names":[],"mappings":"AAeA;EACI,qBAAA;EACA,4CAAA;AAdJ;AAgBA;EACI,2BAAA;EACA,4CAAA;AAdJ;AAgBA;EACI,sBAAA;AAdJ;;AAgBA;EACI,qCArBQ;EAsBR,qBAAA;EACA,SAAA;EACA,UAAA;AAbJ;;AAeA;EACI,eApBW;AAQf;;AAcA;EACI,eAzBO;AAcX;;AAaA;EACI,eA5BO;EA6BP,yBAjCa;EAkCb,iBAAA;AAVJ;;AAYA;EACI,yDAAA;EACA,kBAAA;EACA,WAAA;EACA,WAAA;EACA,SAAA;EACA,UAAA;AATJ;;AAWA;EACI,UAAA;EACA,gBAAA;EACA,iBAAA;EACA,mBAAA;EACA,kBAAA;EAEA,SAAA;EACA,QAAA;EACA,gCAAA;EAEA,uBAAA;EACA,mBAAA;EACA,+CAAA;AAVJ;;AAYA;EACI,aAAA;EACA,iBAAA;EACA,kBAAA;AATJ;;AAWA;EACI,aAAA;EACA,mBAAA;AARJ;;AAUA;EACI,WAAA;EACA,YAAA;EACA,yDAAA;EACA,sBAAA;EACA,kBAAA;AAPJ;;AASA;EACI,aAAA;EACA,WAAA;EACA,mBAAA;EACA,yBA9EU;AAwEd;;AASA;EACE,aAAA;AANF;;AAQA;EACI,yBAtFa;EAuFb,eAAA;AALJ;;AAOA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EAEA,WAAA;EACA,YAAA;EACA,kBAAA;EACA,iBAAA;EAEA,YAAA;EACA,uBAvGU;EAwGV,kBAAA;EACA,oCAtGa;AAgGjB;;AAQA;EACI,gBAAA;EACA,mBAAA;AALJ;;AAOA;EACI,YAAA;EACA,gCAhHS;AA4Gb;;AAMA;EACI,UAAA;EACA,WAAA;EACA,wCAAA;AAHJ;;AAKA;EACI;IACI,mBAAA;IACA,iBAAA;EAFN;EAIE;IACI,iBAAA;EAFN;EAIE;IACI,UAAA;EAFN;AACF;AAIA;EACI;IACI,UAAA;IACA,YAAA;IACA,uBAAA;EAFN;EAIE;IACI,UAAA;EAFN;EAIE;IACI,eAAA;IACA,iBAAA;EAFN;AACF;AAIA;EACI;IACI,UAAA;EAFN;EAIE;IACI,iBAAA;IACA,kBAAA;EAFN;EAIE;IACI,eAAA;IACA,iBAAA;EAFN;AACF","sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/style/main.scss"],"names":[],"mappings":"AAeA;EACI,qBAAA;EACA,4CAAA;AAdJ;AAgBA;EACI,2BAAA;EACA,4CAAA;AAdJ;AAgBA;EACI,sBAAA;AAdJ;;AAgBA;EACI,qCArBQ;EAsBR,qBAAA;EACA,SAAA;EACA,UAAA;AAbJ;;AAeA;EACI,eApBW;AAQf;;AAcA;EACI,eAzBO;AAcX;;AAaA;EACI,eA5BO;EA6BP,yBAjCa;EAkCb,iBAAA;AAVJ;;AAYA;EACI,yDAAA;EACA,kBAAA;EACA,WAAA;EACA,WAAA;EACA,SAAA;EACA,UAAA;AATJ;;AAWA;EACI,UAAA;EACA,gBAAA;EACA,iBAAA;EACA,mBAAA;EACA,+BAAA;EACA,kBAAA;EAEA,SAAA;EACA,QAAA;EACA,gCAAA;EAEA,uBAAA;EACA,mBAAA;EACA,+CAAA;AAVJ;;AAYA;EACI,aAAA;EACA,iBAAA;EACA,kBAAA;AATJ;;AAWA;EACI,aAAA;EACA,mBAAA;AARJ;;AAUA;EACI,WAAA;EACA,YAAA;EACA,yDAAA;EACA,sBAAA;EACA,kBAAA;AAPJ;;AASA;EACI,aAAA;EACA,qBAAA;EACA,WAAA;EACA,mBAAA;EACA,yBAhFU;EAkFV,iBAAA;AAPJ;;AAUA;EACE,aAAA;AAPF;;AASA;EACI,yBA1Fa;EA2Fb,eAAA;AANJ;;AAQA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EAEA,WAAA;EACA,YAAA;EACA,kBAAA;EACA,iBAAA;EAEA,YAAA;EACA,uBA3GU;EA4GV,kBAAA;EACA,oCA1Ga;AAmGjB;;AASA;EACI,gBAAA;EACA,mBAAA;AANJ;;AAQA;EACI,YAAA;EACA,gCApHS;AA+Gb;;AAOA;EACI,UAAA;EACA,WAAA;EACA,wCAAA;AAJJ;;AAMA;EACI;IACI,mBAAA;IACA,2BAAA;EAHN;EAKE;IACI,iBAAA;EAHN;EAKE;IACI,UAAA;EAHN;AACF;AAKA;EACI;IACI,UAAA;IACA,YAAA;IACA,uBAAA;IACA,+BAAA;EAHN;EAKE;IACI,UAAA;EAHN;EAKE;IACI,eAAA;IACA,iBAAA;EAHN;AACF;AAKA;EACI;IACI,UAAA;EAHN;EAKE;IACI,iBAAA;IACA,kBAAA;EAHN;EAKE;IACI,eAAA;IACA,iBAAA;EAHN;AACF","sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -863,14 +867,11 @@ var backgroundImg = document.querySelector('body');
 backgroundImg.src = _assets_images_patternDesktop_svg__WEBPACK_IMPORTED_MODULE_1__;
 var backgroundStar = document.getElementById('star');
 backgroundStar.src = _assets_images_icon_star_svg__WEBPACK_IMPORTED_MODULE_2__;
-var questionsArr = document.querySelectorAll('details');
 var summarys = Array.from(document.querySelectorAll('details'));
 var detailsIndex;
 summarys.forEach(function (summary, index) {
   summary.addEventListener('mousedown', function (e) {
     console.log('location: ', index);
-    console.log(e);
-    var what = e.target;
     if (detailsIndex === index) {
       console.log('clicked in same detail');
       detailsIndex = index;
@@ -891,4 +892,4 @@ summarys.forEach(function (summary, index) {
 });
 /******/ })()
 ;
-//# sourceMappingURL=bundle0f389b1af2471a8f1fce.js.map
+//# sourceMappingURL=bundle7c015769b3e641f667e2.js.map
