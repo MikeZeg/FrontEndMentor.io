@@ -1,11 +1,8 @@
 {
+  "homepage": "https://mikezeg.github.io/FrontEndMentor.io/faq-accordion-main",
   "name": "faq-accordion-main",
   "version": "1.0.0",
   "description": "![Design preview for the FAQ accordion coding challenge](./design/desktop-preview.jpg)",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mikezeg/FrontEndMentor.io/faq-accordion-main/dist"
-  },
   "main": "index.js",
   "scripts": {
     "build": "webpack",
