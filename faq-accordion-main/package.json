@@ -9,7 +9,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack serve",
+    "dev": "webpack server",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
