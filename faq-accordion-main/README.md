@@ -32,7 +32,6 @@ Users should be able to:
 ### Links
 
 [live](https://mikezeg-faq-accordion.netlify.app/)
-[code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/faq-accordion-main)
 
 ### Used Technology
 
