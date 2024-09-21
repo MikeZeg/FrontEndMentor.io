@@ -15,7 +15,7 @@
 
 ### Preview
 
-![Preview](./src/design/assets/images/desktop-preview.svg)
+![Preview](./src/assets/images/desktop-preview.svg)
 
 ### The Challenge
 
@@ -45,10 +45,10 @@ Users should be able to:
 ### Performance
 
   #### Desktop
-![deskopt-performance](./src/design/assets/images/desktop.png)
+![deskopt-performance](./src/assets/images/desktop.png)
 
   #### Mobile
-![mobile-performance](./src/design/assets/images/phone.png)
+![mobile-performance](./src/assets/images/phone.png)
 
 ### Learn
 -- Using Webpack to solved that challenge, help me to better understanding of how Webpack works and how it can easily help to manage JS file as well as other assets like fonts, images, stylesheets, etc. 
