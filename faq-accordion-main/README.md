@@ -44,10 +44,10 @@ Users should be able to:
 ### Performance
 
   #### Desktop
-![deskopt-performance](./src/assets/images/desktop.png)
+![deskopt-performance](./src/assets/images/performanceDesktop.png)
 
   #### Mobile
-![mobile-performance](./src/assets/images/phone.png)
+![mobile-performance](./src/assets/images/performaceMobile.png)
 
 ### Learn
 -- Using Webpack to solved that challenge, help me to better understanding of how Webpack works and how it can easily help to manage JS file as well as other assets like fonts, images, stylesheets, etc. 
