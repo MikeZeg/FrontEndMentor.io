@@ -15,7 +15,7 @@ Please note that these challenges work best when viewed in the Chrome browser. I
 | [Live](https://mikezeg.github.io/FrontEndMentor.io/nft-preview-card-component-main/) | NTF preview card component | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/nft-preview-card-component-main) | HTML, CSS - Sass |
 | [Live](https://curious-malabi-315b39.netlify.app/) | Blog - Preview Card | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/blog-preview-card-main) | React, HTML, CSS |
 | [Live](https://harmonious-melomakarona-b076f5.netlify.app/) |  Four card feature - section | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/four-card-feature-section) | React, HTML, CSS (not nesting for Safari) |
-| [Live](https://mikezeg-faq-accordion.netlify.app/) |   | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/faq-accordion-main) | Webpack with assets HTML, JS, CSS |
+| [Live](https://mikezeg-faq-accordion.netlify.app/) | FAQ Accordion  | [Code](https://github.com/MikeZeg/FrontEndMentor.io/tree/main/faq-accordion-main) | Webpack with assets HTML, JS, CSS |
 
 ### Junior
 | Live | Challange Name | Code | Tech |
