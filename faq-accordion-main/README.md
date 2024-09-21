@@ -15,7 +15,7 @@
 
 ### Preview
 
-![Preview](./src/assets/images/desktop-preview.svg)
+![Preview](./src/assets/images/desktop-design.jpg)
 
 ### The Challenge
 
