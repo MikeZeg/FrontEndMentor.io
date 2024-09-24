@@ -1,10 +1,9 @@
 # FrontEndMentor.io
-Please check below my completed FrontEnd Mentor challenges. 
-Each challenge includes links to the code with descriptions and a live demo.
+Below you will find the FrontEnd Mentor challenges I have completed. Each challenge includes links to the code, descriptions, and a live demo.
 
-FrontEnd Mentor website provides an excellent opportunity to apply your knowledge and continue developong your skills.
+The FrontEnd Mentor website offers an excellent opportunity to apply your knowledge and continue developing your skills.
 
-Please note that these challenges work best when viewed in the Chrome browser. If you have any additional information, please don't hesitate to contact me.
+Please note that these challenges work best when viewed in the Google Chrome browser. If you have any additional questions, feel free to contact me.
 
 ### NewBie
 | Live | Challange Name | Code | Tech |
