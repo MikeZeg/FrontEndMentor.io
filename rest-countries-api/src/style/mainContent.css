@@ -1,0 +1,8 @@
+.mainContent_countryBlock{
+    border: 1px solid red;
+
+    width: 200px;
+    height: 100px;
+
+    /* display: grid; */
+}
