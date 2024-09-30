@@ -5,11 +5,10 @@
     --fontColorTitle:hsl(0, 0%, 100%);
     --fontColorSubtitle:hsl(0, 4%, 76%);
 
-    --xlargFont: 3rem;
-    --largFont: 2rem;
-    --medFont: 1.5rem;
-    --smallFont: 1rem;
-    --mobileFont: 0.8rem;
+    --xlargFont: 2rem;
+    --largFont: 1.5rem;
+    --medFont: 1.2rem;
+    --smallFont: 0.75rem;
 }
 .marginLeft {
     margin-left: 1rem;

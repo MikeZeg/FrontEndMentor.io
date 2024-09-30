@@ -7,7 +7,11 @@
 }
 #looking-input {
     height: 55px;
-    width: 200px;
+    width: 480px;
+
+    border-radius: 5px;
+    box-shadow: none;
+    border: 0;
 }
 #choose-region {
     position: absolute;

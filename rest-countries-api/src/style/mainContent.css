@@ -10,7 +10,7 @@
     row-gap: 75px;
 }
 .mainContentStyle {
-    max-width: 260px;
+    max-width: 270px;
     max-height: 330px;
     
 }
@@ -26,14 +26,14 @@
     height: 155px;
 
     h3 {
-        font-size: 1rem;
+        font-size: var(--medFont);
         color: var(--fontColorTitle);
         font-weight: 700;
         margin: 0;
         padding: 0;
     }
     h4 {
-        font-size: 0.5rem;
+        font-size: var(--smallFont);
         font-weight: 800;
         color: var(--fontColorTitle);
         display: flex;

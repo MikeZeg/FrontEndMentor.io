@@ -4,10 +4,11 @@
 #top-header {
     display: flex;
     align-items: center;
+    margin-left: 5rem;
 }
 #mode-btn {
     position: absolute;
-    right: 40px;
+    right: 5rem;
     max-height: 15px;
     max-width: 105px
 }
