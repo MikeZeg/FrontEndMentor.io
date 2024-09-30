@@ -27,22 +27,26 @@
 }
 .mainContent_countryBlock{
     border: 1px solid red;
-    height: 100px;
-    margin: 1rem;
+    height: 155px;
 
     h3 {
         font-size: 1rem;
-        /* color: blue; */
+        color: var(--fontColorTitle);
         font-weight: 700;
         margin: 0;
         padding: 0;
     }
     h4 {
         font-size: 0.5rem;
-        font-weight: 500;
+        font-weight: 800;
+        color: var(--fontColorTitle);
         display: flex;
         align-items: center;
         margin: 0;
         padding: 0;
+    }
+    p{
+        color: var(--fontColorTitle);
+        font-weight: 400;
     }
 }

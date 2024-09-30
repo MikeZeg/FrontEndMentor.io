@@ -14,10 +14,10 @@ const MainContent = (props) => {
                     <figcaption></figcaption>
                 </figure>
                 <div className="mainContent_countryBlock">
-                    <h3>Country Name</h3>
-                    <h4 >Population: <p>81,770,900</p></h4>
-                    <h4 >Region: <p>Europe</p></h4>
-                    <h4 >Capital: <p>Berlin</p></h4>
+                    <h3 className="marginLeft marginTop">Country Name</h3>
+                    <h4 className="marginLeft">Population:<p> 81,770,900</p></h4>
+                    <h4 className="marginLeft">Region:<p> Europe</p></h4>
+                    <h4 className="marginLeft">Capital:<p> Berlin</p></h4>
                 </div>
             </div>
         )
