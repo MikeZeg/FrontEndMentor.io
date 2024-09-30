@@ -1,19 +1,15 @@
 
 .main_style {
-    /* margin: 2rem 1rem 2rem 1rem; */
     display: grid;
-    /* grid-template-columns: 250px 250px 250px 250px; */
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 300px;
 
     margin: 2rem 5rem 0 5rem;
 
-    column-gap: 25px;
-    row-gap: 45px;
+    column-gap: 75px;
+    row-gap: 75px;
 }
 .mainContentStyle {
-    border: 1px solid blue;
-
     max-width: 260px;
     max-height: 330px;
     
@@ -48,5 +44,6 @@
     p{
         color: var(--fontColorTitle);
         font-weight: 400;
+        margin-left: 5px;
     }
 }

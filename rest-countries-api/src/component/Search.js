@@ -1,16 +1,17 @@
 import React, {useState} from "react";
+import '../style/searchStyle.css'
 
 
 const Search = () => {
     
     return (
-        <div>
-            <div id="searching">
-                <input></input>
+        <div id="searching">
+            <div id="looking">
+                <input id="looking-input"></input>
             </div>
             {/* that component on middel */}
-            <div>
-                <form>
+            <div id="choose-region">
+                <form id="choose-region-form">
                     <label for="region"></label>
                     <select name="region" id="region">
                         <option value="" selected> -- Filter by Region -- </option>

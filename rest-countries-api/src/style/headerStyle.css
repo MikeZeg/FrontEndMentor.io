@@ -1,3 +1,13 @@
 .header {
     background-color: blue;
 }
+#top-header {
+    display: flex;
+    align-items: center;
+}
+#mode-btn {
+    position: absolute;
+    right: 40px;
+    max-height: 15px;
+    max-width: 105px
+}

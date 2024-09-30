@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '../style/mainContent.css';
-import '../style/variable.css'
+import '../style/variable.css';
 
 
 
@@ -14,10 +14,10 @@ const MainContent = (props) => {
                     <figcaption></figcaption>
                 </figure>
                 <div className="mainContent_countryBlock">
-                    <h3 className="marginLeft marginTop">Country Name</h3>
-                    <h4 className="marginLeft">Population:<p> 81,770,900</p></h4>
-                    <h4 className="marginLeft">Region:<p> Europe</p></h4>
-                    <h4 className="marginLeft">Capital:<p> Berlin</p></h4>
+                    <h3 style={{marginLeft:'1rem', marginTop:'1rem', marginBottom:'1rem'}}>Country Name</h3>
+                    <h4 style={{marginLeft:'1rem'}}>Population:<p> 81,770,900</p></h4>
+                    <h4 style={{marginLeft:'1rem'}}>Region:<p> Europe</p></h4>
+                    <h4 style={{marginLeft:'1rem'}}>Capital:<p> Berlin</p></h4>
                 </div>
             </div>
         )

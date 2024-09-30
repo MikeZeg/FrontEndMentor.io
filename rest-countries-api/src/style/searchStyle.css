@@ -1,0 +1,27 @@
+#searching{
+    display: flex;
+    align-items: center;
+}
+#looking {
+    margin-left: 5rem;
+}
+#looking-input {
+    height: 55px;
+    width: 200px;
+}
+#choose-region {
+    position: absolute;
+    right: 5rem;
+}
+#choose-region-form {
+    width: 200px;
+    height: 50px;
+
+    text-align: center;
+    border-radius: 5px;
+
+    border: 1px solid red;
+}
+#region {
+    margin-top: 1rem;
+}
