@@ -1,0 +1,10 @@
+:root {
+    --primary-color: hsl(0, 5%, 55%);
+    --second-color: hsl(10,50%,55%);
+
+    --xlargFont: 3rem;
+    --largFont: 2rem;
+    --medFont: 1.5rem;
+    --smallFont: 1rem;
+    --mobileFont: 0.8rem;
+}

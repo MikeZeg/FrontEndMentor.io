@@ -8,11 +8,11 @@ const LandingPage = (props) => {
 
 
     return (
-        <main>
+        <div className="container">
             <Header/>
             <Search/>
             <MainContent/>
-        </main>
+        </div>
     )
 }
 
