@@ -1,10 +1,19 @@
 :root {
-    --primary-color: hsl(0, 5%, 55%);
-    --second-color: hsl(10,50%,55%);
-    --third-color: hsl(165, 2%, 54%);
+    /* dark Mode */
+    --elements-color: hsl(209, 23%, 22%);
+    --background-color: hsl(207, 26%, 17%);
+    --input-color: hsl(165, 2%, 54%);
 
-    --fontColorTitle:hsl(0, 0%, 100%);
-    --fontColorSubtitle:hsl(0, 4%, 76%);
+    /* light Mode */
+    --elements-color-LM: hsl(0, 0%, 100%);
+    --background-color-LM: hsl(0, 0%, 98%);
+    --input-color-LM: hsl(0,0%,52%);
+
+    /* font color  */
+        /* dark version */
+    --font-color-darkMode:hsl(0, 0%, 100%);
+        /* light version */
+    --font-color-lightMode: hsl(200, 15%, 8%);
 
     --xlargFont: 2rem;
     --largFont: 1.5rem;

@@ -1,8 +1,8 @@
 h1 {
-    color: var(--fontColorTitle);
+    color: var(--font-color-darkMode);
 }
 header {
-    background-color: var(--third-color);
+    background-color: var(--elements-color);
     margin-bottom: 3rem;
 }
 #top-header {
@@ -12,23 +12,29 @@ header {
 }
 #mode-btn {
     position: absolute;
+    display: flex;
+    align-items: center;
+
     right: 5rem;
     max-height: 15px;
     max-width: 105px;
 
     font-size: var(--smallFont);
-    color: var(--fontColorTitle);
+    color: var(--font-color-darkMode);
     font-weight: 600;
 
-    background-color: var(--third-color);
+    background-color: var(--elements-color);
     box-sizing: inherit;
     border: none;
 }
 .svgAdd {
-    background-image: url('../images/img/light-mode-svgrepo-com.svg');
-    height: 10px;
-    width: 10px;
+    background-image: url('../images/img/night-mode-svgrepo-com.svg');
+    background-repeat: none;
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+    /* display: flex; */
 }
 button {
-    background-color: var(--third-color);
+    background-color: var(--elements-color);
 }

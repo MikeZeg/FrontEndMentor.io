@@ -7,6 +7,7 @@ const Search = () => {
     return (
         <div id="searching">
             <div id="looking">
+                <p>asd</p>
                 <input id="looking-input"></input>
             </div>
             {/* that component on middel */}

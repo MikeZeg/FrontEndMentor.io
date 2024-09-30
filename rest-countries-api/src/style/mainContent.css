@@ -6,6 +6,8 @@
     row-gap: 75px;
 
     margin: 2rem 5rem 0 5rem;
+
+    background-color: var(--background-color);
 }
 .mainContentStyle {
     max-width: 270px;
@@ -20,12 +22,13 @@
 }
 .mainContent_countryBlock{
     border: 1px solid red;
+    background-color: var(--elements-color);
     height: 155px;
     width: 100%;
 
     h3 {
         font-size: var(--medFont);
-        color: var(--fontColorTitle);
+        color: var(--font-color-darkMode);
         font-weight: 700;
         margin: 0;
         padding: 0;
@@ -33,14 +36,14 @@
     h4 {
         font-size: var(--smallFont);
         font-weight: 800;
-        color: var(--fontColorTitle);
+        color: var(--font-color-darkMode);
         display: flex;
         align-items: center;
         margin: 0;
         padding: 0;
     }
     p {
-        color: var(--fontColorTitle);
+        color: var(--font-color-darkMode);
         font-weight: 400;
         margin-left: 5px;
     }

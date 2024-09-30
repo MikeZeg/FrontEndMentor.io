@@ -4,6 +4,10 @@
 }
 #looking {
     margin-left: 5rem;
+    display: flex;
+}
+#looking::after {
+    content: 'asd';
 }
 #looking-input {
     height: 55px;
@@ -12,6 +16,7 @@
     border-radius: 5px;
     box-shadow: none;
     border: 0;
+    background-color: var(--elements-color);
 }
 #choose-region {
     position: absolute;
@@ -20,12 +25,15 @@
 #choose-region-form {
     width: 200px;
     height: 50px;
+    background-color: var(--elements-color);
 
     text-align: center;
     border-radius: 5px;
-
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 #region {
     margin-top: 1rem;
+    background-color: var(--elements-color);
+    border: none;
+    color: var(--font-color-darkMode);
 }
