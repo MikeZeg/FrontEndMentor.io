@@ -1,6 +1,7 @@
 :root {
     --primary-color: hsl(0, 5%, 55%);
     --second-color: hsl(10,50%,55%);
+    --third-color: hsl(165, 2%, 54%);
 
     --fontColorTitle:hsl(0, 0%, 100%);
     --fontColorSubtitle:hsl(0, 4%, 76%);
@@ -8,7 +9,7 @@
     --xlargFont: 2rem;
     --largFont: 1.5rem;
     --medFont: 1.2rem;
-    --smallFont: 0.75rem;
+    --smallFont: 0.8rem;
 }
 .marginLeft {
     margin-left: 1rem;

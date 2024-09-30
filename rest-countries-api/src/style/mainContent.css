@@ -1,18 +1,15 @@
-
 .main_style {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 300px;
-
-    margin: 2rem 5rem 0 5rem;
-
     column-gap: 75px;
     row-gap: 75px;
+
+    margin: 2rem 5rem 0 5rem;
 }
 .mainContentStyle {
     max-width: 270px;
     max-height: 330px;
-    
 }
 .mainContent_figure {
     border: 1px solid yellow;
@@ -24,6 +21,7 @@
 .mainContent_countryBlock{
     border: 1px solid red;
     height: 155px;
+    width: 100%;
 
     h3 {
         font-size: var(--medFont);
@@ -41,7 +39,7 @@
         margin: 0;
         padding: 0;
     }
-    p{
+    p {
         color: var(--fontColorTitle);
         font-weight: 400;
         margin-left: 5px;

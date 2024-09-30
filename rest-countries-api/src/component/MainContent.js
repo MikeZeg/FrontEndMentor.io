@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import '../style/mainContent.css';
 import '../style/variable.css';
 
-
-
 const MainContent = (props) => {
 
     const CountryWindow = () =>{
