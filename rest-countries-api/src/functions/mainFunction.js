@@ -1,24 +1,28 @@
+import { useEffect, useState } from "react"
+
 console.log('Hello world !!!')
+// ----- links ---------
+const apiCountrys = 'https://restcountries.com/v3.1/independent?status=true'
 
-const apiRoute = `../api/data.json`;
 
-const grabApi = async () => {
-    console.log('checking data')
-    const res = await fetch(apiRoute);
-    const data = await res.json();
+// ---------- Fetch API ----------- //
+export const grabApi = async ( getData ) => {
+    console.log('function start')
+    const myArr = [];
 
-    console.log('Response', res)
+    if(myArr.length <= 0) {
+        console.log('Array empty')
+        const response = await fetch(apiCountrys)
+                        .catch(console.error)
 
-    try {
-        const response = await fetch(url);
-            if(!response.ok){
-                throw new Error(`Response status: ${response.status}`);
-            }
-        const json = await response.json();
-        console.log(json)
-    }catch(error){
-        console.log('error')
+        const myData = await response.json();
+        getData = [...myData]
+
+        console.log('data received', getData)
+        return getData;
+    }else {
+        console.log('Working')
     }
 }
 
-grabApi()
+// grabApi();
