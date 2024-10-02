@@ -3,8 +3,9 @@ import '../style/mainContent.css';
 import '../style/variable.css';
 
 const MainContent = (props) => {
+    const [countryArr, setCountryArr] = useState('')
 
-    const CountryWindow = () =>{
+    const CountryWindow = (props) =>{
         return (
             <div id="keyData" className="mainContentStyle">
                 <figure className="mainContent_figure">

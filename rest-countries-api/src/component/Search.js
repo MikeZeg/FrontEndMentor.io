@@ -6,11 +6,17 @@ const Search = () => {
     
     return (
         <div id="searching">
-            <div id="looking">
-                <p>asd</p>
-                <input id="looking-input"></input>
-            </div>
-            {/* that component on middel */}
+
+                <label id="looking-label" for='looking-input'>
+                    <input
+                        type="text"
+                        id="looking-input"
+                        placeholder="Search for a country..."
+                        // onChange={}
+                    >
+                    </input>
+                </label>
+
             <div id="choose-region">
                 <form id="choose-region-form">
                     <label for="region"></label>
@@ -24,6 +30,7 @@ const Search = () => {
                     </select>
                 </form>
             </div>
+
         </div>
     )
 }

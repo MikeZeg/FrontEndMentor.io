@@ -3,6 +3,7 @@ import Header from './Header.js';
 import Search from './Search.js';
 import MainContent from './MainContent.js';
 import '../style/landingPageStyle.css';
+import funCountry from '../functions/mainFunction.js'
 
 const LandingPage = (props) => {
 

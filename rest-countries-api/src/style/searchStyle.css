@@ -2,21 +2,35 @@
     display: flex;
     align-items: center;
 }
-#looking {
+#looking-label {
+    position: relative;
     margin-left: 5rem;
-    display: flex;
+    color: var(--font-color-darkMode);
 }
-#looking::after {
-    content: 'asd';
+#looking-label:before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    width: 2rem;
+    height: 55px;
+    background: url('../images/img/maps-and-flags-magnifying-glass-svgrepo-com.svg') center / contain no-repeat;
 }
 #looking-input {
     height: 55px;
-    width: 480px;
+    width: 450px;
+    padding-left: 3.5rem;
+    padding-right: 0.5rem;
 
     border-radius: 5px;
     box-shadow: none;
     border: 0;
     background-color: var(--elements-color);
+
+    color: var(--font-color-darkMode);
+    font-weight: 700;
+}
+#looking-input::placeholder {
+    color: var(--font-color-darkMode);
 }
 #choose-region {
     position: absolute;
