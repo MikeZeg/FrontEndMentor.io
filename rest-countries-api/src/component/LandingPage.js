@@ -3,16 +3,25 @@ import Header from './Header.js';
 import Search from './Search.js';
 import MainContent from './MainContent.js';
 import '../style/landingPageStyle.css';
-import { grabApi } from '../functions/mainFunction.js'
+import { useGrabApi } from '../functions/mainFunction.js'
 
 const LandingPage = (props) => {
 
-    const [ countrys, setCountrys ] = grabApi('')
-
-    useEffect((data)=>{
-        // setCountrys(grabApi)   
-    })
+    const [ countrys, setCountrys ] = useGrabApi(' ')
     
+    // setCountrys(useGrabApi)
+    // grabApi();
+
+    
+    const grabApi = () => {
+        setCountrys(useGrabApi)
+    }
+    
+    if(!countrys){
+        grabApi()
+    }else {
+        return countrys;
+    }
 
     return (
         <div className="container">

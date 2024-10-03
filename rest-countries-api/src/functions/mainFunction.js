@@ -4,25 +4,29 @@ console.log('Hello world !!!')
 // ----- links ---------
 const apiCountrys = 'https://restcountries.com/v3.1/independent?status=true'
 
-
 // ---------- Fetch API ----------- //
-export const grabApi = async ( getData ) => {
-    console.log('function start')
-    const myArr = [];
 
-    if(myArr.length <= 0) {
-        console.log('Array empty')
-        const response = await fetch(apiCountrys)
-                        .catch(console.error)
+const myArr = [];
 
-        const myData = await response.json();
-        getData = [...myData]
+// console.log(myArr)
 
-        console.log('data received', getData)
-        return getData;
+export const useGrabApi = (  ) => {
+    console.log('function start ->>>')
+    
+    const [data, setData] = useState([]);
+
+    console.log(data.length)
+
+    if(data.length >= 1){
+        return data;
     }else {
-        console.log('Working')
+        const response = fetch(apiCountrys)
+                        .then((response) => response.json())
+                        // .then((data) => console.log(data))
+                        .then((data) => myArr.push(data))
+        console.log(data)
+        setData(myArr)
+        return data
     }
 }
 
-// grabApi();
