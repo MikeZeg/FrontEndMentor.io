@@ -6,27 +6,20 @@ const apiCountrys = 'https://restcountries.com/v3.1/independent?status=true'
 
 // ---------- Fetch API ----------- //
 
-const myArr = [];
+// const myArr = [];
 
-// console.log(myArr)
-
-export const useGrabApi = (  ) => {
+export const useGrabApi = (props) => {
     console.log('function start ->>>')
     
-    const [data, setData] = useState([]);
+    const [data, setData] = useState('');
 
-    console.log(data.length)
+    const res = fetch(apiCountrys)
+                .then((res) => res.json())
+                .then((res) => console.log(res) )
+                // .then((res)=> setData(res))
+                // .then((data) => myArr.push([...data]))
+                // .then((res) => console.log(res))
+                // .then(()=> {return myArr})
 
-    if(data.length >= 1){
-        return data;
-    }else {
-        const response = fetch(apiCountrys)
-                        .then((response) => response.json())
-                        // .then((data) => console.log(data))
-                        .then((data) => myArr.push(data))
-        console.log(data)
-        setData(myArr)
-        return data
-    }
+    return data;
 }
-

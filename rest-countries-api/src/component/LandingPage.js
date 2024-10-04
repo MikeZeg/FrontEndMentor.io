@@ -7,21 +7,9 @@ import { useGrabApi } from '../functions/mainFunction.js'
 
 const LandingPage = (props) => {
 
-    const [ countrys, setCountrys ] = useGrabApi(' ')
-    
-    // setCountrys(useGrabApi)
-    // grabApi();
+    const [ countrys, setCountrys ] = useState(useGrabApi)
 
-    
-    const grabApi = () => {
-        setCountrys(useGrabApi)
-    }
-    
-    if(!countrys){
-        grabApi()
-    }else {
-        return countrys;
-    }
+    console.log('Check: ', countrys)
 
     return (
         <div className="container">
