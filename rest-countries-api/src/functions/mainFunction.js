@@ -10,9 +10,10 @@ const apiCountrys = 'https://restcountries.com/v3.1/independent?status=true'
 
 export const useGrabApi = async (props) => {
     console.log('function start ->>>')
-    // const [myData, setMyData] = useState('')
 
-    const myData = []
+    const myData = [];
+    const [send, setSend] = useState(myData)
+    
 
     try {
         const response = await fetch(apiCountrys);
@@ -22,12 +23,13 @@ export const useGrabApi = async (props) => {
         data.forEach((element,index) => {
                 myData.push(element);
         });
+        return myData;
 
     }catch(err){
         console.error('Issue: ', err)
     }
 
-    console.log(myData);
+    // console.log(myData);
 
-    return myData;
+    // return myData;
 }
