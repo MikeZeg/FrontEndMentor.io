@@ -3,19 +3,28 @@ import Header from './Header.js';
 import Search from './Search.js';
 import MainContent from './MainContent.js';
 import '../style/landingPageStyle.css';
-import { useGrabApi } from '../functions/mainFunction.js'
+import { grabApi } from '../functions/mainFunction.js'
 
 const LandingPage = (props) => {
+    const apiCountrys = 'https://restcountries.com/v3.1/independent?status=true'
 
-    const [ countrys, setCountrys ] = useState('');
-    const addData = () => {
-
-        if(!countrys){
-            setCountrys(useGrabApi);
+    const [ countrys, setCountrys ] = useState([])
+    
+// waiting for data from mainFunction
+    useEffect(()=>{
+        // setCountrys(grabApi())
+        console.log('check array: ', countrys);
+        const handelData = () => {
+            grabApi().then((myData) => {
+                setCountrys(myData)
+            })
         }
-    }
-    addData()
+        handelData()
+    },[])
+    
+    console.log('data in landingPage: ',countrys)
 
+    console.log('data received: ', countrys.length)
 
     return (
         <div className="container">

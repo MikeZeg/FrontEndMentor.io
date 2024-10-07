@@ -6,30 +6,18 @@ const apiCountrys = 'https://restcountries.com/v3.1/independent?status=true'
 
 // ---------- Fetch API ----------- //
 
-// const myArr = [];
-
-export const useGrabApi = async (props) => {
+export const grabApi = async () => {
     console.log('function start ->>>')
-
     const myData = [];
-    const [send, setSend] = useState(myData)
-    
 
-    try {
-        const response = await fetch(apiCountrys);
-        const data = await response.json();
-        !response.ok ? console.log('error!!') : console.log('data received')
+    const response = await fetch(apiCountrys);
+    const data = await response.json();
+    // console.log('function data after response: ',data)
+    data.forEach(element => {
+        myData.push(element)
+    })
 
-        data.forEach((element,index) => {
-                myData.push(element);
-        });
-        return myData;
+    console.log('data from function: ', myData);
 
-    }catch(err){
-        console.error('Issue: ', err)
-    }
-
-    // console.log(myData);
-
-    // return myData;
+    return myData;
 }
