@@ -6,13 +6,10 @@ import '../style/landingPageStyle.css';
 import { grabApi } from '../functions/mainFunction.js'
 
 const LandingPage = (props) => {
-    const apiCountrys = 'https://restcountries.com/v3.1/independent?status=true'
-
     const [ countrys, setCountrys ] = useState([])
     
 // waiting for data from mainFunction
     useEffect(()=>{
-        // setCountrys(grabApi())
         console.log('check array: ', countrys);
         const handelData = () => {
             grabApi().then((myData) => {
@@ -21,22 +18,17 @@ const LandingPage = (props) => {
         }
         handelData()
     },[])
-    
-    console.log('data in landingPage: ',countrys)
-
-    console.log('data received: ', countrys.length)
 
     return (
         <div className="container">
             <Header/>
             <Search
-            
+                data = {countrys}
             />
             <MainContent
-
+                data = {countrys}
             />
         </div>
     )
 }
-
 export default LandingPage;

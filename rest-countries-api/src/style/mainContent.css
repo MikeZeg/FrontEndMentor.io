@@ -17,14 +17,19 @@
     min-height: 340px;
 }
 .mainContent_figure {
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     height: 150px;
     width: 100%;
     margin: 0;
     padding: 0;
 }
+.mainContent_figure_img {
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+}
 .mainContent_countryBlock{
-    border: 1px solid red;
+    border: 1px solid hsl(207, 26%, 17%);
     background-color: var(--elements-color);
     height: 190px;
     width: 100%;

@@ -7,7 +7,7 @@ const apiCountrys = 'https://restcountries.com/v3.1/independent?status=true'
 // ---------- Fetch API ----------- //
 
 export const grabApi = async () => {
-    console.log('function start ->>>')
+    // console.log('function start ->>>')
     const myData = [];
 
     const response = await fetch(apiCountrys);
@@ -16,8 +16,15 @@ export const grabApi = async () => {
     data.forEach(element => {
         myData.push(element)
     })
-
     console.log('data from function: ', myData);
-
     return myData;
 }
+
+// ------- Choose  -----------
+const countrys = document.querySelectorAll('.mainContnetStyle')
+
+countrys.forEach((country) => {
+    country.addEventListener('click', ()=>{
+        console.log('Country: ', country)
+    })
+})
