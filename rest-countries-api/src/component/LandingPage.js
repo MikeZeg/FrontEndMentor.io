@@ -10,7 +10,7 @@ const LandingPage = (props) => {
     
 // waiting for data from mainFunction
     useEffect(()=>{
-        console.log('check array: ', countrys);
+        // console.log('check array: ', countrys);
         const handelData = () => {
             grabApi().then((myData) => {
                 setCountrys(myData)

@@ -16,12 +16,13 @@ export const grabApi = async () => {
     data.forEach(element => {
         myData.push(element)
     })
-    console.log('data from function: ', myData);
+    // console.log('data from function: ', myData);
     return myData;
 }
 
 // ------- Choose  -----------
-const countrys = document.querySelectorAll('.mainContnetStyle')
+const countrys = document.querySelectorAll('.mainContentStyle')
+console.log(countrys)
 
 countrys.forEach((country) => {
     country.addEventListener('click', ()=>{
