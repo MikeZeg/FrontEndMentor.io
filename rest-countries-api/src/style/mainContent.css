@@ -16,6 +16,9 @@
     max-height: 340px;
     min-height: 340px;
 }
+.mainContentStyle:hover {
+    border: 1px solid red;
+}
 .mainContent_figure {
     /* border: 1px solid yellow; */
     height: 150px;

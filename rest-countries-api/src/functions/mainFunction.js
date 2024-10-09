@@ -21,11 +21,14 @@ export const grabApi = async () => {
 }
 
 // ------- Choose  -----------
-const countrys = document.querySelectorAll('.mainContentStyle')
-console.log(countrys)
+export const openWindow = () => {
 
-countrys.forEach((country) => {
-    country.addEventListener('click', ()=>{
-        console.log('Country: ', country)
-    })
+    const countrys = document.querySelectorAll('.mainContentStyle');
+    console.log('check: ', countrys)
+
+    countrys.forEach((window)=>{
+        window.addEventListener('click',(e)=>{
+            console.log('event: ',e)
+        })
 })
+}

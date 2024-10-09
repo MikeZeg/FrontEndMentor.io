@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import '../style/mainContent.css';
 import '../style/variable.css';
+import { openWindow } from '../functions/mainFunction.js' 
 
 const MainContent = (props) => {
     const [country, setCountryArr] = useState([])
 
     useEffect(() => {
         setCountryArr(props.data);
+        openWindow();
+
     })
     // console.log('MainContent: ', country)
 
@@ -40,7 +43,7 @@ const MainContent = (props) => {
                 {country.map((country, index) => (
                         <CountryWindow 
                             data={country}
-                            key = {index}
+                            index    = {index}
                         />
                 ))}
             </section>
