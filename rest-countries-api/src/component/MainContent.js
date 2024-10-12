@@ -43,7 +43,7 @@ const MainContent = (props) => {
                 {country.map((country, index) => (
                         <CountryWindow 
                             data={country}
-                            index    = {index}
+                            index = {index}
                         />
                 ))}
             </section>
