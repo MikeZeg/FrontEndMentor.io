@@ -3,7 +3,6 @@ import '../style/selectedCountryStyle.css'
 import '../style/variable.css'
 import Header from './Header.js'
 
-
 const SelectedCountry = (props) => {
 
     const countryName = 'Poland';
@@ -15,18 +14,19 @@ const SelectedCountry = (props) => {
     const topLevelDomain = '.pl';
     const currencies = 'Zloty';
     const languages = 'Polish';
+    const flagImg = 'https://flagcdn.com/af.svg';
 
     return (
-        <div>
-            <Header/>
+        <div className="hidenSection">
             <div>
                 <button className="btn btnBack"><span></span>Back</button>
             </div>
             <article className="selectedCountry">
                 <figure className="countryFlag">
-                    <img></img>
+                    <img src={flagImg} className="selectedCountryImage"></img>
                 </figure>
-                <div>
+
+                <div className="countryInfo">
                     <section className="countryName">
                         <h1>{countryName}</h1>
                     </section>
@@ -41,6 +41,7 @@ const SelectedCountry = (props) => {
                         <h2>Currencies: <span>{currencies}</span></h2>
                         <h2>Languages: <span>{languages}</span></h2>
                     </section>
+
                     <section className="countryBorder">
                         <h3>Border Country:</h3>
                     </section>

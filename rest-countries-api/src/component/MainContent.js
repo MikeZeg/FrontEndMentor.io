@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import '../style/mainContent.css';
 import '../style/variable.css';
+import SelectedCountry from './SelectedCountry.js'
 import { openWindow } from '../functions/mainFunction.js' 
 
 const MainContent = (props) => {
@@ -47,6 +48,7 @@ const MainContent = (props) => {
                         />
                 ))}
             </section>
+            <SelectedCountry/>
         </div>
     )
 }

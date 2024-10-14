@@ -1,5 +1,6 @@
 .main_style {
-    display: grid;
+    /* display: grid; */
+    display: none;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 300px;
     column-gap: 75px;

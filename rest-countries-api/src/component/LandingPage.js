@@ -2,6 +2,7 @@ import React,  {useEffect, useState } from "react";
 import Header from './Header.js';
 import Search from './Search.js';
 import MainContent from './MainContent.js';
+
 import '../style/landingPageStyle.css';
 import { grabApi } from '../functions/mainFunction.js'
 
@@ -28,6 +29,7 @@ const LandingPage = (props) => {
             <MainContent
                 data = {countrys}
             />
+            
         </div>
     )
 }

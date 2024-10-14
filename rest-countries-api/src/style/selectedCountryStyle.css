@@ -1,0 +1,51 @@
+.hidenSection {
+    background: white;
+    width: 90%;
+    height: 100%;
+    margin-left: 4.5rem;
+
+    display: felx;
+}
+.btnBack { 
+    width: 135px;
+    height: 40px;
+    position: relative;
+
+    color: white;
+    border-radius: 5px;
+    box-shadow: none;
+}
+.btnBack::before {
+    content: '<--';
+    position: absolute;
+    left: 1.5rem;
+
+    color: white;
+    /* background: ; */
+
+}
+.selectedCountry {
+    display: flex;
+    margin-left: 0;
+
+    height: 100%;
+    width: 100%;
+}
+.countryFlag {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: 100%;
+    background: lightblue;
+
+    border: 1px solid red;
+}
+.selectedCountryImage {
+    width: 100%;
+    height: 100%;
+}
+.countryInfo {
+    width: 50%;
+    height: 100%;
+    background: pink;
+}
