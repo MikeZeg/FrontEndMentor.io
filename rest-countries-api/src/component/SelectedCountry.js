@@ -16,9 +16,11 @@ const SelectedCountry = (props) => {
     const languages = 'Polish';
     const flagImg = 'https://flagcdn.com/af.svg';
 
+    const borderArr = ['Germany','Czech','Slovakia','Ukrain','Litva']
+
     return (
         <div className="hidenSection">
-            <div>
+            <div className="buttonPress">
                 <button className="btn btnBack"><span></span>Back</button>
             </div>
             <article className="selectedCountry">
@@ -34,7 +36,7 @@ const SelectedCountry = (props) => {
                     <section className="countryDetails">
                         <h2>Native Name: <span>{nativeName}</span></h2>
                         <h2>Population: <span>{population}</span></h2>
-                        <h2>Region<span>{region}</span></h2>
+                        <h2>Region: <span>{region}</span></h2>
                         <h2>Sub Region:<span>{subRegion}</span></h2>
                         <h2>Capital: <span>{capital}</span></h2>
                         <h2>Top Level Domain: <span>{topLevelDomain}</span></h2>
@@ -43,7 +45,13 @@ const SelectedCountry = (props) => {
                     </section>
 
                     <section className="countryBorder">
-                        <h3>Border Country:</h3>
+                        <div className="flexCountryBorder">
+                            <h3>Border Country:</h3>
+                            {borderArr.map((border, index) => (
+                                <p className="borderCountry">{border}</p>
+                            ))}
+                            
+                        </div>
                     </section>
                 </div>
             </article>

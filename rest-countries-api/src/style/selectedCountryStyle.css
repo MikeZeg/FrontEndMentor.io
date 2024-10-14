@@ -3,13 +3,14 @@
     width: 90%;
     height: 100%;
     margin-left: 4.5rem;
-
-    display: felx;
+    /* display: none; */
+    display: grid;
 }
 .btnBack { 
     width: 135px;
     height: 40px;
     position: relative;
+    margin-bottom: 3rem;
 
     color: white;
     border-radius: 5px;
@@ -27,6 +28,7 @@
 .selectedCountry {
     display: flex;
     margin-left: 0;
+    align-items: center;
 
     height: 100%;
     width: 100%;
@@ -37,8 +39,6 @@
     width: 50%;
     height: 100%;
     background: lightblue;
-
-    border: 1px solid red;
 }
 .selectedCountryImage {
     width: 100%;
@@ -47,5 +47,42 @@
 .countryInfo {
     width: 50%;
     height: 100%;
+    margin-left: 2rem;
+
+    display: grid;
+    font-size: 12px;
+
     background: pink;
+}
+.countryName {
+    font-size: var(--xlargFont);
+    color: var(--font-color-darkMode);
+}
+.countryDetails {
+    color: var(--font-color-darkMode);
+    font-size: var(--smallFont);
+    margin-top: auto;
+    margin-bottom: auto;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 70%;
+}
+.countryBorder {
+    border: 1px solid red;
+    /* display: block; */
+}
+.flexCountryBorder {
+    display: flex;
+}
+.borderCountry {
+    text-align: center;
+    line-height: 25px;
+    background: hsla(240, 67%, 56%, 0.712);
+    width: 60px;
+    height: 25px;
+    margin-left: 10px;
 }
