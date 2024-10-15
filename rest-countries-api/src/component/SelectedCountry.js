@@ -2,7 +2,7 @@ import React, {useState,useEffect} from "react";
 import '../style/selectedCountryStyle.css'
 import '../style/variable.css'
 import Header from './Header.js'
-import { goBack } from '../functions/mainFunction.js'
+import { openWindow, goBack } from '../functions/mainFunction.js'
 
 const SelectedCountry = (props) => {
 
@@ -22,8 +22,9 @@ const SelectedCountry = (props) => {
     return (
         <div className="hidenSection">
             <div className="buttonPress">
-                <button className="btn btnBack"
-                    onChange={()=>{goBack()}}
+                <button 
+                    className="btn btnBack"
+                    // onChange={()=>{goBack()}}
                 ><span></span>Back</button>
             </div>
             <article className="selectedCountry">

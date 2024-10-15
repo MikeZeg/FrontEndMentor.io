@@ -21,28 +21,40 @@ export const grabApi = async () => {
 }
 
 // ------- Choose  -----------
-const hidenSection = document.querySelector('.hidenSection')
-const mainContent = document.querySelector('.main_style')
-const btnBack = document.querySelector('.btnBack')
+    export const openWindow = () => {
+        const hidenSection = document.querySelector('.hidenSection')
+        const mainContent = document.querySelector('.main_style')
+        const countrys = document.querySelectorAll('.mainContentStyle');
+        const searchBar = document.querySelector('#searching')
 
-console.log('asd: ', hidenSection, mainContent);
+        console.log('check: ', countrys)
 
-export const openWindow = () => {
-
-    const countrys = document.querySelectorAll('.mainContentStyle');
-    console.log('check: ', countrys)
-
-    countrys.forEach((window)=>{
-        window.addEventListener('click',(e)=>{
-            console.log('event: ',e)
+        countrys.forEach((window)=>{
+            window.addEventListener('click',(e)=>{
+                console.log('----->openWindow Working <----')
+                console.log('Pressed: ',e)
+    
+                mainContent.style.display = 'none';
+                searchBar.style.display = 'none';
+                hidenSection.style.display = 'grid';
+            })
         })
-})
-}
+    }
 
-export const goBack = () => {
-    console.log(btnBack, 'asdasdas', hidenSection)
-    console.log('work')
-    btnBack.addEventListener('click',()=>{
-        console.log('Working');
-    })
-}
+    export const goBack = () => {
+        const hidenSection = document.querySelector('.hidenSection')
+        const mainContent = document.querySelector('.main_style')
+        const btnBack = document.querySelector('btnBack')
+        const searchBar = document.querySelector('#searching')
+        
+        console.log(btnBack, 'asdasdas', hidenSection)
+        console.log('work')
+        
+        btnBack.addEventListener('click',()=>{
+            console.log('Working');
+
+            mainContent.style.display = 'grid'
+            searchBar.style.display = 'flex';
+            hidenSection.style.display = 'none'
+        })
+    }

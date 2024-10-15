@@ -3,8 +3,8 @@
     width: 90%;
     height: 100%;
     margin-left: 4.5rem;
-    /* display: none; */
-    display: grid;
+    display: none;
+    /* display: grid; */
 }
 .btnBack, input[type='submit'], input[type='reset'] { 
     width: 135px;
