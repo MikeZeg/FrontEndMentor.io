@@ -21,6 +21,12 @@ export const grabApi = async () => {
 }
 
 // ------- Choose  -----------
+const hidenSection = document.querySelector('.hidenSection')
+const mainContent = document.querySelector('.main_style')
+const btnBack = document.querySelector('.btnBack')
+
+console.log('asd: ', hidenSection, mainContent);
+
 export const openWindow = () => {
 
     const countrys = document.querySelectorAll('.mainContentStyle');
@@ -31,4 +37,12 @@ export const openWindow = () => {
             console.log('event: ',e)
         })
 })
+}
+
+export const goBack = () => {
+    console.log(btnBack, 'asdasdas', hidenSection)
+    console.log('work')
+    btnBack.addEventListener('click',()=>{
+        console.log('Working');
+    })
 }

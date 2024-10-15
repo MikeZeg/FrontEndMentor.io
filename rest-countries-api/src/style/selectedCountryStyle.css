@@ -1,12 +1,12 @@
 .hidenSection {
-    background: white;
+    background: var(--background-color);
     width: 90%;
     height: 100%;
     margin-left: 4.5rem;
     /* display: none; */
     display: grid;
 }
-.btnBack { 
+.btnBack, input[type='submit'], input[type='reset'] { 
     width: 135px;
     height: 40px;
     position: relative;
@@ -15,6 +15,9 @@
     color: white;
     border-radius: 5px;
     box-shadow: none;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
 }
 .btnBack::before {
     content: '<--';
@@ -23,15 +26,16 @@
 
     color: white;
     /* background: ; */
-
 }
 .selectedCountry {
     display: flex;
     margin-left: 0;
     align-items: center;
 
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
+    height: 400px;
+    /* width: 560px; */
 }
 .countryFlag {
     margin: 0;
@@ -47,12 +51,9 @@
 .countryInfo {
     width: 50%;
     height: 100%;
-    margin-left: 2rem;
-
-    display: grid;
+    margin-left: 7rem;
+    /* display: grid; */
     font-size: 12px;
-
-    background: pink;
 }
 .countryName {
     font-size: var(--xlargFont);
@@ -60,19 +61,23 @@
 }
 .countryDetails {
     color: var(--font-color-darkMode);
-    font-size: var(--smallFont);
+    font-size: 10px;
     margin-top: auto;
     margin-bottom: auto;
-
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: wrap;
-    height: 70%;
+    height: 58%;
+}
+.countryDetails > h2 {
+    font-weight: 300;
+}
+.countryDetails > h2 > span {
+    font-weight: 700;
 }
 .countryBorder {
-    border: 1px solid red;
     /* display: block; */
 }
 .flexCountryBorder {
@@ -81,8 +86,11 @@
 .borderCountry {
     text-align: center;
     line-height: 25px;
-    background: hsla(240, 67%, 56%, 0.712);
+    background: var(--elements-color);
     width: 60px;
     height: 25px;
     margin-left: 10px;
+}
+.flexCountryBorder {
+    color: var(--font-color-darkMode);
 }

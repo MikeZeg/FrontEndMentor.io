@@ -2,6 +2,7 @@ import React, {useState,useEffect} from "react";
 import '../style/selectedCountryStyle.css'
 import '../style/variable.css'
 import Header from './Header.js'
+import { goBack } from '../functions/mainFunction.js'
 
 const SelectedCountry = (props) => {
 
@@ -21,7 +22,9 @@ const SelectedCountry = (props) => {
     return (
         <div className="hidenSection">
             <div className="buttonPress">
-                <button className="btn btnBack"><span></span>Back</button>
+                <button className="btn btnBack"
+                    onChange={()=>{goBack()}}
+                ><span></span>Back</button>
             </div>
             <article className="selectedCountry">
                 <figure className="countryFlag">
@@ -34,14 +37,14 @@ const SelectedCountry = (props) => {
                     </section>
 
                     <section className="countryDetails">
-                        <h2>Native Name: <span>{nativeName}</span></h2>
-                        <h2>Population: <span>{population}</span></h2>
-                        <h2>Region: <span>{region}</span></h2>
-                        <h2>Sub Region:<span>{subRegion}</span></h2>
-                        <h2>Capital: <span>{capital}</span></h2>
-                        <h2>Top Level Domain: <span>{topLevelDomain}</span></h2>
-                        <h2>Currencies: <span>{currencies}</span></h2>
-                        <h2>Languages: <span>{languages}</span></h2>
+                        <h2> <span>Native Name:</span> {nativeName}</h2>
+                        <h2><span>Population:</span> {population}</h2>
+                        <h2><span>Region:</span> {region}</h2>
+                        <h2><span>Sub Region:</span> {subRegion}</h2>
+                        <h2><span>Capital:</span> {capital}</h2>
+                        <h2><span>Top Level Domain:</span> {topLevelDomain}</h2>
+                        <h2><span>Currencies:</span> {currencies}</h2>
+                        <h2><span>Languages: </span> {languages}</h2>
                     </section>
 
                     <section className="countryBorder">
