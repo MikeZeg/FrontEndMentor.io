@@ -44,17 +44,12 @@ export const grabApi = async () => {
     export const goBack = () => {
         const hidenSection = document.querySelector('.hidenSection')
         const mainContent = document.querySelector('.main_style')
-        const btnBack = document.querySelector('btnBack')
+        const btnBack = document.querySelector('#back-btn')
         const searchBar = document.querySelector('#searching')
         
-        console.log(btnBack, 'asdasdas', hidenSection)
-        console.log('work')
-        
-        btnBack.addEventListener('click',()=>{
-            console.log('Working');
+        console.log('Working?? ->: ',btnBack, hidenSection)
 
-            mainContent.style.display = 'grid'
-            searchBar.style.display = 'flex';
-            hidenSection.style.display = 'none'
-        })
+        mainContent.style.display = 'grid'
+        searchBar.style.display = 'flex';
+        hidenSection.style.display = 'none';
     }

@@ -24,7 +24,8 @@ const SelectedCountry = (props) => {
             <div className="buttonPress">
                 <button 
                     className="btn btnBack"
-                    // onChange={()=>{goBack()}}
+                    id="back-btn"
+                    onClick={()=>{goBack()}}
                 ><span></span>Back</button>
             </div>
             <article className="selectedCountry">
