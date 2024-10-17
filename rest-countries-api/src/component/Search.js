@@ -1,9 +1,25 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import '../style/searchStyle.css'
 
+const Search = (props) => {
+    const [list, setList ] = useState([]);
+    const [looking, setLooking] = useState('');
+    const [typing, setTyping] = useState('')
 
-const Search = () => {
-    
+    console.log('check data in Search',props)
+    console.log('check: ',typing)
+
+//Searching country and display if match to looking/ typing data
+    const handelData = (e) => {
+        
+
+        setList()
+    }
+
+    useEffect(()=>{
+        props.changeData([{asd:'a'},{aq:'b'}])
+    },[typing])
+
     return (
         <div id="searching">
 
@@ -12,7 +28,12 @@ const Search = () => {
                         type="text"
                         id="looking-input"
                         placeholder="Search for a country..."
-                        // onChange={}
+                        // value={typing}
+                        onChange={(e) => {
+                            setTyping(e.target.value)
+                            console.log(e.target.value)
+                            handelData(e)
+                        }}
                     >
                     </input>
                 </label>

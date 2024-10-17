@@ -8,6 +8,7 @@ import { grabApi } from '../functions/mainFunction.js'
 
 const LandingPage = (props) => {
     const [ countrys, setCountrys ] = useState([])
+    const [ list, setList ] = useState([])
     
 // waiting for data from mainFunction
     useEffect(()=>{
@@ -15,16 +16,25 @@ const LandingPage = (props) => {
         const handelData = () => {
             grabApi().then((myData) => {
                 setCountrys(myData)
+                setList(myData)
             })
         }
         handelData()
     },[])
 
+    // data from Search.js - sorting by typing letters
+    const lookingCountry = (data) => {
+        setList(data)
+    }
+
+
+    console.log('check data from search: ', list)
+
     return (
         <div className="container">
             <Header/>
             <Search
-                data = {countrys}
+                changeData  = {list => lookingCountry(list)}
             />
             <MainContent
                 data = {countrys}

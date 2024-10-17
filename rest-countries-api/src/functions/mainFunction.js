@@ -21,19 +21,18 @@ export const grabApi = async () => {
 }
 
 // ------- Choose  -----------
-    export const openWindow = () => {
+    export const openWindow = (data, index) => {
         const hidenSection = document.querySelector('.hidenSection')
         const mainContent = document.querySelector('.main_style')
         const countrys = document.querySelectorAll('.mainContentStyle');
         const searchBar = document.querySelector('#searching')
 
-        console.log('check: ', countrys)
+        // console.log('check: ', countrys)
+
+        console.log('openWindow check: ',data)
 
         countrys.forEach((window)=>{
             window.addEventListener('click',(e)=>{
-                console.log('----->openWindow Working <----')
-                console.log('Pressed: ',e)
-    
                 mainContent.style.display = 'none';
                 searchBar.style.display = 'none';
                 hidenSection.style.display = 'grid';
@@ -47,7 +46,7 @@ export const grabApi = async () => {
         const btnBack = document.querySelector('#back-btn')
         const searchBar = document.querySelector('#searching')
         
-        console.log('Working?? ->: ',btnBack, hidenSection)
+        // console.log('Working?? ->: ',btnBack, hidenSection)
 
         mainContent.style.display = 'grid'
         searchBar.style.display = 'flex';

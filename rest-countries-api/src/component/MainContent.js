@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import '../style/mainContent.css';
 import '../style/variable.css';
 import SelectedCountry from './SelectedCountry.js'
-import { openWindow,goBack } from '../functions/mainFunction.js' 
+import { openWindow, goBack } from '../functions/mainFunction.js' 
 
 const MainContent = (props) => {
     const [country, setCountryArr] = useState([])
@@ -12,7 +12,8 @@ const MainContent = (props) => {
         openWindow();
 
     })
-    // console.log('MainContent: ', country)
+
+    // console.log('MainContent: ', pressed)
 
     const CountryWindow = ({data, index}) =>{
         let name = data.country;
@@ -23,7 +24,7 @@ const MainContent = (props) => {
         let keyData = {index}
 
         return (
-            <div id={index} className="mainContentStyle">
+            <div id={index} className="mainContentStyle" key={index}>
                 <figure className="mainContent_figure">
                     <img src={countryImg} alt={index} className="mainContent_figure_img"></img>
                     <figcaption></figcaption>
@@ -48,7 +49,9 @@ const MainContent = (props) => {
                         />
                 ))}
             </section>
-            <SelectedCountry/>
+            <SelectedCountry
+                
+            />
         </div>
     )
 }
