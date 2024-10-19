@@ -22,19 +22,17 @@ const LandingPage = (props) => {
         handelData()
     },[])
 
-    // data from Search.js - sorting by typing letters
+// data from Search.js - sorting by typing letters
     const lookingCountry = (data) => {
         setList(data)
     }
-
-
-    console.log('check data from search: ', list)
 
     return (
         <div className="container">
             <Header/>
             <Search
-                changeData  = {list => lookingCountry(list)}
+                changeData  = {list => lookingCountry}
+                
             />
             <MainContent
                 data = {countrys}

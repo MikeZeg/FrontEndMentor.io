@@ -6,14 +6,12 @@ const Search = (props) => {
     const [looking, setLooking] = useState('');
     const [typing, setTyping] = useState('')
 
-    console.log('check data in Search',props)
-    console.log('check: ',typing)
+    console.log('check data in Search',props.changeData)
+    // console.log('check: ',typing)
 
 //Searching country and display if match to looking/ typing data
     const handelData = (e) => {
-        
 
-        setList()
     }
 
     useEffect(()=>{

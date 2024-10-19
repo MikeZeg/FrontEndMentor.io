@@ -24,7 +24,7 @@ const SelectedCountry = (data) => {
         // setCountry()
     })
     // console.log('check data: ', data)
-    console.log(country.flagImg)
+    // console.log(country.flagImg)
 
     
 

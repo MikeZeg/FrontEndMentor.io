@@ -29,7 +29,7 @@ export const grabApi = async () => {
 
         // console.log('check: ', countrys)
 
-        console.log('openWindow check: ',data)
+        // console.log('openWindow check: ',data)
 
         countrys.forEach((window)=>{
             window.addEventListener('click',(e)=>{
