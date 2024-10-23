@@ -16,22 +16,23 @@ const LandingPage = (props) => {
         const handelData = () => {
             grabApi().then((myData) => {
                 setCountrys(myData)
-                setList(myData)
+                // setList(myData)
             })
         }
         handelData()
     },[])
 
 // data from Search.js - sorting by typing letters
-    const lookingCountry = (data) => {
-        setList(data)
+    const handelData = (data) => {
+        this.setList({data})
     }
+    console.log('received data from Search.js: ', list)
 
     return (
         <div className="container">
             <Header/>
             <Search
-                changeData  = {list => lookingCountry}
+                changeData  = {handelData}
                 
             />
             <MainContent

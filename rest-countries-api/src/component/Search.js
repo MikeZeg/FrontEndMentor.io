@@ -1,22 +1,47 @@
 import React, {useEffect, useState} from "react";
-import '../style/searchStyle.css'
+import '../style/searchStyle.css';
+import { grabApi } from '../functions/mainFunction.js'
 
 const Search = (props) => {
     const [list, setList ] = useState([]);
     const [looking, setLooking] = useState('');
     const [typing, setTyping] = useState('')
-
-    console.log('check data in Search',props.changeData)
     // console.log('check: ',typing)
 
-//Searching country and display if match to looking/ typing data
-    const handelData = (e) => {
+    const asd = [
+        {aaa:'aaa'},
+        {bbb:'bbb'},
+    ]
 
+    useEffect(()=>{
+        const dataReceived = () => {
+            grabApi().then((myData) => {
+                setLooking(myData)
+                // console.log('Received from grabApi Sreach.js: ', myData)
+            })
+        }
+        dataReceived();
+    })
+
+    const sendDataToApp = () => {
+        props.changeData(looking)
+        console.log('data sent to App.js')
     }
 
     useEffect(()=>{
-        props.changeData([{asd:'a'},{aq:'b'}])
+        // console.log('change')
+        // sendDataToApp()
+
     },[typing])
+
+//Searching country and display if match to looking/ typing data
+    // console.log('data from LandignPage: ', props.changeData)
+
+    const filtrData = () => {
+        // let data = ;
+
+    }
+    
 
     return (
         <div id="searching">
@@ -30,7 +55,7 @@ const Search = (props) => {
                         onChange={(e) => {
                             setTyping(e.target.value)
                             console.log(e.target.value)
-                            handelData(e)
+                            
                         }}
                     >
                     </input>
