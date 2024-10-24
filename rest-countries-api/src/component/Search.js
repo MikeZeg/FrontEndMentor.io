@@ -3,45 +3,67 @@ import '../style/searchStyle.css';
 import { grabApi } from '../functions/mainFunction.js'
 
 const Search = (props) => {
-    const [list, setList ] = useState([]);
+    const [list, setList ] = useState('');
     const [looking, setLooking] = useState('');
     const [typing, setTyping] = useState('')
-    // console.log('check: ',typing)
 
-    const asd = [
-        {aaa:'aaa'},
-        {bbb:'bbb'},
+    const arr = [
+        {
+            country:'Poland1',
+            population:11111111,
+            region:'western Europeasdasdas',
+            capital:'Warsow',
+            flags:{png:"https://flagcdn.com/w320/gd.png",svg:"https://flagcdn.com/gd.svg"},
+        },
+        {
+            country:'Poland2',
+            population:2222222222,
+            region:'western Europeeeeeeeee',
+            capital:'Warsow',
+            flags:{png:"https://flagcdn.com/w320/gd.png",svg:"https://flagcdn.com/gd.svg"},
+        },
+        {
+            country:'Poland3',
+            population:33333333333,
+            region:'western Europe',
+            capital:'Warsow',
+            flags:{png:"https://flagcdn.com/w320/gd.png",svg:"https://flagcdn.com/gd.svg"},
+        },
+        
     ]
 
-    useEffect(()=>{
-        const dataReceived = () => {
-            grabApi().then((myData) => {
-                setLooking(myData)
-                // console.log('Received from grabApi Sreach.js: ', myData)
-            })
-        }
-        dataReceived();
-    })
-
-    const sendDataToApp = () => {
-        props.changeData(looking)
-        console.log('data sent to App.js')
+    // Data receiving from mainFunction - use try ?
+    const dataReceived = () => {
+        grabApi().then((myData) => {
+            setList(myData)
+            // console.log('Received from grabApi Sreach.js: ', myData)
+        })
     }
-
-    useEffect(()=>{
-        // console.log('change')
-        // sendDataToApp()
-
-    },[typing])
-
-//Searching country and display if match to looking/ typing data
-    // console.log('data from LandignPage: ', props.changeData)
-
-    const filtrData = () => {
-        // let data = ;
-
+    dataReceived();
+    // Filter array by typing
+    const filterData = (list, typing) =>{
+        const newArr = list.filter((country)=>{
+            return country.name === typing
+        })
+        console.log(newArr)
     }
     
+    useEffect(()=>{
+        console.log('From LandingPage: ', props.changeData)
+        
+        function dataSend(){
+            // props.changeData(list)
+            props.changeData(arr)
+            console.log('data send to LandingPage')
+        }
+        dataSend();
+    },[!list])
+
+    useEffect(()=>{
+        filterData(arr, typing)
+    },[typing])
+
+
 
     return (
         <div id="searching">
@@ -55,7 +77,6 @@ const Search = (props) => {
                         onChange={(e) => {
                             setTyping(e.target.value)
                             console.log(e.target.value)
-                            
                         }}
                     >
                     </input>

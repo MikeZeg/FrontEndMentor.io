@@ -6,14 +6,13 @@ import { openWindow, goBack } from '../functions/mainFunction.js'
 
 const MainContent = (props) => {
     const [country, setCountryArr] = useState([])
+    const [ secondData, setSecondData ] = useState([])
 
     useEffect(() => {
         setCountryArr(props.data);
         openWindow();
-
     })
 
-    // console.log('MainContent: ', pressed)
 
     const CountryWindow = ({data, index}) =>{
         let name = data.country;
@@ -26,7 +25,10 @@ const MainContent = (props) => {
         return (
             <div id={index} className="mainContentStyle" key={index}>
                 <figure className="mainContent_figure">
-                    <img src={countryImg} alt={index} className="mainContent_figure_img"></img>
+                    <img 
+                    src={countryImg}
+                    alt={index} className="mainContent_figure_img">
+                    </img>
                     <figcaption></figcaption>
                 </figure>
                 <div className="mainContent_countryBlock">
