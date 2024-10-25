@@ -18,7 +18,7 @@ const LandingPage = (props) => {
                 setCountrys(myData)
             })
         }
-        handelData()
+        // handelData()
     },[])
 
     //receiving data from Search 

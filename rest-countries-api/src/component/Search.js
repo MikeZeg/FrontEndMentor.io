@@ -7,6 +7,8 @@ const Search = (props) => {
     const [looking, setLooking] = useState('');
     const [typing, setTyping] = useState('')
 
+    // console.log('check data List: ', list)
+
     const arr = [
         {
             country:'Poland1',
@@ -36,34 +38,44 @@ const Search = (props) => {
     const dataReceived = () => {
         grabApi().then((myData) => {
             setList(myData)
-            // console.log('Received from grabApi Sreach.js: ', myData)
+            console.log('Received from grabApi Sreach.js: ', myData)
         })
     }
-    dataReceived();
+
     // Filter array by typing
     const filterData = (list, typing) =>{
-        const newArr = list.filter((country)=>{
-            return country.name === typing
+        const myList = [...list]
+        // const newArr = list.map(show => show.name.common)
+        //                 .flat()
+        //                 .filter(show => show.includes(typing))
+        const newArr = myList.filter((item)=>{
+            // console.log('check item',item)
+           return item.name.common.includes(typing)
         })
-        console.log(newArr)
+        console.log('check value: ', newArr)
+        return setLooking(newArr);
+    }
+
+//Send data to LandingPage    
+    function dataSend(data){
+        props.changeData(data)
+        // props.changeData(arr)
+        console.log('data send to LandingPage')
     }
     
+    //init download data from MainFunction/grabAPI
     useEffect(()=>{
+        dataReceived()
         console.log('From LandingPage: ', props.changeData)
-        
-        function dataSend(){
-            // props.changeData(list)
-            props.changeData(arr)
-            console.log('data send to LandingPage')
-        }
-        dataSend();
+        dataSend(list);
     },[!list])
 
     useEffect(()=>{
-        filterData(arr, typing)
+        filterData(list, typing)
+        dataSend(looking)
     },[typing])
 
-
+    // console.log('check After code data List: ', list)
 
     return (
         <div id="searching">
