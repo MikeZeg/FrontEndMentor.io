@@ -15,7 +15,8 @@ const MainContent = (props) => {
 
 
     const CountryWindow = ({data, index}) =>{
-        let name = data.country;
+
+        let name = data.name.common;
         let population = data.population;
         let region = data.region;
         let capital = data.capital;
@@ -32,7 +33,7 @@ const MainContent = (props) => {
                     <figcaption></figcaption>
                 </figure>
                 <div className="mainContent_countryBlock">
-                    <h3 style={{marginLeft:'1rem', marginTop:'1rem'}}>Country Name: {name}</h3>
+                    <h3 style={{marginLeft:'1rem', marginTop:'1rem'}}>{name}</h3>
                     <h4 style={{marginLeft:'1rem'}}>Population:<p> {population}</p></h4>
                     <h4 style={{marginLeft:'1rem'}}>Region:<p> {region}</p></h4>
                     <h4 style={{marginLeft:'1rem'}}>Capital:<p> {capital}</p></h4>

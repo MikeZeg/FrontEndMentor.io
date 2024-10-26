@@ -58,8 +58,6 @@ const Search = (props) => {
     //Send data to LandingPage    
     function dataSend(data){
         props.changeData(data)
-        // props.changeData(arr)
-        console.log('data send to LandingPage')
     }
     
     //init download data from MainFunction/grabAPI
