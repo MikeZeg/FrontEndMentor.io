@@ -45,18 +45,17 @@ const Search = (props) => {
     // Filter array by typing
     const filterData = (list, typing) =>{
         const myList = [...list]
-        // const newArr = list.map(show => show.name.common)
-        //                 .flat()
-        //                 .filter(show => show.includes(typing))
+
         const newArr = myList.filter((item)=>{
             // console.log('check item',item)
            return item.name.common.includes(typing)
         })
+
         console.log('check value: ', newArr)
         return setLooking(newArr);
     }
 
-//Send data to LandingPage    
+    //Send data to LandingPage    
     function dataSend(data){
         props.changeData(data)
         // props.changeData(arr)
