@@ -12,8 +12,7 @@ const MainContent = (props) => {
         setCountryArr(props.data);
         openWindow();
     })
-
-
+    
     const CountryWindow = ({data, index}) =>{
 
         let name = data.name.common;

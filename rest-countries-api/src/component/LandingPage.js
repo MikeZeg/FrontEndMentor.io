@@ -8,26 +8,17 @@ import { grabApi } from '../functions/mainFunction.js'
 
 const LandingPage = (props) => {
     const [ countrys, setCountrys ] = useState([])
-    const [dataSearch, setDataSearch ]  = useState([])
+    const [ dataSearch, setDataSearch ]  = useState([])
 
-// waiting for data from mainFunction
-    useEffect(()=>{
-        // console.log('check array: ', countrys);
-        const handelData = () => {
-            grabApi().then((myData) => {
-                setCountrys(myData)
-            })
-        }
-        // handelData()
-    },[])
+    console.log('check data from Search.js: ', dataSearch)
 
-    //receiving data from Search 
+//receiving data from Search 
     function searchCallBack(data){
         setDataSearch(data);
     }
-    // console.log('check data in LandingPage: ',dataSearch)
 
-    //that change object to Array to can be used in MainContent.js
+
+//that change object to Array to can be used in MainContent.js
     useEffect(()=>{
         setCountrys([...dataSearch])
         // console.log('check data after ansing new data to country: -->>>>> ', countrys)
@@ -39,7 +30,6 @@ const LandingPage = (props) => {
             <Header/>
             <Search
                 //receiving data from Search.js short version
-                // changeData  = {data => setDataSearch(data)}
                 changeData = {searchCallBack}
                 
             />

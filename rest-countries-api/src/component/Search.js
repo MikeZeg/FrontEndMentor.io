@@ -9,37 +9,17 @@ const Search = (props) => {
 
     // console.log('check data List: ', list)
 
-    const arr = [
-        {
-            country:'Poland1',
-            population:11111111,
-            region:'western Europeasdasdas',
-            capital:'Warsow',
-            flags:{png:"https://flagcdn.com/w320/gd.png",svg:"https://flagcdn.com/gd.svg"},
-        },
-        {
-            country:'Poland2',
-            population:2222222222,
-            region:'western Europeeeeeeeee',
-            capital:'Warsow',
-            flags:{png:"https://flagcdn.com/w320/gd.png",svg:"https://flagcdn.com/gd.svg"},
-        },
-        {
-            country:'Poland3',
-            population:33333333333,
-            region:'western Europe',
-            capital:'Warsow',
-            flags:{png:"https://flagcdn.com/w320/gd.png",svg:"https://flagcdn.com/gd.svg"},
-        },
-        
-    ]
-
     // Data receiving from mainFunction - use try ?
     const dataReceived = () => {
         grabApi().then((myData) => {
             setList(myData)
-            console.log('Received from grabApi Sreach.js: ', myData)
+            // console.log('Received from grabApi Sreach.js: ', myData)
         })
+    }
+
+    //Send data to LandingPage    
+    function dataSend(data){
+        props.changeData(data)
     }
 
     // Filter array by typing
@@ -52,22 +32,22 @@ const Search = (props) => {
         })
 
         console.log('check value: ', newArr)
-        return setLooking(newArr);
+        console.log('check typing: ',typing)
+
+        return typing.lenght <= 0 ? setLooking(myList) : setLooking(newArr)
+
+        // return setLooking(newArr);
     }
 
-    //Send data to LandingPage    
-    function dataSend(data){
-        props.changeData(data)
-    }
-    
     //init download data from MainFunction/grabAPI
     useEffect(()=>{
         dataReceived()
-        console.log('From LandingPage: ', props.changeData)
+        // console.log('From LandingPage: ', props.changeData)
         dataSend(list);
     },[!list])
 
     useEffect(()=>{
+        console.log('typing refresh ?: ', typing)
         filterData(list, typing)
         dataSend(looking)
     },[typing])
