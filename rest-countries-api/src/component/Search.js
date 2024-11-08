@@ -7,52 +7,49 @@ const Search = (props) => {
     const [looking, setLooking] = useState('');
     const [typing, setTyping] = useState('')
 
-    // console.log('check data List: ', list)
-
-    // Data receiving from mainFunction - use try ?
+// Data receiving from mainFunction
     const dataReceived = () => {
         grabApi().then((myData) => {
             setList(myData)
             // console.log('Received from grabApi Sreach.js: ', myData)
         })
     }
-
-    //Send data to LandingPage    
+// Send data to LandingPage    
     function dataSend(data){
+        console.log('sendData function to LandingPage <<--')
         props.changeData(data)
     }
-
-    // Filter array by typing
-    const filterData = (list, typing) =>{
+// Filter array by typing
+    const filterData = async (list, typing) =>{
         const myList = [...list]
+        console.log('filter Data function')
 
         const newArr = myList.filter((item)=>{
             // console.log('check item',item)
            return item.name.common.includes(typing)
         })
-
         console.log('check value: ', newArr)
-        console.log('check typing: ',typing)
-
-        return typing.lenght <= 0 ? setLooking(myList) : setLooking(newArr)
-
+        
+        return typing.length <= 0 ? setLooking(myList) : setLooking(newArr)
         // return setLooking(newArr);
     }
 
-    //init download data from MainFunction/grabAPI
+// init download data from MainFunction/grabAPI
     useEffect(()=>{
+        console.log('Init download data from function <<<----')
         dataReceived()
-        // console.log('From LandingPage: ', props.changeData)
         dataSend(list);
     },[!list])
-
-    useEffect(()=>{
-        console.log('typing refresh ?: ', typing)
+// Refresh looking when user typing 
+    useEffect(() => {        
         filterData(list, typing)
-        dataSend(looking)
     },[typing])
+// Send data to LandingPage.js
+    useEffect(()=>{
+        console.log('looking change !!!')
+        dataSend(looking)
+    },[looking])
 
-    // console.log('check After code data List: ', list)
 
     return (
         <div id="searching">
@@ -62,7 +59,6 @@ const Search = (props) => {
                         type="text"
                         id="looking-input"
                         placeholder="Search for a country..."
-                        // value={typing}
                         onChange={(e) => {
                             setTyping(e.target.value)
                             console.log(e.target.value)

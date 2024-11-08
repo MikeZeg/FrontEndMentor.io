@@ -4,8 +4,8 @@ console.log('Hello world !!!')
 // ----- links ---------
 const apiCountrys = 'https://restcountries.com/v3.1/independent?status=true'
 
-// ---------- Fetch API ----------- //
 
+// ---------- Fetch API ----------- //
 export const grabApi = async () => {
     // console.log('function start ->>>')
     const myData = [];
@@ -20,7 +20,13 @@ export const grabApi = async () => {
     return myData;
 }
 
-// ------- Choose  -----------
+// Functions
+    // 1 Choose function - actived when user pressed country window and move to component with details
+    // 2 Back function - back to LandingPage.js when pressed
+    // 3 Dark Mode Function - change page colors
+
+
+// ------- Choose  Function -----------
     export const openWindow = (data, index) => {
         const hidenSection = document.querySelector('.hidenSection')
         const mainContent = document.querySelector('.main_style')
@@ -39,11 +45,11 @@ export const grabApi = async () => {
             })
         })
     }
-
+// -------- Back Function ----------------
     export const goBack = () => {
         const hidenSection = document.querySelector('.hidenSection')
         const mainContent = document.querySelector('.main_style')
-        const btnBack = document.querySelector('#back-btn')
+        // const btnBack = document.querySelector('#back-btn')
         const searchBar = document.querySelector('#searching')
         
         // console.log('Working?? ->: ',btnBack, hidenSection)
@@ -51,4 +57,11 @@ export const grabApi = async () => {
         mainContent.style.display = 'grid'
         searchBar.style.display = 'flex';
         hidenSection.style.display = 'none';
+    }
+// -------- Dark Mode -----------
+    export const darkModeSwap = () => {
+        const swapMode = document.querySelector('#mode-btn');
+
+        console.log('presed')
+
     }
