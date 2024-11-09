@@ -4,7 +4,8 @@ import '../style/variable.css'
 import Header from './Header.js'
 import { openWindow, goBack } from '../functions/mainFunction.js'
 
-const SelectedCountry = (data) => {
+const SelectedCountry = (props) => {
+    const [selected, setSelected ] = useState(openWindow)
     const [country, setCountry] = useState({
         countryName:'Poland',
         population:'36900000',
@@ -19,6 +20,12 @@ const SelectedCountry = (data) => {
 
         borderArr:['Germany','Czech','Slovakia','Ukrain','Litva']
     })
+
+
+    console.log(selected)
+    console.log('chekc data from MainContent.js: ',props.data)
+    
+
 
     useEffect(()=>{
         // setCountry()

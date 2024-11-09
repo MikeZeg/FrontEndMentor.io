@@ -52,7 +52,7 @@ const MainContent = (props) => {
                 ))}
             </section>
             <SelectedCountry
-                
+                country = {props}
             />
         </div>
     )

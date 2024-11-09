@@ -33,17 +33,21 @@ export const grabApi = async () => {
         const countrys = document.querySelectorAll('.mainContentStyle');
         const searchBar = document.querySelector('#searching')
 
-        // console.log('check: ', countrys)
-
-        // console.log('openWindow check: ',data)
+        let selectedCountryVar = '';
 
         countrys.forEach((window)=>{
+            
             window.addEventListener('click',(e)=>{
                 mainContent.style.display = 'none';
                 searchBar.style.display = 'none';
                 hidenSection.style.display = 'grid';
+                console.log(e.target.alt)
+                
+                return selectedCountryVar =  e.target.alt 
+                //check pressing part - get info when pressing flag
             })
         })
+
     }
 // -------- Back Function ----------------
     export const goBack = () => {
@@ -61,7 +65,17 @@ export const grabApi = async () => {
 // -------- Dark Mode -----------
     export const darkModeSwap = () => {
         const swapMode = document.querySelector('#mode-btn');
+        
+        const changeSelectedCountryStyle = document.querySelector('.hidenSection')
+        const changeSearchStyle = document.querySelector('#looking-label');
+        const changeDetailsStyle = document.querySelector('.countryDetails')
 
-        console.log('presed')
+
+        changeSearchStyle.style.color = '--font-color-lightMode'
+        changeSelectedCountryStyle.style.background = '--background-color-LM'
+
+
+        console.log('presed', changeSearchStyle, changeSelectedCountryStyle)
+
 
     }
