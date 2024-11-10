@@ -22,10 +22,9 @@ const SelectedCountry = (props) => {
     })
 
 
-    console.log(selected)
+    console.log('selectedCountry.js: ',selected)
     console.log('chekc data from MainContent.js: ',props.data)
     
-
 
     useEffect(()=>{
         // setCountry()

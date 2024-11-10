@@ -44,9 +44,9 @@ export const grabApi = async () => {
                 console.log(e.target.alt)
                 
                 return selectedCountryVar =  e.target.alt 
-                //check pressing part - get info when pressing flag
             })
         })
+        return selectedCountryVar;
 
     }
 // -------- Back Function ----------------
@@ -72,8 +72,8 @@ export const grabApi = async () => {
 
 
         changeSearchStyle.style.color = '--font-color-lightMode'
-        changeSelectedCountryStyle.style.background = '--background-color-LM'
-
+        changeSelectedCountryStyle.style.background = 'var(--background-color-LM)'
+        changeDetailsStyle.style.color = 'var(--font-color-lightMode)'
 
         console.log('presed', changeSearchStyle, changeSelectedCountryStyle)
 
