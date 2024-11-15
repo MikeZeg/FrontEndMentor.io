@@ -11,32 +11,24 @@ const Search = (props) => {
     const dataReceived = () => {
         grabApi().then((myData) => {
             setList(myData)
-            // console.log('Received from grabApi Sreach.js: ', myData)
         })
     }
 // Send data to LandingPage    
     function dataSend(data){
-        console.log('sendData function to LandingPage <<--')
         props.changeData(data)
     }
 // Filter array by typing
     const filterData = async (list, typing) =>{
         const myList = [...list]
-        console.log('filter Data function')
-
         const newArr = myList.filter((item)=>{
-            // console.log('check item',item)
            return item.name.common.includes(typing)
         })
-        console.log('check value: ', newArr)
-        
+        // console.log('check value: ', newArr)
         return typing.length <= 0 ? setLooking(myList) : setLooking(newArr)
-        // return setLooking(newArr);
     }
 
 // init download data from MainFunction/grabAPI
     useEffect(()=>{
-        console.log('Init download data from function <<<----')
         dataReceived()
         dataSend(list);
     },[!list])
@@ -46,7 +38,6 @@ const Search = (props) => {
     },[typing])
 // Send data to LandingPage.js
     useEffect(()=>{
-        console.log('looking change !!!')
         dataSend(looking)
     },[looking])
 

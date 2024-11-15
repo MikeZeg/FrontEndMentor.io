@@ -34,7 +34,7 @@
     background-size: 100%;
 }
 .mainContent_countryBlock{
-    border: 1px solid hsl(207, 26%, 17%);
+    border: 1px solid var(--background-color);
     background-color: var(--elements-color);
     height: 190px;
     width: 100%;

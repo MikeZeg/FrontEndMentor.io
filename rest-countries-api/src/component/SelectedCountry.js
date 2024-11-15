@@ -21,19 +21,6 @@ const SelectedCountry = (props) => {
         borderArr:['Germany','Czech','Slovakia','Ukrain','Litva']
     })
 
-
-    console.log('selectedCountry.js: ',selected)
-    console.log('chekc data from MainContent.js: ',props.data)
-    
-
-    useEffect(()=>{
-        // setCountry()
-    })
-    // console.log('check data: ', data)
-    // console.log(country.flagImg)
-
-    
-
     return (
         <div className="hidenSection">
             <div className="buttonPress">

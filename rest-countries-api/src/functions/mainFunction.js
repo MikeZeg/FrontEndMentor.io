@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-console.log('Hello world !!!')
+// console.log('Hello world !!!')
 // ----- links ---------
 const apiCountrys = 'https://restcountries.com/v3.1/independent?status=true'
 
@@ -63,19 +63,25 @@ export const grabApi = async () => {
         hidenSection.style.display = 'none';
     }
 // -------- Dark Mode -----------
+    let darkModeFlag = 0;
     export const darkModeSwap = () => {
         const swapMode = document.querySelector('#mode-btn');
-        
-        const changeSelectedCountryStyle = document.querySelector('.hidenSection')
-        const changeSearchStyle = document.querySelector('#looking-label');
-        const changeDetailsStyle = document.querySelector('.countryDetails')
+        const root = document.documentElement;
 
+        if(!darkModeFlag){
+            root.style.setProperty('--elements-color', 'hsl(0, 0%, 100%)');
+            root.style.setProperty('--background-color', 'hsl(0, 0%, 78%)');
+            root.style.setProperty('--input-color', 'hsl(0, 0%, 52%)');
+            root.style.setProperty('--font-color-darkMode', 'hsl(200, 15%, 8%)');
+            darkModeFlag = 1;
 
-        changeSearchStyle.style.color = '--font-color-lightMode'
-        changeSelectedCountryStyle.style.background = 'var(--background-color-LM)'
-        changeDetailsStyle.style.color = 'var(--font-color-lightMode)'
+        }else{
+            root.style.setProperty('--elements-color', 'hsl(209, 23%, 22%)');
+            root.style.setProperty('--background-color', 'hsl(207, 26%, 17%)');
+            root.style.setProperty('--input-color', 'hsl(165, 2%, 54%)');
+            root.style.setProperty('--font-color-darkMode', 'hsl(0, 0%, 100%)');
+            darkModeFlag = 0
+        }
 
-        console.log('presed', changeSearchStyle, changeSelectedCountryStyle)
-
-
+        console.log('presed')
     }
