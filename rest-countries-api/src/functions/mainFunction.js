@@ -70,7 +70,7 @@ export const grabApi = async () => {
 
         if(!darkModeFlag){
             root.style.setProperty('--elements-color', 'hsl(0, 0%, 100%)');
-            root.style.setProperty('--background-color', 'hsl(0, 0%, 78%)');
+            root.style.setProperty('--background-color', 'hsl(0, 0%, 89%)');
             root.style.setProperty('--input-color', 'hsl(0, 0%, 52%)');
             root.style.setProperty('--font-color-darkMode', 'hsl(200, 15%, 8%)');
             darkModeFlag = 1;

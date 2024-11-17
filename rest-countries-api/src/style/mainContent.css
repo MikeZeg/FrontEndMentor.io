@@ -16,6 +16,9 @@
 
     max-height: 340px;
     min-height: 340px;
+    box-shadow: 2px 0px 15px 2px rgba(0,0,0,0.81);
+    -webkit-box-shadow: 2px 0px 15px 2px rgba(0,0,0,0.81);
+    -moz-box-shadow: 2px 0px 15px 2px rgba(0,0,0,0.81);
 }
 .mainContentStyle:hover {
     background-color: var(--background-color-LM);
@@ -37,7 +40,7 @@
     border: 1px solid var(--background-color);
     background-color: var(--elements-color);
     height: 190px;
-    width: 100%;
+    width: calc(100% - 2px);
 
     h3 {
         font-size: var(--medFont);
