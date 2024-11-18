@@ -61,7 +61,7 @@ const Search = (props) => {
             <div id="choose-region">
                 <form id="choose-region-form">
                     <label for="region"></label>
-                    <select name="region" id="region">
+                    <select name="region" id="region" onChange={console.log('pressed')}>
                         <option value="" selected> -- Filter by Region -- </option>
                         <option value={'Africa'}>Africa</option>
                         <option value={'America'}>America</option>

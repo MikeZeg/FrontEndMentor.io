@@ -12,7 +12,7 @@
     position: relative;
     margin-bottom: 3rem;
 
-    color: white;
+    color: var(--font-color-darkMode);
     border-radius: 5px;
     box-shadow: none;
     border: none;
@@ -24,7 +24,7 @@
     position: absolute;
     left: 1.5rem;
 
-    color: white;
+    color: var(--font-color-darkMode);
     /* background: ; */
 }
 .selectedCountry {

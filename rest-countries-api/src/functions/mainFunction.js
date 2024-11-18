@@ -25,7 +25,6 @@ export const grabApi = async () => {
     // 2 Back function - back to LandingPage.js when pressed
     // 3 Dark Mode Function - change page colors
 
-
 // ------- Choose  Function -----------
     export const openWindow = (data, index) => {
         const hidenSection = document.querySelector('.hidenSection')
@@ -85,3 +84,4 @@ export const grabApi = async () => {
 
         console.log('presed')
     }
+// ------- Change by continent ----------
