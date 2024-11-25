@@ -92,6 +92,7 @@
 @media (max-width: 599px) {
     .main_style {
         grid-template-columns: repeat(1,1fr);
+        justify-items: center;
     }
     .mainContentStyle {
         min-width: 250px;

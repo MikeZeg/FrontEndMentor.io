@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import '../style/mainContent.css';
 import '../style/variable.css';
 import SelectedCountry from './SelectedCountry.js'
-import { openWindow, goBack, darkModeSwap } from '../functions/mainFunction.js' 
+import { openWindow, goBack, darkModeSwap, selectedCountryVar  } from '../functions/mainFunction.js' 
 
 const MainContent = (props) => {
     const [country, setCountryArr] = useState([])
     const [ secondData, setSecondData ] = useState([])
+    const [selected, setSelected ] = useState('')
+
+    console.log('check var: ', selectedCountryVar)
 
     useEffect(() => {
         setCountryArr(props.data);
@@ -53,6 +56,7 @@ const MainContent = (props) => {
             </section>
             <SelectedCountry
                 country = {props}
+                selected = {selected}
             />
         </div>
     )

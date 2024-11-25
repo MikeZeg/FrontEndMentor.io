@@ -52,3 +52,17 @@
     border: none;
     color: var(--font-color-darkMode);
 }
+
+@media (max-width: 915px) {
+    #searching {
+        display: grid;
+        justify-items: center;
+    }
+    #looking-label {
+        margin-left: 0;
+    }
+    #choose-region {
+        position: static;
+        margin: 1rem auto 1rem auto;
+    }
+}

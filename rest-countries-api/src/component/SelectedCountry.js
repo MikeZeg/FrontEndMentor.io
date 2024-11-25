@@ -2,10 +2,10 @@ import React, {useState,useEffect} from "react";
 import '../style/selectedCountryStyle.css'
 import '../style/variable.css'
 import Header from './Header.js'
-import { openWindow, goBack } from '../functions/mainFunction.js'
+import { openWindow, goBack, selectedCountryVar } from '../functions/mainFunction.js'
 
 const SelectedCountry = (props) => {
-    const [selected, setSelected ] = useState(openWindow)
+    const [selected, setSelected ] = useState(props.selected)
     const [country, setCountry] = useState({
         countryName:'Poland',
         population:'36900000',
@@ -20,6 +20,13 @@ const SelectedCountry = (props) => {
 
         borderArr:['Germany','Czech','Slovakia','Ukrain','Litva']
     })
+
+    console.log('check data selected', props.selected)
+
+    useEffect(()=> {
+        
+        // console.log('check useEffect with props', props.country.data[selectedCountryVar])
+    },[])
 
     return (
         <div className="hidenSection">

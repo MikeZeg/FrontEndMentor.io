@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react"
 
 // console.log('Hello world !!!')
-// ----- links ---------
+// --------- links ---------
 const apiCountrys = 'https://restcountries.com/v3.1/independent?status=true'
 
+// -------- global variable ----------
+export let selectedCountryVar = '';
 
 // ---------- Fetch API ----------- //
 export const grabApi = async () => {
@@ -32,7 +34,7 @@ export const grabApi = async () => {
         const countrys = document.querySelectorAll('.mainContentStyle');
         const searchBar = document.querySelector('#searching')
 
-        let selectedCountryVar = '';
+        // let selectedCountryVar = '';
 
         countrys.forEach((window)=>{
             
@@ -46,7 +48,6 @@ export const grabApi = async () => {
             })
         })
         return selectedCountryVar;
-
     }
 // -------- Back Function ----------------
     export const goBack = () => {
