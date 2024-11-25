@@ -6,6 +6,9 @@ const Search = (props) => {
     const [list, setList ] = useState('');
     const [looking, setLooking] = useState('');
     const [typing, setTyping] = useState('')
+    const [selectRegion, setRegion] = useState('')
+
+    console.log('check region: ', selectRegion)
 
 // Data receiving from mainFunction
     const dataReceived = () => {
@@ -23,10 +26,18 @@ const Search = (props) => {
         const newArr = myList.filter((item)=>{
            return item.name.common.includes(typing)
         })
-        // console.log('check value: ', newArr)
+        console.log('check value: ', newArr)
         return typing.length <= 0 ? setLooking(myList) : setLooking(newArr)
     }
-
+// Filter array by Region
+    const filterByRegion = async (list, selectRegion) => {
+        const myList = [...list]
+        const newArr = myList.filter((item) => {
+            return item.region.includes(selectRegion)
+        })
+        console.log('--->> check filter by region->> ',newArr)
+        return setLooking(newArr)
+    }
 // init download data from MainFunction/grabAPI
     useEffect(()=>{
         dataReceived()
@@ -36,11 +47,14 @@ const Search = (props) => {
     useEffect(() => {        
         filterData(list, typing)
     },[typing])
+// Filer by Region
+    useEffect(()=>{
+        filterByRegion(list, selectRegion)
+    },[selectRegion])
 // Send data to LandingPage.js
     useEffect(()=>{
         dataSend(looking)
-    },[looking])
-
+    },[looking, selectRegion])
 
     return (
         <div id="searching">
@@ -61,12 +75,13 @@ const Search = (props) => {
             <div id="choose-region">
                 <form id="choose-region-form">
                     <label for="region"></label>
-                    <select name="region" id="region" onChange={console.log('pressed')}>
+                    <select name="region" id="region" value={selectRegion} onChange={ e => setRegion(e.target.value)}>
                         <option value="" selected> -- Filter by Region -- </option>
+                        <option value={''}>All</option>
                         <option value={'Africa'}>Africa</option>
-                        <option value={'America'}>America</option>
+                        <option value={'Americas'}>America</option>
                         <option value={'Asia'}>Asia</option>
-                        <option value={'Europa'}>Europe</option>
+                        <option value={'Europe'}>Europe</option>
                         <option value={'Oceania'}>Oceania</option>
                     </select>
                 </form>

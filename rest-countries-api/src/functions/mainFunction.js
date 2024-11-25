@@ -84,4 +84,3 @@ export const grabApi = async () => {
 
         console.log('presed')
     }
-// ------- Change by continent ----------
