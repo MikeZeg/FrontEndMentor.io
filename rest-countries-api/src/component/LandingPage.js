@@ -4,12 +4,12 @@ import Search from './Search.js';
 import MainContent from './MainContent.js';
 
 import '../style/landingPageStyle.css';
-import { grabApi } from '../functions/mainFunction.js'
+import { grabApi, openWindow } from '../functions/mainFunction.js'
 
 const LandingPage = (props) => {
     const [ countrys, setCountrys ] = useState([])
     const [ dataSearch, setDataSearch ]  = useState([])
-
+    
 // receiving data from Search 
     function searchCallBack(data){
         // console.log('receiving data from Search.js')

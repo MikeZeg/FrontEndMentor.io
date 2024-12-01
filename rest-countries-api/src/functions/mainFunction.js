@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 const apiCountrys = 'https://restcountries.com/v3.1/independent?status=true'
 
 // -------- global variable ----------
-export let selectedCountryVar = '';
+export let selectedCountryVar = 'new value';
 
 // ---------- Fetch API ----------- //
 export const grabApi = async () => {
@@ -33,22 +33,23 @@ export const grabApi = async () => {
         const mainContent = document.querySelector('.main_style')
         const countrys = document.querySelectorAll('.mainContentStyle');
         const searchBar = document.querySelector('#searching')
-
-        // let selectedCountryVar = '';
-
-        countrys.forEach((window)=>{
+        
+        countrys.forEach((element) => {
             
-            window.addEventListener('click',(e)=>{
+            element.addEventListener('click',(e)=>{
+                console.log('open window pressed')
+
                 mainContent.style.display = 'none';
                 searchBar.style.display = 'none';
                 hidenSection.style.display = 'grid';
-                console.log(e.target.alt)
-                
-                return selectedCountryVar =  e.target.alt 
+                // console.log(e.target.alt)  
+                selectedCountryVar = e.target.alt;
             })
         })
+        
         return selectedCountryVar;
     }
+
 // -------- Back Function ----------------
     export const goBack = () => {
         const hidenSection = document.querySelector('.hidenSection')

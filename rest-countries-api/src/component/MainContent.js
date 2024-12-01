@@ -5,17 +5,20 @@ import SelectedCountry from './SelectedCountry.js'
 import { openWindow, goBack, darkModeSwap, selectedCountryVar  } from '../functions/mainFunction.js' 
 
 const MainContent = (props) => {
-    const [country, setCountryArr] = useState([])
+    const [ country, setCountryArr] = useState([])
     const [ secondData, setSecondData ] = useState([])
-    const [selected, setSelected ] = useState('')
-
-    console.log('check var: ', selectedCountryVar)
-
+    
+// set data from 
     useEffect(() => {
         setCountryArr(props.data);
         openWindow();
     })
-    
+//send data to SelectedCountry.js
+    useEffect(()=> {
+
+    },[])
+
+// component - display elements
     const CountryWindow = ({data, index}) =>{
 
         let name = data.name.common;
@@ -27,7 +30,7 @@ const MainContent = (props) => {
 
         return (
             <div id={index} className="mainContentStyle" key={index}>
-                <figure className="mainContent_figure">
+                <figure className="mainContent_figure" >
                     <img 
                     src={countryImg}
                     alt={index} className="mainContent_figure_img">
@@ -55,8 +58,8 @@ const MainContent = (props) => {
                 ))}
             </section>
             <SelectedCountry
-                country = {props}
-                selected = {selected}
+                data = {country}
+                
             />
         </div>
     )

@@ -5,9 +5,10 @@ import Header from './Header.js'
 import { openWindow, goBack, selectedCountryVar } from '../functions/mainFunction.js'
 
 const SelectedCountry = (props) => {
-    const [selected, setSelected ] = useState(props.selected)
+    const [selected, setSelected ] = useState('')
     const [country, setCountry] = useState({
-        countryName:'Poland',
+        countryName: 'Poland',
+        // countryName: props.data[selected]['name']['common'],
         population:'36900000',
         nativeName: 'Polska',
         region:'Europ',
@@ -20,13 +21,6 @@ const SelectedCountry = (props) => {
 
         borderArr:['Germany','Czech','Slovakia','Ukrain','Litva']
     })
-
-    console.log('check data selected', props.selected)
-
-    useEffect(()=> {
-        
-        // console.log('check useEffect with props', props.country.data[selectedCountryVar])
-    },[])
 
     return (
         <div className="hidenSection">
