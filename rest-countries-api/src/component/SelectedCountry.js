@@ -17,7 +17,6 @@ const SelectedCountry = ({data, details}) => {
         topLevelDomain: '',
         currencies : '',
         languages : ['','',''],
-        // languages : '',
         flagImg : '',
         borderArr: ['','','']
     })
@@ -25,7 +24,7 @@ const SelectedCountry = ({data, details}) => {
     // console.log('props from mainContent --->>>' ,props.details.target.alt)
     // console.log('check selected -->>', selected)
 
-    console.log('')
+    console.log('check data', data[1])
 
     useEffect(()=>{
         setSelected(details.target)
@@ -38,8 +37,12 @@ const SelectedCountry = ({data, details}) => {
         if(!selected){
             console.log('selected is empty')
         }else{
-            let lang = Object.keys(data[1].languages)
-            console.log('add data seleceted is not empty')            
+        // destru to array only values not keys
+            let lang = Object.values(data[1].languages)
+        // destru to array only key names not values
+            let curr = Object.keys(data[1].currencies)   
+            
+            // console.log('add data seleceted is not empty')
             setCountry({
                 countryName: data[1].name.common,
                 population: data[1].population,
@@ -48,11 +51,11 @@ const SelectedCountry = ({data, details}) => {
                 subRegion: data[1].region,
                 capital: data[1].capital,
                 topLevelDomain: data[1].tld[0],
-                currencies: data[1].currencies[1],
+                currencies: curr,
                 languages : lang,
                 flagImg: data[1].flags.png,
                 borderArr: data[1].borders
-        })
+            })
         }
 
     },[selected])
