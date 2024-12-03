@@ -71,6 +71,14 @@
     flex-wrap: wrap;
     height: 58%;
 }
+.inLine-languages {
+    display: flex;
+    align-items: center;
+}
+.lang-p {
+    margin-left: 10px;
+    font-size: 14px;
+}
 .countryDetails > h2 {
     font-weight: 300;
 }

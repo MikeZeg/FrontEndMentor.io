@@ -7,19 +7,27 @@ import { openWindow, goBack, darkModeSwap, selectedCountryVar  } from '../functi
 const MainContent = (props) => {
     const [ country, setCountryArr] = useState([])
     const [ secondData, setSecondData ] = useState([])
+    const [ selected, setSelected ] = useState('')
+    // console.log('check selected -->>: ', selected.target)
     
 // set data from 
     useEffect(() => {
         setCountryArr(props.data);
-        openWindow();
     })
-//send data to SelectedCountry.js
-    useEffect(()=> {
+// callBack function to CountryWindow.js - received selected component
+    function selectedElement(data) {
+        setSelected(data)
+    }
 
-    },[])
+// ------ Component - display elements ---------
+    const CountryWindow = ({data, index, select}) => {
 
-// component - display elements
-    const CountryWindow = ({data, index}) =>{
+    //callBack function return element to MainContent
+        function elementSelected(e) {
+            // console.log('clicked in component, element ->>: ', e)
+            select(e)
+            openWindow()
+        }
 
         let name = data.name.common;
         let population = data.population;
@@ -29,7 +37,9 @@ const MainContent = (props) => {
         let keyData = {index}
 
         return (
-            <div id={index} className="mainContentStyle" key={index}>
+            <div id={index} className="mainContentStyle" key={index} onClick={(e)=>{
+                    elementSelected(e)
+            }}>
                 <figure className="mainContent_figure" >
                     <img 
                     src={countryImg}
@@ -54,12 +64,13 @@ const MainContent = (props) => {
                         <CountryWindow 
                             data={country}
                             index = {index}
+                            select = {selectedElement}
                         />
                 ))}
             </section>
             <SelectedCountry
                 data = {country}
-                
+                details = {selected}
             />
         </div>
     )

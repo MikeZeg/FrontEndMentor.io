@@ -7,8 +7,9 @@ const Search = (props) => {
     const [looking, setLooking] = useState('');
     const [typing, setTyping] = useState('')
     const [selectRegion, setRegion] = useState('')
-
-    console.log('check region: ', selectRegion)
+    
+//check selected region
+    // console.log('check region: ', selectRegion)
 
 // Data receiving from mainFunction
     const dataReceived = () => {

@@ -34,20 +34,10 @@ export const grabApi = async () => {
         const countrys = document.querySelectorAll('.mainContentStyle');
         const searchBar = document.querySelector('#searching')
         
-        countrys.forEach((element) => {
-            
-            element.addEventListener('click',(e)=>{
-                console.log('open window pressed')
-
-                mainContent.style.display = 'none';
-                searchBar.style.display = 'none';
-                hidenSection.style.display = 'grid';
-                // console.log(e.target.alt)  
-                selectedCountryVar = e.target.alt;
-            })
-        })
-        
-        return selectedCountryVar;
+        console.log('clicked in mainFunction')
+        mainContent.style.display = 'none';
+        searchBar.style.display = 'none';
+        hidenSection.style.display = 'grid';
     }
 
 // -------- Back Function ----------------

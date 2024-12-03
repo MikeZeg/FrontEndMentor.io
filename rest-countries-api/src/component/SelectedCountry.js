@@ -2,25 +2,60 @@ import React, {useState,useEffect} from "react";
 import '../style/selectedCountryStyle.css'
 import '../style/variable.css'
 import Header from './Header.js'
-import { openWindow, goBack, selectedCountryVar } from '../functions/mainFunction.js'
+import { goBack } from '../functions/mainFunction.js'
 
-const SelectedCountry = (props) => {
+const SelectedCountry = ({data, details}) => {
     const [selected, setSelected ] = useState('')
     const [country, setCountry] = useState({
-        countryName: 'Poland',
-        // countryName: props.data[selected]['name']['common'],
-        population:'36900000',
-        nativeName: 'Polska',
-        region:'Europ',
-        subRegion:'West Europ',
-        capital:'Warsaw',
-        topLevelDomain: '.pl',
-        currencies : 'Zloty',
-        languages : 'Polish',
-        flagImg :'https://flagcdn.com/af.svg',
 
-        borderArr:['Germany','Czech','Slovakia','Ukrain','Litva']
+        countryName: '',
+        population:'',
+        nativeName: '',
+        region:'',
+        subRegion:'',
+        capital:'',
+        topLevelDomain: '',
+        currencies : '',
+        languages : ['','',''],
+        // languages : '',
+        flagImg : '',
+        borderArr: ['','','']
     })
+
+    // console.log('props from mainContent --->>>' ,props.details.target.alt)
+    // console.log('check selected -->>', selected)
+
+    console.log('')
+
+    useEffect(()=>{
+        setSelected(details.target)
+    })
+
+// change selected data
+    useEffect(()=> {
+        console.log('SelectedCountry.js check data change --->>>> if coming')
+
+        if(!selected){
+            console.log('selected is empty')
+        }else{
+            let lang = Object.keys(data[1].languages)
+            console.log('add data seleceted is not empty')            
+            setCountry({
+                countryName: data[1].name.common,
+                population: data[1].population,
+                nativeName: data[1].official,
+                region: data[1].continents,
+                subRegion: data[1].region,
+                capital: data[1].capital,
+                topLevelDomain: data[1].tld[0],
+                currencies: data[1].currencies[1],
+                languages : lang,
+                flagImg: data[1].flags.png,
+                borderArr: data[1].borders
+        })
+        }
+
+    },[selected])
 
     return (
         <div className="hidenSection">
@@ -49,7 +84,14 @@ const SelectedCountry = (props) => {
                         <h2><span>Capital:</span> {country.capital}</h2>
                         <h2><span>Top Level Domain:</span> {country.topLevelDomain}</h2>
                         <h2><span>Currencies:</span> {country.currencies}</h2>
-                        <h2><span>Languages: </span> {country.languages}</h2>
+                        {/* <h2><span>Languages: </span> {country.languages}</h2> */}
+                        <section className="inLine-languages">
+                            <h2>Languages: </h2>
+                                {country.languages.map((extra, index) => (
+                                    <p className="lang-p" key={index} >{extra}</p>
+                                ))}
+                        
+                        </section>
                     </section>
 
                     <section className="countryBorder">
