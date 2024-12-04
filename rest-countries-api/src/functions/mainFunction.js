@@ -29,12 +29,13 @@ export const grabApi = async () => {
 
 // ------- Choose  Function -----------
     export const openWindow = (data, index) => {
+        // console.log('clicked in mainFunction')
+        
         const hidenSection = document.querySelector('.hidenSection')
         const mainContent = document.querySelector('.main_style')
         const countrys = document.querySelectorAll('.mainContentStyle');
         const searchBar = document.querySelector('#searching')
         
-        console.log('clicked in mainFunction')
         mainContent.style.display = 'none';
         searchBar.style.display = 'none';
         hidenSection.style.display = 'grid';

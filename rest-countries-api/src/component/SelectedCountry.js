@@ -5,7 +5,7 @@ import Header from './Header.js'
 import { goBack } from '../functions/mainFunction.js'
 
 const SelectedCountry = ({data, details}) => {
-    const [selected, setSelected ] = useState('')
+    const [selected, setSelected ] = useState(0)
     const [country, setCountry] = useState({
 
         countryName: '',
@@ -21,10 +21,9 @@ const SelectedCountry = ({data, details}) => {
         borderArr: ['','','']
     })
 
-    // console.log('props from mainContent --->>>' ,props.details.target.alt)
-    // console.log('check selected -->>', selected)
-
-    console.log('check data', data[1])
+    // console.log('props from mainContent --->>>' ,details.target.alt)
+    console.log('check selected -->>', selected)
+    // console.log('check data', data[0])
 
     useEffect(()=>{
         setSelected(details.target)
@@ -33,28 +32,38 @@ const SelectedCountry = ({data, details}) => {
 // change selected data
     useEffect(()=> {
         console.log('SelectedCountry.js check data change --->>>> if coming')
+        const emptyArr = []
 
         if(!selected){
             console.log('selected is empty')
         }else{
+        // sign element to var 
+                let elementDigit = details.target.alt
+                console.log('element check ->:',elementDigit)
+                
         // destru to array only values not keys
-            let lang = Object.values(data[1].languages)
+            let lang = Object.values(data[elementDigit].languages)
         // destru to array only key names not values
-            let curr = Object.keys(data[1].currencies)   
+            let curr = Object.keys(data[elementDigit].currencies)
+
+            let emptyArr = ['']
+            let border = !data[elementDigit].borders ? emptyArr : data[elementDigit].borders
             
-            // console.log('add data seleceted is not empty')
+            console.log('ternery Condition -->', !data[elementDigit].borders ? emptyArr : data[elementDigit].borders)
+
             setCountry({
-                countryName: data[1].name.common,
-                population: data[1].population,
-                nativeName: data[1].official,
-                region: data[1].continents,
-                subRegion: data[1].region,
-                capital: data[1].capital,
-                topLevelDomain: data[1].tld[0],
+                countryName: data[elementDigit].name.common,
+                population: data[elementDigit].population,
+                nativeName: data[elementDigit].name.official,
+                region: data[elementDigit].continents,
+                subRegion: data[elementDigit].region,
+                capital: data[elementDigit].capital,
+                topLevelDomain: data[elementDigit].tld[0],
                 currencies: curr,
                 languages : lang,
-                flagImg: data[1].flags.png,
-                borderArr: data[1].borders
+                flagImg: data[elementDigit].flags.png,
+                // borderArr: data[elementDigit].borders
+                borderArr: border
             })
         }
 
@@ -80,7 +89,7 @@ const SelectedCountry = ({data, details}) => {
                     </section>
 
                     <section className="countryDetails">
-                        <h2> <span>Native Name:</span> {country.nativeName}</h2>
+                        <h2 className="maxWidth"> <span>Native Name:</span> {country.nativeName}</h2>
                         <h2><span>Population:</span> {country.population}</h2>
                         <h2><span>Region:</span> {country.region}</h2>
                         <h2><span>Sub Region:</span> {country.subRegion}</h2>
@@ -100,6 +109,7 @@ const SelectedCountry = ({data, details}) => {
                     <section className="countryBorder">
                         <div className="flexCountryBorder">
                             <h3>Border Country:</h3>
+                            {/* check if map is zero */}
                             {country.borderArr.map((border, index) => (
                                 <p className="borderCountry" key={index}>{border}</p>
                             ))}

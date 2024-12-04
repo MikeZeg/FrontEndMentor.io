@@ -55,6 +55,9 @@
     /* display: grid; */
     font-size: 12px;
 }
+.maxWidth {
+    max-width: 270px;
+}
 .countryName {
     font-size: var(--xlargFont);
     color: var(--font-color-darkMode);

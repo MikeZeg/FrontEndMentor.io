@@ -8,7 +8,6 @@ const MainContent = (props) => {
     const [ country, setCountryArr] = useState([])
     const [ secondData, setSecondData ] = useState([])
     const [ selected, setSelected ] = useState('')
-    // console.log('check selected -->>: ', selected.target)
     
 // set data from 
     useEffect(() => {
@@ -18,13 +17,11 @@ const MainContent = (props) => {
     function selectedElement(data) {
         setSelected(data)
     }
-
 // ------ Component - display elements ---------
     const CountryWindow = ({data, index, select}) => {
 
     //callBack function return element to MainContent
         function elementSelected(e) {
-            // console.log('clicked in component, element ->>: ', e)
             select(e)
             openWindow()
         }
