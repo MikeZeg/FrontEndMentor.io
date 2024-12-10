@@ -46,7 +46,7 @@ const SelectedCountry = ({data, details}) => {
         // destru to array only key names not values
             let curr = Object.keys(data[elementDigit].currencies)
 
-            let emptyArr = ['']
+            let emptyArr = ['Nobody']
             let border = !data[elementDigit].borders ? emptyArr : data[elementDigit].borders
             
             console.log('ternery Condition -->', !data[elementDigit].borders ? emptyArr : data[elementDigit].borders)
@@ -109,10 +109,12 @@ const SelectedCountry = ({data, details}) => {
                     <section className="countryBorder">
                         <div className="flexCountryBorder">
                             <h3>Border Country:</h3>
-                            {/* check if map is zero */}
-                            {country.borderArr.map((border, index) => (
-                                <p className="borderCountry" key={index}>{border}</p>
-                            ))}
+                            <section className="countryBorder-element">
+                                {/* check if map is zero */}
+                                {country.borderArr.map((border, index) => (
+                                    <p className="borderCountry" key={index}>{border}</p>
+                                ))}
+                            </section>
                             
                         </div>
                     </section>

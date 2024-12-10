@@ -102,6 +102,67 @@
     height: 25px;
     margin-left: 10px;
 }
+.countryBorder-element {
+    display: flex;
+}
 .flexCountryBorder {
     color: var(--font-color-darkMode);
+}
+
+@media (max-width: 1099px) {
+    .selectedCountry {
+        display: contents;
+        width: 100%;
+        height: 100%;
+    }
+    .countryFlag {
+        width: 70%;
+        height: 200px;
+        margin: auto;
+    }
+    .countryInfo {
+        width: 70%;
+        height: 60%;
+        margin: 0 auto 0 auto;
+    }
+
+}
+@media (max-width: 740px) {
+    .countryInfo {
+        display:inline;
+        align-items: center;
+        justify-items: center;
+    }
+    .hidenSection {
+        margin: 10px;
+    }
+    .countryDetails {
+        margin: 0;
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        height: fit-content;
+    }
+    .maxWidth {
+        max-width: 100%;
+        display: contents;
+    }
+    .countryBorder {
+        width: 100%;
+    }
+    .countryBorder-element {
+        /* background-color: blue; */
+
+        display: grid;
+        width: 80%;
+        grid-template-columns: repeat(auto-fill, 40px);
+        justify-items: center;
+        grid-gap: 0px 28px;
+    }
+    
+}
+@media (max-width: 435px) {
+    .maxWidth {
+        display: contents;
+    }
 }
