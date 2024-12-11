@@ -52,6 +52,11 @@
     border: none;
     color: var(--font-color-darkMode);
 }
+.stickySearching {
+    position: fixed;
+    top: 110px;
+    left: 160px;
+}
 
 @media (max-width: 915px) {
     #searching {
@@ -65,4 +70,14 @@
         position: static;
         margin: 1rem auto 1rem auto;
     }
+}
+@media (max-width: 550px ) {
+    #searching {
+        width: 90%;
+        margin: 0 1rem;
+    }
+    #looking-input {
+        width: 282px;
+    }
+    
 }

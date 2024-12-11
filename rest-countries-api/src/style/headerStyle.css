@@ -38,3 +38,14 @@ header {
 button {
     background-color: var(--elements-color);
 }
+
+@media (max-width: 580px) {
+    #mode-btn {
+        display: none;
+    }
+}
+@media (max-width: 440px) {
+    #top-header {
+        margin: 0 2rem;
+    }
+}

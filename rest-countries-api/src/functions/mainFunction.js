@@ -51,7 +51,7 @@ export const grabApi = async () => {
         // console.log('Working?? ->: ',btnBack, hidenSection)
 
         mainContent.style.display = 'grid'
-        searchBar.style.display = 'flex';
+        searchBar.style.display = '';
         hidenSection.style.display = 'none';
     }
 // -------- Dark Mode -----------
