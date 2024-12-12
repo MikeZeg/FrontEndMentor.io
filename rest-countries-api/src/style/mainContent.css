@@ -36,6 +36,9 @@
     width: 100%;
     background-size: 100%;
 }
+.mainContent_figure_img:hover {
+    cursor: pointer;
+}
 .mainContent_countryBlock{
     border: 1px solid var(--background-color);
     background-color: var(--elements-color);

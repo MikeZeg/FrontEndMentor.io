@@ -104,6 +104,7 @@
 }
 .countryBorder-element {
     display: flex;
+    flex-wrap: wrap;
 }
 .flexCountryBorder {
     color: var(--font-color-darkMode);

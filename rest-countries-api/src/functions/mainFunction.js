@@ -47,7 +47,6 @@ export const grabApi = async () => {
         const mainContent = document.querySelector('.main_style')
         // const btnBack = document.querySelector('#back-btn')
         const searchBar = document.querySelector('#searching')
-        
         // console.log('Working?? ->: ',btnBack, hidenSection)
 
         mainContent.style.display = 'grid'

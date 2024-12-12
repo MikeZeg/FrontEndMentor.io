@@ -34,17 +34,21 @@ const MainContent = (props) => {
         let keyData = {index}
 
         return (
-            <div id={index} className="mainContentStyle" key={index} onClick={(e)=>{
-                    elementSelected(e)
-            }}>
-                <figure className="mainContent_figure" >
+            <div
+                id={index} 
+                className="mainContentStyle" 
+                key={index}
+                >
+                <figure className="mainContent_figure" 
+                    onClick={(e)=>elementSelected(e)}
+                >
                     <img 
                     src={countryImg}
                     alt={index} className="mainContent_figure_img">
                     </img>
                     <figcaption></figcaption>
                 </figure>
-                <div className="mainContent_countryBlock">
+                <div className="mainContent_countryBlock" alt={index}>
                     <h3 style={{marginLeft:'1rem', marginTop:'1rem'}}>{name}</h3>
                     <h4 style={{marginLeft:'1rem'}}>Population:<p> {population}</p></h4>
                     <h4 style={{marginLeft:'1rem'}}>Region:<p> {region}</p></h4>
