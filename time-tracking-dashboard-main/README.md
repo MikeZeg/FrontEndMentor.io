@@ -35,7 +35,7 @@ When user press dotts, that boxes can be grabbed and swap with another boxes. Wh
 
 ### Links
     
-    - [Live](https://mikezeg.github.io/FrontEndMentor.io/time-tracking-dashboard-main)
+[Live](https://mikezeg.github.io/FrontEndMentor.io/time-tracking-dashboard-main)
 
 ### Used Technology
 
