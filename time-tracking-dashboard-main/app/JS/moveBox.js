@@ -139,6 +139,7 @@ function boxActive() {
 }
 
 function boxUnActive() {
+    console.log('box unactive')
     boxArr.forEach((item)=>{
         item.setAttribute('draggable', false);
     });

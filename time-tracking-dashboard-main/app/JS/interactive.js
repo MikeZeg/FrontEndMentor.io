@@ -9,7 +9,7 @@ async function dataFetch (url) {
             throw new Error(`HTTP error status: ${response.status}`)
         }
         myData =  await response.json()
-        console.log('check data: ', myData)
+        // console.log('check data: ', myData)
 
     }catch (err) { console.error(`Error fetching data: ${err}`)}
 
@@ -52,7 +52,7 @@ function myfun (period) {
     // console.log(period)
     // check forEach() - to speed up algorithm
     for(let i=0; i < myData.length; i++){
-        console.log('Round: ' + [i] )
+        // console.log('Round: ' + [i] )
         let day1 = myData[i].timeframes.daily.current;
         let day2 = myData[i].timeframes.daily.previous;
         

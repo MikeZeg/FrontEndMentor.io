@@ -19,7 +19,7 @@ main {
 @media (max-width: 900px) {
   main {
     display: block;
-    width: 80vh;
+    width: 56vh;
     height: auto;
     margin: 10px auto 10px auto;
     grid-template-areas: " user " " work " " play " " study " " exercise " " social " " selfCare ";
@@ -31,10 +31,10 @@ main {
     width: 46vh;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   main {
     display: block;
-    width: 41vh;
+    width: 35vh;
   }
 }
 

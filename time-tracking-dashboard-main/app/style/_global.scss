@@ -32,7 +32,7 @@ main {
     @media (max-width: 900px) {
         display: block;
 
-        width: 80vh;
+        width: 56vh;
         height: auto;
         margin: 10px auto 10px auto;
 
@@ -51,9 +51,9 @@ main {
         display: block;
         width: 46vh;
     }
-    @media (max-width:400px) {
+    @media (max-width:500px) {
         display: block;
-        width: 41vh;
+        width: 35vh;
     }
 }
 .footer {
