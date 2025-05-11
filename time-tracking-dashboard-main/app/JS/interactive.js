@@ -1,9 +1,20 @@
+// const url = 'http://127.0.0.1:5500/data.json'
+const url = 'https://mikezeg.github.io/FrontEndMentor.io/time-tracking-dashboard-main/data.json'
+let myData = [];
 
-// JSON
-// import data from '../../data.json' assert {type: 'json'};
-const {default: data } = await import ('../../data.json', {assert:{type:'json'}});
+async function dataFetch (url) {
+    try{
+        const response = await fetch(url);
+        if(!response.ok){
+            throw new Error(`HTTP error status: ${response.status}`)
+        }
+        myData =  await response.json()
+        console.log('check data: ', myData)
 
-const myData = data;
+    }catch (err) { console.error(`Error fetching data: ${err}`)}
+
+    return myData;
+}
 
 // catch links - Selection options Daily, Weekly, Monthly
 const catchDaily = document.querySelector('#daily__list');
@@ -31,18 +42,17 @@ const catchMonthly = document.querySelector('#monthly__list');
     const selfCareLast = document.querySelector('.selfCare__details__info h3 span');
 
 // Main Funtion
-async function myfun (period) {
-    let period1 = period;
+function myfun (period) {
+    dataFetch(url)
 
+    let period1 = period;
     // Created 2 arrays 
     const divArrNow = [workNow, playNow, studyNow, exerciseNow, socialNow, selfCareNow];
     const divArrLast = [workLast,playLast,studyLast,exerciseLast,socialLast,selfCareLast];
-
     // console.log(period)
     // check forEach() - to speed up algorithm
     for(let i=0; i < myData.length; i++){
-        // console.log('Round: ' + [i] )
-
+        console.log('Round: ' + [i] )
         let day1 = myData[i].timeframes.daily.current;
         let day2 = myData[i].timeframes.daily.previous;
         
@@ -51,7 +61,6 @@ async function myfun (period) {
 
         let month1 = myData[i].timeframes.monthly.current;
         let month2 = myData[i].timeframes.monthly.previous;
-
         // check what period/time are pressed
             if (period1 === 'daily') {
                 // console.log('Daily: current: '+day1+', last: '+day2)
@@ -63,11 +72,11 @@ async function myfun (period) {
                 divArrNow[i].innerHTML = week1 + ' hrs' ;
                 divArrLast[i].innerHTML = week2 + ' hrs';
                 
-            } if (period1 === 'monthly') {
+            }if (period1 === 'monthly') {
                 // console.log('Mothly: current: '+month1+', last: '+month2)
                 divArrNow[i].innerHTML = month1 + ' hrs';
                 divArrLast[i].innerHTML = month2 + ' hrs';
-            } else {
+            }else {
                 // console.log('nooooooooooooo')
             }
     }   
