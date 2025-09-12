@@ -36,10 +36,10 @@ export const useButtonAPI = (val) => {
 // ----------------------- If statment ------------------------
     if(!ip){
         console.log('false', ip)
-        useLink = `https://freeipapi.com/api/json`
+        useLink = `https://free.freeipapi.com/api/json`
     }if(ip){
         console.log('True', ip)
-        useLink = `https://freeipapi.com/api/json/${ip}`
+        useLink = `https://free.freeipapi.com/api/json/${ip}`
     }
 // -------- Use Effect -----------
         console.log('before effect', ip)
