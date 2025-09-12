@@ -65,17 +65,17 @@ function myfun (period) {
         let month2 = myData[i].timeframes.monthly.previous;
         // check what period/time are pressed
             if (period1 === 'daily') {
-                // console.log('Daily: current: '+day1+', last: '+day2)
+                console.log('Daily: current: '+day1+', last: '+day2)
                 divArrNow[i].innerHTML = day1 + ' hrs';
                 divArrLast[i].innerHTML = day2 + ' hrs';
                 
             }if (period1 === 'weekly') {
-                // console.log('Weekly: current: '+week1+', last: '+week2)
+                console.log('Weekly: current: '+week1+', last: '+week2)
                 divArrNow[i].innerHTML = week1 + ' hrs' ;
                 divArrLast[i].innerHTML = week2 + ' hrs';
                 
             }if (period1 === 'monthly') {
-                // console.log('Mothly: current: '+month1+', last: '+month2)
+                console.log('Mothly: current: '+month1+', last: '+month2)
                 divArrNow[i].innerHTML = month1 + ' hrs';
                 divArrLast[i].innerHTML = month2 + ' hrs';
             }else {
