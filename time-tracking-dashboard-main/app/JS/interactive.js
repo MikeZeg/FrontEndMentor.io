@@ -1,5 +1,5 @@
-// const url = 'http://127.0.0.1:5500/data.json'
-const url = 'https://mikezeg.github.io/FrontEndMentor.io/time-tracking-dashboard-main/data.json'
+const url = 'http://127.0.0.1:5500/data.json'
+// const url = 'https://mikezeg.github.io/FrontEndMentor.io/time-tracking-dashboard-main/data.json'
 
 let myData = [];
 
