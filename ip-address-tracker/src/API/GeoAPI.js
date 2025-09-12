@@ -7,8 +7,7 @@ import { useEffect, useState } from 'react';
 
 // -------------- Function BTN ------------------------
 export const useButtonAPI = (val) => {
-    console.log('BTN API val: ', val)
-    
+    // console.log('BTN API val: ', val)
     let useLink ;
     // let link = `https://ipapi.co/8.8.8.8/json/`;
     // let link2 = `https://ipapi.co/${val}/json/`;
@@ -31,8 +30,6 @@ export const useButtonAPI = (val) => {
 
 // That part send forward Value to component/s
     const [ip, setIP] = useState()
-
-
 // ----------------------- If statment ------------------------
     if(!ip){
         console.log('false', ip)
@@ -45,25 +42,18 @@ export const useButtonAPI = (val) => {
         console.log('before effect', ip)
         
     useEffect((ip)=>{
-
-        console.log('After effect:', useLink)
-
+        // console.log('After effect:', useLink)
         const fetchData = async (link) => {
             console.log('Show link: ',link)
             const res = await fetch(link);
             const data = await res.json();
-            console.log('Response: ', data)
-            
+            // console.log('Response: ', data)
             setData(data)
         }
-
         fetchData(useLink)
             .catch(console.error)
-
 //when IP change UseEffect working agian
     },[ip])
-
-    console.log('Return Data from function: ', data)
-
+    // console.log('Return Data from function: ', data)
     return [data, val, setIP] 
 }

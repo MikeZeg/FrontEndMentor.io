@@ -17,9 +17,6 @@ const  App = () => {
   const  [data, setData, setIP] = useButtonAPI('');
   const [ipFromHeader, setIpFromHeader] = useState('');
 
-  console.log('App: ------>>>>', data);
-  console.log('App !!--> Received IP from Head:', ipFromHeader);
-
 // UseEffect send data to useButtonAPI by setIP
   useEffect(()=>{
 // that sending new IP to useButtonAPI and refresh data on all pages :)
