@@ -17,6 +17,8 @@ async function dataFetch (url) {
     console.log('my data: ', myData)
     return myData;
 }
+//use function when refresh page
+dataFetch(url)
 
 // catch links - Selection options Daily, Weekly, Monthly
 const catchDaily = document.querySelector('#daily__list');
@@ -45,7 +47,7 @@ const catchMonthly = document.querySelector('#monthly__list');
 
 // Main Funtion
 function myfun (period) {
-    dataFetch(url)
+    // dataFetch(url)
 
     let period1 = period;
     // Created 2 arrays 
@@ -86,6 +88,7 @@ function myfun (period) {
 
 // add that event to main function to push data when CLICK
 catchDaily.addEventListener('click', (e)=>{
+    console.log('Clicked daily')
     myfun('daily');
     catchDaily.style.cssText = 'color: white';
     catchWeekly.style.cssText = 'color: $paleBlue';
@@ -93,12 +96,14 @@ catchDaily.addEventListener('click', (e)=>{
     
 });
 catchWeekly.addEventListener('click', (e)=>{
+    console.log('Clicked weekly')
     myfun('weekly')
     catchDaily.style.cssText = 'color: $paleBlue';
     catchWeekly.style.cssText = 'color: white';
     catchMonthly.style.cssText ='color: $paleBlue';
 });
 catchMonthly.addEventListener('click', (e)=>{
+    console.log('Clicked monthly')
     myfun('monthly');
     catchDaily.style.cssText = 'color: $paleBlue';
     catchWeekly.style.cssText = 'color: $paleBlue';
