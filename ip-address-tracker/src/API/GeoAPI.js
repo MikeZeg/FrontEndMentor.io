@@ -10,10 +10,10 @@ export const useButtonAPI = (val) => {
     console.log('BTN API val: ', val)
     
     let useLink ;
-    let link = `https://ipapi.co/8.8.8.8/json/`;
-    let link2 = `https://ipapi.co/${val}/json/`;
+    // let link = `https://ipapi.co/8.8.8.8/json/`;
+    // let link2 = `https://ipapi.co/${val}/json/`;
     // let link1 = `https://ipapi.co/${val}/json/`;
-    let link11 = `https://freeipapi.com/api/json/`;
+    // let link11 = `https://freeipapi.com/api/json/`;
 
 // ToDo list -> Check initData for first start
     const initData = {
