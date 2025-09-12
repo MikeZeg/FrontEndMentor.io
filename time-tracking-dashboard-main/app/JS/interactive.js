@@ -1,5 +1,6 @@
 // const url = 'http://127.0.0.1:5500/data.json'
 const url = 'https://mikezeg.github.io/FrontEndMentor.io/time-tracking-dashboard-main/data.json'
+
 let myData = [];
 
 async function dataFetch (url) {
@@ -13,6 +14,7 @@ async function dataFetch (url) {
 
     }catch (err) { console.error(`Error fetching data: ${err}`)}
 
+    console.log('my data: ', myData)
     return myData;
 }
 
