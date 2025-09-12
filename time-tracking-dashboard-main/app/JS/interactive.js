@@ -14,7 +14,7 @@ async function dataFetch (url) {
 
     }catch (err) { console.error(`Error fetching data: ${err}`)}
 
-    console.log('my data: ', myData)
+    // console.log('my data: ', myData)
     return myData;
 }
 //use function when refresh page
@@ -88,7 +88,7 @@ function myfun (period) {
 
 // add that event to main function to push data when CLICK
 catchDaily.addEventListener('click', (e)=>{
-    console.log('Clicked daily')
+    // console.log('Clicked daily')
     myfun('daily');
     catchDaily.style.cssText = 'color: white';
     catchWeekly.style.cssText = 'color: $paleBlue';
@@ -96,14 +96,14 @@ catchDaily.addEventListener('click', (e)=>{
     
 });
 catchWeekly.addEventListener('click', (e)=>{
-    console.log('Clicked weekly')
+    // console.log('Clicked weekly')
     myfun('weekly')
     catchDaily.style.cssText = 'color: $paleBlue';
     catchWeekly.style.cssText = 'color: white';
     catchMonthly.style.cssText ='color: $paleBlue';
 });
 catchMonthly.addEventListener('click', (e)=>{
-    console.log('Clicked monthly')
+    // console.log('Clicked monthly')
     myfun('monthly');
     catchDaily.style.cssText = 'color: $paleBlue';
     catchWeekly.style.cssText = 'color: $paleBlue';
