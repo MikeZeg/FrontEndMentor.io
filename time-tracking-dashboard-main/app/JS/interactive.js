@@ -10,7 +10,7 @@ async function dataFetch (url) {
             throw new Error(`HTTP error status: ${response.status}`)
         }
         myData =  await response.json()
-        // console.log('check data: ', myData)
+        console.log('check data: ', myData)
 
     }catch (err) { console.error(`Error fetching data: ${err}`)}
 
