@@ -41,13 +41,13 @@ Your users should be able to:
 ### Used Tools
 ![VS Code](https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Google](https://img.shields.io/badge/google-DA4437?style=for-the-badge&logo=google&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
-<!-- ### Performance -->
+### Performance
 
-  <!-- #### Desktop -->
-<!-- ![deskopt-performance](./src/design/desktop.png) -->
+  #### Desktop
+![deskopt-performance](./src/images/img/desktop.png)
 
-  <!-- #### Mobile -->
-<!-- ![mobile-performance](./src/design/mobile.png) -->
+  #### Mobile
+![mobile-performance](./src/images/img/mobile.png)
 
 ### Author 🚀
  -- FrontEnd Mentor -> [MikeZeg](https://www.frontendmentor.io/profile/MikeZeg)
